@@ -1,0 +1,193 @@
+@font-face {
+  font-family: "GoGoHack";
+  src: url(../fonts/GoGoHack.ttf);
+}
+@font-face {
+  font-family: "CasCadia";
+  src: url(../fonts/Cascadia.ttf);
+}
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+body {
+  margin: 0;
+  background-color: #000000;
+}
+
+.cookie-popup {
+  position: absolute;
+  width: 100vw;
+  height: 133px;
+  background-color: #fff;
+  bottom: 0;
+}
+
+.button-primary {
+  border: 1px solid #885df3;
+  font-size: 25px;
+  font-family: "GoGoHack";
+  padding: 5px 13px;
+  border-radius: 20px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-wrapper {
+  overflow-x: hidden;
+}
+
+.header-dots-cont {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  padding: 5px;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: flex;
+  overflow: hidden;
+}
+.header-dots-cont .dots-col {
+  display: flex;
+  flex-direction: column;
+}
+.header-dots-cont .dots-col .dot {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: #06edf7;
+  margin: 15px;
+  display: inline-block;
+  position: relative;
+}
+.header-dots-cont .dots-col .dot.dot-lg {
+  width: 10px;
+  height: 10px;
+}
+.header-dots-cont .dots-col .dot.dot-lg {
+  width: 9px;
+  height: 9px;
+}
+.header-dots-cont .dots-col .dot.dot-md {
+  width: 5px;
+  height: 5px;
+  margin-left: 15.5px;
+}
+.header-dots-cont .dots-col .dot.dot-sm {
+  width: 3px;
+  height: 3px;
+  margin-left: 16px;
+}
+.header-dots-cont .dots-col .dot.dot-xs {
+  width: 2px;
+  height: 2px;
+  margin-left: 16px;
+}
+.header-dots-cont .dots-col .dot.dot-blue-d {
+  background: #004cba;
+}
+.header-dots-cont .dots-col .dot.dot-blue-l {
+  background: #039dd9;
+}
+.header-dots-cont .dots-col .dot.dot-purp-d {
+  background: #4c0282;
+}
+.header-dots-cont .dots-col .dot.dot-purp-l {
+  background: #8a24d2;
+}
+.header-dots-cont .dots-col .dot.dot-vlt {
+  background: #06edf7;
+}
+.header-dots-cont .dots-col .dot.dot-pink-l {
+  background: #f44da8;
+}
+.header-dots-cont .dots-col .dot.dot-pink-d {
+  background: #bd2782;
+}
+.header-dots-cont .dots-col .dot.dot-green-l {
+  background: #70ce23;
+}
+.header-dots-cont .dots-col .dot.dot-green-d {
+  background: #49a00c;
+}
+.header-dots-cont .dots-col .dot.dot-orng {
+  background: #fcbb00;
+}
+.header-dots-cont .dots-col .dot.dot-orng-d {
+  background: #da4812;
+}
+
+header {
+  padding: 40px 53px;
+  box-sizing: border-box;
+  position: relative;
+  min-height: 100vh;
+}
+header nav.navbar {
+  position: relative;
+  z-index: 2;
+}
+header nav.navbar .logo {
+  width: 20.5%;
+}
+header nav.navbar .logo img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: left center;
+     object-position: left center;
+}
+header nav.navbar a.nav-link {
+  color: #fff;
+  font-family: "GoGoHack", sans-serif;
+  font-size: 20px;
+}
+header nav.navbar a.nav-link i {
+  font-size: 26px;
+}
+header .bg-video-cont {
+  width: 82%;
+  height: calc(100vh - 50px);
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+  top: 40px;
+  left: 52%;
+  transform: translateX(-50%);
+}
+header .bg-video-cont video {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
+}
+header .header-text-cont {
+  width: 36%;
+  height: calc(100vh - 245px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-left: 34px;
+  position: relative;
+  z-index: 2;
+}
+header .header-text-cont .header-text h2 {
+  font-family: "GoGoHack";
+  font-size: 70px;
+  color: #fff;
+}
+header .header-text-cont .header-text p {
+  font-family: "CasCadia";
+  font-size: 17px;
+  line-height: 26px;
+  color: #fff;
+}/*# sourceMappingURL=styles.css.map */

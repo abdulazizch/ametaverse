@@ -1,0 +1,215 @@
+@font-face {
+    font-family: 'GoGoHack';
+    src: url(../fonts/GoGoHack.ttf) ;
+}
+@font-face {
+    font-family: 'CasCadia';
+    src: url(../fonts/Cascadia.ttf) ;
+}
+$primary-bg: #000000;
+$primary-txt-color: #fff;
+$primary-font: 'GoGoHack';
+$secondary-font: 'CasCadia';
+
+
+// dots colors
+$dot-blue-lit: #06edf7;
+
+
+// global styles 
+*{
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    color: $primary-txt-color;
+}
+body{
+    margin: 0;
+    background-color: $primary-bg;
+}
+
+.cookie-popup{
+    position: absolute;
+    width: 100vw;
+    height: 133px;
+    background-color: #fff;
+    bottom: 0;
+}
+.button-primary{
+    border: 1px solid #885df3;
+    font-size: 25px;   
+    font-family: $primary-font;
+    padding: 5px 13px;
+    border-radius: 20px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+.main-wrapper{
+    overflow-x: hidden;
+}
+
+// Dots Styles
+$dot-wid-xxl: 11px;
+$dot-wid-xl: 10px;
+$dot-wid-lg: 9px;
+$dot-wid-md: 5px;
+$dot-wid-sm: 3px;
+$dot-wid-xs: 2px;
+.header-dots-cont{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    padding: 5px;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: flex;
+    overflow: hidden;
+
+    .dots-col{
+        display: flex;
+        flex-direction: column;
+
+        .dot{
+            width: $dot-wid-xxl;
+            height: $dot-wid-xxl;
+            border-radius: 50%;
+            background: $dot-blue-lit;
+            margin: 15px;
+            display:inline-block;
+            position:relative;
+        }
+        .dot.dot-lg{
+            width: $dot-wid-xl;
+            height: $dot-wid-xl;
+        }
+        .dot.dot-lg{
+            width: $dot-wid-lg;
+            height: $dot-wid-lg;
+        }
+        .dot.dot-md{
+            width: $dot-wid-md;
+            height: $dot-wid-md;
+            margin-left: 15.5px;
+        }
+        .dot.dot-sm{
+            width: $dot-wid-sm;
+            height: $dot-wid-sm;
+            margin-left: 16px;
+        }
+        .dot.dot-xs{
+            width: $dot-wid-xs;
+            height: $dot-wid-xs;
+            margin-left: 16px;
+        }
+       
+        .dot.dot-blue-d{
+            background: #004cba;
+        }
+        .dot.dot-blue-l{
+            background: #039dd9;
+        }
+        .dot.dot-purp-d{
+            background: #4c0282;
+        }
+        .dot.dot-purp-l{
+            background: #8a24d2;
+        }
+        .dot.dot-vlt{
+            background: #06edf7;
+        }
+        .dot.dot-pink-l{
+            background: #f44da8;
+        }
+        .dot.dot-pink-d{
+            background: #bd2782;
+        }
+        .dot.dot-green-l{
+            background: #70ce23;
+        }
+        .dot.dot-green-d{
+            background: #49a00c;
+        }
+        .dot.dot-orng{
+            background: #fcbb00;
+        }
+        .dot.dot-orng-d{
+            background: #da4812;
+        }
+    }
+}
+header{
+    padding: 40px 53px;
+    box-sizing: border-box;
+    position: relative;
+    min-height: 100vh;
+
+    nav.navbar{
+        position: relative;
+        z-index: 2;
+        
+        .logo{
+            width: 20.5%;
+            
+            img{
+                width: 100%;
+                object-fit: contain;
+                object-position: left center;
+            }
+        }
+        a.nav-link{
+            color: $primary-txt-color;
+            font-family: $primary-font, sans-serif;
+            font-size: 20px;
+            i{
+                font-size: 26px;
+            }
+        }
+    }
+
+    .bg-video-cont{
+        width: 82%;
+        height: calc(100vh - 50px);
+        overflow: hidden;
+        position: absolute;
+        z-index: -1;
+        top: 40px;
+        left: 52%;
+        transform: translateX(-50%);
+        
+        video{
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            object-position: center;
+        }
+    }
+
+    .header-text-cont{
+        width: 36%;
+        height: calc(100vh - 245px);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding-left: 34px;
+        position: relative;
+        z-index: 2;
+
+        .header-text{
+            h2{
+                font-family: $primary-font;
+                font-size: 70px;
+                color: $primary-txt-color;
+            }
+            p{
+                font-family: $secondary-font;
+                font-size: 17px;
+                line-height: 26px;
+                color: $primary-txt-color;
+            }
+            
+        }
+    }
+}
