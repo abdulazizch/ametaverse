@@ -7,8 +7,6 @@
     <link rel="stylesheet" href="./assets/bootstrap-5.0.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="./assets/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="./assets/lite-slider/lightslider.css">
-    <script src="./assets/lite-slider/JQuery3.3.1.js"></script>
-    <script src="./assets/lite-slider/lightslider.js"></script>
     <link rel="stylesheet" href="./assets/css/styles.css">
     <title>Ametaverse</title>
 </head>
@@ -1145,7 +1143,7 @@
                     <!-- Header-content start  -->
                     <div class="bg-video-cont">
                         <!-- <video class="bg-video" playsinline autoplay muted loop>
-                            <source src="./assets/video/" type="video/mp4"/>
+                            <source src="./assets/video/Token Video.m4v" type="video/mp4"/>
                         </video> -->
                         <img src="./assets/video/token.gif" alt="">
                     </div>
@@ -1266,7 +1264,91 @@
                     </div>
 
                     <div class="game-cards-con">
-                       
+                        <div class="game-cards-crsl-con">
+                            <ul id="game-cards-crsl" class="game-cards-crsl cS-hidden">
+                                <!--1------------------------------>
+                                <li class="slide-item">
+                                    <!--slider-item-card-->
+                                    <div class="item-card">
+                                        <img src="./assets/images/game-cards/card-1.png" class="">
+                                        <div class="slide-card-btn">
+                                            <a href="#">Play</a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <!--2------------------------------>
+                                <li class="slide-item">
+                                    <!--slider-item-card-->
+                                    <div class="item-card">
+                                        <img src="./assets/images/game-cards/card-2.png" alt="">
+                                        <div class="slide-card-btn">
+                                            <a href="#">Play</a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <!--3------------------------------>
+                                <li class="slide-item">
+                                    <!--slider-item-card-->
+                                    <div class="item-card">
+                                        <img src="./assets/images/game-cards/card-3.png" alt="">
+                                        <div class="slide-card-btn">
+                                            <a href="#">Play</a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <!--4------------------------------>
+                                <li class="slide-item">
+                                    <!--slider-item-card-->
+                                    <div class="item-card">
+                                        <img src="./assets/images/game-cards/card-4.png" class="">
+                                        <div class="slide-card-btn">
+                                            <a href="#">Play</a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <!--5------------------------------>
+                                <li class="slide-item">
+                                    <!--slider-item-card-->
+                                    <div class="item-card">
+                                        <img src="./assets/images/game-cards/card-5.png" alt="">
+                                        <div class="slide-card-btn">
+                                            <a href="#">Play</a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <!--6------------------------------>
+                                <li class="slide-item">
+                                    <!--slider-item-card-->
+                                    <div class="item-card">
+                                        <img src="./assets/images/game-cards/card-6.png" alt="">
+                                        <div class="slide-card-btn">
+                                            <a href="#">Play</a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <!--7------------------------------>
+                                <li class="slide-item">
+                                    <!--slider-item-card-->
+                                    <div class="item-card">
+                                        <img src="./assets/images/game-cards/card-7.png" alt="">
+                                        <div class="slide-card-btn">
+                                            <a href="#">Play</a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <!--8------------------------------>
+                                <li class="slide-item">
+                                    <!--slider-item-card-->
+                                    <div class="item-card">
+                                        <img src="./assets/images/game-cards/card-8.png" alt="">
+                                        <div class="slide-card-btn">
+                                            <a href="#">Play</a>
+                                        </div>
+                                    </div>
+                                </li>
+
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -1275,18 +1357,48 @@
         </div>
     </div>
 
-    <!-- <script src="./assets/js/jQuery-3.6.0.js"></script> -->
+    <script src="./assets/js/jQuery-3.6.0.js"></script>
     <script src="./assets/bootstrap-5.0.2/js/bootstrap.bundle.min.js"></script>
-   
+    <script src="./assets/lite-slider/lightslider.js"></script>
     <script src="./assets/js/main.js"></script>
    <script>
      $(document).ready(function() {
-        $('#autoWidth').lightSlider({
+        const slider = $('#game-cards-crsl').lightSlider({
             autoWidth:true,
             loop:true,
-            onSliderLoad: function() {
-                $('#autoWidth').removeClass('cS-hidden');
-            } 
+            item:3,
+            controls: false,
+            // autoWidth: false,
+            slideMargin: 40,
+            responsive : [
+            {
+                breakpoint:800,
+                settings: {
+                    item:3,
+                    slideMove:1,
+                    slideMargin:6,
+                  }
+            },
+            {
+                breakpoint:480,
+                settings: {
+                    item:2,
+                    slideMove:1
+                  }
+            }
+        ],
+        onSliderLoad: function() {
+            $('#game-cards-crsl').removeClass('cS-hidden');
+            $('.lSPager').prepend("<span class='me-2 mb-2 btn-slide-prev text-white'><img src='./assets/images/icons/arrow-slide-left.png' ></span>")
+            $('.lSPager').append("<span class='ms-2 mb-2 btn-slide-next text-white'> <img src='./assets/images/icons/arrow-slide-right.png'></span>")
+
+            $(".btn-slide-prev").click(()=>{
+                slider.goToPrevSlide();
+            })
+            $(".btn-slide-next").click(()=>{
+                slider.goToNextSlide();
+            })
+        } 
         });  
     });
    </script>
