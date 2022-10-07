@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/bootstrap-5.0.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="./assets/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./assets/lite-slider/lightslider.css">
+    <script src="./assets/lite-slider/JQuery3.3.1.js"></script>
+    <script src="./assets/lite-slider/lightslider.js"></script>
     <link rel="stylesheet" href="./assets/css/styles.css">
     <title>Ametaverse</title>
 </head>
@@ -13,386 +16,1095 @@
     <!-- <div class="cookie-popup">
 
     </div> -->
+    <!-- header-dots  -->
+    <div class="bg-dots-con d-flex">
+        <div class="dots-col col1">
+            <div class="dot dot-vlt"></div>
+            <div class="dot dot-pink-l"></div>
+            <div class="dot dot-blue-l"></div>
+            <div class="dot dot-purp-l"></div>
+            <div class="dot dot-vlt"></div>
+            <div class="dot dot-xl dot-pink-l"></div>
+            <div class="dot dot-xl dot-pink-d"></div>
+            <div class="dot dot-lg dot-green-l"></div>
+            <div class="dot dot-lg dot-orng"></div>
+            <div class="dot dot-lg dot-green-l"></div>
+            <div class="dot dot-md dot-orng"></div>
+            <div class="dot dot-xs dot-orng"></div>
+        </div>
+        <div class="dots-col col2">
+            <div class="dot dot-pink-l"></div>
+            <div class="dot dot-orng"></div>
+            <div class="dot dot-green-l"></div>
+            <div class="dot dot-xl dot-green-l"></div>
+            <div class="dot dot-xl dot-orng"></div>
+            <div class="dot dot-xl dot-pink-l"></div>
+            <div class="dot dot-lg dot-orng"></div>
+            <div class="dot dot-lg dot-purp-l"></div>
+            <div class="dot dot-lg dot-blue-d"></div>
+            <div class="dot dot-md dot-vlt"></div>
+            <div class="dot dot-xs dot-orng"></div>
+        </div>
+        <div class="dots-col col3">
+            <div class="dot dot-orng"></div>
+            <div class="dot dot-purp-l"></div>
+            <div class="dot dot-vlt"></div>
+            <div class="dot dot-vlt"></div>
+            <div class="dot dot-xl dot-orng-d"></div>
+            <div class="dot dot-lg dot-orng"></div>
+            <div class="dot dot-lg dot-vlt"></div>
+            <div class="dot dot-lg dot-purp-l"></div>
+            <div class="dot dot-md dot-vlt"></div>
+            <div class="dot dot-sm dot-pink-l"></div>
+
+        </div>
+        <div class="dots-col col4">
+            <div class="dot dot-blue-l"></div>
+            <div class="dot dot-green-l"></div>
+            <div class="dot dot-purp-l"></div>
+            <div class="dot dot-pink-d"></div>
+            <div class="dot dot-purp-d"></div>
+            <div class="dot dot-lg dot-pink-d"></div>
+            <div class="dot dot-lg dot-pink-d"></div>
+            <div class="dot dot-lg dot-pink-l"></div>
+            <div class="dot dot-md dot-pink-l"></div>
+            
+        </div>
+        <div class="dots-col col5">
+            <div class="dot dot-orng"></div>
+            <div class="dot dot-purp-l"></div>
+            <div class="dot dot-pink-d"></div>
+            <div class="dot dot-green-l"></div>
+            <div class="dot dot-xl dot-vlt"></div>
+            <div class="dot dot-xl dot-pink-l"></div>
+            <div class="dot dot-lg dot-pink-d"></div>
+            <div class="dot dot-lg dot-green-l"></div>
+            <div class="dot dot-xs dot-pink-l"></div>
+        </div>
+        <div class="dots-col col6">
+            <div class="dot dot-green-l"></div>
+            <div class="dot dot-pink-d"></div>
+            <div class="dot dot-green-l"></div>
+            <div class="dot dot-blue-d"></div>
+            <div class="dot dot-xl dot-pink-l"></div>
+            <div class="dot dot-lg dot-purp-l"></div>
+            <div class="dot dot-lg dot-purp-l"></div>
+            <div class="dot dot-sm dot-green-l"></div>
+
+        </div>
+        <div class="dots-col col7">
+            <div class="dot dot-green-l"></div>
+            <div class="dot dot-purp-d"></div>
+            <div class="dot dot-orng"></div>
+            <div class="dot dot-xl dot-blue-l"></div>
+            <div class="dot dot-xl dot-pink-d"></div>
+            <div class="dot dot-lg dot-pink-l"></div>
+            <div class="dot dot-lg dot-purp-d"></div>
+
+        </div>
+        <div class="dots-col col8">
+            <div class="dot dot-green-l"></div>
+            <div class="dot dot-pink-l"></div>
+            <div class="dot dot-orng"></div>
+            <div class="dot dot-purp-l"></div>
+            <div class="dot dot-xl dot-purp-l"></div>
+            <div class="dot dot-lg dot-purp-l"></div>
+            <div class="dot dot-sm dot-pink-l"></div>
+        </div>
+        <div class="dots-col col9">
+            <div class="dot dot-pink-l"></div>
+            <div class="dot dot-pink-l"></div>
+            <div class="dot dot-vlt"></div>
+            <div class="dot dot-purp-d"></div>
+            <div class="dot dot-blue-l"></div>
+            <div class="dot dot-lg dot-blue-l"></div>
+        </div>
+        <div class="dots-col col10">
+            <div class="dot dot-orng"></div>
+            <div class="dot dot-pink-d"></div>
+            <div class="dot dot-pink-l"></div>
+            <div class="dot dot-orng-d"></div>
+            <div class="dot dot-lg dot-green-l"></div>
+            <div class="dot dot-md dot-orng"></div>
+        </div>
+        <div class="dots-col col11">
+            <div class="dot dot-orng"></div>
+            <div class="dot dot-blue-l"></div>
+            <div class="dot dot-purp-l"></div>
+            <div class="dot dot-blue-d"></div>
+            <div class="dot dot-lg dot-orng"></div>
+        </div>
+        <div class="dots-col col12">
+            <div class="dot dot-blue-l"></div>
+            <div class="dot dot-green-l"></div>
+            <div class="dot dot-orng"></div>
+            <div class="dot dot-xl dot-orng"></div>
+            <div class="dot dot-md dot-orng-d"></div>
+        </div>
+        <div class="dots-col col13">
+            <div class="dot dot-purp-l"></div>
+            <div class="dot dot-purp-d"></div>
+            <div class="dot dot-xl dot-vlt"></div>
+            <div class="dot dot-xl dot-vlt"></div>
+            <div class="dot dot-sm dot-orng-d"></div>
+        </div> 
+        <div class="dots-col col14">
+            <div class="dot dot-orng"></div>
+            <div class="dot dot-green-l"></div>
+            <div class="dot dot-orng"></div>
+            <div class="dot dot-pink-l"></div>
+        </div>
+        <div class="dots-col col15">
+            <div class="dot dot-purp-d"></div>
+            <div class="dot dot-pink-l"></div>
+            <div class="dot dot-blue-l"></div>
+            <div class="dot dot-lg dot-green-l"></div>
+        </div>
+        <div class="dots-col col16">
+            <div class="dot dot-purp-l"></div>
+            <div class="dot dot-orng"></div>
+            <div class="dot dot-orng"></div>
+            <div class="dot dot-md dot-green-l"></div>
+        </div>
+        <div class="dots-col col17">
+            <div class="dot dot-green-l"></div>
+            <div class="dot dot-purp-l"></div>
+            <div class="dot dot-vlt"></div>
+            <div class="dot dot-md dot-vlt"></div>
+        </div>
+        <div class="dots-col col18">
+            <div class="dot dot-blue-d"></div>
+            <div class="dot dot-pink-l"></div>
+            <div class="dot dot-green-l"></div>
+        </div>
+        <div class="dots-col col19">
+            <div class="dot dot-orng-d"></div>
+            <div class="dot dot-pink-l"></div>
+            <div class="dot dot-pink-d"></div>
+        </div>
+        <div class="dots-col col20">
+            <div class="dot dot-orng"></div>
+            <div class="dot dot-green-l"></div>
+            <div class="dot dot-lg dot-orng"></div>
+        </div>
+        <div class="dots-col col21">
+            <div class="dot dot-purp-d"></div>
+            <div class="dot dot-orng"></div>
+            <div class="dot dot-lg dot-vlt"></div>
+        </div>
+        <div class="dots-col col22">
+            <div class="dot dot-pink-l"></div>
+            <div class="dot dot-green-l"></div>
+            <div class="dot dot-md dot-orng"></div>
+        </div>
+        <div class="dots-col col23">
+            <div class="dot dot-green-l"></div>
+            <div class="dot dot-orng"></div>
+            <div class="dot dot-md dot-orng"></div>
+        </div>
+        <div class="dots-col col24">
+            <div class="dot dot-orng"></div>
+            <div class="dot dot-lg dot-pink-l"></div>
+            <div class="dot dot-md dot-green-l"></div>
+        </div>
+        <div class="dots-col col25">
+            <div class="dot dot-xl dot-purp-l"></div>
+            <div class="dot dot-xl dot-green-l"></div>
+            <div class="dot dot-md dot-blue-l"></div>
+        </div>
+        <div class="dots-col col26">
+            <div class="dot dot-xl dot-pink-l"></div>
+            <div class="dot dot-xl dot-pink-l"></div>
+            <div class="dot dot-md dot-blue-l"></div>
+        </div>
+        <div class="dots-col col27">
+            <div class="dot dot-xl dot-blue-l"></div>
+            <div class="dot dot-xl dot-purp-d"></div>
+            <div class="dot dot-md dot-pink-l"></div>
+        </div>
+        <div class="dots-col col28">
+            <div class="dot dot-green-l"></div>
+            <div class="dot dot-xl dot-orng"></div>
+            <div class="dot dot-lg dot-pink-l"></div>
+        </div>
+        <div class="dots-col col29">
+            <div class="dot dot-purp-l"></div>
+            <div class="dot dot-xl dot-green-l"></div>
+            <div class="dot dot-lg dot-vlt"></div>
+        </div>
+        <div class="dots-col col30">
+            <div class="dot dot-orng"></div>
+            <div class="dot dot-xl dot-vlt"></div>
+            <div class="dot dot-lg dot-green-l"></div>
+        </div>
+        <div class="dots-col col31">
+            <div class="dot dot-purp-l"></div>
+            <div class="dot dot-xl dot-blue-d"></div>
+            <div class="dot dot-lg dot-pink-l"></div>
+        </div>
+        <div class="dots-col col32">
+            <div class="dot dot-vlt"></div>
+            <div class="dot dot-xl dot-vlt"></div>
+            <div class="dot dot-lg dot-green-l"></div>
+        </div>
+        <div class="dots-col col33">
+            <div class="dot dot-purp-l"></div>
+            <div class="dot dot-purp-l"></div>
+            <div class="dot dot-purp-l"></div>
+            <div class="dot dot-xs dot-pink-l"></div>
+        </div>
+        <div class="dots-col col34">
+            <div class="dot dot-orng-d"></div>
+            <div class="dot dot-pink-l"></div>
+            <div class="dot dot-blue-d"></div>
+            <div class="dot dot-sm dot-green-l"></div>
+        </div>
+        <div class="dots-col col35">
+            <div class="dot dot-pink-d"></div>
+            <div class="dot dot-purp-d"></div>
+            <div class="dot dot-xl dot-purp-l"></div>
+            <div class="dot dot-md dot-pink-l"></div>
+        </div>
+        <div class="dots-col col36">
+            <div class="dot dot-orng-d"></div>
+            <div class="dot dot-purp-d"></div>
+            <div class="dot dot-xl dot-green-d"></div>
+            <div class="dot dot-lg dot-green-l"></div>
+        </div>
+        <div class="dots-col col37">
+            <div class="dot dot-green-d"></div>
+            <div class="dot dot-green-l"></div>
+            <div class="dot dot-xl dot-orng-d"></div>
+            <div class="dot dot-xl dot-purp-d"></div>
+            <div class="dot dot-sm dot-vlt"></div>
+        </div>
+        <div class="dots-col col38">
+            <div class="dot dot-green-l"></div>
+            <div class="dot dot-purp-l"></div>
+            <div class="dot dot-xl dot-purp-d"></div>
+            <div class="dot dot-xl dot-pink-l"></div>
+            <div class="dot dot-md dot-vlt"></div>
+        </div>
+        <div class="dots-col col39">
+            <div class="dot dot-purp-l"></div>
+            <div class="dot dot-pink-d"></div>
+            <div class="dot dot-xl dot-pink-d"></div>
+            <div class="dot dot-xl dot-pink-l"></div>
+            <div class="dot dot-lg dot-purp-l"></div>
+        </div>
+        <div class="dots-col col40">
+            <div class="dot dot-green-l"></div>
+            <div class="dot dot-green-l"></div>
+            <div class="dot dot-xl dot-blue-d"></div>
+            <div class="dot dot-xl dot-green-l"></div>
+            <div class="dot dot-lg dot-orng-d"></div>
+            <div class="dot dot-md dot-orng"></div>
+        </div>
+        <div class="dots-col col41">
+            <div class="dot dot-orng-d"></div>
+            <div class="dot dot-green-d"></div>
+            <div class="dot dot-xl dot-vlt"></div>
+            <div class="dot dot-xl dot-pink-l"></div>
+            <div class="dot dot-xl dot-pink-l"></div>
+            <div class="dot dot-lg dot-orng-d"></div>
+        </div>
+        <div class="dots-col col42">
+            <div class="dot dot-purp-d"></div>
+            <div class="dot dot-green-d"></div>
+            <div class="dot dot-green-l"></div>
+            <div class="dot dot-purp-d"></div>
+            <div class="dot dot-xl dot-green-l"></div>
+            <div class="dot dot-lg dot-green-d"></div>
+            <div class="dot dot-sm dot-green-l"></div>
+        </div>
+        <div class="dots-col col43">
+            <div class="dot dot-vlt"></div>
+            <div class="dot dot-purp-d"></div>
+            <div class="dot dot-purp-d"></div>
+            <div class="dot dot-xl dot-pink-l"></div>
+            <div class="dot dot-xl dot-purp-l"></div>
+            <div class="dot dot-xl dot-orng"></div>
+            <div class="dot dot-lg dot-orng-d"></div>
+        </div>
+        <div class="dots-col col44">                        
+            <div class="dot dot-orng-d"></div>
+            <div class="dot dot-orng-d"></div>
+            <div class="dot dot-orng-d"></div>
+            <div class="dot dot-xl dot-vlt"></div>
+            <div class="dot dot-xl dot-purp-l"></div>
+            <div class="dot dot-lg dot-vlt"></div>
+            <div class="dot dot-lg dot-pink-l"></div>
+            <div class="dot dot-sm dot-pink-l"></div>
+        </div>
+        <div class="dots-col col45">
+            <div class="dot dot-green-d"></div>
+            <div class="dot dot-purp-d"></div>
+            <div class="dot dot-orng-d"></div>
+            <div class="dot dot-xl dot-green-d"></div>
+            <div class="dot dot-xl dot-orng"></div>
+            <div class="dot dot-lg dot-pink-d"></div>
+            <div class="dot dot-lg dot-purp-l"></div>
+            <div class="dot dot-sm dot-vlt"></div>
+            <div class="dot dot-xs dot-pink-l"></div>
+        </div>
+        <div class="dots-col col46">
+            <div class="dot dot-orng-d"></div>
+            <div class="dot dot-orng"></div>
+            <div class="dot dot-vlt"></div>
+            <div class="dot dot-pink-l"></div>
+            <div class="dot dot-xl dot-purp-l"></div>
+            <div class="dot dot-lg dot-pink-l"></div>
+            <div class="dot dot-lg dot-pink-d"></div>
+            <div class="dot dot-md dot-orng"></div>
+            <div class="dot dot-sm dot-pink-l"></div>
+        </div>
+        <div class="dots-col col47">
+            <div class="dot dot-orng"></div>
+            <div class="dot dot-blue-l"></div>
+            <div class="dot dot-vlt"></div>
+            <div class="dot dot-orng"></div>
+            <div class="dot dot-xl dot-blue-d"></div>
+            <div class="dot dot-xl dot-green-l"></div>
+            <div class="dot dot-xl dot-orng-d"></div>
+            <div class="dot dot-lg dot-purp-d"></div>
+            <div class="dot dot-md dot-orng"></div>
+            <div class="dot dot-xs dot-green-l"></div>
+        </div>
+        <div class="dots-col col48">
+            <div class="dot dot-orng-d"></div>
+            <div class="dot dot-blue-d"></div>
+            <div class="dot dot-orng-d"></div>
+            <div class="dot dot-green-l"></div>
+            <div class="dot dot-xl dot-green-d"></div>
+            <div class="dot dot-xl dot-green-d"></div>
+            <div class="dot dot-xl dot-blue-l"></div>
+            <div class="dot dot-lg dot-blue-d"></div>
+            <div class="dot dot-md dot-green-l"></div>
+            <div class="dot dot-sm dot-purp-l"></div>
+            <div class="dot dot-xs dot-green-l"></div>
+        </div>
+        <div class="dots-col col49">
+            <div class="dot dot-blue-d"></div>
+            <div class="dot dot-purp-l"></div>
+            <div class="dot dot-purp-d"></div>
+            <div class="dot dot-pink-d"></div>
+            <div class="dot dot-blue-l"></div>
+            <div class="dot dot-xl dot-orng"></div>
+            <div class="dot dot-xl dot-green-l"></div>
+            <div class="dot dot-lg dot-purp-l"></div>
+            <div class="dot dot-lg dot-orng-d"></div>
+            <div class="dot dot-md dot-orng-d"></div>
+            <div class="dot dot-sm dot-orng-d"></div>
+        </div>
+    </div>
+    <!-- get ameta dots  -->
+    <div class="bg-dots-con d-flex flex-column pb-0">
+        <div class="dots-row row1">
+            <div class="dot dot-pink-l"></div>
+        </div>
+        <div class="dots-row row2">
+            <div class="dot dot-pink-l"></div>
+            <div class="dot dot-vlt"></div>
+        </div>
+        <div class="dots-row row3">
+            <div class="dot dot-orng"></div>
+            <div class="dot dot-pink-l"></div>
+            <div class="dot dot-pink-l"></div>
+        </div>
+        <div class="dots-row row4">
+            <div class="dot dot-pink-d"></div>
+            <div class="dot dot-orng"></div>
+            <div class="dot dot-green-d"></div>
+            <div class="dot dot-green-l"></div>
+        </div>
+        <div class="dots-row row5">
+            <div class="dot dot-green-l"></div>
+            <div class="dot dot-blue-d"></div>
+            <div class="dot dot-blue-l"></div>
+            <div class="dot dot-purp-d"></div>
+            <div class="dot dot-orng"></div>
+        </div>
+        <div class="dots-row row6">
+            <div class="dot dot-purp-d"></div>
+            <div class="dot dot-orng"></div>
+            <div class="dot dot-orng-d"></div>
+            <div class="dot dot-purp-l"></div>
+            <div class="dot dot-green-d"></div>
+            <div class="dot dot-green-l"></div>
+
+        </div>
+        <div class="dots-row row7">
+            <div class="dot dot-pink-l"></div>
+            <div class="dot dot-orng"></div>
+            <div class="dot dot-orng"></div>
+            <div class="dot dot-pink-d"></div>
+            <div class="dot dot-green-l"></div>
+            <div class="dot dot-green-d"></div>
+
+        </div>
+        <div class="dots-row row8">
+            <div class="dot dot-purp-l"></div>
+            <div class="dot dot-green-l"></div>
+            <div class="dot dot-orng"></div>
+            <div class="dot dot-vlt"></div>
+            <div class="dot dot-green-l"></div>
+            <div class="dot dot-green-d"></div>
+        </div>
+        <div class="dots-row row9">
+            <div class="dot dot-vlt"></div>
+            <div class="dot dot-orng"></div>
+            <div class="dot dot-pink-l"></div>
+            <div class="dot dot-orng"></div>
+            <div class="dot dot-pink-d"></div>
+            <div class="dot dot-green-l"></div>
+
+            <div class="dot dot-orng"></div>
+            <div class="dot dot-purp-d"></div>
+            <div class="dot dot-orng-d"></div>
+            <div class="dot dot-pink-l"></div>
+            <div class="dot dot-orng"></div>
+            <div class="dot dot-vlt"></div>
+            <div class="dot dot-pink-l"></div>
+            <div class="dot dot-pink-l"></div>
+            <div class="dot dot-green-l"></div>
+            <div class="dot dot-green-d"></div>
+            <div class="dot dot-green-l"></div>
+            <div class="dot dot-pink-d"></div>
+            <div class="dot dot-orng-d"></div>
+        </div>
+        <div class="dots-row row10">
+            <div class="dot dot-green-l"></div>
+            <div class="dot dot-blue-d"></div>
+            <div class="dot dot-blue-l"></div>
+            <div class="dot dot-orng-d"></div>
+            <div class="dot dot-orng"></div>
+            <div class="dot dot-orng"></div>
+            
+            <div class="dot dot-orng"></div>
+            <div class="dot dot-blue-d"></div>
+            <div class="dot dot-green-l"></div>
+            <div class="dot dot-purp-d"></div>
+            <div class="dot dot-green-d"></div>
+            <div class="dot dot-orng-d"></div>
+            <div class="dot dot-purp-d"></div>
+            <div class="dot dot-vlt"></div>
+            <div class="dot dot-orng-d"></div>
+            <div class="dot dot-green-l"></div>
+            <div class="dot dot-orng-d"></div>
+            <div class="dot dot-orng"></div>
+            <div class="dot dot-orng"></div>
+        </div>
+        <div class="dots-row row11">
+            <div class="dot dot-purp-l"></div>
+            <div class="dot dot-orng"></div>
+            <div class="dot dot-orng-d"></div>
+            <div class="dot dot-vlt"></div>
+            <div class="dot dot-orng"></div>
+            <div class="dot dot-green-d"></div>
+
+            <div class="dot dot-purp-d"></div>
+            <div class="dot dot-purp-l"></div>
+            <div class="dot dot-purp-d"></div>
+            <div class="dot dot-pink-d"></div>
+            <div class="dot dot-green-l"></div>
+            <div class="dot dot-vlt"></div>
+            <div class="dot dot-green-d"></div>
+            <div class="dot dot-green-l"></div>
+            <div class="dot dot-orng-d"></div>
+            <div class="dot dot-purp-d"></div>
+            <div class="dot dot-orng"></div>
+            <div class="dot dot-blue-d"></div>
+            <div class="dot dot-blue-l"></div>
+        </div>
+        <div class="dots-row row12">
+            <div class="dot dot-purp-l"></div>
+            <div class="dot dot-green-d"></div>
+            <div class="dot dot-green-l"></div>
+            <div class="dot dot-orng"></div>
+            <div class="dot dot-pink-l"></div>
+            <div class="dot dot-pink-l"></div>
+
+            <div class="dot dot-green-d"></div>
+            <div class="dot dot-orng"></div>
+            <div class="dot dot-purp-d"></div>
+            <div class="dot dot-pink-d"></div>
+            <div class="dot dot-blue-d"></div>
+            <div class="dot dot-vlt"></div>
+            <div class="dot dot-green-l"></div>
+            <div class="dot dot-purp-l"></div>
+            <div class="dot dot-orng"></div>
+            <div class="dot dot-orng-d"></div>
+            <div class="dot dot-vlt"></div>
+            <div class="dot dot-vlt"></div>
+            <div class="dot dot-orng-d"></div>
+        </div>
+        <div class="dots-row row13">
+            <div class="dot dot-purp-d"></div>
+            <div class="dot dot-green-l"></div>
+            <div class="dot dot-green-l"></div>
+            <div class="dot dot-pink-l"></div>
+            <div class="dot dot-orng"></div>
+            <div class="dot dot-green-l"></div>
+        </div>
+        <div class="dots-row row14">
+            <div class="dot dot-pink-d"></div>
+            <div class="dot dot-green-l"></div>
+            <div class="dot dot-green-l"></div>
+            <div class="dot dot-green-d"></div>
+            <div class="dot dot-blue-d"></div>
+            <div class="dot dot-blue-l"></div>
+        </div>
+        <div class="dots-row row15">
+            <div class="dot dot-purp-d"></div>
+            <div class="dot dot-orng"></div>
+            <div class="dot dot-orng-d"></div>
+            <div class="dot dot-purp-l"></div>
+            <div class="dot dot-green-d"></div>
+            <div class="dot dot-green-l"></div>
+        </div>
+        <div class="dots-row row16">
+            <div class="dot dot-pink-l"></div>
+            <div class="dot dot-orng"></div>
+            <div class="dot dot-pink-l"></div>
+            <div class="dot dot-pink-d"></div>
+            <div class="dot dot-green-l"></div>
+            <div class="dot dot-green-d"></div>
+        </div>
+        <div class="dots-row row17">
+            <div class="dot dot-purp-l"></div>
+            <div class="dot dot-green-l"></div>
+            <div class="dot dot-blue-d"></div>
+            <div class="dot dot-vlt"></div>
+            <div class="dot dot-green-l"></div>
+            <div class="dot dot-green-d"></div>
+        </div>
+        <div class="dots-row row18">
+            <div class="dot dot-vlt"></div>
+            <div class="dot dot-pink-l"></div>
+            <div class="dot dot-orng"></div>
+            <div class="dot dot-blue-l"></div>
+            <div class="dot dot-pink-d"></div>
+            <div class="dot dot-green-l"></div>
+        </div>
+        <div class="dots-row row19">
+            <div class="dot dot-green-l"></div>
+            <div class="dot dot-purp-l"></div>
+            <div class="dot dot-blue-d"></div>
+            <div class="dot dot-blue-l"></div>
+            <div class="dot dot-orng"></div>
+            <div class="dot dot-orng"></div>
+        </div>
+        <div class="dots-row row20">
+            <div class="dot dot-orng"></div>
+            <div class="dot dot-purp-l"></div>
+            <div class="dot dot-blue-d"></div>
+            <div class="dot dot-blue-l"></div>
+            <div class="dot dot-orng"></div>
+            <div class="dot dot-green-l"></div>
+        </div>
+        <div class="dots-row row20">
+            <div class="dot dot-pink-d"></div>
+            <div class="dot dot-blue-d"></div>
+            <div class="dot dot-orng"></div>
+            <div class="dot dot-purp-l"></div>
+            <div class="dot dot-purp-l"></div>
+            <div class="dot dot-blue-l"></div>
+        </div>
+        <div class="dots-row row20">
+            <div class="dot dot-orng"></div>
+            <div class="dot dot-purp-l"></div>
+            <div class="dot dot-purp-l"></div>
+            <div class="dot dot-green-d"></div>
+            <div class="dot dot-blue-l"></div>
+            <div class="dot dot-purp-l"></div>
+
+            <div class="dot dot-pink-l"></div>
+            <div class="dot dot-pink-l"></div>
+            <div class="dot dot-green-l"></div>
+            <div class="dot dot-blue-d"></div>
+            <div class="dot dot-orng-d"></div>
+            <div class="dot dot-purp-l"></div>
+            <div class="dot dot-blue-l"></div>
+            <div class="dot dot-green-l"></div>
+            <div class="dot dot-green-l"></div>
+            <div class="dot dot-green-l"></div>
+            <div class="dot dot-orng-d"></div>
+            <div class="dot dot-green-l"></div>
+            <div class="dot dot-purp-d"></div>
+            <div class="dot dot-orng-d"></div>
+            <div class="dot dot-purp-l"></div>
+            <div class="dot dot-blue-d"></div>
+            <div class="dot dot-orng"></div>
+            <div class="dot dot-blue-l"></div>
+            <div class="dot dot-orng"></div>
+            <div class="dot dot-green-l"></div>
+            <div class="dot dot-purp-l"></div>
+            <div class="dot dot-green-d"></div>
+            <div class="dot dot-green-l"></div>
+            <div class="dot dot-orng"></div>
+            <div class="dot dot-pink-l"></div>
+            <div class="dot dot-pink-l"></div>
+            <div class="dot dot-green-d"></div>
+            <div class="dot dot-orng"></div>
+            <div class="dot dot-purp-d"></div>
+            <div class="dot dot-pink-d"></div>
+            <div class="dot dot-blue-d"></div>
+            <div class="dot dot-vlt"></div>
+            <div class="dot dot-green-l"></div>
+            <div class="dot dot-purp-l"></div>
+            <div class="dot dot-orng"></div>
+            <div class="dot dot-pink-d"></div>
+            <div class="dot dot-orng-d"></div>
+            <div class="dot dot-vlt"></div>
+            <div class="dot dot-vlt"></div>
+            <div class="dot dot-pink-l"></div>
+            <div class="dot dot-orng"></div>
+            <div class="dot dot-purp-d"></div>
+            <div class="dot dot-orng-d"></div>
+
+        </div>
+        <div class="dots-row row21">
+            <div class="dot dot-purp-l"></div>
+            <div class="dot dot-green-d"></div>
+            <div class="dot dot-blue-l"></div>
+            <div class="dot dot-purp-l"></div>
+            <div class="dot dot-purp-l"></div>
+            <div class="dot dot-orng"></div>
+
+            <div class="dot dot-vlt"></div>
+            <div class="dot dot-orng-d"></div>
+            <div class="dot dot-pink-l"></div>
+            <div class="dot dot-green-l"></div>
+            <div class="dot dot-purp-l"></div>
+            <div class="dot dot-pink-l"></div>
+            <div class="dot dot-blue-d"></div>
+            <div class="dot dot-green-l"></div>
+            <div class="dot dot-orng-d"></div>
+            <div class="dot dot-green-l"></div>
+            <div class="dot dot-orng"></div>
+            <div class="dot dot-vlt"></div>
+            <div class="dot dot-blue-d"></div>
+            <div class="dot dot-orng"></div>
+            <div class="dot dot-green-l"></div>
+            <div class="dot dot-pink-l"></div>
+            <div class="dot dot-purp-d"></div>
+            <div class="dot dot-green-l"></div>
+            <div class="dot dot-orng-d"></div>
+            <div class="dot dot-purp-l"></div>
+            <div class="dot dot-blue-l"></div>
+            <div class="dot dot-orng"></div>
+            <div class="dot dot-pink-l"></div>
+            <div class="dot dot-green-l"></div>
+            <div class="dot dot-purp-d"></div>
+            <div class="dot dot-blue-d"></div>
+            <div class="dot dot-green-d"></div>
+            <div class="dot dot-pink-d"></div>
+            <div class="dot dot-green-d"></div>
+            <div class="dot dot-orng-d"></div>
+            <div class="dot dot-orng"></div>
+            <div class="dot dot-vlt"></div>
+            <div class="dot dot-orng"></div>
+            <div class="dot dot-pink-d"></div>
+            <div class="dot dot-pink-l"></div>
+            <div class="dot dot-green-l"></div>
+            <div class="dot dot-purp-l"></div>
+            <div class="dot dot-orng"></div>
+            <div class="dot dot-purp-d"></div>
+            <div class="dot dot-orng-d"></div>
+            <div class="dot dot-vlt"></div>
+            <div class="dot dot-vlt"></div>
+
+        </div>
+        <div class="dots-row row22">
+            <div class="dot dot-blue-l"></div>
+            <div class="dot dot-green-d"></div>
+            <div class="dot dot-purp-l"></div>
+            <div class="dot dot-blue-d"></div>
+            <div class="dot dot-orng"></div>
+            <div class="dot dot-purp-l"></div>
+            <div class="dot dot-orng-d"></div>
+            <div class="dot dot-purp-l"></div>
+
+            <div class="dot dot-vlt"></div>
+            <div class="dot dot-green-l"></div>
+            <div class="dot dot-pink-l"></div>
+            <div class="dot dot-green-l"></div>
+            <div class="dot dot-orng"></div>
+            <div class="dot dot-pink-l"></div>
+            <div class="dot dot-blue-d"></div>
+            <div class="dot dot-orng"></div>
+            <div class="dot dot-orng-d"></div>
+            <div class="dot dot-green-l"></div>
+            <div class="dot dot-vlt"></div>
+            <div class="dot dot-blue-d"></div>
+            <div class="dot dot-orng-d"></div>
+            <div class="dot dot-green-l"></div>
+            <div class="dot dot-pink-l"></div>
+            <div class="dot dot-orng"></div>
+            <div class="dot dot-purp-d"></div>
+            <div class="dot dot-green-l"></div>
+            <div class="dot dot-purp-d"></div>
+            <div class="dot dot-blue-l"></div>
+            <div class="dot dot-pink-d"></div>
+            <div class="dot dot-pink-l"></div>
+            <div class="dot dot-green-l"></div>
+            <div class="dot dot-orng"></div>
+            <div class="dot dot-blue-d"></div>
+            <div class="dot dot-green-d"></div>
+            <div class="dot dot-pink-d"></div>
+            <div class="dot dot-green-d"></div>
+            <div class="dot dot-orng-d"></div>
+            <div class="dot dot-purp-l"></div>
+            <div class="dot dot-vlt"></div>
+            <div class="dot dot-orng"></div>
+            <div class="dot dot-orng-d"></div>
+            <div class="dot dot-pink-l"></div>
+            <div class="dot dot-green-l"></div>
+            <div class="dot dot-vlt"></div>
+            <div class="dot dot-orng"></div>
+            <div class="dot dot-vlt"></div>
+            <div class="dot dot-purp-d"></div>
+
+        </div>
+        <div class="dots-row row23">
+            <div class="dot dot-purp-l"></div>
+            <div class="dot dot-blue-l"></div>
+            <div class="dot dot-orng"></div>
+            <div class="dot dot-purp-l"></div>
+            <div class="dot dot-orng"></div>
+            <div class="dot dot-vlt"></div>
+            <div class="dot dot-orng"></div>
+            <div class="dot dot-blue-d"></div>
+            <div class="dot dot-orng-d"></div>
+            <div class="dot dot-vlt"></div>
+            <div class="dot dot-pink-l"></div>
+            
+            <div class="dot dot-green-l"></div>
+            <div class="dot dot-green-d"></div>
+            <div class="dot dot-pink-l"></div>
+            <div class="dot dot-purp-l"></div>
+            <div class="dot dot-blue-d"></div>
+            <div class="dot dot-green-l"></div>
+            <div class="dot dot-blue-d"></div>
+            <div class="dot dot-green-l"></div>
+            <div class="dot dot-orng-d"></div>
+            <div class="dot dot-orng-d"></div>
+            <div class="dot dot-vlt"></div>
+            <div class="dot dot-pink-l"></div>
+            <div class="dot dot-green-l"></div>
+            <div class="dot dot-xl dot-blue-d"></div>
+            <div class="dot dot-lg dot-orng"></div>
+            <div class="dot dot-md dot-purp-d"></div>
+            <div class="dot dot-sm dot-orng-d"></div>
+            <div class="dot dot-sm dot-vlt"></div>
+            <div class="dot dot-xs dot-blue-l"></div>
+            <div class="dot dot-xs dot-blue-d"></div>
+            <div class="dot dot-xs dot-green-l"></div>
+            <div class="dot dot-xs dot-green-l"></div>
+            <div class="dot dot-xs dot-pink-d"></div>
+            <div class="dot dot-xs dot-purp-d"></div>
+            <div class="dot dot-xs dot-pink-l"></div>
+            <div class="dot dot-xs dot-pink-d"></div>
+            <div class="dot dot-sm dot-orng"></div>
+            <div class="dot dot-md dot-purp-l"></div>
+            <div class="dot dot-lg dot-green-d"></div>
+            <div class="dot dot-vlt"></div>
+            <div class="dot dot-green-d"></div>
+            <div class="dot dot-orng-d"></div>
+            <div class="dot dot-orng"></div>
+            <div class="dot dot-orng-d"></div>
+            <div class="dot dot-vlt"></div>
+            <div class="dot dot-pink-l"></div>
+            <div class="dot dot-orng"></div>
+
+        </div>
+        <div class="dots-row row24">
+            <div class="dot dot-purp-l"></div>
+            <div class="dot dot-blue-l"></div>
+            <div class="dot dot-purp-l"></div>
+            <div class="dot dot-orng"></div>
+            <div class="dot dot-vlt"></div>
+            <div class="dot dot-orng"></div>
+            <div class="dot dot-orng"></div>
+            <div class="dot dot-blue-d"></div>
+            <div class="dot dot-orng-d"></div>
+            <div class="dot dot-pink-l"></div>
+            
+            <div class="dot dot-green-l"></div>
+            <div class="dot dot-green-d"></div>
+            <div class="dot dot-orng-d"></div>
+            <div class="dot dot-pink-l"></div>
+            <div class="dot dot-purp-l"></div>
+            <div class="dot dot-blue-d"></div>
+            <div class="dot dot-green-l"></div>
+            <div class="dot dot-green-l"></div>
+            <div class="dot dot-orng"></div>
+            <div class="dot dot-vlt"></div>
+            <div class="dot dot-md dot-pink-l"></div>
+            <div class="dot dot-sm dot-green-l"></div>
+            <div class="dot dot-xs dot-blue-d"></div>
+
+        </div>
+        <div class="dots-row row25">
+            <div class="dot dot-pink-l"></div>
+            <div class="dot dot-orng"></div>
+            <div class="dot dot-vlt"></div>
+            <div class="dot dot-blue-l"></div>
+            <div class="dot dot-orng"></div>
+            <div class="dot dot-purp-d"></div>
+            <div class="dot dot-orng-d"></div>
+            <div class="dot dot-purp-l"></div>
+            
+            <div class="dot dot-orng"></div>
+            <div class="dot dot-green-l"></div>
+            <div class="dot dot-pink-l"></div>
+            <div class="dot dot-blue-d"></div>
+            <div class="dot dot-green-l"></div>
+            <div class="dot dot-pink-l"></div>
+            <div class="dot dot-vlt"></div>
+            <div class="dot dot-blue-l"></div>
+            <div class="dot dot-md dot-pink-l"></div>
+            <div class="dot dot-sm dot-green-l"></div>
+            <div class="dot dot-xs dot-blue-d"></div>
+
+        </div>
+        <div class="dots-row row26">
+            <div class="dot dot-vlt"></div>
+            <div class="dot dot-orng"></div>
+            <div class="dot dot-pink-l"></div>
+            <div class="dot dot-orng-d"></div>
+            <div class="dot dot-blue-d"></div>
+            <div class="dot dot-purp-l"></div>
+            <div class="dot dot-blue-l"></div>
+            <div class="dot dot-orng"></div>
+            
+            <div class="dot dot-orng"></div>
+            <div class="dot dot-vlt"></div>
+            <div class="dot dot-green-l"></div>
+            <div class="dot dot-green-l"></div>
+            <div class="dot dot-blue-l"></div>
+            <div class="dot dot-md dot-pink-l"></div>
+            <div class="dot dot-sm dot-green-l"></div>
+            <div class="dot dot-xs dot-blue-d"></div>
+
+        </div>
+    </div>
+
+    <!-- play games dots  -->
+    <div class="bg-dots-con d-flex flex-column pt-0">
+        <div class="dots-row row1">
+            <div class="dot dot-pink-l"></div>
+            <div class="dot dot-orng"></div>
+            <div class="dot dot-orng"></div>
+            <div class="dot dot-green-l"></div>
+            <div class="dot dot-orng"></div>
+            <div class="dot dot-blue-d"></div>
+            <div class="dot dot-green-l"></div>
+            <div class="dot dot-pink-l"></div>
+            <div class="dot dot-vlt"></div>
+            <div class="dot dot-blue-l"></div>
+            <div class="dot dot-vlt"></div>
+            <div class="dot dot-md dot-pink-l"></div>
+            <div class="dot dot-sm dot-green-l"></div>
+            <div class="dot dot-xs dot-blue-d"></div>
+
+        </div>
+        <div class="dots-row row2">
+            <div class="dot dot-purp-l"></div>
+            <div class="dot dot-blue-l"></div>
+            <div class="dot dot-purp-l"></div>
+            <div class="dot dot-orng"></div>
+            <div class="dot dot-vlt"></div>
+            <div class="dot dot-orng"></div>
+            <div class="dot dot-pink-l"></div>
+            <div class="dot dot-orng"></div>
+            <div class="dot dot-blue-d"></div>
+            <div class="dot dot-lg dot-orng-d"></div>
+            <div class="dot dot-md dot-pink-l"></div>
+            <div class="dot dot-sm dot-pink-l"></div>
+        </div>
+        <div class="dots-row row3">
+            <div class="dot dot-purp-l"></div>
+            <div class="dot dot-green-d"></div>
+            <div class="dot dot-orng"></div>
+            <div class="dot dot-pink-l"></div>
+            <div class="dot dot-blue-l"></div>
+            <div class="dot dot-purp-l"></div>
+            <div class="dot dot-blue-d"></div>
+            <div class="dot dot-green-l"></div>
+            <div class="dot dot-lg dot-orng"></div>
+            <div class="dot dot-md dot-vlt"></div>
+            <div class="dot dot-sm dot-pink-l"></div>
+        </div>
+        <div class="dots-row row4">
+            <div class="dot dot-pink-l"></div>
+            <div class="dot dot-purp-l"></div>
+            <div class="dot dot-green-d"></div>
+            <div class="dot dot-orng"></div>
+            <div class="dot dot-pink-l"></div>
+            <div class="dot dot-blue-d"></div>
+            <div class="dot dot-lg dot-orng"></div>
+            <div class="dot dot-md dot-vlt"></div>
+            <div class="dot dot-sm dot-pink-l"></div>
+        </div>
+        <div class="dots-row row5">
+            <div class="dot dot-pink-d"></div>
+            <div class="dot dot-green-l"></div>
+            <div class="dot dot-orng"></div>
+            <div class="dot dot-purp-l"></div>
+            <div class="dot dot-vlt"></div>
+            <div class="dot dot-green-d"></div>
+            <div class="dot dot-lg dot-orng-d"></div>
+        </div>
+        <div class="dots-row row6">
+            <div class="dot dot-green-l"></div>
+            <div class="dot dot-purp-l"></div>
+            <div class="dot dot-orng"></div>
+            <div class="dot dot-orng-d"></div>
+            <div class="dot dot-purp-l"></div>
+        </div>
+        <div class="dots-row row7">
+            <div class="dot dot-blue-l"></div>
+            <div class="dot dot-orng-d"></div>
+            <div class="dot dot-green-l"></div>
+            <div class="dot dot-purp-l"></div>
+        </div>
+        <div class="dots-row row8">
+            <div class="dot dot-blue-d"></div>
+            <div class="dot dot-purp-l"></div>
+            <div class="dot dot-orng"></div>
+        </div>
+        <div class="dots-row row9">
+            <div class="dot dot-vlt"></div>
+            <div class="dot dot-vlt"></div>
+            <div class="dot dot-orng"></div>
+        </div>
+        <div class="dots-row row10">
+            <div class="dot dot-purp-l"></div>
+            <div class="dot dot-purp-l"></div>
+            <div class="dot dot-vlt"></div>
+        </div>
+        <div class="dots-row row11">
+            <div class="dot dot-pink-l"></div>
+            <div class="dot dot-orng"></div>
+            <div class="dot dot-orng-d"></div>
+        </div>
+        <div class="dots-row row12">
+            <div class="dot dot-vlt"></div>
+            <div class="dot dot-green-d"></div>
+            <div class="dot dot-purp-d"></div>
+        </div>
+        <div class="dots-row row13">
+            <div class="dot dot-purp-l"></div>
+            <div class="dot dot-pink-l"></div>
+            <div class="dot dot-orng-d"></div>
+        </div>
+        <div class="dots-row row14">
+            <div class="dot dot-purp-l"></div>
+            <div class="dot dot-green-l"></div>
+            <div class="dot dot-green-l"></div>
+        </div>
+        <div class="dots-row row15">
+            <div class="dot dot-pink-d"></div>
+            <div class="dot dot-green-l"></div>
+            <div class="dot dot-green-l"></div>
+            
+        </div>
+        <div class="dots-row row16">
+            <div class="dot dot-purp-d"></div>
+            <div class="dot dot-orng"></div>
+            <div class="dot dot-orng-d"></div>
+            
+        </div>
+        <div class="dots-row row17">
+            <div class="dot dot-pink-l"></div>
+            <div class="dot dot-orng"></div>
+            <div class="dot dot-pink-l"></div>
+            
+        </div>
+        <div class="dots-row row18">
+            <div class="dot dot-purp-l"></div>
+            <div class="dot dot-green-l"></div>
+            <div class="dot dot-blue-d"></div>
+            
+        </div>
+        <div class="dots-row row19">
+            <div class="dot dot-vlt"></div>
+            <div class="dot dot-pink-l"></div>
+            <div class="dot dot-orng"></div>
+            
+        </div>
+        <div class="dots-row row20">
+            <div class="dot dot-green-l"></div>
+            <div class="dot dot-purp-l"></div>
+            <div class="dot dot-blue-d"></div>
+            
+        </div>
+        <div class="dots-row row21">
+            <div class="dot dot-orng"></div>
+            <div class="dot dot-purp-l"></div>
+            <div class="dot dot-blue-d"></div>
+            
+        </div>
+        <div class="dots-row row22">
+            <div class="dot dot-pink-d"></div>
+            <div class="dot dot-blue-d"></div>
+            <div class="dot dot-orng"></div>
+            
+        </div>
+        <div class="dots-row row23">
+            <div class="dot dot-orng"></div>
+            <div class="dot dot-purp-l"></div>
+            <div class="dot dot-purp-l"></div>
+
+        </div>
+        <div class="dots-row row24">
+            <div class="dot dot-purp-l"></div>
+            <div class="dot dot-green-d"></div>
+            <div class="dot dot-blue-l"></div>
+        </div>
+        <div class="dots-row row25">
+            <div class="dot dot-blue-l"></div>
+            <div class="dot dot-green-d"></div>
+            <div class="dot dot-purp-l"></div>
+        </div>
+        <div class="dots-row row26">
+            <div class="dot dot-purp-l"></div>
+            <div class="dot dot-blue-l"></div>
+            <div class="dot dot-orng-d"></div>
+        </div>
+        <div class="dots-row row27">
+            <div class="dot dot-orng"></div>
+            <div class="dot dot-blue-l"></div>
+            <div class="dot dot-purp-l"></div>
+        </div>
+        <!-- <div class="dots-row row28">
+            <div class="dot dot-green-d"></div>
+            <div class="dot dot-purp-l"></div>
+            <div class="dot dot-blue-l"></div>
+            
+        </div>
+        <div class="dots-row row29">
+            <div class="dot dot-blue-l"></div>
+            <div class="dot dot-orng-d"></div>
+            <div class="dot dot-green-l"></div>
+            
+        </div>
+        <div class="dots-row row30">
+            <div class="dot dot-orng"></div>
+            <div class="dot dot-pink-l"></div>
+            <div class="dot dot-orng"></div>
+            
+        </div> -->
+        
+    </div>
+
+
     <div class="main-wrapper">
         <div class="container-fluid p-0">
             <!-- header-section start -->
             <section class="hero-section">
-                <div class="header-dots-cont">
-                    <div class="dots-col col1">
-                        <div class="dot dot-vlt"></div>
-                        <div class="dot dot-pink-l"></div>
-                        <div class="dot dot-blue-l"></div>
-                        <div class="dot dot-purp-l"></div>
-                        <div class="dot dot-vlt"></div>
-                        <div class="dot dot-xl dot-pink-l"></div>
-                        <div class="dot dot-xl dot-pink-d"></div>
-                        <div class="dot dot-lg dot-green-l"></div>
-                        <div class="dot dot-lg dot-orng"></div>
-                        <div class="dot dot-lg dot-green-l"></div>
-                        <div class="dot dot-md dot-orng"></div>
-                        <div class="dot dot-xs dot-orng"></div>
-                    </div>
-                    <div class="dots-col col2">
-                        <div class="dot dot-pink-l"></div>
-                        <div class="dot dot-orng"></div>
-                        <div class="dot dot-green-l"></div>
-                        <div class="dot dot-xl dot-green-l"></div>
-                        <div class="dot dot-xl dot-orng"></div>
-                        <div class="dot dot-xl dot-pink-l"></div>
-                        <div class="dot dot-lg dot-orng"></div>
-                        <div class="dot dot-lg dot-purp-l"></div>
-                        <div class="dot dot-lg dot-blue-d"></div>
-                        <div class="dot dot-md dot-vol"></div>
-                        <div class="dot dot-xs dot-orng"></div>
-                    </div>
-                    <div class="dots-col col3">
-                        <div class="dot dot-orng"></div>
-                        <div class="dot dot-purp-l"></div>
-                        <div class="dot dot-vlt"></div>
-                        <div class="dot dot-vlt"></div>
-                        <div class="dot dot-xl dot-orng-d"></div>
-                        <div class="dot dot-lg dot-orng"></div>
-                        <div class="dot dot-lg dot-vlt"></div>
-                        <div class="dot dot-lg dot-purp-l"></div>
-                        <div class="dot dot-md dot-vlt"></div>
-                        <div class="dot dot-sm dot-pink-l"></div>
-                    </div>
-                    <div class="dots-col col4">
-                        <div class="dot dot-blue-l"></div>
-                        <div class="dot dot-green-l"></div>
-                        <div class="dot dot-purp-l"></div>
-                        <div class="dot dot-pink-d"></div>
-                        <div class="dot dot-purp-d"></div>
-                        <div class="dot dot-lg dot-pink-d"></div>
-                        <div class="dot dot-lg dot-pink-d"></div>
-                        <div class="dot dot-lg dot-pink-l"></div>
-                        <div class="dot dot-md dot-pink-l"></div>
-                    </div>
-                    <div class="dots-col col5">
-                        <div class="dot dot-orng"></div>
-                        <div class="dot dot-purp-l"></div>
-                        <div class="dot dot-pink-d"></div>
-                        <div class="dot dot-green-l"></div>
-                        <div class="dot dot-xl dot-vlt"></div>
-                        <div class="dot dot-xl dot-pink-l"></div>
-                        <div class="dot dot-lg dot-pink-d"></div>
-                        <div class="dot dot-lg dot-green-l"></div>
-                        <div class="dot dot-xs dot-pink-l"></div>
-                    </div>
-                    <div class="dots-col col6">
-                        <div class="dot dot-green-l"></div>
-                        <div class="dot dot-pink-d"></div>
-                        <div class="dot dot-green-l"></div>
-                        <div class="dot dot-blue-d"></div>
-                        <div class="dot dot-xl dot-pink-l"></div>
-                        <div class="dot dot-lg dot-purp-l"></div>
-                        <div class="dot dot-lg dot-purp-l"></div>
-                        <div class="dot dot-sm dot-green-l"></div>
-                    </div>
-                    <div class="dots-col col7">
-                        <div class="dot dot-green-l"></div>
-                        <div class="dot dot-purp-d"></div>
-                        <div class="dot dot-orng"></div>
-                        <div class="dot dot-xl dot-blue-l"></div>
-                        <div class="dot dot-xl dot-pink-d"></div>
-                        <div class="dot dot-lg dot-pink-l"></div>
-                        <div class="dot dot-lg dot-purp-d"></div>
-                    </div>
-                    <div class="dots-col col8">
-                        <div class="dot dot-green-l"></div>
-                        <div class="dot dot-pink-l"></div>
-                        <div class="dot dot-orng"></div>
-                        <div class="dot dot-purp-l"></div>
-                        <div class="dot dot-xl dot-purp-l"></div>
-                        <div class="dot dot-lg dot-purp-l"></div>
-                        <div class="dot dot-sm dot-pink-l"></div>
-                    </div>
-                    <div class="dots-col col9">
-                        <div class="dot dot-pink-l"></div>
-                        <div class="dot dot-pink-l"></div>
-                        <div class="dot dot-vlt"></div>
-                        <div class="dot dot-purp-d"></div>
-                        <div class="dot dot-blue-l"></div>
-                        <div class="dot dot-lg dot-blue-l"></div>
-                    </div>
-                    <div class="dots-col col10">
-                        <div class="dot dot-orng"></div>
-                        <div class="dot dot-pink-d"></div>
-                        <div class="dot dot-pink-l"></div>
-                        <div class="dot dot-orng-d"></div>
-                        <div class="dot dot-lg dot-green-l"></div>
-                        <div class="dot dot-md dot-orng"></div>
-                    </div>
-                    <div class="dots-col col11">
-                        <div class="dot dot-orng"></div>
-                        <div class="dot dot-blue-l"></div>
-                        <div class="dot dot-purp-l"></div>
-                        <div class="dot dot-blue-d"></div>
-                        <div class="dot dot-lg dot-orng"></div>
-                    </div>
-                    <div class="dots-col col12">
-                        <div class="dot dot-blue-l"></div>
-                        <div class="dot dot-green-l"></div>
-                        <div class="dot dot-orng"></div>
-                        <div class="dot dot-xl dot-orng"></div>
-                        <div class="dot dot-md dot-orng-d"></div>
-                    </div>
-                    <div class="dots-col col13">
-                        <div class="dot dot-purp-l"></div>
-                        <div class="dot dot-purp-d"></div>
-                        <div class="dot dot-xl dot-vlt"></div>
-                        <div class="dot dot-xl dot-vlt"></div>
-                        <div class="dot dot-sm dot-orng-d"></div>
-                    </div> 
-                    <div class="dots-col col14">
-                        <div class="dot dot-orng"></div>
-                        <div class="dot dot-green-l"></div>
-                        <div class="dot dot-orng"></div>
-                        <div class="dot dot-pink-l"></div>
-                    </div>
-                    <div class="dots-col col15">
-                        <div class="dot dot-purp-d"></div>
-                        <div class="dot dot-pink-l"></div>
-                        <div class="dot dot-blue-l"></div>
-                        <div class="dot dot-lg dot-green-l"></div>
-                    </div>
-                    <div class="dots-col col16">
-                        <div class="dot dot-purp-l"></div>
-                        <div class="dot dot-orng"></div>
-                        <div class="dot dot-orng"></div>
-                        <div class="dot dot-md dot-green-l"></div>
-                    </div>
-                    <div class="dots-col col17">
-                        <div class="dot dot-green-l"></div>
-                        <div class="dot dot-purp-l"></div>
-                        <div class="dot dot-vlt"></div>
-                        <div class="dot dot-md dot-vlt"></div>
-                    </div>
-                    <div class="dots-col col18">
-                        <div class="dot dot-blue-d"></div>
-                        <div class="dot dot-pink-l"></div>
-                        <div class="dot dot-green-l"></div>
-                    </div>
-                    <div class="dots-col col19">
-                        <div class="dot dot-orng-d"></div>
-                        <div class="dot dot-pink-l"></div>
-                        <div class="dot dot-pink-d"></div>
-                    </div>
-                    <div class="dots-col col20">
-                        <div class="dot dot-orng"></div>
-                        <div class="dot dot-green-l"></div>
-                        <div class="dot dot-lg dot-orng"></div>
-                    </div>
-                    <div class="dots-col col21">
-                        <div class="dot dot-purp-d"></div>
-                        <div class="dot dot-orng"></div>
-                        <div class="dot dot-lg dot-vlt"></div>
-                    </div>
-                    <div class="dots-col col22">
-                        <div class="dot dot-pink-l"></div>
-                        <div class="dot dot-green-l"></div>
-                        <div class="dot dot-md dot-orng"></div>
-                    </div>
-                    <div class="dots-col col23">
-                        <div class="dot dot-green-l"></div>
-                        <div class="dot dot-orng"></div>
-                        <div class="dot dot-md dot-orng"></div>
-                    </div>
-                    <div class="dots-col col24">
-                        <div class="dot dot-orng"></div>
-                        <div class="dot dot-lg dot-pink-l"></div>
-                        <div class="dot dot-md dot-green-l"></div>
-                    </div>
-                    <div class="dots-col col25">
-                        <div class="dot dot-xl dot-purp-l"></div>
-                        <div class="dot dot-xl dot-green-l"></div>
-                        <div class="dot dot-md dot-blue-l"></div>
-                    </div>
-                    <div class="dots-col col26">
-                        <div class="dot dot-xl dot-pink-l"></div>
-                        <div class="dot dot-xl dot-pink-l"></div>
-                        <div class="dot dot-md dot-blue-l"></div>
-                    </div>
-                    <div class="dots-col col27">
-                        <div class="dot dot-xl dot-blue-l"></div>
-                        <div class="dot dot-xl dot-purp-d"></div>
-                        <div class="dot dot-md dot-pink-l"></div>
-                    </div>
-                    <div class="dots-col col28">
-                        <div class="dot dot-green-l"></div>
-                        <div class="dot dot-xl dot-orng"></div>
-                        <div class="dot dot-lg dot-pink-l"></div>
-                    </div>
-                    <div class="dots-col col29">
-                        <div class="dot dot-purp-l"></div>
-                        <div class="dot dot-xl dot-green-l"></div>
-                        <div class="dot dot-lg dot-vlt"></div>
-                    </div>
-                    <div class="dots-col col30">
-                        <div class="dot dot-orng"></div>
-                        <div class="dot dot-xl dot-vlt"></div>
-                        <div class="dot dot-lg dot-green-l"></div>
-                    </div>
-                    <div class="dots-col col31">
-                        <div class="dot dot-purp-l"></div>
-                        <div class="dot dot-xl dot-blue-d"></div>
-                        <div class="dot dot-lg dot-pink-l"></div>
-                    </div>
-                    <div class="dots-col col32">
-                        <div class="dot dot-vlt"></div>
-                        <div class="dot dot-xl dot-vlt"></div>
-                        <div class="dot dot-lg dot-green-l"></div>
-                    </div>
-                    <div class="dots-col col33">
-                        <div class="dot dot-purp-l"></div>
-                        <div class="dot dot-purp-l"></div>
-                        <div class="dot dot-purp-l"></div>
-                        <div class="dot dot-xs dot-pink-l"></div>
-                    </div>
-                    <div class="dots-col col34">
-                        <div class="dot dot-orng-d"></div>
-                        <div class="dot dot-pink-l"></div>
-                        <div class="dot dot-blue-d"></div>
-                        <div class="dot dot-sm dot-green-l"></div>
-                    </div>
-                    <div class="dots-col col35">
-                        <div class="dot dot-pink-d"></div>
-                        <div class="dot dot-purp-d"></div>
-                        <div class="dot dot-xl dot-purp-l"></div>
-                        <div class="dot dot-md dot-pink-l"></div>
-                    </div>
-                    <div class="dots-col col36">
-                        <div class="dot dot-orng-d"></div>
-                        <div class="dot dot-purp-d"></div>
-                        <div class="dot dot-xl dot-green-d"></div>
-                        <div class="dot dot-lg dot-green-l"></div>
-                    </div>
-                    <div class="dots-col col37">
-                        <div class="dot dot-green-d"></div>
-                        <div class="dot dot-green-l"></div>
-                        <div class="dot dot-xl dot-orng-d"></div>
-                        <div class="dot dot-xl dot-purp-d"></div>
-                        <div class="dot dot-sm dot-vlt"></div>
-                    </div>
-                    <div class="dots-col col38">
-                        <div class="dot dot-green-l"></div>
-                        <div class="dot dot-purp-l"></div>
-                        <div class="dot dot-xl dot-purp-d"></div>
-                        <div class="dot dot-xl dot-pink-l"></div>
-                        <div class="dot dot-md dot-vlt"></div>
-                    </div>
-                    <div class="dots-col col39">
-                        <div class="dot dot-purp-l"></div>
-                        <div class="dot dot-pink-d"></div>
-                        <div class="dot dot-xl dot-pink-d"></div>
-                        <div class="dot dot-xl dot-pink-l"></div>
-                        <div class="dot dot-lg dot-purp-l"></div>
-                    </div>
-                    <div class="dots-col col40">
-                        <div class="dot dot-green-l"></div>
-                        <div class="dot dot-green-l"></div>
-                        <div class="dot dot-xl dot-blue-d"></div>
-                        <div class="dot dot-xl dot-green-l"></div>
-                        <div class="dot dot-lg dot-orng-d"></div>
-                        <div class="dot dot-md dot-orng"></div>
-                    </div>
-                    <div class="dots-col col41">
-                        <div class="dot dot-orng-d"></div>
-                        <div class="dot dot-green-d"></div>
-                        <div class="dot dot-xl dot-vlt"></div>
-                        <div class="dot dot-xl dot-pink-l"></div>
-                        <div class="dot dot-xl dot-pink-l"></div>
-                        <div class="dot dot-lg dot-orng-d"></div>
-                    </div>
-                    <div class="dots-col col42">
-                        <div class="dot dot-purp-d"></div>
-                        <div class="dot dot-green-d"></div>
-                        <div class="dot dot-green-l"></div>
-                        <div class="dot dot-purp-d"></div>
-                        <div class="dot dot-xl dot-green-l"></div>
-                        <div class="dot dot-lg dot-green-d"></div>
-                        <div class="dot dot-sm dot-green-l"></div>
-                    </div>
-                    <div class="dots-col col43">
-                        <div class="dot dot-vlt"></div>
-                        <div class="dot dot-purp-d"></div>
-                        <div class="dot dot-purp-d"></div>
-                        <div class="dot dot-xl dot-pink-l"></div>
-                        <div class="dot dot-xl dot-purp-l"></div>
-                        <div class="dot dot-xl dot-orng"></div>
-                        <div class="dot dot-lg dot-orng-d"></div>
-                    </div>
-                    <div class="dots-col col44">                        
-                        <div class="dot dot-orng-d"></div>
-                        <div class="dot dot-orng-d"></div>
-                        <div class="dot dot-orng-d"></div>
-                        <div class="dot dot-xl dot-vlt"></div>
-                        <div class="dot dot-xl dot-purp-l"></div>
-                        <div class="dot dot-lg dot-vlt"></div>
-                        <div class="dot dot-lg dot-pink-l"></div>
-                        <div class="dot dot-sm dot-pink-l"></div>
-                    </div>
-                    <div class="dots-col col45">
-                        <div class="dot dot-green-d"></div>
-                        <div class="dot dot-purp-d"></div>
-                        <div class="dot dot-orng-d"></div>
-                        <div class="dot dot-xl dot-green-d"></div>
-                        <div class="dot dot-xl dot-orng"></div>
-                        <div class="dot dot-lg dot-pink-d"></div>
-                        <div class="dot dot-lg dot-purp-l"></div>
-                        <div class="dot dot-sm dot-vlt"></div>
-                        <div class="dot dot-xs dot-pink-l"></div>
-                    </div>
-                    <div class="dots-col col46">
-                        <div class="dot dot-orng-d"></div>
-                        <div class="dot dot-orng"></div>
-                        <div class="dot dot-vlt"></div>
-                        <div class="dot dot-pink-l"></div>
-                        <div class="dot dot-xl dot-purp-l"></div>
-                        <div class="dot dot-lg dot-pink-l"></div>
-                        <div class="dot dot-lg dot-pink-d"></div>
-                        <div class="dot dot-md dot-orng"></div>
-                        <div class="dot dot-sm dot-pink-l"></div>
-                    </div>
-                    <div class="dots-col col47">
-                        <div class="dot dot-orng"></div>
-                        <div class="dot dot-blue-l"></div>
-                        <div class="dot dot-vlt"></div>
-                        <div class="dot dot-orng"></div>
-                        <div class="dot dot-xl dot-blue-d"></div>
-                        <div class="dot dot-xl dot-green-l"></div>
-                        <div class="dot dot-xl dot-orng-d"></div>
-                        <div class="dot dot-lg dot-purp-d"></div>
-                        <div class="dot dot-md dot-orng"></div>
-                        <div class="dot dot-xs dot-green-l"></div>
-                    </div>
-                    <div class="dots-col col48">
-                        <div class="dot dot-orng-d"></div>
-                        <div class="dot dot-blue-d"></div>
-                        <div class="dot dot-orng-d"></div>
-                        <div class="dot dot-green-l"></div>
-                        <div class="dot dot-xl dot-green-d"></div>
-                        <div class="dot dot-xl dot-green-d"></div>
-                        <div class="dot dot-xl dot-blue-l"></div>
-                        <div class="dot dot-lg dot-blue-d"></div>
-                        <div class="dot dot-md dot-green-l"></div>
-                        <div class="dot dot-sm dot-purp-l"></div>
-                        <div class="dot dot-xs dot-green-l"></div>
-                    </div>
-                    <div class="dots-col col49">
-                        <div class="dot dot-blue-d"></div>
-                        <div class="dot dot-purp-l"></div>
-                        <div class="dot dot-purp-d"></div>
-                        <div class="dot dot-pink-d"></div>
-                        <div class="dot dot-blue-l"></div>
-                        <div class="dot dot-xl dot-orng"></div>
-                        <div class="dot dot-xl dot-green-l"></div>
-                        <div class="dot dot-lg dot-purp-l"></div>
-                        <div class="dot dot-lg dot-orng-d"></div>
-                        <div class="dot dot-md dot-orng-d"></div>
-                        <div class="dot dot-sm dot-orng-d"></div>
-                    </div>
-                </div>
+                
                 <header>
                     <!-- navbar start  -->
                     <nav class="navbar navbar-expand-lg navbar-fixed">
@@ -457,11 +1169,125 @@
                 </header>
             </section>
             <!-- header section end  -->
+
+            <!-- Get Ameta Section Start  -->
+            <section id="get-ameta">
+                <div class="get-ameta-sec">
+                    <div class="section-text">
+                        <h2>Get Ameta</h2>
+                        <p>$AMETA is an ERC-20 token, created on the polygon chain, which can be 
+                            used as a bet when participating in multiplayer games, and can be 
+                            obtained through the Swipe system.<br/>
+                            Currently, $AMETA and MATIC are allowed to exchange. <br/>
+                            Exchange rate 1 : 1
+                        </p>
+
+                        <div class="ameta-address">
+                            <div class="address-icon">
+                                <img src="./assets/images/polygon-icon.png" alt="">
+                            </div>
+                            <p>Verified contract address : 0x3683c0B540B49B19740d7B3dc11814de7a0faD5a</p>
+                        </div>
+                        <div class="polygon-btn-con mt-4 pt-3">
+                            <a href="" class="button-primary">Polygonscan</a>
+                        </div>
+                    </div>
+                    <div class="section-card">
+                        <div class="swap-card-con">
+                            <div class="swap-card">
+                                <div class="card-title">
+                                    <h3>Swap</h3>
+                                </div>
+                                <p>1 Matic = 1 Ameta</p>
+                                
+                                <div class="divider my-1"></div>
+
+                                <label for="" class="ms-1">From</label>
+                                <div class="swap-from">
+                                    <div class="swap-input-con matic-input-con my-1">
+                                        <div class="input-icon">
+                                            <img src="./assets/images/polygon-icon.png" alt="">
+                                        </div>
+                                        <div class="input-label">Matic</div>
+                                        <input type="text" placeholder="0" class="swap-input matic-input">
+                                    </div>
+                                </div>
+                                <label for="" class="balance-label ms-1 matic-balance">Balance : 0</label>
+
+                                <div class="swap-btn-con text-center my-2 mb-3">
+                                    <button class="swap-btn">
+                                        <img src="./assets/images/icons/swap.png" alt="">
+                                    </button>
+                                </div>
+
+                                <div class="divider my-1"></div>
+                                
+                                <label for=""  class="ms-1">To</label>
+                                <div class="swap-to">
+                                    <div class="swap-input-con ameta-input-con my-1">
+                                        <div class="input-icon">
+                                            <img src="./assets/images/AMETA-TOKEN-ICON.png" alt="">
+                                        </div>
+                                        <div class="input-label">Ameta</div>
+                                        <input type="text" placeholder="0" class="swap-input ameta-input">
+                                    </div>
+                                </div>
+                                <label for="" class="balance-label ms-1 ameta-balance">Balance : 0</label>
+
+                                <div class="wallet-btn-con text-center">
+                                    <button class="connect-wallet-btn mt-3">Connect Wallet</button>
+                                </div>
+                                <p class="gass-fee-label text-center mt-2">Gas Fee</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Get Ameta Section End  -->
+
+            <!-- Play Games Section Start -->
+            <section id="play-games">
+                <div class="play-games-sec">
+                    <div class="section-text">
+                        <h2>Play Games</h2>
+                        <p>According to the number of tokens required by 
+                            different games, put $AMETA as a bet to compete 
+                            with global players.
+                            <br/><br/>
+                            Our game combining technology, fun, gambling and 
+                            blockchain. More games will be released soon.
+                            <br/><br/>
+                            <span>
+                                * Winners get all the bets after deducting the
+                                    service fee from AMETAVERSE
+                            </span>
+                        </p>
+                    </div>
+
+                    <div class="game-cards-con">
+                       
+                    </div>
+                </div>
+            </section>
+            <!-- Play Games Section End -->
+            
         </div>
     </div>
 
-    <script src="./assets/js/jQuery-3.6.0.js"></script>
+    <!-- <script src="./assets/js/jQuery-3.6.0.js"></script> -->
     <script src="./assets/bootstrap-5.0.2/js/bootstrap.bundle.min.js"></script>
+   
     <script src="./assets/js/main.js"></script>
+   <script>
+     $(document).ready(function() {
+        $('#autoWidth').lightSlider({
+            autoWidth:true,
+            loop:true,
+            onSliderLoad: function() {
+                $('#autoWidth').removeClass('cS-hidden');
+            } 
+        });  
+    });
+   </script>
 </body>
 </html>

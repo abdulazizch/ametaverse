@@ -32,7 +32,7 @@ setInterval(function () {
         distance = Math.sqrt((distancex * distancex) + (distancey * distancey));
         
         
-        magnet = 1900 - distance*20;
+        magnet = 800;
         if(distance>130) {
            magnet=0; 
         }
@@ -49,3 +49,13 @@ setInterval(function () {
         el.css('top',  powery + forcey);
     });
 }, 5);
+
+
+$(".swap-btn").click(function(){
+    const swapFrom = $(".swap-from").html();
+    const swapTo = $(".swap-to").html();
+
+    $(".swap-from").html(swapTo)  
+    $(".swap-to").html(swapFrom)  
+    
+})
