@@ -29,12 +29,22 @@ h2 {
   font-size: 70px;
   color: #fff;
 }
+@media (max-width: 482px) {
+  h2 {
+    font-size: 32px;
+  }
+}
 
 p {
   font-family: "CasCadia";
   font-size: 17px;
   line-height: 26px;
   color: #fff;
+}
+@media (max-width: 482px) {
+  p {
+    font-size: 14px;
+  }
 }
 
 .cookie-popup {
@@ -61,7 +71,9 @@ p {
 }
 
 .bg-dots-con {
-  max-width: 100vw;
+  width: 100vw;
+  max-width: 1920px;
+  box-sizing: border-box;
   margin: auto;
   height: 101vh;
   top: 0;
@@ -509,10 +521,11 @@ header .header-text-cont {
   height: 80vh !important;
   display: flex;
   align-items: center;
-  padding-left: 50px;
+  padding-left: 4%;
 }
 #play-games .play-games-sec .game-cards-con ul.game-cards-crsl .item-card {
-  width: 386px;
+  width: 19vw;
+  min-width: 200px;
   border-radius: 10px;
   display: flex;
   box-sizing: border-box;
@@ -724,4 +737,52 @@ header .header-text-cont {
   100% {
     transform: translate(1px, -2px) rotate(-1deg);
   }
+}
+#FAQ .faq-sec {
+  width: 60%;
+  margin: auto;
+}
+@media (max-width: 482px) {
+  #FAQ .faq-sec {
+    width: 90%;
+  }
+}
+#FAQ .faq-sec .section-title {
+  text-align: center;
+}
+#FAQ .faq-sec .faq-dropdowns-con {
+  width: 70%;
+  margin: auto;
+  margin-top: 50px;
+  border-bottom: 1px solid #fff;
+}
+@media (max-width: 482px) {
+  #FAQ .faq-sec .faq-dropdowns-con {
+    width: 95%;
+  }
+}
+#FAQ .faq-sec .faq-dropdowns-con .accordion-item {
+  background-color: #000;
+  border-top: 1px solid #fff;
+}
+#FAQ .faq-sec .faq-dropdowns-con .accordion-item .accordion-button {
+  background-color: transparent;
+}
+#FAQ .faq-sec .faq-dropdowns-con .accordion-item .accordion-button.collapsed {
+  color: #fff;
+}
+#FAQ .faq-sec .faq-dropdowns-con .accordion-item .accordion-button:not(.collapsed) {
+  color: #fff;
+  background-color: transparent;
+}
+#FAQ .faq-sec .faq-dropdowns-con .accordion-item .accordion-button:focus {
+  outline: none;
+  box-shadow: none;
+  border: none;
+}
+#FAQ .faq-sec .faq-dropdowns-con .accordion-item .accordion-button::after {
+  background-image: url(../images/icons/plus.png);
+}
+#FAQ .faq-sec .faq-dropdowns-con .accordion-item .accordion-button:not(.collapsed)::after {
+  background-image: url(../images/icons/minus.png);
 }/*# sourceMappingURL=styles.css.map */
