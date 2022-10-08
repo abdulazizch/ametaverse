@@ -511,10 +511,6 @@ header .header-text-cont {
   align-items: center;
   padding-left: 50px;
 }
-#play-games .play-games-sec .game-cards-con ul.game-cards-crsl .slide-item.active {
-  transform: scale(1.2);
-  margin-right: 80px !important;
-}
 #play-games .play-games-sec .game-cards-con ul.game-cards-crsl .item-card {
   width: 386px;
   border-radius: 10px;
@@ -533,6 +529,7 @@ header .header-text-cont {
   bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
+  display: none;
 }
 #play-games .play-games-sec .game-cards-con ul.game-cards-crsl .item-card .slide-card-btn a {
   font-size: 32px;
@@ -550,6 +547,13 @@ header .header-text-cont {
   #play-games .play-games-sec .game-cards-con ul.game-cards-crsl .item-card {
     width: 300px;
   }
+}
+#play-games .play-games-sec .game-cards-con ul.game-cards-crsl .slide-item.active {
+  transform: scale(1.2);
+  margin-right: 80px !important;
+}
+#play-games .play-games-sec .game-cards-con ul.game-cards-crsl .slide-item.active .slide-card-btn {
+  display: block;
 }
 
 .cS-hidden {
@@ -579,4 +583,145 @@ header .header-text-cont {
   width: 40px;
   border: 10px solid #5a5a5a;
   background-color: #fff;
+}
+
+#roadmap .roadmap-sec {
+  width: 80%;
+  margin: auto;
+  padding-top: 173px;
+}
+#roadmap .roadmap-sec .section-title {
+  padding-left: 8%;
+}
+#roadmap .roadmap-sec .roadmap-timeline {
+  position: relative;
+}
+#roadmap .roadmap-sec .roadmap-timeline .cloud-img-items {
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+#roadmap .roadmap-sec .roadmap-timeline .cloud-img-items .cloud-img-item {
+  position: absolute;
+}
+#roadmap .roadmap-sec .roadmap-timeline .cloud-img-items .cloud-img-item:hover {
+  -webkit-animation: shake 0.5s infinite;
+          animation: shake 0.5s infinite;
+}
+#roadmap .roadmap-sec .roadmap-timeline .cloud-img-items .cloud-img-item.item-1 {
+  width: 193px;
+  top: 36%;
+  left: -2%;
+}
+#roadmap .roadmap-sec .roadmap-timeline .cloud-img-items .cloud-img-item.item-2 {
+  width: 190px;
+  left: 25%;
+  top: 3%;
+}
+#roadmap .roadmap-sec .roadmap-timeline .cloud-img-items .cloud-img-item.item-3 {
+  width: 212px;
+  left: 53%;
+  top: 14%;
+}
+#roadmap .roadmap-sec .roadmap-timeline .cloud-img-items .cloud-img-item.item-4 {
+  width: 200px;
+  right: 3%;
+  top: 35%;
+}
+#roadmap .roadmap-sec .roadmap-timeline .cloud-img-items .cloud-img-item img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+#roadmap .roadmap-sec .roadmap-timeline .timeline-item {
+  min-height: 23vh;
+}
+#roadmap .roadmap-sec .roadmap-timeline .timeline-item .item-text h3 {
+  font-size: 40px;
+  font-family: "GoGoHack";
+  color: #fff;
+  line-height: 26px;
+}
+#roadmap .roadmap-sec .roadmap-timeline .timeline-item .item-text ul {
+  list-style: none;
+  padding: 0;
+}
+#roadmap .roadmap-sec .roadmap-timeline .timeline-item .item-text ul li {
+  font-size: 20px;
+  font-family: "GoGoHack";
+  color: #fff;
+}
+
+@-webkit-keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
 }/*# sourceMappingURL=styles.css.map */
