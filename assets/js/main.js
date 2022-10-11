@@ -59,3 +59,81 @@ $(".swap-btn").click(function(){
     $(".swap-to").html(swapFrom)  
     
 })
+
+$(document).ready(function() {
+    const slider = $('#game-cards-crsl').lightSlider({
+        autoWidth:true,
+        loop:true,
+        item:3,
+        controls: false,
+        // autoWidth: false,
+        slideMargin: 40,
+        responsive : [
+        {
+            breakpoint:800,
+            settings: {
+                item:3,
+                slideMove:1,
+                slideMargin:6,
+              }
+        },
+        {
+            breakpoint:480,
+            settings: {
+                item:2,
+                slideMove:1
+              }
+        }
+    ],
+    onSliderLoad: function() {
+        $('#game-cards-crsl').removeClass('cS-hidden');
+        $('.lSPager').prepend("<span class='me-2 mb-2 btn-slide-prev text-white'><img src='./assets/images/icons/arrow-slide-left.png' ></span>")
+        $('.lSPager').append("<span class='ms-2 mb-2 btn-slide-next text-white'> <img src='./assets/images/icons/arrow-slide-right.png'></span>")
+
+        $(".btn-slide-prev").click(()=>{
+            slider.goToPrevSlide();
+        })
+        $(".btn-slide-next").click(()=>{
+            slider.goToNextSlide();
+        })
+    } 
+    });  
+});
+
+const fadeDown = new IntersectionObserver((el)=>{
+    el.forEach((e) =>{
+        if(e.isIntersecting){
+            e.target.classList.add("fade-down")
+        }
+        else{
+            e.target.classList.remove("fade-down")
+        }
+    })
+})
+const fadeRight = new IntersectionObserver((el)=>{
+    el.forEach((e) =>{
+        if(e.isIntersecting){
+            e.target.classList.add("fade-right")
+        }
+        else{
+            e.target.classList.remove("fade-right")
+        }
+    })
+})
+const fadeLeft = new IntersectionObserver((el)=>{
+    el.forEach((e) =>{
+        if(e.isIntersecting){
+            e.target.classList.add("fade-left")
+        }
+        else{
+            e.target.classList.remove("fade-left")
+        }
+    })
+})
+
+const fadeInDown = document.querySelectorAll(".fadeInDown")
+const fadeInRight = document.querySelectorAll(".fadeInRight")
+const fadeInLeft = document.querySelectorAll(".fadeInLeft")
+fadeInDown.forEach((el) => fadeDown.observe(el))
+fadeInRight.forEach((el) => fadeRight.observe(el))
+fadeInLeft.forEach((el) => fadeLeft.observe(el))
