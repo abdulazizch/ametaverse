@@ -427,14 +427,20 @@ header{
     padding-top: 16.5vw;
 
     @include responsive($xxl){
-        min-height: 110vh;
+        min-height: 115vh;
     }
     @include responsive($lg){
         min-height: 96vh;
     }
 }
 .ms-3col{
-    margin-left: 7.8vw;
+    margin-left: -2vw;
+}
+.ms-1col{
+    margin-left: 0;
+}
+.ms-2col{
+    margin-left: 1.9vw;
 }
 #get-ameta{
     width: 100vw;

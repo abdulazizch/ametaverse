@@ -430,7 +430,7 @@ header .header-text-cont {
 }
 @media (max-width: 1680px) {
   .get-ameta-dots {
-    min-height: 110vh;
+    min-height: 115vh;
   }
 }
 @media (max-width: 992px) {
@@ -440,7 +440,15 @@ header .header-text-cont {
 }
 
 .ms-3col {
-  margin-left: 7.8vw;
+  margin-left: -2vw;
+}
+
+.ms-1col {
+  margin-left: 0;
+}
+
+.ms-2col {
+  margin-left: 1.9vw;
 }
 
 #get-ameta {
