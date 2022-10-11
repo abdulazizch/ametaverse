@@ -429,6 +429,9 @@ header{
     @include responsive($xxl){
         min-height: 115vh;
     }
+    @include responsive($xl){
+        min-height: 139.5vh;
+    }
     @include responsive($lg){
         min-height: 96vh;
     }

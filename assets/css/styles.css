@@ -433,6 +433,11 @@ header .header-text-cont {
     min-height: 115vh;
   }
 }
+@media (max-width: 1366px) {
+  .get-ameta-dots {
+    min-height: 139.5vh;
+  }
+}
 @media (max-width: 992px) {
   .get-ameta-dots {
     min-height: 96vh;
