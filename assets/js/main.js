@@ -70,7 +70,7 @@ $(document).ready(function() {
         slideMargin: 40,
         responsive : [
         {
-            breakpoint:800,
+            breakpoint:992,
             settings: {
                 item:3,
                 slideMove:1,
