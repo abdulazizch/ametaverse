@@ -130,10 +130,22 @@ const fadeLeft = new IntersectionObserver((el)=>{
         }
     })
 })
+const fadeIn = new IntersectionObserver((el)=>{
+    el.forEach((e) =>{
+        if(e.isIntersecting){
+            e.target.classList.add("fade-in")
+        }
+        else{
+            e.target.classList.remove("fade-in")
+        }
+    })
+})
 
 const fadeInDown = document.querySelectorAll(".fadeInDown")
 const fadeInRight = document.querySelectorAll(".fadeInRight")
 const fadeInLeft = document.querySelectorAll(".fadeInLeft")
+const fadein = document.querySelectorAll(".fadeIn")
 fadeInDown.forEach((el) => fadeDown.observe(el))
 fadeInRight.forEach((el) => fadeRight.observe(el))
 fadeInLeft.forEach((el) => fadeLeft.observe(el))
+fadein.forEach((el) => fadeIn.observe(el))

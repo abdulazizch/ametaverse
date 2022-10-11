@@ -1027,62 +1027,97 @@ footer{
 // ------------------------------------
 // Animations 
 // ====================================
-.fadeInDown, .fadeInRight,.fadeInLeft{
+.fadeInDown, .fadeInRight,.fadeInLeft, .fadeIn{
     opacity: 0;
-}
-.fade-down{
-    animation: fadeInDown 1s;
-    animation-fill-mode: both;
-    &._1{
-        animation-delay: 0.1s;
-    }
-    &._2{
-        animation-delay: 0.2s;
-    }
-    &._3{
-        animation-delay: 0.3s;
-    }
-    &._4{
-        animation-delay: 0.4s;
-    }
-}
-.fade-right{
-    animation: fadeInRight 1s 0.5s !important;
-    animation-fill-mode: both !important;
-}
-.fade-left{
-    animation: fadeInLeft 1s 0.5s !important;
-    animation-fill-mode: both !important;
+    transition: all 0.2s;
 }
 
+.fade{
+    &-down{
+        animation: fadeInDown 1s;
+        animation-fill-mode: both;
+        &._1{
+            animation-delay: 0.1s;
+        }
+        &._2{
+            animation-delay: 0.2s;
+        }
+        &._3{
+            animation-delay: 0.3s;
+        }
+        &._4{
+            animation-delay: 0.4s;
+        }
+    }
+    &-right{
+        animation: fadeInRight 1s 0.5s !important;
+        animation-fill-mode: both !important;
+    }
+    &-left{
+        animation: fadeInLeft 1s 0.5s !important;
+        animation-fill-mode: both !important;
+    }
+    &-in{
+        animation: fadeIn 1s 0.5s !important;
+        animation-fill-mode: both !important;
+        &._1{
+            animation-delay: 0.1s;
+        }
+        &._2{
+            animation-delay: 0.4s;
+        }
+        &._3{
+            animation-delay: 0.6s;
+        }
+        &._4{
+            animation-delay: 3s;
+        }
+    }
+}
 
 @keyframes fadeInDown {
     0% {
        opacity: 0;
        transform: translateY(-20px);
+       filter: blur(5px);
     }
     100% {
        opacity: 1;
        transform: translateY(0);
+       filter: blur(0);
     }
  }
 @keyframes fadeInRight {
     0% {
        opacity: 0;
        transform: translateX(-200px);
+       filter: blur(5px);
     }
     100% {
        opacity: 1;
        transform: translateX(0);
+       filter: blur(0);
     }
  }
 @keyframes fadeInLeft {
     0% {
        opacity: 0;
        transform: translateX(300px);
+       filter: blur(5px);
     }
     100% {
        opacity: 1;
        transform: translateX(0);
+       filter: blur(0);
+    }
+ }
+@keyframes fadeIn {
+    0% {
+       opacity: 0;
+       filter: blur(5px);
+    }
+    100% {
+       opacity: 1;
+       filter: blur(0);
     }
  }
