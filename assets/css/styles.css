@@ -762,28 +762,32 @@ header .header-text-cont {
   }
 }
 
+.btn-slider-nav {
+  cursor: pointer;
+}
+
 #play-games .play-games-sec {
   width: 100%;
   padding-left: 14%;
   box-sizing: border-box;
-  min-height: 105vh;
+  min-height: 113vh;
   display: flex;
   overflow: hidden;
 }
 @media (max-width: 1680px) {
   #play-games .play-games-sec {
-    min-height: 105vh;
+    min-height: 112vh;
   }
 }
 @media (max-width: 1366px) {
   #play-games .play-games-sec {
-    min-height: 120vh;
+    min-height: 126vh;
   }
 }
 @media (max-width: 992px) {
   #play-games .play-games-sec {
     flex-wrap: wrap;
-    min-height: 80vh;
+    min-height: 87vh;
   }
 }
 #play-games .play-games-sec .section-text {
@@ -982,21 +986,21 @@ header .header-text-cont {
 #roadmap .roadmap-sec {
   width: 80%;
   margin-left: 14%;
-  padding-top: 9.8%;
+  padding-top: 3.8%;
 }
 @media (max-width: 1680px) {
   #roadmap .roadmap-sec {
-    padding-top: 7.5%;
+    padding-top: 3.3%;
   }
 }
 @media (max-width: 1366px) {
   #roadmap .roadmap-sec {
-    padding-top: 6.9%;
+    padding-top: 3.9%;
   }
 }
 @media (max-width: 992px) {
   #roadmap .roadmap-sec {
-    padding-top: 17.9%;
+    padding-top: 3.5%;
   }
 }
 #roadmap .roadmap-sec .section-title {
@@ -1432,7 +1436,7 @@ footer .footer-sec .footer-content .footer-col .copyrights p {
 @-webkit-keyframes fadeInLeft {
   0% {
     opacity: 0;
-    transform: translateX(300px);
+    transform: translateX(50%);
     filter: blur(5px);
   }
   100% {
@@ -1444,7 +1448,7 @@ footer .footer-sec .footer-content .footer-col .copyrights p {
 @keyframes fadeInLeft {
   0% {
     opacity: 0;
-    transform: translateX(300px);
+    transform: translateX(50%);
     filter: blur(5px);
   }
   100% {

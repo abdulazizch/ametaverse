@@ -725,25 +725,28 @@ header{
         min-height: 85vh;
     }
 }
+.btn-slider-nav{
+    cursor: pointer;
+}
 #play-games{
     .play-games-sec{
         width: 100%;
         padding-left: 14%;
         box-sizing: border-box;
-        min-height: 105vh;
+        min-height: 113vh;
         display: flex;
         // align-items: center;
         overflow: hidden;
 
         @include responsive($xxl){
-            min-height: 105vh;
+            min-height: 112vh;
         }
         @include responsive($xl){
-            min-height: 120vh;
+            min-height: 126vh;
         }
         @include responsive($lg){
             flex-wrap: wrap;
-            min-height: 80vh;
+            min-height: 87vh;
         }
         .section-text{
             width: 33%;
@@ -937,15 +940,15 @@ header{
     .roadmap-sec{
         width: 80%;
         margin-left: 14%;
-        padding-top:9.8%;
+        padding-top:3.8%;
         @include responsive($xxl){
-            padding-top: 7.5%;
+            padding-top: 3.3%;
         }
         @include responsive($xl){
-            padding-top: 6.9%;
+            padding-top: 3.9%;
         }
         @include responsive($lg){
-            padding-top: 17.9%;
+            padding-top: 3.5%;
         }
 
         .section-title{
@@ -1292,7 +1295,7 @@ footer{
 @keyframes fadeInLeft {
     0% {
        opacity: 0;
-       transform: translateX(300px);
+       transform: translateX(50%);
        filter: blur(5px);
     }
     100% {
