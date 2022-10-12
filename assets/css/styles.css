@@ -1322,16 +1322,24 @@ footer .footer-sec .footer-content .footer-col .copyrights p {
   font-size: 18px;
 }
 
-.fadeInDown, .fadeInRight, .fadeInLeft, .fadeIn {
+.fadeInUp, .fadeInDown, .fadeInRight, .fadeInLeft, .fadeIn {
   opacity: 0;
   transition: all 0.2s;
 }
 
+.fade-up {
+  -webkit-animation: fadeInUp 1s !important;
+          animation: fadeInUp 1s !important;
+  -webkit-animation-fill-mode: both !important;
+          animation-fill-mode: both !important;
+  -webkit-animation-delay: 1.5s !important;
+          animation-delay: 1.5s !important;
+}
 .fade-down {
-  -webkit-animation: fadeInDown 1s;
-          animation: fadeInDown 1s;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
+  -webkit-animation: fadeInDown 1s !important;
+          animation: fadeInDown 1s !important;
+  -webkit-animation-fill-mode: both !important;
+          animation-fill-mode: both !important;
 }
 .fade-down._1 {
   -webkit-animation-delay: 0.1s;
@@ -1384,6 +1392,31 @@ footer .footer-sec .footer-content .footer-col .copyrights p {
           animation-delay: 3s;
 }
 
+@-webkit-keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+    filter: blur(5px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+    filter: blur(5px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
 @-webkit-keyframes fadeInDown {
   0% {
     opacity: 0;
@@ -1396,7 +1429,6 @@ footer .footer-sec .footer-content .footer-col .copyrights p {
     filter: blur(0);
   }
 }
-
 @keyframes fadeInDown {
   0% {
     opacity: 0;

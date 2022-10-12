@@ -1220,15 +1220,20 @@ footer{
 // ------------------------------------
 // Animations 
 // ====================================
-.fadeInDown, .fadeInRight,.fadeInLeft, .fadeIn{
+.fadeInUp, .fadeInDown, .fadeInRight,.fadeInLeft, .fadeIn{
     opacity: 0;
     transition: all 0.2s;
 }
 
 .fade{
+    &-up{
+        animation: fadeInUp 1s !important;
+        animation-fill-mode: both !important;
+        animation-delay: 1.5s !important;
+    }
     &-down{
-        animation: fadeInDown 1s;
-        animation-fill-mode: both;
+        animation: fadeInDown 1s !important;
+        animation-fill-mode: both !important;
         &._1{
             animation-delay: 0.1s;
         }
@@ -1268,6 +1273,18 @@ footer{
     }
 }
 
+@keyframes fadeInUp {
+    0% {
+       opacity: 0;
+       transform: translateY(100px);
+       filter: blur(5px);
+    }
+    100% {
+       opacity: 1;
+       transform: translateY(0);
+       filter: blur(0);
+    }
+ }
 @keyframes fadeInDown {
     0% {
        opacity: 0;

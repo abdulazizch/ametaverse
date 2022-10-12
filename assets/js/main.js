@@ -100,6 +100,16 @@ $(document).ready(function() {
     });  
 });
 
+const fadeUp = new IntersectionObserver((el)=>{
+    el.forEach((e) =>{
+        if(e.isIntersecting){
+            e.target.classList.add("fade-up")
+        }
+        else{
+            e.target.classList.remove("fade-up")
+        }
+    })
+})
 const fadeDown = new IntersectionObserver((el)=>{
     el.forEach((e) =>{
         if(e.isIntersecting){
@@ -141,10 +151,13 @@ const fadeIn = new IntersectionObserver((el)=>{
     })
 })
 
+const fadeInUp = document.querySelectorAll(".fadeInUp")
 const fadeInDown = document.querySelectorAll(".fadeInDown")
 const fadeInRight = document.querySelectorAll(".fadeInRight")
 const fadeInLeft = document.querySelectorAll(".fadeInLeft")
 const fadein = document.querySelectorAll(".fadeIn")
+
+fadeInUp.forEach((el) => fadeUp.observe(el))
 fadeInDown.forEach((el) => fadeDown.observe(el))
 fadeInRight.forEach((el) => fadeRight.observe(el))
 fadeInLeft.forEach((el) => fadeLeft.observe(el))
