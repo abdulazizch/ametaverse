@@ -567,6 +567,11 @@ header .header-text-cont {
   transform: translateY(-50%);
   z-index: 2;
 }
+@media (max-width: 992px) {
+  #get-ameta .get-ameta-sec .section-text .ameta-address .address-icon {
+    height: 6vw;
+  }
+}
 #get-ameta .get-ameta-sec .section-text .ameta-address .address-icon img {
   width: 100%;
   height: 100%;
@@ -1268,13 +1273,13 @@ header .header-text-cont {
 }
 @media (max-width: 1680px) {
   #FAQ {
-    min-height: 188vh;
+    min-height: 182vh;
     padding-top: 23vh;
   }
 }
 @media (max-width: 1366px) {
   #FAQ {
-    min-height: 210vh;
+    min-height: 206vh;
     padding-top: 25vh;
   }
 }
@@ -1411,10 +1416,16 @@ footer .footer-sec .footer-content .footer-col .social-menu a img {
 }
 footer .footer-sec .footer-content .footer-col .newsletter-form-con form {
   position: relative;
-}
-footer .footer-sec .footer-content .footer-col .newsletter-form-con form input {
   width: 80%;
   margin-left: auto;
+}
+@media (max-width: 992px) {
+  footer .footer-sec .footer-content .footer-col .newsletter-form-con form {
+    margin: auto;
+  }
+}
+footer .footer-sec .footer-content .footer-col .newsletter-form-con form input {
+  width: 100%;
   position: relative;
   height: 41px;
   color: #fff;
@@ -1471,6 +1482,7 @@ footer .footer-sec .copyrights a {
 }
 footer .footer-sec .copyrights p {
   font-size: clamp(13px, 0.9375vw, 18px);
+  margin: 0;
 }
 
 .fadeInUp, .fadeInDown, .fadeInRight, .fadeInLeft, .fadeIn, .slideDown, .slideUp {
