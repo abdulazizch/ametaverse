@@ -813,20 +813,6 @@ header{
                 width: 100%;
             }
 
-            .card-data-con{
-                position: absolute;
-                left: 50%;
-                transform: translateX(-50%);
-                .card-data{
-                    .data-icon{
-                        width: 44px;
-                        img{
-                            width: 100%;
-                            object-fit: contain;
-                        }
-                    }
-                }
-            }
             ul.game-cards-crsl{
                 list-style:none;
                 height: 80vh !important;
@@ -866,6 +852,24 @@ header{
                         object-fit: contain;
                         
                     }
+                    .card-data-con{
+                        position: absolute;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        // display: none;
+        
+                        .card-data{
+                            .data-icon{
+                                width: 44px;
+                                img{
+                                    width: 100%;
+                                    object-fit: contain;
+                                }
+                            }
+                        }
+                    }
+
+                    
                     .slide-card-btn{
                         position: absolute;
                         bottom: 20px;
@@ -927,6 +931,9 @@ header{
                     }
 
                     .slide-card-btn{
+                        display: block;
+                    }
+                    .card-data{
                         display: block;
                     }
                 }

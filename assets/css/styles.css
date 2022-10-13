@@ -856,19 +856,6 @@ header .header-text-cont {
     width: 100%;
   }
 }
-#play-games .play-games-sec .game-cards-con .card-data-con {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-}
-#play-games .play-games-sec .game-cards-con .card-data-con .card-data .data-icon {
-  width: 44px;
-}
-#play-games .play-games-sec .game-cards-con .card-data-con .card-data .data-icon img {
-  width: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
-}
 #play-games .play-games-sec .game-cards-con ul.game-cards-crsl {
   list-style: none;
   height: 80vh !important;
@@ -907,6 +894,19 @@ header .header-text-cont {
   }
 }
 #play-games .play-games-sec .game-cards-con ul.game-cards-crsl .item-card img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+#play-games .play-games-sec .game-cards-con ul.game-cards-crsl .item-card .card-data-con {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+#play-games .play-games-sec .game-cards-con ul.game-cards-crsl .item-card .card-data-con .card-data .data-icon {
+  width: 44px;
+}
+#play-games .play-games-sec .game-cards-con ul.game-cards-crsl .item-card .card-data-con .card-data .data-icon img {
   width: 100%;
   -o-object-fit: contain;
      object-fit: contain;
@@ -972,6 +972,9 @@ header .header-text-cont {
   }
 }
 #play-games .play-games-sec .game-cards-con ul.game-cards-crsl .slide-item.active .slide-card-btn {
+  display: block;
+}
+#play-games .play-games-sec .game-cards-con ul.game-cards-crsl .slide-item.active .card-data {
   display: block;
 }
 
