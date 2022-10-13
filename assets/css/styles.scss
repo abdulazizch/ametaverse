@@ -76,7 +76,7 @@ ul{
     border: 1px solid #885df3;
     font-size: clamp(15px, 1.3vw,25px);   
     font-family: $primary-font;
-    padding: 5px 13px;
+    padding: 5px 14px;
     border-radius: 20px;
     display: inline-flex;
     justify-content: center;
@@ -84,6 +84,7 @@ ul{
     transition: all 0.3s;
     position: relative;
     overflow: hidden;
+    text-align: center;
 
     &::after{
         content: "";
@@ -107,18 +108,18 @@ ul{
     }
 }
 
-// $dot-wid-xxl: 11px;
-$dot-wid-xxl: 0.572vw;
-// $dot-wid-xl: 10px;
-$dot-wid-xl: 0.52vw;
-// $dot-wid-lg: 9px;
-$dot-wid-lg: 0.46vw;
-// $dot-wid-md: 5px;
-$dot-wid-md: 0.26vw;
+// $dot-wid-xxl: 9px;
+$dot-wid-xxl: 0.46875vw;
+// $dot-wid-xl: 8px;
+$dot-wid-xl: 0.4166vw;
+// $dot-wid-lg: 6px;
+$dot-wid-lg: 0.3125vw;
+// $dot-wid-md: 4px;
+$dot-wid-md: 0.208vw;
 // $dot-wid-sm: 3px;
-$dot-wid-sm: 0.15vw;
+$dot-wid-sm: 0.15625vw;
 // $dot-wid-xs: 2px;
-$dot-wid-xs: 0.1041vw;
+$dot-wid-xs: 0.104vw;
 .bg-dots-con{
     width: 100vw;
     max-width: 1920px;
@@ -126,8 +127,11 @@ $dot-wid-xs: 0.1041vw;
     margin: auto;
     min-height: 101vh;
     top: 0;
-    padding: 10px;
+    padding: 10px 2px;
     // overflow: hidden;
+    @include responsive($lg){
+        padding: 10px 7px;
+    }
     
     .dot{
         width: $dot-wid-xxl;
@@ -304,13 +308,16 @@ $dot-wid-xs: 0.1041vw;
 }
 
 header{
-    padding: 40px 53px;
+    padding: 33px;
     box-sizing: border-box;
     position: relative;
     min-height: 100vh;
 
+    @include responsive($xxl){
+        padding: 28px 10px 28px 25px;
+    }
     @include responsive($xl){
-        padding: 20px 53px;
+        padding: 20px 0 20px 20px;
     }
 
     nav.navbar{
@@ -332,7 +339,7 @@ header{
         a.nav-link{
             color: $primary-txt-color;
             font-family: $primary-font, sans-serif;
-            font-size: clamp(17px, 1.04vw, 20px);
+            font-size: clamp(13px, 1.04vw, 20px);
 
             @include responsive($lg){
                 font-size: 26px;
@@ -409,7 +416,7 @@ header{
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
-        padding-left: 34px;
+        padding-left: 53px;
         position: relative;
         z-index: 2;
         @include responsive($lg){
@@ -427,7 +434,7 @@ header{
     padding-top: 16.5vw;
 
     @include responsive($xxl){
-        min-height: 115vh;
+        min-height: 109vh;
     }
     @include responsive($xl){
         min-height: 139.5vh;
@@ -451,7 +458,7 @@ header{
     position: relative;
     z-index: 2;
     @include responsive($xxl){
-        min-height: 115vh;
+        min-height: 109vh;
     }
     @include responsive($xl){
         min-height: 140vh;
@@ -488,7 +495,7 @@ header{
             p{
                 padding-left: 30px;
                 position: relative;
-                margin-top: 60px;
+                margin-top: 45px;
                 width: 95%;
                 font-size: clamp(14px, 0.9375vw,18px);
 
@@ -516,11 +523,11 @@ header{
                 width: auto;
                 display: inline-block;
                 height: auto;
-                padding: 3px 30px 3px 5%;
+                padding: 0 30px 0 0.2vw;
                 border-radius: 9.5px;
                 background: #fff;
                 position: relative;
-                margin-top: 20px;
+                margin-top: 30px;
                 margin-left: 10px;
                 
                 @include responsive($xxl){
@@ -530,18 +537,18 @@ header{
                 .address-icon{
                     position: absolute;
                     width: auto;
-                    height: 250%;
+                    height: 2.761vw;
                     left: -24px;
                     top: 50%;
                     transform: translateY(-50%);
                     z-index: 2;
 
-                    @include responsive($xxl){
-                        height: 230%;
-                    }
-                    @include responsive($xl){
-                        height: 160%;
-                    }
+                    // @include responsive($xxl){
+                    //     height: 230%;
+                    // }
+                    // @include responsive($xl){
+                    //     height: 160%;
+                    // }
                     img{
                         width: 100%;
                         height: 100%;
@@ -549,6 +556,7 @@ header{
                         object-position: center;
                     }
                 }
+                
                 p{
                     color: #000;
                     margin: 0;
@@ -561,6 +569,12 @@ header{
                     &::before{
                         content: none;
                     }
+                }
+            }
+            .polygon-btn-con{
+                margin-top: 35px;
+                @include responsive($xxl){
+                    margin-top: 25px;
                 }
             }
 
@@ -579,7 +593,7 @@ header{
             height: 27.1874vw;
             min-height: 392px ;
             max-height: 522px;
-            margin-top: 22%;
+            margin-top: 20%;
             position: relative;
             @include responsive($xl){
                 width: 25vw;
@@ -739,7 +753,7 @@ header{
         overflow: hidden;
 
         @include responsive($xxl){
-            min-height: 112vh;
+            min-height: 114vh;
         }
         @include responsive($xl){
             min-height: 126vh;
@@ -751,6 +765,7 @@ header{
         .section-text{
             width: 33%;
             margin-top: 15%;
+            height: 100%;
             @include responsive($xl){
                 margin-top:12%;
             }
@@ -797,6 +812,21 @@ header{
             @include responsive($lg){
                 width: 100%;
             }
+
+            .card-data-con{
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                .card-data{
+                    .data-icon{
+                        width: 44px;
+                        img{
+                            width: 100%;
+                            object-fit: contain;
+                        }
+                    }
+                }
+            }
             ul.game-cards-crsl{
                 list-style:none;
                 height: 80vh !important;
@@ -826,6 +856,7 @@ header{
                     box-sizing: border-box;
                     margin: 0px 10px;
                     position: relative;
+                    overflow: hidden;
 
                     @include responsive($lg){
                         width: 29vw;
@@ -850,12 +881,32 @@ header{
                             width: 230px;
                             display: inline-block;
                             text-align: center;
-                            border-radius: 50px;
+                            border-radius: 20px;
                             border: 1.5px solid #fff;
                             background: #000;
+                            position: relative;
+
+                            
 
                             @include responsive($lg){
                                 width: 180px;
+                            }
+                            .btn-icon{
+                                position: absolute;
+                                display: inline-block;
+                                width: 2vw;
+                                min-width: 24px;
+                                max-width: 38px;
+                                right: 20px;
+                                img{
+                                    width: 100%;
+                                    object-fit: contain;
+                                }
+                            }
+                        }
+                        &.cs{
+                            a{
+                                font-size: clamp(15px,1.2vw,25px);
                             }
                         }
                     }
@@ -939,16 +990,16 @@ header{
 #roadmap{
     .roadmap-sec{
         width: 80%;
-        margin-left: 14%;
-        padding-top:3.8%;
+        margin-left: 12.5%;
+        padding-top:1.5%;
         @include responsive($xxl){
-            padding-top: 3.3%;
+            padding-top: 1%;
         }
         @include responsive($xl){
-            padding-top: 3.9%;
+            padding-top: 1.6%;
         }
         @include responsive($lg){
-            padding-top: 3.5%;
+            padding-top: 3%;
         }
 
         .section-title{
@@ -1094,7 +1145,7 @@ header{
     padding-right: 20px;
 }
 #FAQ{
-    min-height: 200vh;
+    min-height: 190vh;
     padding-top: 35vh;
     @include responsive($xxl){
         min-height: 188vh;
@@ -1106,7 +1157,7 @@ header{
     }
     @include responsive($lg){
         min-height: 80vh;
-        padding-top: 12vh;
+        padding-top: 7vh;
     }
     .faq-sec{
         width: 60%;
@@ -1141,11 +1192,17 @@ header{
                 &:last-child{
                     border-bottom: 1px solid #fff;
                 }
+                p{
+                    @include responsive($lg){
+                        font-size: 12px;
+                        line-height: 17px;
+                    }
+                }
                 .accordion-button{
                     background-color: transparent;
 
                     @include responsive($lg){
-                        font-size: 16px;
+                        font-size: 14px;
                     }
                 }
                 .accordion-button.collapsed{
@@ -1180,7 +1237,7 @@ header{
 }
 
 footer{
-    padding: 50px 0;
+    padding: 25px 0;
 
     .footer-sec{
         width: 77.8%;
@@ -1196,21 +1253,93 @@ footer{
 
         .footer-content{
             .footer-col{
-
+                h4{
+                    font-size: clamp(15px, 1.145vw, 22px);
+                    color: #fff;
+                    font-family: $primary-font;
+                    text-transform: uppercase;
+                }
                 ul li{
                     margin: 10px 0;
-                    font-size: 18px;
+                    font-size: clamp(13px, 0.9375vw, 18px);
                 }
                 .social-menu{
                     a{
                         font-size: 28px;
+                        width: 40px;
+                        height: 40px;
+                        display: inline-flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        img{
+                            width: 70%;
+                            height: 70%;
+                            object-fit: contain;
+                            object-position: center;
+                        }
                     }
                 }
-                .copyrights{
-                    p{
-                        font-size: 18px;
+                .newsletter-form-con{
+                    form{
+                        position: relative;
+                        input{
+                            width: 80%;
+                            margin-left: auto;
+                            position: relative;
+                            height: 41px;
+                            color: #fff;
+                            font-size: clamp(14px, 0.9vw, 18px);
+                            font-family: $secondary-font;
+                            background: transparent;
+                            outline: none;
+                            border: 1.5px solid #fff;
+                            border-radius: 50px;
+                            padding: 2px 15px;
+
+                            &::placeholder{
+                                color: #fff;
+                                font-size: clamp(14px, 0.9vw, 18px);
+                                font-family: $secondary-font;
+                            }
+                        }
+                        .submit-btn{
+                            background: transparent;
+                            width: 41px;
+                            height: 41px;
+                            display: inline-flex;
+                            justify-content: center;
+                            align-items: center;
+                            border-radius: 50%;
+                            border: 1px solid #fff;
+                            position: absolute;
+                            top: 0;
+                            right: 0;
+                            z-index: 2;
+
+                            img{
+                                width: 70%;
+                                object-fit: contain;
+                                object-position: center;
+                            }
+                        }
                     }
                 }
+                
+            }
+            
+        }
+
+        .bg-dots-con{
+            height: auto;
+            min-height: auto;
+        }
+        .copyrights{
+            a{
+                font-size: clamp(13px, 0.9375vw, 18px);
+            }
+            p{
+                font-size: clamp(13px, 0.9375vw, 18px);
             }
         }
     }
@@ -1220,40 +1349,79 @@ footer{
 // ------------------------------------
 // Animations 
 // ====================================
-.fadeInUp, .fadeInDown, .fadeInRight,.fadeInLeft, .fadeIn{
+.fadeInUp, .fadeInDown, .fadeInRight,.fadeInLeft, .fadeIn, .slideDown, .slideUp{
     opacity: 0;
     transition: all 0.2s;
 }
 
+.slide{
+    &-up{
+        animation: slideUp 1s 0.4s !important;
+        animation-fill-mode: both !important;
+    }
+    &-down{
+        animation: slideDown 2s 0.4s !important;
+        animation-fill-mode: both !important;
+    }
+}
 .fade{
     &-up{
         animation: fadeInUp 1s !important;
         animation-fill-mode: both !important;
-        animation-delay: 1.5s !important;
+        &._1s{
+            animation-delay: 1s !important;
+        }
     }
     &-down{
-        animation: fadeInDown 1s !important;
+        animation: fadeInDown 1.5s  !important;
         animation-fill-mode: both !important;
+        &._1s{
+            animation-delay: 1s !important;
+        }
         &._1{
-            animation-delay: 0.1s;
+            animation-delay: 0.5s !important;
         }
         &._2{
-            animation-delay: 0.2s;
+            animation-delay: 0.7s !important;
         }
         &._3{
-            animation-delay: 0.3s;
+            animation-delay: 0.9s !important;
         }
         &._4{
-            animation-delay: 0.4s;
+            animation-delay: 1s !important;
+        }
+        &._5{
+            animation-delay: 1.2s !important;
+        }
+        &._6{
+            animation-delay: 1.3s !important;
         }
     }
     &-right{
-        animation: fadeInRight 1s 0.5s !important;
+        animation: fadeInRight 1s !important;
         animation-fill-mode: both !important;
+        &._1{
+            animation-delay: 0.1s !important;
+        }
+        &._2{
+            animation-delay: 0.2s !important;
+        }
+        &._3{
+            animation-delay: 0.3s !important;
+        }
     }
     &-left{
-        animation: fadeInLeft 1s 0.5s !important;
+        animation: fadeInLeft 1s 0.4s !important;
         animation-fill-mode: both !important;
+        &._1{
+            animation-delay: 0.1s !important;
+        }
+        &._2{
+            animation-delay: 0.2s !important;
+        }
+        &._3{
+            animation-delay: 0.3s !important;
+        }
     }
     &-in{
         animation: fadeIn 1s 0.5s !important;
@@ -1273,6 +1441,26 @@ footer{
     }
 }
 
+@keyframes slideUp {
+    0% {
+        opacity: 0;
+       transform: translateX(-50%) translateY(50px);
+    }
+    100% {
+        opacity: 1;
+       transform: translateX(-50%) translateY(0);
+    }
+ }
+@keyframes slideDown {
+    0% {
+        opacity: 0;
+       transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+       transform: translateY(0);
+    }
+ }
 @keyframes fadeInUp {
     0% {
        opacity: 0;
@@ -1288,13 +1476,11 @@ footer{
 @keyframes fadeInDown {
     0% {
        opacity: 0;
-       transform: translateY(-20px);
-       filter: blur(5px);
+       transform: translateY(-50px);
     }
     100% {
        opacity: 1;
        transform: translateY(0);
-       filter: blur(0);
     }
  }
 @keyframes fadeInRight {
