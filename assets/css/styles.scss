@@ -853,17 +853,45 @@ header{
                         
                     }
                     .card-data-con{
+                        width: 90%;
+                        margin: auto;
+                        margin-top: 30px;
                         position: absolute;
                         left: 50%;
                         transform: translateX(-50%);
-                        // display: none;
+                        display: none;
         
                         .card-data{
                             .data-icon{
-                                width: 44px;
+                                width: 33px;
+                                margin-right: 4px;
                                 img{
                                     width: 100%;
                                     object-fit: contain;
+                                }
+                            }
+                            .data-text{
+                                h6{
+                                    font-size: clamp(12px,0.83vw,16px);
+                                    font-family: $primary-font;
+                                    margin: 0;
+                                    line-height:clamp(12px,0.83vw,16px);
+                                }
+                                p{
+                                    margin: 0;
+                                    font-size: clamp(9px,0.573vw,11.6px);
+                                    line-height: clamp(9px,0.573vw,11.6px);
+
+                                }
+                            }
+                            .item-1,.item-3{
+                                .data-icon{
+                                    width: 33px;
+                                }
+                            }
+                            .item-2{
+                                .data-icon{
+                                    width:30px;
                                 }
                             }
                         }
@@ -933,7 +961,7 @@ header{
                     .slide-card-btn{
                         display: block;
                     }
-                    .card-data{
+                    .card-data-con{
                         display: block;
                     }
                 }
@@ -1461,11 +1489,11 @@ footer{
 @keyframes slideDown {
     0% {
         opacity: 0;
-       transform: translateY(-50px);
+       transform: translateX(-50%) translateY(-50px);
     }
     100% {
         opacity: 1;
-       transform: translateY(0);
+       transform: translateX(-50%) translateY(0);
     }
  }
 @keyframes fadeInUp {

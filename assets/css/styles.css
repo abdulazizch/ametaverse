@@ -899,17 +899,39 @@ header .header-text-cont {
      object-fit: contain;
 }
 #play-games .play-games-sec .game-cards-con ul.game-cards-crsl .item-card .card-data-con {
+  width: 90%;
+  margin: auto;
+  margin-top: 30px;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
+  display: none;
 }
 #play-games .play-games-sec .game-cards-con ul.game-cards-crsl .item-card .card-data-con .card-data .data-icon {
-  width: 44px;
+  width: 33px;
+  margin-right: 4px;
 }
 #play-games .play-games-sec .game-cards-con ul.game-cards-crsl .item-card .card-data-con .card-data .data-icon img {
   width: 100%;
   -o-object-fit: contain;
      object-fit: contain;
+}
+#play-games .play-games-sec .game-cards-con ul.game-cards-crsl .item-card .card-data-con .card-data .data-text h6 {
+  font-size: clamp(12px, 0.83vw, 16px);
+  font-family: "GoGoHack";
+  margin: 0;
+  line-height: clamp(12px, 0.83vw, 16px);
+}
+#play-games .play-games-sec .game-cards-con ul.game-cards-crsl .item-card .card-data-con .card-data .data-text p {
+  margin: 0;
+  font-size: clamp(9px, 0.573vw, 11.6px);
+  line-height: clamp(9px, 0.573vw, 11.6px);
+}
+#play-games .play-games-sec .game-cards-con ul.game-cards-crsl .item-card .card-data-con .card-data .item-1 .data-icon, #play-games .play-games-sec .game-cards-con ul.game-cards-crsl .item-card .card-data-con .card-data .item-3 .data-icon {
+  width: 33px;
+}
+#play-games .play-games-sec .game-cards-con ul.game-cards-crsl .item-card .card-data-con .card-data .item-2 .data-icon {
+  width: 30px;
 }
 #play-games .play-games-sec .game-cards-con ul.game-cards-crsl .item-card .slide-card-btn {
   position: absolute;
@@ -974,7 +996,7 @@ header .header-text-cont {
 #play-games .play-games-sec .game-cards-con ul.game-cards-crsl .slide-item.active .slide-card-btn {
   display: block;
 }
-#play-games .play-games-sec .game-cards-con ul.game-cards-crsl .slide-item.active .card-data {
+#play-games .play-games-sec .game-cards-con ul.game-cards-crsl .slide-item.active .card-data-con {
   display: block;
 }
 
@@ -1596,21 +1618,21 @@ footer .footer-sec .copyrights p {
 @-webkit-keyframes slideDown {
   0% {
     opacity: 0;
-    transform: translateY(-50px);
+    transform: translateX(-50%) translateY(-50px);
   }
   100% {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateX(-50%) translateY(0);
   }
 }
 @keyframes slideDown {
   0% {
     opacity: 0;
-    transform: translateY(-50px);
+    transform: translateX(-50%) translateY(-50px);
   }
   100% {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateX(-50%) translateY(0);
   }
 }
 @-webkit-keyframes fadeInUp {
