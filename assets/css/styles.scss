@@ -407,6 +407,22 @@ header{
         .navbar-toggler .navbar-toggler-icon{
             background-image: url("../images/icons/togger-icon.png") !important;
         }
+        .tab-toggler{
+            @include responsive($lg){
+                display: block;
+            }
+            @include responsive($sm){
+                display: none;
+            }
+        }
+        .mobile-toggler{
+            @include responsive($lg){
+                display: none;
+            }
+            @include responsive($sm){
+                display: block;
+            }
+        }
     }
 
     .bg-video-cont{
