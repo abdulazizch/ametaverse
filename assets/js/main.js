@@ -97,6 +97,9 @@ $(document).ready(function() {
             $(".btn-slide-next").click(()=>{
                 slider.goToNextSlide();
             })
+            if(window.innerWidth<480){
+                $(".slide-card-btn a").html("Only Supports Desktop Browser")
+            }
         },200)
     } 
     });  

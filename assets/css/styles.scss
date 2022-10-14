@@ -1,10 +1,27 @@
+$hxl: 1005px;
 $xxl : 1680px;
 $xl : 1366px;
 $lg : 992px;
 $md : 768px;
 $sm : 482px;
+$xs : 375px;
 @mixin responsive($query) {
     @media ( max-width: $query ) {
+        @content;
+    }
+}
+@mixin responsiveHeight($query) {
+    @media ( min-height: $query ) and (min-width: 1600px){
+        @content;
+    }
+}
+@mixin responsiveMaxHeight($query) {
+    @media ( max-height: $query ) and (max-width: 480px) {
+        @content;
+    }
+}
+@mixin responsiveMinHeight($query) {
+    @media ( min-height: $query ) and (max-width: 480px) {
         @content;
     }
 }
@@ -137,6 +154,14 @@ $dot-wid-xs: 0.104vw;
     @include responsive($lg){
         padding: 10px 7px;
     }
+    @include responsive($sm){
+        min-height: auto;
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        padding: 7px 3px;
+    }
     
     .dot{
         width: $dot-wid-xxl;
@@ -159,19 +184,28 @@ $dot-wid-xs: 0.104vw;
         @include responsive($sm){
             width: $dot-wid-xxxl;
             height: $dot-wid-xxxl;
-            margin: 1.893vw;
-            
+            margin: 1.893vw !important;  
         }
     }
     .dot.dot-lg{
         width: $dot-wid-lg;
         height: $dot-wid-lg;
         margin: 0.776vw;
+        @include responsive($sm){
+            width: $dot-wid-xxl;
+            height: $dot-wid-xxl;
+            margin: 2.1923vw !important;  
+        }
     }
     .dot.dot-md{
         width: $dot-wid-md;
         height: $dot-wid-md;
         margin: 0.876vw;
+        @include responsive($sm){
+            width: $dot-wid-xl;
+            height: $dot-wid-xl;
+            margin: 2.22vw !important;  
+        }
     }
     .dot.dot-sm{
         width: $dot-wid-sm;
@@ -265,6 +299,9 @@ $dot-wid-xs: 0.104vw;
         padding-top: 0;
     }
 }
+.header-dots-sm{
+    z-index: 1;
+}
 .row-xxl{
     @include responsive($xl){
         display: none;
@@ -324,7 +361,7 @@ $dot-wid-xs: 0.104vw;
     left: 0;
 
     @include responsive($sm){
-        padding: 6.5vw;
+        padding:0;
     }
 }
 
@@ -341,8 +378,8 @@ header{
         padding: 20px 0 20px 20px;
     }
     @include responsive($sm){
-        padding: 0;
-        min-height: 90vh;
+        padding: 15% 6.5% 0;
+        min-height: 99vh;
     }
 
     nav.navbar{
@@ -478,14 +515,20 @@ header{
         @include responsive($sm){
             width: 92%;
             padding-left: 0;
-            height: calc(100vh - 225px);
+            height: calc(100vh - 245px);
+        }
+        @include responsive($xs){
+            height: calc(100vh - 210px);
+        }
+        @include responsiveMaxHeight(800px){
+            height: calc(100vh - 170px);
         }
 
     }
 }
 
 .get-ameta-dots{
-    min-height: 120vh;
+    min-height: 95vh;
     padding-top: 16.5vw;
 
     @include responsive($xxl){
@@ -509,9 +552,12 @@ header{
 }
 #get-ameta{
     width: 100vw;
-    min-height: 120vh;
+    min-height: 95vh;
     position: relative;
     z-index: 2;
+    @include responsiveHeight($hxl){
+        min-height: 96vh;
+    }
     @include responsive($xxl){
         min-height: 109vh;
     }
@@ -520,6 +566,9 @@ header{
     }
     @include responsive($lg){
         min-height: 100vh;
+    }
+    @include responsive($sm){
+        padding: 0 6.5%;
     }
     
 
@@ -550,8 +599,8 @@ header{
                 margin-top: 40%;
             }
             @include responsive($sm){
-                width: 95%;
-                margin-top: 25%;
+                width: 100%;
+                margin-top: 6%;
             }
 
             p{
@@ -626,6 +675,9 @@ header{
                 margin-top: 0;
                 height: 55vh;
                 margin-left: 0;
+            }
+            @include responsive($xs){
+                height: 66vh;
             }
 
             p{
@@ -797,7 +849,10 @@ header{
                     font-size: 11px;
                 }
                 @include responsive($sm){
-                    font-size: clamp(6px,1.88vw ,7.8px);
+                    font-size: 7.8px;
+                }
+                @include responsive(390px){
+                    font-size: 7px;
                 }
 
                 &::before{
@@ -811,7 +866,7 @@ header{
                 margin-top: 25px;
             }
             @include responsive($sm){
-                width: 87%;
+                width: 100%;
             }
             .button-primary {
                 @include responsive($sm){
@@ -826,7 +881,7 @@ header{
 }
 
 .play-games-dots{
-    min-height: 104vh;
+    min-height: auto;
     padding-top: 25%;
     padding-bottom: 0;
     @include responsive($xxl){
@@ -839,8 +894,18 @@ header{
 }
 .btn-slider-nav{
     cursor: pointer;
+
+    @include responsive($sm){
+        width: 25px;
+
+        img{
+            width: 100%;
+            object-fit: contain;
+        }
+    }
 }
 #play-games{
+    position: relative;
     .play-games-sec{
         width: 100%;
         padding-left: 14%;
@@ -849,9 +914,13 @@ header{
         display: flex;
         // align-items: center;
         overflow: hidden;
+        position: relative;
 
-        @include responsive($xxl){
+        @include responsiveHeight($hxl){
             min-height: 114vh;
+        }
+        @include responsive($xxl){
+            min-height: 110vh;
         }
         @include responsive($xl){
             min-height: 126vh;
@@ -859,6 +928,9 @@ header{
         @include responsive($lg){
             flex-wrap: wrap;
             min-height: 87vh;
+        }
+        @include responsive($sm){
+            padding-left: 6.5%;
         }
         .section-text{
             width: 33%;
@@ -871,7 +943,11 @@ header{
                 width: 95%;
                 margin-top:12%;
             }
-          
+            @include responsive($sm){
+                width: 100%;
+                padding-right: 6.5%;
+                margin-top: 5%;
+            }
 
             p{
                 width: 97%;
@@ -927,6 +1003,12 @@ header{
                 @include responsive($lg){
                     height: 48vh !important;
                 }
+                @include responsive($sm){
+                    height: 60vh !important;
+                }
+                @include responsive($xs){
+                    height: 66vh !important;
+                }
                 // margin-top: 0;
                 // .slide-item{
                 //     transform: scale(1.05);
@@ -945,6 +1027,12 @@ header{
                     @include responsive($lg){
                         width: 29vw;
                     }
+                    @include responsive($sm){
+                        width: 59vw;
+                    }
+                    @include responsive($xs){
+                        width: 56vw;
+                    }
                     img{
                         width: 100%;
                         object-fit: contain;
@@ -959,7 +1047,12 @@ header{
                         left: 50%;
                         transform: translateX(-50%);
                         display: none;
-        
+
+                        @include responsive($sm){
+                            margin-top: 25px;
+                            margin-left: 2%;
+                        }
+                        
                         .card-data{
                             .data-icon{
                                 width: 33px;
@@ -971,26 +1064,39 @@ header{
                             }
                             .data-text{
                                 h6{
-                                    font-size: clamp(12px,0.83vw,16px);
+                                    font-size: clamp(9px,0.83vw,16px);
                                     font-family: $primary-font;
                                     margin: 0;
                                     line-height:clamp(12px,0.83vw,16px);
+
+                                    @include responsive($sm){
+                                        font-size: 8px
+                                    }
                                 }
                                 p{
                                     margin: 0;
-                                    font-size: clamp(9px,0.573vw,11.6px);
+                                    font-size: clamp(7px,0.573vw,11.6px);
                                     line-height: clamp(9px,0.573vw,11.6px);
+                                    @include responsive($sm){
+                                        font-size: 5px
+                                    }
 
                                 }
                             }
                             .item-1,.item-3{
                                 .data-icon{
                                     width: 33px;
+                                    @include responsive($sm){
+                                        width: 26px;
+                                    }
                                 }
                             }
                             .item-2{
                                 .data-icon{
                                     width:30px;
+                                    @include responsive($sm){
+                                        width: 22px;
+                                    }
                                 }
                             }
                         }
@@ -1004,6 +1110,14 @@ header{
                         transform: translateX(-50%);
                         display: none;
 
+                        @include responsive($sm){
+                            bottom: 25px;
+                        }
+                        @include responsive($xs){
+                            bottom: auto;
+                            top:84%;
+                            padding-top: 15px;
+                        }
                         a{
                             font-size: clamp(17px,1.6vw,32px);
                             color: #fff;
@@ -1021,6 +1135,13 @@ header{
 
                             @include responsive($lg){
                                 width: 180px;
+                            }
+                            @include responsive($sm){
+                                width: 48vw;
+                                font-size: 9px;
+                            }
+                            @include responsive($xs){
+                                font-size: 8px;
                             }
                             .btn-icon{
                                 position: absolute;
@@ -1042,9 +1163,6 @@ header{
                         }
                     }
 
-                    @include responsive($sm) {
-                        width: 300px;
-                    }
                 }
                 .slide-item.active{
                     transform: scale(1.1);
@@ -1090,12 +1208,18 @@ header{
         @include responsive($xxl){
             padding: 0 16px;
         }
+        @include responsive($sm){
+            padding: 0 9px;
+        }
+        @include responsive($xs){
+            padding: 0 7px;
+        }
         a{
             width: 0.989vw;
-            min-width: 12px;
+            min-width: 9px;
             max-width: 19px;
             height: 0.989vw;
-            min-height: 12px;
+            min-height: 9px;
             max-height: 19px;
             background-color: #fff;
             border-radius: 50%;
@@ -1111,6 +1235,11 @@ header{
                 
                 border: 10px solid #5a5a5a;
                 background-color: #fff;
+
+                @include responsive($sm){
+                    margin-top: 5px;
+                    border: 5px solid #5a5a5a;
+                }
             }
         }
     }
@@ -1122,10 +1251,16 @@ header{
     min-height: auto;
 }
 #roadmap{
+    position: relative;
+
     .roadmap-sec{
         width: 80%;
         margin-left: 12.5%;
         padding-top:1.5%;
+
+        @include responsiveHeight($hxl){
+            padding-top: 3.5%;
+        }
         @include responsive($xxl){
             padding-top: 3.5%;
         }
@@ -1135,6 +1270,12 @@ header{
         @include responsive($lg){
             padding-top: 3%;
         }
+        @include responsive($sm){
+            width: 100%;
+            margin-left: 0;
+            padding: 0 6.5%;
+            padding-top: 5%;
+        }
 
         .section-title{
             padding-left:0;
@@ -1143,6 +1284,9 @@ header{
         .roadmap-timeline{
             position: relative;
             padding-left: 1%;
+            @include responsive($sm){
+                padding-left: 17%;
+            }
 
             .cloud-img-items{
                 position: absolute;
@@ -1169,6 +1313,12 @@ header{
                             top: 55%;
                             left: 60%;
                         }
+                        @include responsive($sm){
+                            min-width: 120px;
+                            top: 55%;
+                            left: 53%;
+                        }
+                        
                     }
                     &.item-2{
                         width: 190px;
@@ -1181,6 +1331,11 @@ header{
                             top: -2%;
                             left: 55%;
                         }
+                        @include responsive($sm){
+                            min-width: 120px;
+                            top: -3%;
+                            left: 50%;
+                        }
                     }
                     &.item-3{
                         width: 11.04vw;
@@ -1189,6 +1344,11 @@ header{
                         left: 53%;
                         top: 14%;
                         @include responsive($lg){
+                            top: 25%;
+                            left: 0;
+                        }
+                        @include responsive($sm){
+                            min-width: 110px;
                             top: 25%;
                             left: 0;
                         }
@@ -1203,6 +1363,11 @@ header{
                         @include responsive($lg){
                             top: 77%;
                             right: 52%;
+                        }
+                        @include responsive($sm){
+                            min-width: 115px;
+                            top: 77%;
+                            right: 60%;
                         }
                     }
 
@@ -1219,13 +1384,26 @@ header{
                 @include responsive($lg){
                     min-height: 10vh;
                 }
+
+                @include responsive($lg){
+                    min-height: 8vh;
+                }
+                @include responsive($sm){
+                    min-height: 7.4vh;
+                }
+                @include responsiveMinHeight(840px){
+                    min-height: 7.2vh !important;
+                }
                 
                 .item-text{
                     h3{
-                        font-size: clamp(20px, 2.08vw, 40px);
+                        font-size: clamp(17px, 2.08vw, 40px);
                         font-family: $primary-font;
                         color: #fff;
                         line-height: 26px;
+                        @include responsive($sm){
+                            font-size: clamp(9px, 3.5vw, 15px);
+                        }
                     }
                     ul{
                         list-style: none;
@@ -1235,6 +1413,10 @@ header{
                             font-size: clamp(14px, 1.04vw, 20px);
                             font-family: $primary-font;
                             color: #fff;
+
+                            @include responsive($sm){
+                                font-size: clamp(7px, 2.2vw, 11px);
+                            }
                         }
                     }
                 }
@@ -1279,8 +1461,10 @@ header{
     padding-right: 20px;
 }
 #FAQ{
-    min-height: 190vh;
+    min-height: 170vh;
     padding-top: 35vh;
+    position: relative;
+
     @include responsive($xxl){
         min-height: 152vh;
         padding-top: 17vh;
@@ -1291,7 +1475,10 @@ header{
     }
     @include responsive($lg){
         min-height: 80vh;
-        padding-top: 7vh;
+        padding-top: 16vh;
+    }
+    @include responsiveMinHeight(840px){
+        padding-top: 13vh;
     }
     .faq-sec{
         width: 60%;
@@ -1300,7 +1487,16 @@ header{
             width: 85%;
         }
         @include responsive($sm){
-            width: 90%;
+            width: 100%;
+            padding: 0 6.5%;
+        }
+        .section-title{
+            h2{
+                @include responsive($sm){
+                    text-align: left;
+                    width: 50%;
+                }
+            }
         }
 
         .section-title{
@@ -1337,6 +1533,9 @@ header{
 
                     @include responsive($lg){
                         font-size: 14px;
+                    }
+                    @include responsive($sm){
+                        padding: 1rem 0;
                     }
                 }
                 .accordion-button.collapsed{
@@ -1399,6 +1598,9 @@ footer{
                 ul li{
                     margin: 10px 0;
                     font-size: clamp(13px, 0.9375vw, 18px);
+                    @include responsive($sm){
+                        margin: 0;
+                    }
                 }
                 .social-menu{
                     a{
@@ -1589,6 +1791,9 @@ footer{
     0% {
         opacity: 0;
        transform: translateX(-50%) translateY(50px);
+       @include responsive($sm){
+            transform: translateX(-50%) translateY(10px);
+        }
     }
     100% {
         opacity: 1;
@@ -1599,6 +1804,9 @@ footer{
     0% {
         opacity: 0;
        transform: translateX(-50%) translateY(-50px);
+       @include responsive($sm){
+            transform: translateX(-50%) translateY(-5px);
+       }
     }
     100% {
         opacity: 1;
