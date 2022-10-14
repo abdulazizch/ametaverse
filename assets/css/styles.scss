@@ -41,7 +41,7 @@ h2{
     font-size: clamp(26px, 3.65vw, 70px);
     color: $primary-txt-color;
     @include responsive($sm){
-        font-size: 32px;
+        font-size: clamp(26px, 7.11vw, 32px);
     }
 }
 p{
@@ -50,7 +50,8 @@ p{
     line-height: 26px;
     color: $primary-txt-color;
     @include responsive($sm){
-        font-size: 14px;
+        font-size: clamp(9px, 2.62vw, 11px);
+        line-height: 16px;
     }
 }
 ul{
@@ -108,7 +109,11 @@ ul{
     }
 }
 
-// $dot-wid-xxl: 9px;
+// $dot-wid-xxl: 13px/1125px;
+$dot-wid-xxxxl: 1.16vw;
+// $dot-wid-xxl: 12px/1125px;
+$dot-wid-xxxl: 1.067vw;
+// $dot-wid-xxl: 9px/1920px;
 $dot-wid-xxl: 0.46875vw;
 // $dot-wid-xl: 8px;
 $dot-wid-xl: 0.4166vw;
@@ -140,11 +145,23 @@ $dot-wid-xs: 0.104vw;
         margin: 0.72vw;
         display:inline-block;
         position:relative;
+        @include responsive($sm){
+            width: $dot-wid-xxxxl;
+            height: $dot-wid-xxxxl;
+            margin: 1.8vw;
+        }
     }
     .dot.dot-xl{
         width: $dot-wid-xl;
         height: $dot-wid-xl;
         margin: 0.746vw;
+
+        @include responsive($sm){
+            width: $dot-wid-xxxl;
+            height: $dot-wid-xxxl;
+            margin: 1.893vw;
+            
+        }
     }
     .dot.dot-lg{
         width: $dot-wid-lg;
@@ -305,6 +322,10 @@ $dot-wid-xs: 0.104vw;
     position: absolute;
     top: 0;
     left: 0;
+
+    @include responsive($sm){
+        padding: 6.5vw;
+    }
 }
 
 header{
@@ -319,6 +340,10 @@ header{
     @include responsive($xl){
         padding: 20px 0 20px 20px;
     }
+    @include responsive($sm){
+        padding: 0;
+        min-height: 90vh;
+    }
 
     nav.navbar{
         position: relative;
@@ -328,6 +353,9 @@ header{
             width: 20.5%;
             @include responsive($lg){
                 width: 50%;
+            }
+            @include responsive($sm){
+                width: 100%;
             }
             
             img{
@@ -408,6 +436,11 @@ header{
             width: 100%;
             top: 0;
         }
+        @include responsive($sm){
+            width: 150%;
+            top: -60px;
+            left: 54%;
+        }
     }
 
     .header-text-cont{
@@ -419,13 +452,19 @@ header{
         padding-left: 53px;
         position: relative;
         z-index: 2;
-        @include responsive($lg){
-            width: 80%;
-        }
 
         @include responsive($xl){
             height: calc(100vh - 160px);
         }
+        @include responsive($lg){
+            width: 80%;
+        }
+        @include responsive($sm){
+            width: 92%;
+            padding-left: 0;
+            height: calc(100vh - 225px);
+        }
+
     }
 }
 
@@ -480,6 +519,9 @@ header{
             flex-wrap: wrap;
             width: 68%;
         }
+        @include responsive($sm){
+            width: 100%;
+        }
 
         .section-text{
             width: 60%;
@@ -490,6 +532,10 @@ header{
             @include responsive($lg){
                 width: 100%;
                 margin-top: 40%;
+            }
+            @include responsive($sm){
+                width: 95%;
+                margin-top: 25%;
             }
 
             p{
@@ -507,6 +553,13 @@ header{
                     width: 100%;
                     font-size: clamp(14px, 0.7vw,18px);
                 }
+                @include responsive($sm){
+                    font-size: clamp(9px, 2.62vw, 11px);
+                    line-height: 16px;
+                    padding-left: 15px;
+                    margin-top: 5px;
+                    margin-left: 0;
+                }
 
                 &::before{
                     content: "";
@@ -519,64 +572,7 @@ header{
                     top: 0;
                 }
             }
-            .ameta-address{
-                width: auto;
-                display: inline-block;
-                height: auto;
-                padding: 0 30px 0 0.2vw;
-                border-radius: 9.5px;
-                background: #fff;
-                position: relative;
-                margin-top: 30px;
-                margin-left: 10px;
-                
-                @include responsive($xxl){
-                    margin-top: 10px;
-                }
-
-                .address-icon{
-                    position: absolute;
-                    width: auto;
-                    height: 2.761vw;
-                    left: -24px;
-                    top: 50%;
-                    transform: translateY(-50%);
-                    z-index: 2;
-
-                    // @include responsive($xxl){
-                    //     height: 230%;
-                    // }
-                    @include responsive($lg){
-                        height: 6vw;
-                    }
-                    img{
-                        width: 100%;
-                        height: 100%;
-                        object-fit: contain;
-                        object-position: center;
-                    }
-                }
-                
-                p{
-                    color: #000;
-                    margin: 0;
-                    width: 100%;
-                    font-size: clamp(13px, 0.834vw,16px);
-                    @include responsive($xl){
-                        font-size: 11px;
-                    }
-
-                    &::before{
-                        content: none;
-                    }
-                }
-            }
-            .polygon-btn-con{
-                margin-top: 35px;
-                @include responsive($xxl){
-                    margin-top: 25px;
-                }
-            }
+            
 
         }
 
@@ -606,6 +602,14 @@ header{
                 margin-top: 0;
                 height: 60vw;
                 margin-left: 30%;
+            }
+            @include responsive($sm){
+                width: 87vw;
+                min-width: auto;
+                min-height: auto;
+                margin-top: 0;
+                height: 55vh;
+                margin-left: 0;
             }
 
             p{
@@ -720,6 +724,84 @@ header{
             .gass-fee-label{
                 font-size: clamp(13px, 0.833vw ,16px);
                 text-align: center;
+            }
+        }
+
+        .ameta-address{
+            width: auto;
+            display: inline-block;
+            height: auto;
+            padding: 0 30px 0 0.2vw;
+            border-radius: 9.5px;
+            background: #fff;
+            position: relative;
+            margin-top: 30px;
+            margin-left: 10px;
+            
+            @include responsive($xxl){
+                margin-top: 10px;
+            }
+            @include responsive($sm){
+                padding: 0 10px 0 5vw;
+            }
+
+            .address-icon{
+                position: absolute;
+                width: auto;
+                height: 2.761vw;
+                left: -24px;
+                top: 50%;
+                transform: translateY(-50%);
+                z-index: 2;
+
+                // @include responsive($xxl){
+                //     height: 230%;
+                // }
+                @include responsive($lg){
+                    height: 6vw;
+                }
+                @include responsive($sm){
+                    height: 10vw;
+                    left: -5vw;
+                }
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                    object-position: center;
+                }
+            }
+            
+            p{
+                color: #000;
+                margin: 0;
+                width: 100%;
+                font-size: clamp(13px, 0.834vw,16px);
+                @include responsive($xl){
+                    font-size: 11px;
+                }
+                @include responsive($sm){
+                    font-size: clamp(6px,1.88vw ,7.8px);
+                }
+
+                &::before{
+                    content: none;
+                }
+            }
+        }
+        .polygon-btn-con{
+            margin-top: 35px;
+            @include responsive($xxl){
+                margin-top: 25px;
+            }
+            @include responsive($sm){
+                width: 87%;
+            }
+            .button-primary {
+                @include responsive($sm){
+                    width: 100%;
+                    font-size: clamp(12px, 5.33vw, 15px);
+                }
             }
         }
 
@@ -856,6 +938,7 @@ header{
                         width: 90%;
                         margin: auto;
                         margin-top: 30px;
+                        margin-left: 2%;
                         position: absolute;
                         left: 50%;
                         transform: translateX(-50%);
@@ -1028,7 +1111,7 @@ header{
         margin-left: 12.5%;
         padding-top:1.5%;
         @include responsive($xxl){
-            padding-top: 1%;
+            padding-top: 3.5%;
         }
         @include responsive($xl){
             padding-top: 1.6%;
@@ -1183,11 +1266,11 @@ header{
     min-height: 190vh;
     padding-top: 35vh;
     @include responsive($xxl){
-        min-height: 182vh;
-        padding-top: 23vh;
+        min-height: 152vh;
+        padding-top: 17vh;
     }
     @include responsive($xl){
-        min-height: 206vh;
+        min-height: 170vh;
         padding-top: 25vh;
     }
     @include responsive($lg){
@@ -1273,6 +1356,9 @@ header{
 
 footer{
     padding: 25px 0;
+    @include responsive($xxl){
+        margin-top: 3%;
+    }
 
     .footer-sec{
         width: 77.8%;
