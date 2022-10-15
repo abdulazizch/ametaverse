@@ -495,9 +495,9 @@ header .bg-video-cont video {
 }
 @media (max-width: 482px) {
   header .bg-video-cont {
-    width: 150%;
+    width: 94%;
     top: -60px;
-    left: 54%;
+    left: 50%;
   }
 }
 header .header-text-cont {

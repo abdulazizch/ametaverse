@@ -490,9 +490,12 @@ header{
             top: 0;
         }
         @include responsive($sm){
-            width: 150%;
+            // width: 150%;
+            // top: -60px;
+            // left: 54%;
+            width: 94%;
             top: -60px;
-            left: 54%;
+            left: 50%;
         }
     }
 
