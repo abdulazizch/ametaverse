@@ -522,7 +522,7 @@ header .header-text-cont {
 }
 @media (max-width: 482px) {
   header .header-text-cont {
-    width: 92%;
+    width: 100%;
     padding-left: 0;
     height: calc(100vh - 245px);
   }
@@ -535,6 +535,11 @@ header .header-text-cont {
 @media (max-height: 800px) and (max-width: 480px) {
   header .header-text-cont {
     height: calc(100vh - 170px);
+  }
+}
+@media (max-width: 482px) {
+  header .header-text-cont p {
+    width: 92%;
   }
 }
 

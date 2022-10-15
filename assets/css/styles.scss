@@ -516,7 +516,7 @@ header{
             width: 80%;
         }
         @include responsive($sm){
-            width: 92%;
+            width: 100%;
             padding-left: 0;
             height: calc(100vh - 245px);
         }
@@ -527,6 +527,11 @@ header{
             height: calc(100vh - 170px);
         }
 
+        p{
+            @include responsive($sm){
+                width: 92%;
+            }
+        }
     }
 }
 
