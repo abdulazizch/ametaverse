@@ -191,3 +191,11 @@ fadeInUp.forEach((el) => fadeUp.observe(el))
 fadeInRight.forEach((el) => fadeRight.observe(el))
 fadeInLeft.forEach((el) => fadeLeft.observe(el))
 fadein.forEach((el) => fadeIn.observe(el))
+
+$(document).ready(function(){
+    setTimeout(()=>{
+        var vid = document.getElementById("banner-bg-vid");
+
+        vid.play();
+    },2000)
+})
