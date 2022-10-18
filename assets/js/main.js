@@ -34,8 +34,8 @@ $(document).ready(function() {
     onSliderLoad: function() {
         setTimeout(()=>{
             $('#game-cards-crsl').removeClass('cS-hidden');
-            $('.lSPager').prepend("<span class='me-2 mb-2 btn-slider-nav btn-slide-prev text-white'><img src='./assets/images/icons/arrow-slide-left.png' ></span>")
-            $('.lSPager').append("<span class='ms-2 mb-2 btn-slider-nav btn-slide-next text-white'> <img src='./assets/images/icons/arrow-slide-right.png'></span>")
+            // $('.lSPager').prepend("<span class='me-2 mb-2 btn-slider-nav btn-slide-prev text-white'><img src='./assets/images/icons/arrow-slide-left.png' ></span>")
+            // $('.lSPager').append("<span class='ms-2 mb-2 btn-slider-nav btn-slide-next text-white'> <img src='./assets/images/icons/arrow-slide-right.png'></span>")
 
             $(".btn-slide-prev").click(()=>{
                 slider.goToPrevSlide();
@@ -147,10 +147,11 @@ fadeInRight.forEach((el) => fadeRight.observe(el))
 fadeInLeft.forEach((el) => fadeLeft.observe(el))
 fadein.forEach((el) => fadeIn.observe(el))
 
-$(document).ready(function(){
+$(window).bind("load",function(){
     setTimeout(()=>{
         var vid = document.getElementById("banner-bg-vid");
-
         vid.play();
-    },2000)
+        $('.lSPager').prepend("<span class='me-2 mb-2 btn-slider-nav btn-slide-prev text-white'><img src='./assets/images/icons/arrow-slide-left.png' ></span>")
+        $('.lSPager').append("<span class='ms-2 mb-2 btn-slider-nav btn-slide-next text-white'> <img src='./assets/images/icons/arrow-slide-right.png'></span>")
+    },3000)
 })
