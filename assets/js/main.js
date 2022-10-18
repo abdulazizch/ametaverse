@@ -34,8 +34,8 @@ $(document).ready(function() {
     onSliderLoad: function() {
         setTimeout(()=>{
             $('#game-cards-crsl').removeClass('cS-hidden');
-            // $('.lSPager').prepend("<span class='me-2 mb-2 btn-slider-nav btn-slide-prev text-white'><img src='./assets/images/icons/arrow-slide-left.png' ></span>")
-            // $('.lSPager').append("<span class='ms-2 mb-2 btn-slider-nav btn-slide-next text-white'> <img src='./assets/images/icons/arrow-slide-right.png'></span>")
+            $('.lSPager').prepend("<span class='me-2 mb-2 btn-slider-nav btn-slide-prev text-white'><img src='./assets/images/icons/arrow-slide-left.png' ></span>")
+            $('.lSPager').append("<span class='ms-2 mb-2 btn-slider-nav btn-slide-next text-white'> <img src='./assets/images/icons/arrow-slide-right.png'></span>")
 
             $(".btn-slide-prev").click(()=>{
                 slider.goToPrevSlide();
@@ -47,18 +47,18 @@ $(document).ready(function() {
                 $(".slide-card-btn a").html("Only Supports Desktop Browser")
                 $(".slide-card-btn a").addClass("disabled")
             }
-        },200)
+        },2000)
     } 
     });  
 });
 
-$(document).ready(()=>{
-    setTimeout(() => {
-        $('.lSPager').prepend("<span class='me-2 mb-2 btn-slider-nav btn-slide-prev text-white'><img src='./assets/images/icons/arrow-slide-left.png' ></span>")
-        $('.lSPager').append("<span class='ms-2 mb-2 btn-slider-nav btn-slide-next text-white'> <img src='./assets/images/icons/arrow-slide-right.png'></span>")
+// $(document).ready(function(){
+//     setTimeout(() => {
+//         $('.lSPager').prepend("<span class='me-2 mb-2 btn-slider-nav btn-slide-prev text-white'><img src='./assets/images/icons/arrow-slide-left.png' ></span>")
+//         $('.lSPager').append("<span class='ms-2 mb-2 btn-slider-nav btn-slide-next text-white'> <img src='./assets/images/icons/arrow-slide-right.png'></span>")
 
-    }, 3000);
-})
+//     }, 3000);
+// })
 
 const sliUp = new IntersectionObserver((el)=>{
     el.forEach((e) =>{
