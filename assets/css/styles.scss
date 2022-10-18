@@ -16,7 +16,12 @@ $xs : 390px;
     }
 }
 @mixin responsiveMaxHeight($query) {
-    @media ( max-height: $query ) and (max-width: 480px) {
+    @media ( max-height: $query ) and (max-width: $sm) {
+        @content;
+    }
+}
+@mixin responsiveMaxHeightxs($query) {
+    @media ( max-height: $query ) and (max-width: $xs) {
         @content;
     }
 }
@@ -921,6 +926,9 @@ header{
         min-height: 85vh;
     }
 }
+.play-games-dots-sm{
+    margin-top: 0.5%;
+}
 .btn-slider-nav{
     cursor: pointer;
 
@@ -1040,6 +1048,9 @@ header{
                 }
                 @include responsive($xs){
                     height: 53vh !important;
+                }
+                @include responsiveMaxHeightxs(700px){
+                    height: 63vh !important;
                 }
                 // margin-top: 0;
                 // .slide-item{

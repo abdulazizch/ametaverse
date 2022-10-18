@@ -541,7 +541,7 @@ header .header-text-cont {
     height: calc(100vh - 210px);
   }
 }
-@media (max-height: 800px) and (max-width: 480px) {
+@media (max-height: 800px) and (max-width: 482px) {
   header .header-text-cont {
     height: calc(100vh - 170px);
   }
@@ -985,6 +985,10 @@ header .header-text-cont {
   }
 }
 
+.play-games-dots-sm {
+  margin-top: 0.5%;
+}
+
 .btn-slider-nav {
   cursor: pointer;
 }
@@ -1136,6 +1140,11 @@ header .header-text-cont {
 @media (max-width: 390px) {
   #play-games .play-games-sec .game-cards-con ul.game-cards-crsl {
     height: 53vh !important;
+  }
+}
+@media (max-height: 700px) and (max-width: 390px) {
+  #play-games .play-games-sec .game-cards-con ul.game-cards-crsl {
+    height: 63vh !important;
   }
 }
 #play-games .play-games-sec .game-cards-con ul.game-cards-crsl .item-card {
