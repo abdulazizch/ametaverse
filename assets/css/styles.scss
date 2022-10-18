@@ -729,7 +729,7 @@ header{
                 margin: 1rem 0;
 
                 @include responsive($xxl){
-                    margin: 0 0 1rem 0;
+                    margin: 1rem 0 1.5rem 0;
                 }
                 .swap-btn{
                     background: transparent;

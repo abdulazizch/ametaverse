@@ -771,7 +771,7 @@ header .header-text-cont {
 }
 @media (max-width: 1680px) {
   #get-ameta .get-ameta-sec .section-card .swap-btn-con {
-    margin: 0 0 1rem 0;
+    margin: 1rem 0 1.5rem 0;
   }
 }
 #get-ameta .get-ameta-sec .section-card .swap-btn-con .swap-btn {
