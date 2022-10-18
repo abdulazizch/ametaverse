@@ -67,8 +67,8 @@ p{
     line-height: 26px;
     color: $primary-txt-color;
     @include responsive($sm){
-        font-size: clamp(9px, 2.62vw, 11px);
-        line-height: 16px;
+        font-size: 14px;
+        line-height: 20px;
     }
 }
 ul{
@@ -383,7 +383,7 @@ header{
         padding: 20px 0 20px 20px;
     }
     @include responsive($sm){
-        padding: 15% 6.5% 0;
+        padding: 12.6% 6.5% 0;
         min-height: 99vh;
     }
 
@@ -397,7 +397,8 @@ header{
                 width: 50%;
             }
             @include responsive($sm){
-                width: 100%;
+                width: 80%;
+                margin: auto;
             }
             
             img{
@@ -632,8 +633,8 @@ header{
                     font-size: clamp(14px, 0.7vw,18px);
                 }
                 @include responsive($sm){
-                    font-size: clamp(9px, 2.62vw, 11px);
-                    line-height: 16px;
+                    font-size: 14px;
+                    line-height: 20px;
                     padding-left: 15px;
                     margin-top: 5px;
                     margin-left: 0;
