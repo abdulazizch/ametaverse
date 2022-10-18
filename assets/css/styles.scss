@@ -4,7 +4,7 @@ $xl : 1366px;
 $lg : 992px;
 $md : 768px;
 $sm : 482px;
-$xs : 375px;
+$xs : 390px;
 @mixin responsive($query) {
     @media ( max-width: $query ) {
         @content;
@@ -21,7 +21,12 @@ $xs : 375px;
     }
 }
 @mixin responsiveMinHeight($query) {
-    @media ( min-height: $query ) and (max-width: 480px) {
+    @media ( min-height: $query ) and (max-width: $sm) {
+        @content;
+    }
+}
+@mixin responsiveMinHeightxs($query) {
+    @media ( min-height: $query ) and (max-width: $xs) {
         @content;
     }
 }
@@ -555,6 +560,9 @@ header{
         min-height: 96vh;
     }
 }
+.get-ameta-dots-sm{
+    margin-top: 1%;
+}
 .ms-3col{
     margin-left: -2vw;
 }
@@ -732,7 +740,7 @@ header{
                     margin: 0rem 0 1rem 0;
                 }
                 @include responsive($sm){
-                    margin: 1rem 0 1.5rem 0;
+                    margin: 2rem 0 2.9rem 0;
                 }
                 @include responsive($xs){
                     margin: 0.6rem 0 1rem 0;
@@ -926,6 +934,9 @@ header{
     }
 }
 #play-games{
+    @include responsive($xs){
+        margin-top: 12%;
+    }
     position: relative;
     .play-games-sec{
         width: 100%;
@@ -1025,10 +1036,10 @@ header{
                     height: 48vh !important;
                 }
                 @include responsive($sm){
-                    height: 60vh !important;
+                    height: 56vh !important;
                 }
                 @include responsive($xs){
-                    height: 66vh !important;
+                    height: 53vh !important;
                 }
                 // margin-top: 0;
                 // .slide-item{
@@ -1070,8 +1081,9 @@ header{
                         display: none;
 
                         @include responsive($sm){
-                            margin-top: 25px;
+                            margin-top: 15px;
                             margin-left: 2%;
+                            height: 40%;
                         }
                         
                         .card-data{
@@ -1092,6 +1104,9 @@ header{
 
                                     @include responsive($sm){
                                         font-size: 8px
+                                    }
+                                    @include responsive($xs){
+                                        font-size: 7px
                                     }
                                 }
                                 p{
@@ -1114,9 +1129,9 @@ header{
                             }
                             .item-2{
                                 .data-icon{
-                                    width:30px;
+                                    width: 30px;
                                     @include responsive($sm){
-                                        width: 22px;
+                                        width: 26px;
                                     }
                                 }
                             }
@@ -1183,6 +1198,9 @@ header{
                         &.cs{
                             a{
                                 font-size: clamp(15px,1.2vw,25px);
+                                @include responsive($sm){
+                                    font-size: 8px;
+                                }
                             }
                         }
                     }
@@ -1274,9 +1292,18 @@ header{
     // padding-bottom: 0;
     height: 100%;
 }
+.roadmap-dots-sm{
+    margin-top: 1%;
+}
 #roadmap{
     position: relative;
     overflow: hidden;
+    @include responsive($sm){
+        margin-top: 15%;
+    }
+    @include responsive($xs){
+        margin-top: 17%;
+    }
 
     .roadmap-sec{
         width: 80%;
@@ -1292,6 +1319,9 @@ header{
 
         .section-title{
             padding-left:0;
+            @include responsive($sm){
+                padding-left: 6px;
+            }
         }
 
         .roadmap-timeline{
@@ -1327,7 +1357,7 @@ header{
                             left: 60%;
                         }
                         @include responsive($sm){
-                            min-width: 120px;
+                            min-width: 90px;
                             top: 55%;
                             left: 53%;
                         }
@@ -1345,7 +1375,7 @@ header{
                             left: 55%;
                         }
                         @include responsive($sm){
-                            min-width: 120px;
+                            min-width: 90px;
                             top: -3%;
                             left: 50%;
                         }
@@ -1361,7 +1391,7 @@ header{
                             left: 0;
                         }
                         @include responsive($sm){
-                            min-width: 110px;
+                            min-width: 80px;
                             top: 25%;
                             left: 0;
                         }
@@ -1378,9 +1408,9 @@ header{
                             right: 52%;
                         }
                         @include responsive($sm){
-                            min-width: 115px;
-                            top: 77%;
-                            right: 60%;
+                            min-width: 85px;
+                            top: 80%;
+                            right: 58%;
                         }
                     }
 
@@ -1405,7 +1435,10 @@ header{
                     min-height: 7.4vh;
                 }
                 @include responsiveMinHeight(840px){
-                    min-height: 7.2vh !important;
+                    min-height: 7.1vh !important;
+                }
+                @include responsiveMinHeightxs(800px){
+                    min-height: 6.7vh !important;
                 }
                 
                 .item-text{
@@ -1490,9 +1523,14 @@ header{
         min-height: 80vh;
         padding-top: 16vh;
     }
-    @include responsiveMinHeight(840px){
-        padding-top: 13vh;
+    @include responsive($sm){
+        min-height: 100vh;
+        padding-top: 29%;
     }
+    // @include responsiveMinHeight(840px){
+    //     min-height: 100vh;
+    //     padding-top: 29%;
+    // }
     .faq-sec{
         width: 60%;
         margin: auto;
@@ -1526,6 +1564,7 @@ header{
             }
             @include responsive($sm){
                 width: 95%;
+                margin-top: 20%;
             }
 
             .accordion-item{
@@ -1592,11 +1631,18 @@ footer{
         width: 77.8%;
         margin: auto;
 
+        @include responsive($sm){
+            width: 88%;
+        }
         .footer-logo{
             width: 100%;
+            margin: auto;
             img{
                 width: 100%;
                 object-fit: contain;
+            }
+            @include responsive($sm){
+                width: 94%;
             }
         }
 
@@ -1640,6 +1686,9 @@ footer{
 
                         @include responsive($lg){
                             margin: auto;
+                        }
+                        @include responsive($sm){
+                            width: 100%;
                         }
 
                         input{
@@ -1699,6 +1748,14 @@ footer{
             p{
                 font-size: clamp(13px, 0.9375vw, 18px);
                 margin: 0;
+            }
+            .copyright-links{
+                @include responsive($sm){
+                    width: 88%;
+                    margin: auto;
+                    display: flex;
+                    justify-content: space-between;
+                }
             }
         }
     }

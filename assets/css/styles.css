@@ -536,7 +536,7 @@ header .header-text-cont {
     height: calc(100vh - 245px);
   }
 }
-@media (max-width: 375px) {
+@media (max-width: 390px) {
   header .header-text-cont {
     height: calc(100vh - 210px);
   }
@@ -570,6 +570,10 @@ header .header-text-cont {
   .get-ameta-dots {
     min-height: 96vh;
   }
+}
+
+.get-ameta-dots-sm {
+  margin-top: 1%;
 }
 
 .ms-3col {
@@ -731,7 +735,7 @@ header .header-text-cont {
     margin-left: 0;
   }
 }
-@media (max-width: 375px) {
+@media (max-width: 390px) {
   #get-ameta .get-ameta-sec .section-card {
     height: auto;
   }
@@ -776,10 +780,10 @@ header .header-text-cont {
 }
 @media (max-width: 482px) {
   #get-ameta .get-ameta-sec .section-card .swap-btn-con {
-    margin: 1rem 0 1.5rem 0;
+    margin: 2rem 0 2.9rem 0;
   }
 }
-@media (max-width: 375px) {
+@media (max-width: 390px) {
   #get-ameta .get-ameta-sec .section-card .swap-btn-con {
     margin: 0.6rem 0 1rem 0;
   }
@@ -998,6 +1002,11 @@ header .header-text-cont {
 #play-games {
   position: relative;
 }
+@media (max-width: 390px) {
+  #play-games {
+    margin-top: 12%;
+  }
+}
 #play-games .play-games-sec {
   width: 100%;
   padding-left: 14%;
@@ -1121,12 +1130,12 @@ header .header-text-cont {
 }
 @media (max-width: 482px) {
   #play-games .play-games-sec .game-cards-con ul.game-cards-crsl {
-    height: 60vh !important;
+    height: 56vh !important;
   }
 }
-@media (max-width: 375px) {
+@media (max-width: 390px) {
   #play-games .play-games-sec .game-cards-con ul.game-cards-crsl {
-    height: 66vh !important;
+    height: 53vh !important;
   }
 }
 #play-games .play-games-sec .game-cards-con ul.game-cards-crsl .item-card {
@@ -1149,7 +1158,7 @@ header .header-text-cont {
     width: 59vw;
   }
 }
-@media (max-width: 375px) {
+@media (max-width: 390px) {
   #play-games .play-games-sec .game-cards-con ul.game-cards-crsl .item-card {
     width: 56vw;
   }
@@ -1171,8 +1180,9 @@ header .header-text-cont {
 }
 @media (max-width: 482px) {
   #play-games .play-games-sec .game-cards-con ul.game-cards-crsl .item-card .card-data-con {
-    margin-top: 25px;
+    margin-top: 15px;
     margin-left: 2%;
+    height: 40%;
   }
 }
 #play-games .play-games-sec .game-cards-con ul.game-cards-crsl .item-card .card-data-con .card-data .data-icon {
@@ -1193,6 +1203,11 @@ header .header-text-cont {
 @media (max-width: 482px) {
   #play-games .play-games-sec .game-cards-con ul.game-cards-crsl .item-card .card-data-con .card-data .data-text h6 {
     font-size: 8px;
+  }
+}
+@media (max-width: 390px) {
+  #play-games .play-games-sec .game-cards-con ul.game-cards-crsl .item-card .card-data-con .card-data .data-text h6 {
+    font-size: 7px;
   }
 }
 #play-games .play-games-sec .game-cards-con ul.game-cards-crsl .item-card .card-data-con .card-data .data-text p {
@@ -1218,7 +1233,7 @@ header .header-text-cont {
 }
 @media (max-width: 482px) {
   #play-games .play-games-sec .game-cards-con ul.game-cards-crsl .item-card .card-data-con .card-data .item-2 .data-icon {
-    width: 22px;
+    width: 26px;
   }
 }
 #play-games .play-games-sec .game-cards-con ul.game-cards-crsl .item-card .slide-card-btn {
@@ -1233,7 +1248,7 @@ header .header-text-cont {
     bottom: 25px;
   }
 }
-@media (max-width: 375px) {
+@media (max-width: 390px) {
   #play-games .play-games-sec .game-cards-con ul.game-cards-crsl .item-card .slide-card-btn {
     bottom: auto;
     top: 84%;
@@ -1267,7 +1282,7 @@ header .header-text-cont {
     font-size: 9px;
   }
 }
-@media (max-width: 375px) {
+@media (max-width: 390px) {
   #play-games .play-games-sec .game-cards-con ul.game-cards-crsl .item-card .slide-card-btn a {
     font-size: 8px;
   }
@@ -1287,6 +1302,11 @@ header .header-text-cont {
 }
 #play-games .play-games-sec .game-cards-con ul.game-cards-crsl .item-card .slide-card-btn.cs a {
   font-size: clamp(15px, 1.2vw, 25px);
+}
+@media (max-width: 482px) {
+  #play-games .play-games-sec .game-cards-con ul.game-cards-crsl .item-card .slide-card-btn.cs a {
+    font-size: 8px;
+  }
 }
 #play-games .play-games-sec .game-cards-con ul.game-cards-crsl .slide-item.active {
   transform: scale(1.1);
@@ -1336,7 +1356,7 @@ header .header-text-cont {
     padding: 0 9px;
   }
 }
-@media (max-width: 375px) {
+@media (max-width: 390px) {
   .lSSlideOuter .lSPager.lSpg li {
     padding: 0 7px;
   }
@@ -1373,9 +1393,23 @@ header .header-text-cont {
   height: 100%;
 }
 
+.roadmap-dots-sm {
+  margin-top: 1%;
+}
+
 #roadmap {
   position: relative;
   overflow: hidden;
+}
+@media (max-width: 482px) {
+  #roadmap {
+    margin-top: 15%;
+  }
+}
+@media (max-width: 390px) {
+  #roadmap {
+    margin-top: 17%;
+  }
 }
 #roadmap .roadmap-sec {
   width: 80%;
@@ -1392,6 +1426,11 @@ header .header-text-cont {
 }
 #roadmap .roadmap-sec .section-title {
   padding-left: 0;
+}
+@media (max-width: 482px) {
+  #roadmap .roadmap-sec .section-title {
+    padding-left: 6px;
+  }
 }
 #roadmap .roadmap-sec .roadmap-timeline {
   position: relative;
@@ -1431,7 +1470,7 @@ header .header-text-cont {
 }
 @media (max-width: 482px) {
   #roadmap .roadmap-sec .roadmap-timeline .cloud-img-items .cloud-img-item.item-1 {
-    min-width: 120px;
+    min-width: 90px;
     top: 55%;
     left: 53%;
   }
@@ -1452,7 +1491,7 @@ header .header-text-cont {
 }
 @media (max-width: 482px) {
   #roadmap .roadmap-sec .roadmap-timeline .cloud-img-items .cloud-img-item.item-2 {
-    min-width: 120px;
+    min-width: 90px;
     top: -3%;
     left: 50%;
   }
@@ -1472,7 +1511,7 @@ header .header-text-cont {
 }
 @media (max-width: 482px) {
   #roadmap .roadmap-sec .roadmap-timeline .cloud-img-items .cloud-img-item.item-3 {
-    min-width: 110px;
+    min-width: 80px;
     top: 25%;
     left: 0;
   }
@@ -1492,9 +1531,9 @@ header .header-text-cont {
 }
 @media (max-width: 482px) {
   #roadmap .roadmap-sec .roadmap-timeline .cloud-img-items .cloud-img-item.item-4 {
-    min-width: 115px;
-    top: 77%;
-    right: 60%;
+    min-width: 85px;
+    top: 80%;
+    right: 58%;
   }
 }
 #roadmap .roadmap-sec .roadmap-timeline .cloud-img-items .cloud-img-item img {
@@ -1520,9 +1559,14 @@ header .header-text-cont {
     min-height: 7.4vh;
   }
 }
-@media (min-height: 840px) and (max-width: 480px) {
+@media (min-height: 840px) and (max-width: 482px) {
   #roadmap .roadmap-sec .roadmap-timeline .timeline-item {
-    min-height: 7.2vh !important;
+    min-height: 7.1vh !important;
+  }
+}
+@media (min-height: 800px) and (max-width: 390px) {
+  #roadmap .roadmap-sec .roadmap-timeline .timeline-item {
+    min-height: 6.7vh !important;
   }
 }
 #roadmap .roadmap-sec .roadmap-timeline .timeline-item .item-text h3 {
@@ -1664,9 +1708,10 @@ header .header-text-cont {
     padding-top: 16vh;
   }
 }
-@media (min-height: 840px) and (max-width: 480px) {
+@media (max-width: 482px) {
   #FAQ {
-    padding-top: 13vh;
+    min-height: 100vh;
+    padding-top: 29%;
   }
 }
 #FAQ .faq-sec {
@@ -1706,6 +1751,7 @@ header .header-text-cont {
 @media (max-width: 482px) {
   #FAQ .faq-sec .faq-dropdowns-con {
     width: 95%;
+    margin-top: 20%;
   }
 }
 #FAQ .faq-sec .faq-dropdowns-con .accordion-item {
@@ -1777,13 +1823,24 @@ footer .footer-sec {
   width: 77.8%;
   margin: auto;
 }
+@media (max-width: 482px) {
+  footer .footer-sec {
+    width: 88%;
+  }
+}
 footer .footer-sec .footer-logo {
   width: 100%;
+  margin: auto;
 }
 footer .footer-sec .footer-logo img {
   width: 100%;
   -o-object-fit: contain;
      object-fit: contain;
+}
+@media (max-width: 482px) {
+  footer .footer-sec .footer-logo {
+    width: 94%;
+  }
 }
 footer .footer-sec .footer-content .footer-col h4 {
   font-size: clamp(15px, 1.145vw, 22px);
@@ -1824,6 +1881,11 @@ footer .footer-sec .footer-content .footer-col .newsletter-form-con form {
 @media (max-width: 992px) {
   footer .footer-sec .footer-content .footer-col .newsletter-form-con form {
     margin: auto;
+  }
+}
+@media (max-width: 482px) {
+  footer .footer-sec .footer-content .footer-col .newsletter-form-con form {
+    width: 100%;
   }
 }
 footer .footer-sec .footer-content .footer-col .newsletter-form-con form input {
@@ -1885,6 +1947,14 @@ footer .footer-sec .copyrights a {
 footer .footer-sec .copyrights p {
   font-size: clamp(13px, 0.9375vw, 18px);
   margin: 0;
+}
+@media (max-width: 482px) {
+  footer .footer-sec .copyrights .copyright-links {
+    width: 88%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .fadeInUp, .fadeInDown, .fadeInRight, .fadeInLeft, .fadeIn, .slideDown, .slideUp {

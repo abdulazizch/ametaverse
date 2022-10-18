@@ -45,6 +45,7 @@ $(document).ready(function() {
             })
             if(window.innerWidth<480){
                 $(".slide-card-btn a").html("Only Supports Desktop Browser")
+                $(".slide-card-btn a").addClass("disabled")
             }
         },200)
     } 
