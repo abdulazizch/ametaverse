@@ -143,14 +143,17 @@ $dot-wid-sm: 0.15625vw;
 // $dot-wid-xs: 2px;
 $dot-wid-xs: 0.104vw;
 .bg-dots-con{
-    width: 100vw;
+    width: 100%;
     max-width: 1920px;
     box-sizing: border-box;
     margin: auto;
-    min-height: 101vh;
+    min-height: auto;
+    height: 100%;
     top: 0;
     padding: 10px 2px;
-    // overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
     @include responsive($lg){
         padding: 10px 7px;
     }
@@ -356,7 +359,7 @@ $dot-wid-xs: 0.104vw;
     width: 100vw;
     max-width: 1920px;
     overflow-x: hidden;
-    position: absolute;
+    position: relative;
     top: 0;
     left: 0;
 
@@ -364,7 +367,9 @@ $dot-wid-xs: 0.104vw;
         padding:0;
     }
 }
-
+.hero-section{
+    position: relative;
+}
 header{
     padding: 33px;
     box-sizing: border-box;
@@ -467,7 +472,7 @@ header{
         height: calc(100vh - 50px);
         overflow: hidden;
         position: absolute;
-        z-index: -1;
+        z-index: -2;
         top: 40px;
         left: 52%;
         transform: translateX(-50%);
@@ -536,7 +541,7 @@ header{
 }
 
 .get-ameta-dots{
-    min-height: 95vh;
+    height: 100%;
     padding-top: 16.5vw;
 
     @include responsive($xxl){
@@ -889,7 +894,7 @@ header{
 }
 
 .play-games-dots{
-    min-height: auto;
+    height: 100%;
     padding-top: 25%;
     padding-bottom: 0;
     @include responsive($xxl){
@@ -1117,6 +1122,7 @@ header{
                         left: 50%;
                         transform: translateX(-50%);
                         display: none;
+                        
 
                         @include responsive($sm){
                             bottom: 25px;
@@ -1131,7 +1137,7 @@ header{
                             color: #fff;
                             font-family: $primary-font;
                             padding: 3px 10px;
-                            width: 230px;
+                            min-width: 10.6vw;
                             display: inline-block;
                             text-align: center;
                             border-radius: 20px;
@@ -1139,7 +1145,9 @@ header{
                             background: #000;
                             position: relative;
 
-                            
+                            &.disabled{
+                                pointer-events: none;
+                            }
 
                             @include responsive($lg){
                                 width: 180px;
@@ -1255,29 +1263,18 @@ header{
 
 .roadmap-dots{
     padding-top: 0;
-    padding-bottom: 0;
-    min-height: auto;
+    // padding-bottom: 0;
+    height: 100%;
 }
 #roadmap{
     position: relative;
+    overflow: hidden;
 
     .roadmap-sec{
         width: 80%;
         margin-left: 12.5%;
-        padding-top:1.5%;
+        padding-top:3.1%;
 
-        @include responsiveHeight($hxl){
-            padding-top: 3.5%;
-        }
-        @include responsive($xxl){
-            padding-top: 3.5%;
-        }
-        @include responsive($xl){
-            padding-top: 1.6%;
-        }
-        @include responsive($lg){
-            padding-top: 3%;
-        }
         @include responsive($sm){
             width: 100%;
             margin-left: 0;
@@ -1387,7 +1384,7 @@ header{
             }
 
             .timeline-item{
-                min-height: 23vh;
+                min-height: 20.5vh;
 
                 @include responsive($lg){
                     min-height: 10vh;
@@ -1465,11 +1462,11 @@ header{
 .faq-dots{
     padding-top: 0;
     padding-bottom: 0;
-    min-height: auto;
+    height: 100%;
     padding-right: 20px;
 }
 #FAQ{
-    min-height: 170vh;
+    min-height: 180vh;
     padding-top: 35vh;
     position: relative;
 

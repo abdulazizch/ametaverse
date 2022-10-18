@@ -106,13 +106,17 @@ ul li {
 }
 
 .bg-dots-con {
-  width: 100vw;
+  width: 100%;
   max-width: 1920px;
   box-sizing: border-box;
   margin: auto;
-  min-height: 101vh;
+  min-height: auto;
+  height: 100%;
   top: 0;
   padding: 10px 2px;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 @media (max-width: 992px) {
   .bg-dots-con {
@@ -342,7 +346,7 @@ ul li {
   width: 100vw;
   max-width: 1920px;
   overflow-x: hidden;
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
 }
@@ -350,6 +354,10 @@ ul li {
   .main-wrapper {
     padding: 0;
   }
+}
+
+.hero-section {
+  position: relative;
 }
 
 header {
@@ -466,7 +474,7 @@ header .bg-video-cont {
   height: calc(100vh - 50px);
   overflow: hidden;
   position: absolute;
-  z-index: -1;
+  z-index: -2;
   top: 40px;
   left: 52%;
   transform: translateX(-50%);
@@ -544,7 +552,7 @@ header .header-text-cont {
 }
 
 .get-ameta-dots {
-  min-height: 95vh;
+  height: 100%;
   padding-top: 16.5vw;
 }
 @media (max-width: 1680px) {
@@ -945,7 +953,7 @@ header .header-text-cont {
 }
 
 .play-games-dots {
-  min-height: auto;
+  height: 100%;
   padding-top: 25%;
   padding-bottom: 0;
 }
@@ -1225,13 +1233,16 @@ header .header-text-cont {
   color: #fff;
   font-family: "GoGoHack";
   padding: 3px 10px;
-  width: 230px;
+  min-width: 10.6vw;
   display: inline-block;
   text-align: center;
   border-radius: 20px;
   border: 1.5px solid #fff;
   background: #000;
   position: relative;
+}
+#play-games .play-games-sec .game-cards-con ul.game-cards-crsl .item-card .slide-card-btn a.disabled {
+  pointer-events: none;
 }
 @media (max-width: 992px) {
   #play-games .play-games-sec .game-cards-con ul.game-cards-crsl .item-card .slide-card-btn a {
@@ -1347,37 +1358,17 @@ header .header-text-cont {
 
 .roadmap-dots {
   padding-top: 0;
-  padding-bottom: 0;
-  min-height: auto;
+  height: 100%;
 }
 
 #roadmap {
   position: relative;
+  overflow: hidden;
 }
 #roadmap .roadmap-sec {
   width: 80%;
   margin-left: 12.5%;
-  padding-top: 1.5%;
-}
-@media (min-height: 1005px) and (min-width: 1600px) {
-  #roadmap .roadmap-sec {
-    padding-top: 3.5%;
-  }
-}
-@media (max-width: 1680px) {
-  #roadmap .roadmap-sec {
-    padding-top: 3.5%;
-  }
-}
-@media (max-width: 1366px) {
-  #roadmap .roadmap-sec {
-    padding-top: 1.6%;
-  }
-}
-@media (max-width: 992px) {
-  #roadmap .roadmap-sec {
-    padding-top: 3%;
-  }
+  padding-top: 3.1%;
 }
 @media (max-width: 482px) {
   #roadmap .roadmap-sec {
@@ -1500,7 +1491,7 @@ header .header-text-cont {
      object-fit: contain;
 }
 #roadmap .roadmap-sec .roadmap-timeline .timeline-item {
-  min-height: 23vh;
+  min-height: 20.5vh;
 }
 @media (max-width: 992px) {
   #roadmap .roadmap-sec .roadmap-timeline .timeline-item {
@@ -1634,12 +1625,12 @@ header .header-text-cont {
 .faq-dots {
   padding-top: 0;
   padding-bottom: 0;
-  min-height: auto;
+  height: 100%;
   padding-right: 20px;
 }
 
 #FAQ {
-  min-height: 170vh;
+  min-height: 180vh;
   padding-top: 35vh;
   position: relative;
 }
