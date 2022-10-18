@@ -692,7 +692,7 @@ header .header-text-cont {
 #get-ameta .get-ameta-sec .section-card {
   margin-left: 5%;
   background: url(../images/swap-card-bg.png);
-  padding: 16px 34px;
+  padding: 16px 34px 0;
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: top center;
@@ -727,13 +727,13 @@ header .header-text-cont {
     min-width: auto;
     min-height: auto;
     margin-top: 0;
-    height: 55vh;
+    height: auto;
     margin-left: 0;
   }
 }
 @media (max-width: 375px) {
   #get-ameta .get-ameta-sec .section-card {
-    height: 66vh;
+    height: auto;
   }
 }
 #get-ameta .get-ameta-sec .section-card p {
@@ -771,7 +771,17 @@ header .header-text-cont {
 }
 @media (max-width: 1680px) {
   #get-ameta .get-ameta-sec .section-card .swap-btn-con {
+    margin: 0rem 0 1rem 0;
+  }
+}
+@media (max-width: 482px) {
+  #get-ameta .get-ameta-sec .section-card .swap-btn-con {
     margin: 1rem 0 1.5rem 0;
+  }
+}
+@media (max-width: 375px) {
+  #get-ameta .get-ameta-sec .section-card .swap-btn-con {
+    margin: 0.6rem 0 1rem 0;
   }
 }
 #get-ameta .get-ameta-sec .section-card .swap-btn-con .swap-btn {

@@ -658,7 +658,7 @@ header{
         .section-card{
             margin-left: 5%;
             background: url(../images/swap-card-bg.png);
-            padding: 16px 34px;
+            padding: 16px 34px 0;
             background-size: 100%;
             background-repeat: no-repeat;
             background-position: top center;
@@ -687,11 +687,11 @@ header{
                 min-width: auto;
                 min-height: auto;
                 margin-top: 0;
-                height: 55vh;
+                height: auto;
                 margin-left: 0;
             }
             @include responsive($xs){
-                height: 66vh;
+                height: auto;
             }
 
             p{
@@ -729,7 +729,13 @@ header{
                 margin: 1rem 0;
 
                 @include responsive($xxl){
+                    margin: 0rem 0 1rem 0;
+                }
+                @include responsive($sm){
                     margin: 1rem 0 1.5rem 0;
+                }
+                @include responsive($xs){
+                    margin: 0.6rem 0 1rem 0;
                 }
                 .swap-btn{
                     background: transparent;
