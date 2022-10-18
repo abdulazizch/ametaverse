@@ -907,6 +907,7 @@ header .header-text-cont {
 }
 @media (max-width: 482px) {
   #get-ameta .get-ameta-sec .ameta-address .address-icon {
+    width: 10vw;
     height: 10vw;
     left: -5vw;
   }

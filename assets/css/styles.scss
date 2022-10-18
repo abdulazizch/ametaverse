@@ -849,6 +849,7 @@ header{
                     height: 6vw;
                 }
                 @include responsive($sm){
+                    width: 10vw;
                     height: 10vw;
                     left: -5vw;
                 }
