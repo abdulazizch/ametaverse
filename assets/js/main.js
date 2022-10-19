@@ -8,48 +8,50 @@ $(".swap-btn").click(function(){
 })
 
 $(document).ready(function() {
-    const slider = $('#game-cards-crsl').lightSlider({
-        autoWidth:true,
-        loop:false,
-        controls: false,
-        // autoWidth: false,
-        slideMargin: 40,
-        responsive : [
-        {
-            breakpoint:992,
-            settings: {
-                item:3,
-                slideMove:1,
-                slideMargin:6,
-              }
-        },
-        {
-            breakpoint:480,
-            settings: {
-                item:2,
-                slideMove:1
-              }
-        }
-    ],
-    onSliderLoad: function() {
-        setTimeout(()=>{
-            $('#game-cards-crsl').removeClass('cS-hidden');
-            // $('.lSPager').prepend("<span class='me-2 mb-2 btn-slider-nav btn-slide-prev text-white'><img src='./assets/images/icons/arrow-slide-left.png' ></span>")
-            // $('.lSPager').append("<span class='ms-2 mb-2 btn-slider-nav btn-slide-next text-white'> <img src='./assets/images/icons/arrow-slide-right.png'></span>")
-
-            $(".btn-slide-prev").click(()=>{
-                slider.goToPrevSlide();
-            })
-            $(".btn-slide-next").click(()=>{
-                slider.goToNextSlide();
-            })
-            if(window.innerWidth<480){
-                $(".slide-card-btn a").html("Only Supports Desktop Browser")
-                $(".slide-card-btn a").addClass("disabled")
+    if(document.querySelector("#game-cards-crsl")){
+        const slider = $('#game-cards-crsl').lightSlider({
+            autoWidth:true,
+            loop:false,
+            controls: false,
+            // autoWidth: false,
+            slideMargin: 40,
+            responsive : [
+            {
+                breakpoint:992,
+                settings: {
+                    item:3,
+                    slideMove:1,
+                    slideMargin:6,
+                  }
+            },
+            {
+                breakpoint:480,
+                settings: {
+                    item:2,
+                    slideMove:1
+                  }
             }
-        },2000)
-    } 
-    });  
+        ],
+        onSliderLoad: function() {
+            setTimeout(()=>{
+                $('#game-cards-crsl').removeClass('cS-hidden');
+                // $('.lSPager').prepend("<span class='me-2 mb-2 btn-slider-nav btn-slide-prev text-white'><img src='./assets/images/icons/arrow-slide-left.png' ></span>")
+                // $('.lSPager').append("<span class='ms-2 mb-2 btn-slider-nav btn-slide-next text-white'> <img src='./assets/images/icons/arrow-slide-right.png'></span>")
+    
+                $(".btn-slide-prev").click(()=>{
+                    slider.goToPrevSlide();
+                })
+                $(".btn-slide-next").click(()=>{
+                    slider.goToNextSlide();
+                })
+                if(window.innerWidth<480){
+                    $(".slide-card-btn a").html("Only Supports Desktop Browser")
+                    $(".slide-card-btn a").addClass("disabled")
+                }
+            },2000)
+        } 
+        });
+    }  
 });
 
 // $(document).ready(function(){
@@ -149,8 +151,10 @@ fadein.forEach((el) => fadeIn.observe(el))
 
 $(window).bind("load",function(){
     setTimeout(()=>{
-        var vid = document.getElementById("banner-bg-vid");
-        vid.play();
+        if(document.getElementById("banner-bg-vid")){
+            var vid = document.getElementById("banner-bg-vid");
+            vid.play();
+        }
         $('.lSPager').prepend("<span class='me-2 mb-2 btn-slider-nav btn-slide-prev text-white'><img src='./assets/images/icons/arrow-slide-left.png' ></span>")
         $('.lSPager').append("<span class='ms-2 mb-2 btn-slider-nav btn-slide-next text-white'> <img src='./assets/images/icons/arrow-slide-right.png'></span>")
     },3000)
