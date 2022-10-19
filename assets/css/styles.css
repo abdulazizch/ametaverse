@@ -2251,4 +2251,54 @@ footer .footer-sec .copyrights p {
     opacity: 1;
     filter: blur(0);
   }
+}
+.sub-page-wrapper .bg-dots-con {
+  height: 50vh;
+}
+.sub-page-wrapper .sub-page-hero-sec header {
+  min-height: auto;
+}
+.sub-page-wrapper .page-content-con {
+  width: 60%;
+  margin: auto;
+  margin-top: 3%;
+  position: relative;
+  z-index: 1;
+}
+@media (max-width: 482px) {
+  .sub-page-wrapper .page-content-con {
+    width: 85%;
+    margin-top: 13%;
+  }
+}
+.sub-page-wrapper .page-content-con .page-title {
+  margin-bottom: 5%;
+  position: relative;
+  padding: 8px 0;
+}
+@media (max-width: 482px) {
+  .sub-page-wrapper .page-content-con .page-title {
+    margin-bottom: 13%;
+  }
+}
+.sub-page-wrapper .page-content-con .page-title::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 100%;
+  width: 70%;
+  height: 8px;
+  background: #fff;
+  border-radius: 10px;
+  z-index: 1;
+}
+@media (max-width: 482px) {
+  .sub-page-wrapper .page-content-con .page-title::after {
+    height: 5px;
+    width: 95%;
+  }
+}
+.sub-page-wrapper footer .bg-dots-con {
+  height: auto;
 }/*# sourceMappingURL=styles.css.map */
