@@ -2500,4 +2500,8 @@ footer .footer-sec .copyrights p {
     font-size: 12px;
     line-height: 18px;
   }
+}
+#unity-footer .bg-dots-con {
+  width: 102%;
+  left: -1%;
 }/*# sourceMappingURL=styles.css.map */
