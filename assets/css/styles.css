@@ -2343,12 +2343,18 @@ footer .footer-sec .copyrights p {
   width: 100%;
   top: 0;
 }
+@media (max-width: 1366px) {
+  .main-page-wrapper .page-content-wrapper {
+    padding: 20px;
+  }
+}
 .main-page-wrapper .page-content-wrapper nav.navbar {
   position: relative;
   z-index: 2;
 }
 .main-page-wrapper .page-content-wrapper nav.navbar .logo {
   width: 20.5%;
+  margin-left: 0.6%;
 }
 @media (max-width: 992px) {
   .main-page-wrapper .page-content-wrapper nav.navbar .logo {
@@ -2367,4 +2373,131 @@ footer .footer-sec .copyrights p {
      object-fit: contain;
   -o-object-position: left center;
      object-position: left center;
+}
+.main-page-wrapper .page-content-wrapper .page-content {
+  height: calc(100vh - 135px);
+}
+.main-page-wrapper .page-content-wrapper .page-content h2 {
+  font-size: 30px;
+}
+@media (max-width: 1680px) {
+  .main-page-wrapper .page-content-wrapper .page-content h2 {
+    font-size: 26px;
+  }
+}
+@media (max-width: 1366px) {
+  .main-page-wrapper .page-content-wrapper .page-content h2 {
+    font-size: 18px;
+  }
+}
+.main-page-wrapper .page-content-wrapper .page-content p {
+  font-size: 17px;
+}
+@media (max-width: 1680px) {
+  .main-page-wrapper .page-content-wrapper .page-content p {
+    font-size: 15px;
+    line-height: 20px;
+  }
+}
+@media (max-width: 1366px) {
+  .main-page-wrapper .page-content-wrapper .page-content p {
+    font-size: 12px;
+    line-height: 18px;
+  }
+}
+.main-page-wrapper .page-content-wrapper .page-content .left-side-content {
+  width: 15%;
+}
+.main-page-wrapper .page-content-wrapper .page-content .left-side-content .game-data-con {
+  width: 100%;
+}
+@media (max-width: 482px) {
+  .main-page-wrapper .page-content-wrapper .page-content .left-side-content .game-data-con {
+    margin-top: 15px;
+    margin-left: 2%;
+    height: 40%;
+  }
+}
+.main-page-wrapper .page-content-wrapper .page-content .left-side-content .game-data-con .game-data .data-icon {
+  width: 33px;
+  margin-right: 4px;
+}
+.main-page-wrapper .page-content-wrapper .page-content .left-side-content .game-data-con .game-data .data-icon img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.main-page-wrapper .page-content-wrapper .page-content .left-side-content .game-data-con .game-data .data-text h6 {
+  font-size: 25px;
+  font-family: "GoGoHack";
+  margin: 0;
+  line-height: 26px;
+  color: #fff;
+}
+@media (max-width: 1680px) {
+  .main-page-wrapper .page-content-wrapper .page-content .left-side-content .game-data-con .game-data .data-text h6 {
+    font-size: 18px;
+  }
+}
+@media (max-width: 1366px) {
+  .main-page-wrapper .page-content-wrapper .page-content .left-side-content .game-data-con .game-data .data-text h6 {
+    font-size: 12px;
+    line-height: 14px;
+  }
+}
+.main-page-wrapper .page-content-wrapper .page-content .left-side-content .game-data-con .game-data .data-text p {
+  margin: 0;
+  font-size: 18px;
+  line-height: 18px;
+}
+@media (max-width: 1366px) {
+  .main-page-wrapper .page-content-wrapper .page-content .left-side-content .game-data-con .game-data .data-text p {
+    font-size: 12px;
+    line-height: 15px;
+  }
+}
+.main-page-wrapper .page-content-wrapper .page-content .left-side-content .game-data-con .game-data .item-1 .data-icon, .main-page-wrapper .page-content-wrapper .page-content .left-side-content .game-data-con .game-data .item-2 .data-icon, .main-page-wrapper .page-content-wrapper .page-content .left-side-content .game-data-con .game-data .item-3 .data-icon {
+  width: 47px;
+}
+@media (max-width: 1366px) {
+  .main-page-wrapper .page-content-wrapper .page-content .left-side-content .game-data-con .game-data .item-1 .data-icon, .main-page-wrapper .page-content-wrapper .page-content .left-side-content .game-data-con .game-data .item-2 .data-icon, .main-page-wrapper .page-content-wrapper .page-content .left-side-content .game-data-con .game-data .item-3 .data-icon {
+    width: 38px;
+  }
+}
+
+#unity-footer {
+  padding-top: 30px;
+}
+#unity-footer h2 {
+  font-size: 40px;
+  color: #000;
+  -webkit-text-stroke: 2px #fff;
+  paint-order: stroke fill;
+  margin: 0;
+}
+@media (max-width: 1680px) {
+  #unity-footer h2 {
+    font-size: 36px;
+  }
+}
+@media (max-width: 1366px) {
+  #unity-footer h2 {
+    font-size: 28px;
+  }
+}
+#unity-footer p {
+  font-size: 17px;
+  width: 90%;
+}
+@media (max-width: 1680px) {
+  #unity-footer p {
+    font-size: 15px;
+    line-height: 18px;
+  }
+}
+@media (max-width: 1680px) {
+  #unity-footer p {
+    font-size: 12px;
+    line-height: 18px;
+  }
 }/*# sourceMappingURL=styles.css.map */

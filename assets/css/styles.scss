@@ -2050,12 +2050,16 @@ footer{
         position: absolute;
         width: 100%;
         top: 0;
+        @include responsive($xl){
+            padding: 20px;
+        }
         nav.navbar{
             position: relative;
             z-index: 2;
             
             .logo{
                 width: 20.5%;
+                margin-left: 0.6%;
                 @include responsive($lg){
                     width: 50%;
                 }
@@ -2071,6 +2075,115 @@ footer{
                 }
             }
     
+        }
+        .page-content{
+            height: calc(100vh - 135px);
+            h2{
+                font-size: 30px;
+                @include responsive($xxl){
+                    font-size: 26px;
+                }
+                @include responsive($xl){
+                    font-size: 18px;
+                }
+            }
+            p{
+                font-size: 17px;
+                @include responsive($xxl){
+                    font-size: 15px;
+                    line-height: 20px;
+                }
+                @include responsive($xl){
+                    font-size: 12px;
+                    line-height: 18px;
+                }
+            }
+            .left-side-content{
+                width: 15%;
+                .game-data-con{
+                    width: 100%;
+
+                    @include responsive($sm){
+                        margin-top: 15px;
+                        margin-left: 2%;
+                        height: 40%;
+                    }
+                    
+                    .game-data{
+                        .data-icon{
+                            width: 33px;
+                            margin-right: 4px;
+                            img{
+                                width: 100%;
+                                object-fit: contain;
+                            }
+                        }
+                        .data-text{
+                            h6{
+                                font-size: 25px;
+                                font-family: $primary-font;
+                                margin: 0;
+                                line-height: 26px;
+                                color: #fff;
+                                @include responsive($xxl){
+                                    font-size: 18px;
+                                }
+                                @include responsive($xl){
+                                    font-size: 12px;
+                                    line-height: 14px;
+                                }
+                            }
+                            p{
+                                margin: 0;
+                                font-size: 18px;
+                                line-height: 18px;
+                                @include responsive($xl){
+                                    font-size: 12px;
+                                    line-height: 15px;
+                                }
+
+                            }
+                        }
+                        .item-1,.item-2,.item-3{
+                            .data-icon{
+                                width: 47px;
+                                @include responsive($xl){
+                                    width: 38px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+#unity-footer{
+    padding-top: 30px;
+    h2{
+        font-size: 40px;
+        color: #000;
+        -webkit-text-stroke: 2px #fff;
+        paint-order: stroke fill;
+        margin: 0;
+        @include responsive($xxl){
+            font-size: 36px;
+        }
+        @include responsive($xl){
+            font-size: 28px;
+        }
+    }
+    p{
+        font-size: 17px;
+        width: 90%;
+        @include responsive($xxl){
+            font-size: 15px;
+            line-height: 18px;
+        }
+        @include responsive($xxl){
+            font-size: 12px;
+            line-height: 18px;
         }
     }
 }
