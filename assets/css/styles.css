@@ -1238,7 +1238,7 @@ header .header-text-cont {
   }
 }
 #play-games .play-games-sec .game-cards-con ul.game-cards-crsl .item-card .card-data-con .card-data .item-2 .data-icon {
-  width: 30px;
+  width: 33px;
 }
 @media (max-width: 482px) {
   #play-games .play-games-sec .game-cards-con ul.game-cards-crsl .item-card .card-data-con .card-data .item-2 .data-icon {
@@ -2325,4 +2325,46 @@ footer .footer-sec .copyrights p {
 }
 .sub-page-wrapper footer .bg-dots-con {
   height: auto;
+}
+
+.main-page-wrapper {
+  position: relative;
+}
+.main-page-wrapper .bg-dots-wrapper {
+  position: relative;
+  height: 100vh;
+}
+.main-page-wrapper .bg-dots-wrapper .bg-dots-con {
+  padding: 10px;
+}
+.main-page-wrapper .page-content-wrapper {
+  padding: 33px;
+  position: absolute;
+  width: 100%;
+  top: 0;
+}
+.main-page-wrapper .page-content-wrapper nav.navbar {
+  position: relative;
+  z-index: 2;
+}
+.main-page-wrapper .page-content-wrapper nav.navbar .logo {
+  width: 20.5%;
+}
+@media (max-width: 992px) {
+  .main-page-wrapper .page-content-wrapper nav.navbar .logo {
+    width: 50%;
+  }
+}
+@media (max-width: 482px) {
+  .main-page-wrapper .page-content-wrapper nav.navbar .logo {
+    width: 80%;
+    margin: auto;
+  }
+}
+.main-page-wrapper .page-content-wrapper nav.navbar .logo img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: left center;
+     object-position: left center;
 }/*# sourceMappingURL=styles.css.map */
