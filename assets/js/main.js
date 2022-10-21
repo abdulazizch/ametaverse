@@ -6,10 +6,10 @@ $(".swap-btn").click(function(){
     $(".swap-to").html(swapFrom)  
     
 })
-
+let slider = '';
 $(document).ready(function() {
     if(document.querySelector("#game-cards-crsl")){
-        const slider = $('#game-cards-crsl').lightSlider({
+        slider = $('#game-cards-crsl').lightSlider({
             autoWidth:true,
             loop:false,
             controls: false,
@@ -37,30 +37,18 @@ $(document).ready(function() {
                 $('#game-cards-crsl').removeClass('cS-hidden');
                 // $('.lSPager').prepend("<span class='me-2 mb-2 btn-slider-nav btn-slide-prev text-white'><img src='./assets/images/icons/arrow-slide-left.png' ></span>")
                 // $('.lSPager').append("<span class='ms-2 mb-2 btn-slider-nav btn-slide-next text-white'> <img src='./assets/images/icons/arrow-slide-right.png'></span>")
-    
-                $(".btn-slide-prev").click(()=>{
-                    slider.goToPrevSlide();
-                })
-                $(".btn-slide-next").click(()=>{
-                    slider.goToNextSlide();
-                })
                 if(window.innerWidth<480){
                     $(".slide-card-btn a").html("Only Supports Desktop Browser")
                     $(".slide-card-btn a").addClass("disabled")
+                }
+                else{
+
                 }
             },2000)
         } 
         });
     }  
 });
-
-// $(document).ready(function(){
-//     setTimeout(() => {
-//         $('.lSPager').prepend("<span class='me-2 mb-2 btn-slider-nav btn-slide-prev text-white'><img src='./assets/images/icons/arrow-slide-left.png' ></span>")
-//         $('.lSPager').append("<span class='ms-2 mb-2 btn-slider-nav btn-slide-next text-white'> <img src='./assets/images/icons/arrow-slide-right.png'></span>")
-
-//     }, 3000);
-// })
 
 const sliUp = new IntersectionObserver((el)=>{
     el.forEach((e) =>{
@@ -157,5 +145,13 @@ $(window).bind("load",function(){
         }
         $('.lSPager').prepend("<span class='me-2 mb-2 btn-slider-nav btn-slide-prev text-white'><img src='./assets/images/icons/arrow-slide-left.png' ></span>")
         $('.lSPager').append("<span class='ms-2 mb-2 btn-slider-nav btn-slide-next text-white'> <img src='./assets/images/icons/arrow-slide-right.png'></span>")
+        
+        $(".btn-slide-prev").click(()=>{
+            slider.goToPrevSlide();
+        })
+        $(".btn-slide-next").click(()=>{
+            slider.goToNextSlide();
+        })
+        
     },3000)
 })

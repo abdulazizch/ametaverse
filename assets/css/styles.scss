@@ -2155,6 +2155,31 @@ footer{
                     }
                 }
             }
+            .right-side-content{
+                width: 15%;
+                .game-controls{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+
+                    h5{
+                        color: #fff;
+                        font-size: 30px;
+                        font-family: $primary-font;
+                    }
+                    img{
+                        object-fit: contain;
+                        @include responsive($xl){
+                            width: 80%;
+                        }
+                        &.reset-control{
+                            @include responsive($xl){
+                                width: 26%;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }

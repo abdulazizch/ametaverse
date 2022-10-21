@@ -2464,6 +2464,33 @@ footer .footer-sec .copyrights p {
     width: 38px;
   }
 }
+.main-page-wrapper .page-content-wrapper .page-content .right-side-content {
+  width: 15%;
+}
+.main-page-wrapper .page-content-wrapper .page-content .right-side-content .game-controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main-page-wrapper .page-content-wrapper .page-content .right-side-content .game-controls h5 {
+  color: #fff;
+  font-size: 30px;
+  font-family: "GoGoHack";
+}
+.main-page-wrapper .page-content-wrapper .page-content .right-side-content .game-controls img {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+@media (max-width: 1366px) {
+  .main-page-wrapper .page-content-wrapper .page-content .right-side-content .game-controls img {
+    width: 80%;
+  }
+}
+@media (max-width: 1366px) {
+  .main-page-wrapper .page-content-wrapper .page-content .right-side-content .game-controls img.reset-control {
+    width: 26%;
+  }
+}
 
 #unity-footer {
   padding-top: 30px;
