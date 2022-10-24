@@ -160,7 +160,7 @@ $dot-wid-xs: 0.104vw;
     min-height: auto;
     height: 100%;
     top: 0;
-    padding: 10px 2px;
+    padding: 10px;
     position: absolute;
     top: 0;
     left: 0;
@@ -379,13 +379,16 @@ $dot-wid-xs: 0.104vw;
 }
 .hero-section{
     position: relative;
+    .bg-dots-con{
+        padding: 10px 2px;
+    }
 }
 header{
     padding: 33px;
     box-sizing: border-box;
     position: relative;
     min-height: 100vh;
-
+    
     @include responsive($xxl){
         padding: 28px 10px 28px 25px;
     }
@@ -420,7 +423,7 @@ header{
         a.nav-link{
             color: $primary-txt-color;
             font-family: $primary-font, sans-serif;
-            font-size: clamp(13px, 1.04vw, 20px);
+            font-size: clamp(12px, 0.781vw, 15px);
 
             @include responsive($lg){
                 font-size: 26px;
@@ -516,7 +519,7 @@ header{
     }
 
     .header-text-cont{
-        width: 36%;
+        width: 45%;
         height: calc(100vh - 245px);
         display: flex;
         flex-direction: column;
@@ -542,7 +545,9 @@ header{
         @include responsiveMaxHeight(800px){
             height: calc(100vh - 170px);
         }
-
+        h2{
+            font-size: clamp(30px, 2.61vw, 50px);
+        }
         p{
             @include responsive($sm){
                 width: 92%;
@@ -551,9 +556,15 @@ header{
     }
 }
 
-.get-ameta-dots{
+.what-is-ameta-dots{
     height: 100%;
-    padding-top: 16.5vw;
+    padding-top:0;
+    position: relative;
+
+    &.bottom-dots{
+        margin-top: -1.90875vw;
+        z-index: -1;
+    }
 
     @include responsive($xxl){
         min-height: 109vh;
@@ -577,11 +588,13 @@ header{
 .ms-2col{
     margin-left: 1.9vw;
 }
-#get-ameta{
+#what-is-ametaverse{
     width: 100vw;
     min-height: 95vh;
     position: relative;
     z-index: 2;
+    padding-top: 7vw;
+
     @include responsiveHeight($hxl){
         min-height: 96vh;
     }
@@ -599,13 +612,11 @@ header{
     }
     
 
-    .get-ameta-sec{
-        width: 68.5%;
+    .what-is-ameta-sec{
+        width: 100%;
         margin: auto;
         // min-height: 110vh;
         position: relative;
-        display: flex;
-        align-items: flex-start;
         
         @include responsive($lg){
             flex-wrap: wrap;
@@ -614,298 +625,81 @@ header{
         @include responsive($sm){
             width: 100%;
         }
-
-        .section-text{
-            width: 60%;
-            height: auto;
-            position: relative;
-            margin-top: 27.5%;
-
-            @include responsive($lg){
-                width: 100%;
-                margin-top: 40%;
-            }
-            @include responsive($sm){
-                width: 100%;
-                margin-top: 6%;
-            }
-
-            p{
-                padding-left: 30px;
-                position: relative;
-                margin-top: 45px;
-                width: 95%;
-                font-size: clamp(14px, 0.9375vw,18px);
-
-                @include responsive($lg){
-                    margin-left: 2%;
-                }
-                @include responsive($xl){
-                    margin-top: 40px;
-                    width: 100%;
-                    font-size: clamp(14px, 0.7vw,18px);
-                }
-                @include responsive($sm){
-                    font-size: 14px;
-                    line-height: 20px;
-                    padding-left: 15px;
-                    margin-top: 5px;
-                    margin-left: 0;
-                }
-
-                &::before{
-                    content: "";
-                    position: absolute;
-                    width: 8px;
-                    height: 100%;
-                    background: #fff;
-                    border-radius: 4px;
-                    left: 0;
-                    top: 0;
-                }
-            }
-            
-
+        .section-title{
+            margin-top: 2vw;
         }
+        .flower-anim-con{
+            width: 25%;
+            overflow: hidden;
 
-        .section-card{
-            margin-left: 5%;
-            background: url(../images/swap-card-bg.png);
-            padding: 16px 34px 0;
-            background-size: 100%;
-            background-repeat: no-repeat;
-            background-position: top center;
-            min-width: 295px;
-            width: 20.4vw;
-            max-width: 393px;
-            height: 27.1874vw;
-            min-height: 392px ;
-            max-height: 522px;
-            margin-top: 20%;
-            position: relative;
-            @include responsive($xl){
-                width: 25vw;
-                height: 35vw;
-            }
-            @include responsive($lg){
-                width: 40vw;
-                min-width: auto;
-                min-height: auto;
-                margin-top: 0;
-                height: 60vw;
-                margin-left: 30%;
-            }
-            @include responsive($sm){
-                width: 87vw;
-                min-width: auto;
-                min-height: auto;
-                margin-top: 0;
-                height: auto;
-                margin-left: 0;
-            }
-            @include responsive($xs){
-                height: auto;
-            }
+            .cloud-img-con{
+                width: 44.7%;
 
-            p{
-                font-size: clamp(16px, 1.12vw ,23px);
-                color: #000;
-                text-align: center;
-            }
-            label{
-                font-family: $secondary-font;
-                font-size: 16px;
-            }
-            .card-title{
-                h3{
-                    font-size: clamp(24px, 2.08vw ,40px);
-                    text-align: center;
-                    font-family: $primary-font;
-                }
-                
-            }
-
-            .divider{
-                width: 100%;
-                height: 4px;
-                background-color: #000;
-                border-radius: 1.53px;
-                @include responsive($xxl){
-                    height: 3px;
-                }
-                @include responsive($lg){
-                    height: 2px;
-                }
-            }
-
-            .swap-btn-con{
-                margin: 1rem 0;
-
-                @include responsive($xxl){
-                    margin: 0rem 0 1rem 0;
-                }
-                @include responsive($sm){
-                    margin: 2rem 0 2.9rem 0;
-                }
-                @include responsive($xs){
-                    margin: 0.6rem 0 1rem 0;
-                }
-                .swap-btn{
-                    background: transparent;
-                    border: 0;
-                    outline: none;
-    
-                    &:focus{
-                        outline: none;
-                    }
-                }    
-            }
-            .swap-input-con{
-                background: #000;
-                border-radius: 50px;
-                position: relative;
-                display: flex;
-                align-items: center;
-                .input-icon{
-                    min-width: 40px;
-                    width: 2.604vw;
-                    max-width: 50px;
-                    margin-left: 2px;
-                    margin-right: 5px;
-                    @include responsive($xxl){
-                        height: 38px;
-                    }
-
-                    img{
-                        width: 100%;
-                        height: 100%;
-                        object-fit: contain;
-                        object-position: center;
-                    }
-                }
-                .input-label{
-                    font-family: $secondary-font;
-                    font-size: clamp(16px, 1.12vw ,23px);
-                    color: #fff;
-                }
-                ::placeholder{
-                    color: #fff;
-                    font-family: $secondary-font;
-                    font-size: clamp(16px, 1.12vw ,23px);
-                }
-                input{
-                    width: 57%;
-                    position: relative;
-                    text-align: right;
-                    color: #fff;
-                    background: transparent;
-                    border: 0;
-                    outline: none;
-                    font-size: clamp(16px, 1.12vw ,23px);
-
-                    &:active, &:focus{
-                        outline: none;
-                    }
-                }
-            }
-
-            .connect-wallet-btn{
-                font-size: clamp(17px, 1.35vw ,26px);
-                font-family: $primary-font;
-                color: #000;
-                background: #fff;
-                border: 4px solid #000;
-                border-radius: 50px;
-                width: 80%;
-
-                @include responsive($xxl){
-                    font-size: clamp(17px, 1.25vw ,20px);
-                }
-            }
-            .gass-fee-label{
-                font-size: clamp(13px, 0.833vw ,16px);
-                text-align: center;
-            }
-        }
-
-        .ameta-address{
-            width: auto;
-            display: inline-block;
-            height: auto;
-            padding: 0 30px 0 0.2vw;
-            border-radius: 9.5px;
-            background: #fff;
-            position: relative;
-            margin-top: 30px;
-            margin-left: 10px;
-            
-            @include responsive($xxl){
-                margin-top: 10px;
-            }
-            @include responsive($sm){
-                padding: 0 10px 0 5vw;
-            }
-
-            .address-icon{
-                position: absolute;
-                width: auto;
-                height: 2.761vw;
-                left: -24px;
-                top: 50%;
-                transform: translateY(-50%);
-                z-index: 2;
-
-                // @include responsive($xxl){
-                //     height: 230%;
-                // }
-                @include responsive($lg){
-                    height: 6vw;
-                }
-                @include responsive($sm){
-                    width: 10vw;
-                    height: 10vw;
-                    left: -5vw;
-                }
                 img{
                     width: 100%;
-                    height: 100%;
                     object-fit: contain;
                     object-position: center;
+                    cursor: pointer;
                 }
             }
-            
-            p{
-                color: #000;
-                margin: 0;
-                width: 100%;
-                font-size: clamp(13px, 0.834vw,16px);
-                @include responsive($xl){
-                    font-size: 11px;
-                }
-                @include responsive($sm){
-                    font-size: 7.8px;
-                }
-                @include responsive(390px){
-                    font-size: 7px;
-                }
+            .flower-con{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                position: relative;
 
-                &::before{
-                    content: none;
+                .flower{
+                    width: auto;
+                    height: 9.17vw;
+                    max-height: 176px;
+                    position: absolute;
+                    bottom: 0;
+                    
+
+                    img.flower-petal{
+                        width: 100%;
+                        max-width: 99px;
+                        position: absolute;
+                        top: -50%;
+                        left: 54%;
+                        transform: translate(-50%, 50%);
+                    }
+                    img.sapling{
+                        height: 100%;
+                        object-fit: contain;
+                        z-index: -1;
+                        position: relative;
+                    }
+                }
+                .land-con{
+                    display: flex;
+                    justify-content: center;
+                    margin-bottom: -2px;
                 }
             }
         }
-        .polygon-btn-con{
-            margin-top: 35px;
-            @include responsive($xxl){
-                margin-top: 25px;
+        .section-text{
+            width: 37%;
+            margin-top: 10px;
+            margin-bottom: 3.5vw;
+            
+            h3{
+                color: #fff;
+                font-family: $primary-font;
+                font-size: clamp(28px, 2.10vw, 40.38px);
+                text-align: center;
             }
-            @include responsive($sm){
-                width: 100%;
+            p{
+                text-align: left;
+                font-size: clamp(15px,  0.9375vw, 18px);
+                line-height: auto;
             }
-            .button-primary {
-                @include responsive($sm){
-                    width: 100%;
-                    font-size: clamp(12px, 5.33vw, 15px);
+            .section-btns-con{
+                margin-top: 3vw;
+                .button-primary{
+                    min-width: 15.16vw;
+                    margin: 15px;
+                    font-size: clamp(22px,1.72vw ,33px);
                 }
             }
         }
@@ -913,6 +707,101 @@ header{
     }
     
 }
+
+.ameta-token-sale-dots{
+    position: relative;
+}
+#ameta-token-sale{
+    .ameta-token-sec{
+        width: 62.5%;
+        margin: auto;
+
+        .section-content{
+            padding-top: 5vw;
+
+            .section-text{
+                p{
+                    position: relative;
+                    padding-left: 20px;
+                    span{
+                        margin: 3px 0;
+                        display: inline-block;
+                    }
+                    &::before{
+                        content: "";
+                        position: absolute;
+                        width: 8px;
+                        height: 100%;
+                        background: #fff;
+                        border-radius: 4px;
+                        left: 0;
+                        top: 0;
+                    }
+                }
+            }
+            .section-timer{
+                .timer-sec{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    border: 10px solid transparent;
+                    padding: 15px;
+                    border-image: url(../images/border-dots.png) 12 ;
+                    h3{
+                        font-family: $primary-font;
+                        font-size: clamp(22px, 1.78vw, 34px);
+                        color: #fff;
+                    }
+                    p{
+                        font-size: clamp(15px,  0.9375vw, 18px);
+                    }
+                    .button-primary{
+                        font-size: clamp(22px,1.927vw,37px);
+                    }
+                }
+            }
+        }
+        .ameta-address-con{
+            display: flex ;
+            justify-content: center;
+            margin-top: 2.5vw;
+            .ameta-address{
+                text-align: center;
+                margin: auto;
+                border: 1px solid #fff;
+                border-radius: 30px;
+                position: relative;
+                padding: 0 40px;
+                p{
+                    display: inline;
+                    font-size: 16px;
+                    margin: 0;
+                }
+                .address-icon{
+                    display: inline-block;
+                    width: 45px;
+                    height: 45px;
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+
+                    &.icon-left{
+                        left: -10px;
+                    }
+                    &.icon-right{
+                        right: -10px;
+                    }
+
+                    img{
+                        width: 100%;
+                        object-fit: contain;
+                    }
+                }
+            }
+        }
+    }
+}
+
 
 .play-games-dots{
     height: 100%;

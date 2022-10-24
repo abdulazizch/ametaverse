@@ -113,7 +113,7 @@ ul li {
   min-height: auto;
   height: 100%;
   top: 0;
-  padding: 10px 2px;
+  padding: 10px;
   position: absolute;
   top: 0;
   left: 0;
@@ -359,6 +359,9 @@ ul li {
 .hero-section {
   position: relative;
 }
+.hero-section .bg-dots-con {
+  padding: 10px 2px;
+}
 
 header {
   padding: 33px;
@@ -410,7 +413,7 @@ header nav.navbar .logo img {
 header nav.navbar a.nav-link {
   color: #fff;
   font-family: "GoGoHack", sans-serif;
-  font-size: clamp(13px, 1.04vw, 20px);
+  font-size: clamp(12px, 0.781vw, 15px);
 }
 @media (max-width: 992px) {
   header nav.navbar a.nav-link {
@@ -510,7 +513,7 @@ header .bg-video-cont video {
   }
 }
 header .header-text-cont {
-  width: 36%;
+  width: 45%;
   height: calc(100vh - 245px);
   display: flex;
   flex-direction: column;
@@ -546,28 +549,36 @@ header .header-text-cont {
     height: calc(100vh - 170px);
   }
 }
+header .header-text-cont h2 {
+  font-size: clamp(30px, 2.61vw, 50px);
+}
 @media (max-width: 482px) {
   header .header-text-cont p {
     width: 92%;
   }
 }
 
-.get-ameta-dots {
+.what-is-ameta-dots {
   height: 100%;
-  padding-top: 16.5vw;
+  padding-top: 0;
+  position: relative;
+}
+.what-is-ameta-dots.bottom-dots {
+  margin-top: -1.90875vw;
+  z-index: -1;
 }
 @media (max-width: 1680px) {
-  .get-ameta-dots {
+  .what-is-ameta-dots {
     min-height: 109vh;
   }
 }
 @media (max-width: 1366px) {
-  .get-ameta-dots {
+  .what-is-ameta-dots {
     min-height: 139.5vh;
   }
 }
 @media (max-width: 992px) {
-  .get-ameta-dots {
+  .what-is-ameta-dots {
     min-height: 96vh;
   }
 }
@@ -588,102 +599,150 @@ header .header-text-cont {
   margin-left: 1.9vw;
 }
 
-#get-ameta {
+#what-is-ametaverse {
   width: 100vw;
   min-height: 95vh;
   position: relative;
   z-index: 2;
+  padding-top: 7vw;
 }
 @media (min-height: 1005px) and (min-width: 1600px) {
-  #get-ameta {
+  #what-is-ametaverse {
     min-height: 96vh;
   }
 }
 @media (max-width: 1680px) {
-  #get-ameta {
+  #what-is-ametaverse {
     min-height: 109vh;
   }
 }
 @media (max-width: 1366px) {
-  #get-ameta {
+  #what-is-ametaverse {
     min-height: 140vh;
   }
 }
 @media (max-width: 992px) {
-  #get-ameta {
+  #what-is-ametaverse {
     min-height: 100vh;
   }
 }
 @media (max-width: 482px) {
-  #get-ameta {
+  #what-is-ametaverse {
     padding: 0 6.5%;
   }
 }
-#get-ameta .get-ameta-sec {
-  width: 68.5%;
+#what-is-ametaverse .what-is-ameta-sec {
+  width: 100%;
   margin: auto;
   position: relative;
-  display: flex;
-  align-items: flex-start;
 }
 @media (max-width: 992px) {
-  #get-ameta .get-ameta-sec {
+  #what-is-ametaverse .what-is-ameta-sec {
     flex-wrap: wrap;
     width: 68%;
   }
 }
 @media (max-width: 482px) {
-  #get-ameta .get-ameta-sec {
+  #what-is-ametaverse .what-is-ameta-sec {
     width: 100%;
   }
 }
-#get-ameta .get-ameta-sec .section-text {
-  width: 60%;
-  height: auto;
+#what-is-ametaverse .what-is-ameta-sec .section-title {
+  margin-top: 2vw;
+}
+#what-is-ametaverse .what-is-ameta-sec .flower-anim-con {
+  width: 25%;
+  overflow: hidden;
+}
+#what-is-ametaverse .what-is-ameta-sec .flower-anim-con .cloud-img-con {
+  width: 44.7%;
+}
+#what-is-ametaverse .what-is-ameta-sec .flower-anim-con .cloud-img-con img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
+  cursor: pointer;
+}
+#what-is-ametaverse .what-is-ameta-sec .flower-anim-con .flower-con {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   position: relative;
-  margin-top: 27.5%;
 }
-@media (max-width: 992px) {
-  #get-ameta .get-ameta-sec .section-text {
-    width: 100%;
-    margin-top: 40%;
-  }
+#what-is-ametaverse .what-is-ameta-sec .flower-anim-con .flower-con .flower {
+  width: auto;
+  height: 9.17vw;
+  max-height: 176px;
+  position: absolute;
+  bottom: 0;
 }
-@media (max-width: 482px) {
-  #get-ameta .get-ameta-sec .section-text {
-    width: 100%;
-    margin-top: 6%;
-  }
+#what-is-ametaverse .what-is-ameta-sec .flower-anim-con .flower-con .flower img.flower-petal {
+  width: 100%;
+  max-width: 99px;
+  position: absolute;
+  top: -50%;
+  left: 54%;
+  transform: translate(-50%, 50%);
 }
-#get-ameta .get-ameta-sec .section-text p {
-  padding-left: 30px;
+#what-is-ametaverse .what-is-ameta-sec .flower-anim-con .flower-con .flower img.sapling {
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  z-index: -1;
   position: relative;
-  margin-top: 45px;
-  width: 95%;
-  font-size: clamp(14px, 0.9375vw, 18px);
 }
-@media (max-width: 992px) {
-  #get-ameta .get-ameta-sec .section-text p {
-    margin-left: 2%;
-  }
+#what-is-ametaverse .what-is-ameta-sec .flower-anim-con .flower-con .land-con {
+  display: flex;
+  justify-content: center;
+  margin-bottom: -2px;
 }
-@media (max-width: 1366px) {
-  #get-ameta .get-ameta-sec .section-text p {
-    margin-top: 40px;
-    width: 100%;
-    font-size: clamp(14px, 0.7vw, 18px);
-  }
+#what-is-ametaverse .what-is-ameta-sec .section-text {
+  width: 37%;
+  margin-top: 10px;
+  margin-bottom: 3.5vw;
 }
-@media (max-width: 482px) {
-  #get-ameta .get-ameta-sec .section-text p {
-    font-size: 14px;
-    line-height: 20px;
-    padding-left: 15px;
-    margin-top: 5px;
-    margin-left: 0;
-  }
+#what-is-ametaverse .what-is-ameta-sec .section-text h3 {
+  color: #fff;
+  font-family: "GoGoHack";
+  font-size: clamp(28px, 2.1vw, 40.38px);
+  text-align: center;
 }
-#get-ameta .get-ameta-sec .section-text p::before {
+#what-is-ametaverse .what-is-ameta-sec .section-text p {
+  text-align: left;
+  font-size: clamp(15px, 0.9375vw, 18px);
+  line-height: auto;
+}
+#what-is-ametaverse .what-is-ameta-sec .section-text .section-btns-con {
+  margin-top: 3vw;
+}
+#what-is-ametaverse .what-is-ameta-sec .section-text .section-btns-con .button-primary {
+  min-width: 15.16vw;
+  margin: 15px;
+  font-size: clamp(22px, 1.72vw, 33px);
+}
+
+.ameta-token-sale-dots {
+  position: relative;
+}
+
+#ameta-token-sale .ameta-token-sec {
+  width: 62.5%;
+  margin: auto;
+}
+#ameta-token-sale .ameta-token-sec .section-content {
+  padding-top: 5vw;
+}
+#ameta-token-sale .ameta-token-sec .section-content .section-text p {
+  position: relative;
+  padding-left: 20px;
+}
+#ameta-token-sale .ameta-token-sec .section-content .section-text p span {
+  margin: 3px 0;
+  display: inline-block;
+}
+#ameta-token-sale .ameta-token-sec .section-content .section-text p::before {
   content: "";
   position: absolute;
   width: 8px;
@@ -693,279 +752,62 @@ header .header-text-cont {
   left: 0;
   top: 0;
 }
-#get-ameta .get-ameta-sec .section-card {
-  margin-left: 5%;
-  background: url(../images/swap-card-bg.png);
-  padding: 16px 34px 0;
-  background-size: 100%;
-  background-repeat: no-repeat;
-  background-position: top center;
-  min-width: 295px;
-  width: 20.4vw;
-  max-width: 393px;
-  height: 27.1874vw;
-  min-height: 392px;
-  max-height: 522px;
-  margin-top: 20%;
-  position: relative;
-}
-@media (max-width: 1366px) {
-  #get-ameta .get-ameta-sec .section-card {
-    width: 25vw;
-    height: 35vw;
-  }
-}
-@media (max-width: 992px) {
-  #get-ameta .get-ameta-sec .section-card {
-    width: 40vw;
-    min-width: auto;
-    min-height: auto;
-    margin-top: 0;
-    height: 60vw;
-    margin-left: 30%;
-  }
-}
-@media (max-width: 482px) {
-  #get-ameta .get-ameta-sec .section-card {
-    width: 87vw;
-    min-width: auto;
-    min-height: auto;
-    margin-top: 0;
-    height: auto;
-    margin-left: 0;
-  }
-}
-@media (max-width: 390px) {
-  #get-ameta .get-ameta-sec .section-card {
-    height: auto;
-  }
-}
-#get-ameta .get-ameta-sec .section-card p {
-  font-size: clamp(16px, 1.12vw, 23px);
-  color: #000;
-  text-align: center;
-}
-#get-ameta .get-ameta-sec .section-card label {
-  font-family: "CasCadia";
-  font-size: 16px;
-}
-#get-ameta .get-ameta-sec .section-card .card-title h3 {
-  font-size: clamp(24px, 2.08vw, 40px);
-  text-align: center;
-  font-family: "GoGoHack";
-}
-#get-ameta .get-ameta-sec .section-card .divider {
-  width: 100%;
-  height: 4px;
-  background-color: #000;
-  border-radius: 1.53px;
-}
-@media (max-width: 1680px) {
-  #get-ameta .get-ameta-sec .section-card .divider {
-    height: 3px;
-  }
-}
-@media (max-width: 992px) {
-  #get-ameta .get-ameta-sec .section-card .divider {
-    height: 2px;
-  }
-}
-#get-ameta .get-ameta-sec .section-card .swap-btn-con {
-  margin: 1rem 0;
-}
-@media (max-width: 1680px) {
-  #get-ameta .get-ameta-sec .section-card .swap-btn-con {
-    margin: 0rem 0 1rem 0;
-  }
-}
-@media (max-width: 482px) {
-  #get-ameta .get-ameta-sec .section-card .swap-btn-con {
-    margin: 2rem 0 2.9rem 0;
-  }
-}
-@media (max-width: 390px) {
-  #get-ameta .get-ameta-sec .section-card .swap-btn-con {
-    margin: 0.6rem 0 1rem 0;
-  }
-}
-#get-ameta .get-ameta-sec .section-card .swap-btn-con .swap-btn {
-  background: transparent;
-  border: 0;
-  outline: none;
-}
-#get-ameta .get-ameta-sec .section-card .swap-btn-con .swap-btn:focus {
-  outline: none;
-}
-#get-ameta .get-ameta-sec .section-card .swap-input-con {
-  background: #000;
-  border-radius: 50px;
-  position: relative;
+#ameta-token-sale .ameta-token-sec .section-content .section-timer .timer-sec {
   display: flex;
+  flex-direction: column;
   align-items: center;
+  border: 10px solid transparent;
+  padding: 15px;
+  -o-border-image: url(../images/border-dots.png) 12;
+     border-image: url(../images/border-dots.png) 12;
 }
-#get-ameta .get-ameta-sec .section-card .swap-input-con .input-icon {
-  min-width: 40px;
-  width: 2.604vw;
-  max-width: 50px;
-  margin-left: 2px;
-  margin-right: 5px;
-}
-@media (max-width: 1680px) {
-  #get-ameta .get-ameta-sec .section-card .swap-input-con .input-icon {
-    height: 38px;
-  }
-}
-#get-ameta .get-ameta-sec .section-card .swap-input-con .input-icon img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
-  -o-object-position: center;
-     object-position: center;
-}
-#get-ameta .get-ameta-sec .section-card .swap-input-con .input-label {
-  font-family: "CasCadia";
-  font-size: clamp(16px, 1.12vw, 23px);
-  color: #fff;
-}
-#get-ameta .get-ameta-sec .section-card .swap-input-con ::-moz-placeholder {
-  color: #fff;
-  font-family: "CasCadia";
-  font-size: clamp(16px, 1.12vw, 23px);
-}
-#get-ameta .get-ameta-sec .section-card .swap-input-con :-ms-input-placeholder {
-  color: #fff;
-  font-family: "CasCadia";
-  font-size: clamp(16px, 1.12vw, 23px);
-}
-#get-ameta .get-ameta-sec .section-card .swap-input-con ::placeholder {
-  color: #fff;
-  font-family: "CasCadia";
-  font-size: clamp(16px, 1.12vw, 23px);
-}
-#get-ameta .get-ameta-sec .section-card .swap-input-con input {
-  width: 57%;
-  position: relative;
-  text-align: right;
-  color: #fff;
-  background: transparent;
-  border: 0;
-  outline: none;
-  font-size: clamp(16px, 1.12vw, 23px);
-}
-#get-ameta .get-ameta-sec .section-card .swap-input-con input:active, #get-ameta .get-ameta-sec .section-card .swap-input-con input:focus {
-  outline: none;
-}
-#get-ameta .get-ameta-sec .section-card .connect-wallet-btn {
-  font-size: clamp(17px, 1.35vw, 26px);
+#ameta-token-sale .ameta-token-sec .section-content .section-timer .timer-sec h3 {
   font-family: "GoGoHack";
-  color: #000;
-  background: #fff;
-  border: 4px solid #000;
-  border-radius: 50px;
-  width: 80%;
+  font-size: clamp(22px, 1.78vw, 34px);
+  color: #fff;
 }
-@media (max-width: 1680px) {
-  #get-ameta .get-ameta-sec .section-card .connect-wallet-btn {
-    font-size: clamp(17px, 1.25vw, 20px);
-  }
+#ameta-token-sale .ameta-token-sec .section-content .section-timer .timer-sec p {
+  font-size: clamp(15px, 0.9375vw, 18px);
 }
-#get-ameta .get-ameta-sec .section-card .gass-fee-label {
-  font-size: clamp(13px, 0.833vw, 16px);
+#ameta-token-sale .ameta-token-sec .section-content .section-timer .timer-sec .button-primary {
+  font-size: clamp(22px, 1.927vw, 37px);
+}
+#ameta-token-sale .ameta-token-sec .ameta-address-con {
+  display: flex;
+  justify-content: center;
+  margin-top: 2.5vw;
+}
+#ameta-token-sale .ameta-token-sec .ameta-address-con .ameta-address {
   text-align: center;
-}
-#get-ameta .get-ameta-sec .ameta-address {
-  width: auto;
-  display: inline-block;
-  height: auto;
-  padding: 0 30px 0 0.2vw;
-  border-radius: 9.5px;
-  background: #fff;
+  margin: auto;
+  border: 1px solid #fff;
+  border-radius: 30px;
   position: relative;
-  margin-top: 30px;
-  margin-left: 10px;
+  padding: 0 40px;
 }
-@media (max-width: 1680px) {
-  #get-ameta .get-ameta-sec .ameta-address {
-    margin-top: 10px;
-  }
+#ameta-token-sale .ameta-token-sec .ameta-address-con .ameta-address p {
+  display: inline;
+  font-size: 16px;
+  margin: 0;
 }
-@media (max-width: 482px) {
-  #get-ameta .get-ameta-sec .ameta-address {
-    padding: 0 10px 0 5vw;
-  }
-}
-#get-ameta .get-ameta-sec .ameta-address .address-icon {
+#ameta-token-sale .ameta-token-sec .ameta-address-con .ameta-address .address-icon {
+  display: inline-block;
+  width: 45px;
+  height: 45px;
   position: absolute;
-  width: auto;
-  height: 2.761vw;
-  left: -24px;
   top: 50%;
   transform: translateY(-50%);
-  z-index: 2;
 }
-@media (max-width: 992px) {
-  #get-ameta .get-ameta-sec .ameta-address .address-icon {
-    height: 6vw;
-  }
+#ameta-token-sale .ameta-token-sec .ameta-address-con .ameta-address .address-icon.icon-left {
+  left: -10px;
 }
-@media (max-width: 482px) {
-  #get-ameta .get-ameta-sec .ameta-address .address-icon {
-    width: 10vw;
-    height: 10vw;
-    left: -5vw;
-  }
+#ameta-token-sale .ameta-token-sec .ameta-address-con .ameta-address .address-icon.icon-right {
+  right: -10px;
 }
-#get-ameta .get-ameta-sec .ameta-address .address-icon img {
+#ameta-token-sale .ameta-token-sec .ameta-address-con .ameta-address .address-icon img {
   width: 100%;
-  height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
-  -o-object-position: center;
-     object-position: center;
-}
-#get-ameta .get-ameta-sec .ameta-address p {
-  color: #000;
-  margin: 0;
-  width: 100%;
-  font-size: clamp(13px, 0.834vw, 16px);
-}
-@media (max-width: 1366px) {
-  #get-ameta .get-ameta-sec .ameta-address p {
-    font-size: 11px;
-  }
-}
-@media (max-width: 482px) {
-  #get-ameta .get-ameta-sec .ameta-address p {
-    font-size: 7.8px;
-  }
-}
-@media (max-width: 390px) {
-  #get-ameta .get-ameta-sec .ameta-address p {
-    font-size: 7px;
-  }
-}
-#get-ameta .get-ameta-sec .ameta-address p::before {
-  content: none;
-}
-#get-ameta .get-ameta-sec .polygon-btn-con {
-  margin-top: 35px;
-}
-@media (max-width: 1680px) {
-  #get-ameta .get-ameta-sec .polygon-btn-con {
-    margin-top: 25px;
-  }
-}
-@media (max-width: 482px) {
-  #get-ameta .get-ameta-sec .polygon-btn-con {
-    width: 100%;
-  }
-}
-@media (max-width: 482px) {
-  #get-ameta .get-ameta-sec .polygon-btn-con .button-primary {
-    width: 100%;
-    font-size: clamp(12px, 5.33vw, 15px);
-  }
 }
 
 .play-games-dots {
