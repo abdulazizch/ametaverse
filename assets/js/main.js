@@ -155,3 +155,8 @@ $(window).bind("load",function(){
         
     },3000)
 })
+
+$(".connect-wallet-btn").click((e)=>{
+    e.preventDefault();
+    $(".swap-amount-con").removeClass("d-none");
+})

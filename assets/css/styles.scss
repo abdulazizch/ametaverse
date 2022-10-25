@@ -720,6 +720,10 @@ header{
             padding-top: 5vw;
 
             .section-text{
+                width: 45%;
+                @include responsive($lg){
+                    width: 100%;
+                }
                 p{
                     position: relative;
                     padding-left: 20px;
@@ -740,12 +744,17 @@ header{
                 }
             }
             .section-timer{
+                width: 55%;
+                @include responsive($lg){
+                    width: 100%;
+                }
                 .timer-sec{
                     display: flex;
                     flex-direction: column;
                     align-items: center;
+                    justify-content: space-evenly;
                     border: 10px solid transparent;
-                    padding: 15px;
+                    padding: 40px ;
                     border-image: url(../images/border-dots.png) 12 ;
                     h3{
                         font-family: $primary-font;
@@ -757,6 +766,65 @@ header{
                     }
                     .button-primary{
                         font-size: clamp(22px,1.927vw,37px);
+                    }
+                    .swap-amount-con{
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        margin-bottom: 1vw;
+                        .amount-input-con{
+                            label{
+                                font-size: clamp(15px,  0.9375vw, 18px);
+                                color: #fff;
+                                font-family: $secondary-font;
+                                margin-left: 10px;
+                            }
+                            .amount-input{
+                                border: 1px solid #fff;
+                                height: 44px;
+                                border-radius: 40px;
+                                display: flex;
+                                align-items: center;
+                                padding: 1px;
+                                .input-icon{
+                                    width: 45%;
+                                    height: 90%;
+                                    border-right: 1px solid #fff;
+                                    display: flex;
+                                    align-items: center;
+                                    p{
+                                        font-size: clamp(15px,  0.9375vw, 18px);
+                                        color: #fff;
+                                        font-family: $secondary-font;
+                                        margin: 0;
+                                    }
+                                    img{
+                                        width: auto;
+                                        height: 100%;
+                                        object-fit: contain;
+                                        margin-right: 5px;
+                                    }
+                                }
+                                input{
+                                    width: 55%;
+                                    height: auto;
+                                    background: transparent;
+                                    outline: none;
+                                    border: none;
+                                    color: #fff;
+                                    text-align: right;
+                                    padding-right: 10px;
+                                    font-size: 12px;
+                                    &::placeholder{
+                                        color: #fff;
+                                        font-family: $secondary-font;
+                                        font-size: 12px;
+
+                                    }
+
+                                }
+                            }
+                        }
                     }
                 }
             }
