@@ -708,6 +708,236 @@ header{
     
 }
 
+
+
+#token-generation-event{
+    padding-top: 3vw;
+    padding-bottom: 5vw;
+    .token-gen-sec{
+        .section-content{
+            .section-text{
+                width: 40%;
+                margin: auto;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                h4{
+                    color: #fff;
+                    font-family: $primary-font;
+                    font-size: clamp(18px, 1.302vw, 25px);
+                }
+                p{
+                    display: inline;
+                    font-size: clamp(15px,  0.9375vw, 18px);
+                    line-height: auto;
+                }
+            }
+            .discord-icon{
+                margin: 1vw auto 1.5vw;
+                width: 41px;
+                height: 41px;
+
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                }
+            }
+            .section-phases-con{
+                .section-phases{
+                    width: 90vw;
+                    margin: auto;
+                    display: flex;
+
+                    .phase-item-con{
+                        width: 20.5%;
+                        position: relative;
+
+                        &:nth-child(2){
+                            margin-left: -0.5%;
+                        }
+                        &:nth-child(3){
+                            margin-left: -0.5%;
+                        }
+                        &:nth-child(4){
+                            margin-left: -0.5%;
+                        }
+                        &:nth-child(5){
+                            margin-left: -0.5%;
+                        }
+                        .phase-title{
+                            margin-bottom: 15px;
+                            h5{
+                                font-size: clamp(14px,1.042vw, 20px);
+                                color: #fff;
+                                font-family: $primary-font;
+                                text-align: center;
+                            }
+                        }
+                        .phase-item{
+                            width: 100%;
+                            border: 10px solid transparent;
+                            padding: 10px ;
+                            border-image: url(../images/phase-border-dots.png) 10 ;
+                            text-align: center;
+                            position: relative;
+
+                            .monkey-1{
+                                width: 78px;
+                                position: absolute;
+                                bottom: 107%;
+                                left: -1%;
+
+                                img{
+                                    width: 100%;
+                                    object-fit: contain;
+                                }
+                            }
+                            h4{
+                                font-size: clamp(18px,1.302vw, 25px);
+                                color: #fff;
+                                font-family: $primary-font;
+                            }
+                            p{
+                                font-size: clamp(15px,  0.9375vw, 18px);
+                                margin: 0;
+                            }
+                        }
+                        .item-swing{
+                            display: inline-flex;
+                            align-items: center;
+                            flex-direction: column;
+                            position: relative;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            top: 2.5%;
+                            z-index: 1;
+
+                            .swing-dots-con{
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                transform-origin: top;
+                                &.swing-1{
+                                    animation: swing-anim 1s alternate ease-in-out infinite;
+                                }
+                                &.swing-2{
+                                    animation: swing-anim 1.3s alternate ease-in-out infinite;
+                                }
+                                &.swing-3{
+                                    animation: swing-anim 0.8s alternate ease-in-out infinite;
+                                }
+                                &.swing-4{
+                                    animation: swing-anim 1.5s alternate ease-in-out infinite;
+                                }
+                                &.swing-5{
+                                    animation: swing-anim 0.9s alternate ease-in-out infinite;
+                                }
+                                .dot{
+                                    width: $dot-wid-xxl;
+                                    height: $dot-wid-xxl;
+                                    border-radius: 50%;
+                                    margin: 0.72vw;
+                                    display:inline-block;
+                                    position:relative;
+                                    @include responsive($sm){
+                                        width: $dot-wid-xxxxl;
+                                        height: $dot-wid-xxxxl;
+                                        margin: 1.8vw;
+                                    }
+
+                                    &.dot-trans{
+                                        background: transparent;
+                                    }
+                                    &.dot-blue-d{
+                                        background: #004cba;
+                                    }
+                                    &.dot-blue-l{
+                                        background: #039dd9;
+                                    }
+                                    &.dot-purp-d{
+                                        background: #4c0282;
+                                    }
+                                    &.dot-purp-l{
+                                        background: #8a24d2;
+                                    }
+                                    &.dot-vlt{
+                                        background: #06edf7;
+                                    }
+                                    &.dot-pink-l{
+                                        background: #f44da8;
+                                    }
+                                    &.dot-pink-d{
+                                        background: #bd2782;
+                                    }
+                                    &.dot-green-l{
+                                        background: #70ce23;
+                                    }
+                                    &.dot-green-d{
+                                        background: #49a00c;
+                                    }
+                                    &.dot-orng{
+                                        background: #fcbb00;
+                                    }
+                                    &.dot-orng-d{
+                                        background: #da4812;
+                                    }
+                                }
+                            }
+
+                            .hanging-monkey{
+                                width: 113px;
+                                margin-top: -20%;
+                                position: relative;
+                                z-index: 2;
+                                transform: rotate(0);
+                                animation: swingMonkey-anim 1.1s alternate ease-in-out infinite;
+                                transform-origin: top;
+                                transition: all 0.3s;
+                                img{
+                                    width: 100%;
+                                    object-fit: contain;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes swing-anim{
+    0%{
+        transform: rotate(-45deg);
+    }
+    5%{
+        transform: rotate(-45deg);
+    }
+    95%{
+        transform: rotate(45deg);
+    }
+    100%{
+        transform: rotate(45deg);
+    }
+}
+@keyframes swingMonkey-anim{
+    0%{
+        transform: rotate(-20deg);
+    }
+    5%{
+        transform: rotate(-20deg);
+    }
+    95%{
+        transform: rotate(20deg);
+    }
+    100%{
+        transform: rotate(20deg);
+    }
+}
+
+
+
 .ameta-token-sale-dots{
     position: relative;
 }
