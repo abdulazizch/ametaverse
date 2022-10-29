@@ -1106,15 +1106,22 @@ header{
 
 .tokenomics-dots{
     z-index: -1;
+    position: relative;
 }
 #tokenomics{
-    padding: 10vw 0;
+    padding: 10vw 0 2vw;
     position: relative;
     z-index: 1;
 
     .tokenomics-sec{
         width: 62.5%;
         margin: auto;
+        position: absolute;
+        height: auto;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
         .section-content{
             .section-text{
                 // width: 50%;

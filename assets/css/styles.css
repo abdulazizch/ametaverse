@@ -1152,16 +1152,22 @@ header .header-text-cont h2 {
 
 .tokenomics-dots {
   z-index: -1;
+  position: relative;
 }
 
 #tokenomics {
-  padding: 10vw 0;
+  padding: 10vw 0 2vw;
   position: relative;
   z-index: 1;
 }
 #tokenomics .tokenomics-sec {
   width: 62.5%;
   margin: auto;
+  position: absolute;
+  height: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 #tokenomics .tokenomics-sec .section-content .section-text p {
   position: relative;
