@@ -71,6 +71,10 @@ h2{
         font-size: clamp(26px, 7.11vw, 32px);
     }
 }
+h4, h5,h6{
+    color: #fff;
+    font-family: $primary-font;
+}
 p{
     font-family: $secondary-font;
     font-size: clamp(14px,  0.886vw, 17px);
@@ -1099,6 +1103,139 @@ header{
         }
     }
 }
+
+.tokenomics-dots{
+    z-index: -1;
+}
+#tokenomics{
+    padding: 10vw 0;
+    position: relative;
+    z-index: 1;
+
+    .tokenomics-sec{
+        width: 62.5%;
+        margin: auto;
+        .section-content{
+            .section-text{
+                // width: 50%;
+                p{
+                    position: relative;
+                    padding-left: 20px;
+                    &::before{
+                        content: "";
+                        position: absolute;
+                        width: 8px;
+                        height: 100%;
+                        background: #fff;
+                        border-radius: 4px;
+                        left: 0;
+                        top: 0;
+                    }
+                }
+                h4{
+                    font-size: clamp(22px, 1.78vw, 34px);
+                }
+                .tokenomic-items{
+                    .tokenomic-item{
+                        cursor: pointer;
+
+                        h6{
+                            font-size: clamp(16px, 1.15vw, 22px);
+                        }
+                        p{
+                            padding: 0;
+                            &::before{
+                                content: none;
+                            }
+                        }
+
+                        &.item-1 h6{
+                                color: #ffff00;
+                        }
+                        &.item-2 h6{
+                                color: #ff0000;
+                        }
+                        &.item-3 h6{
+                                color: #0037ff;
+                        }
+                        &.item-4 h6{
+                                color: #5cf246;
+                        }
+                        &.item-5 h6{
+                                color: #ff7300;
+                        }
+                        &.item-6 h6{
+                                color: #ff83e8;
+                        }
+                        &.item-7 h6{
+                                color: #43fff8;
+                        }
+                        &.item-8 h6{
+                                color: #a200ff;
+                        }
+                    }
+                }
+            }
+            .section-infobar{
+                position: relative;
+
+                .technomic-chart{
+                    position: absolute;
+                    width: 28.33vw;
+                    height: 28.33vw;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+
+                    .chart-inner-img{
+                        width: 67%;
+                        height: 67%;
+                        overflow: hidden;
+                        border-radius: 50%;
+                        position: absolute;
+                        left: 50%;
+                        top: 50%;
+                        transform: translate(-50%, -50%);
+    
+                        img{
+                            width: 100%;
+                            height: 100%;
+                            object-fit: contain;
+                        }
+                    }
+                    .chart-inner-text{
+                        position: absolute;
+                        border-radius: 50%;
+                        background: #ffff0099;
+                        z-index: 2;
+                        left: 50%;
+                        top: 50%;
+                        transform: translate(-50%,-50%);
+                        width: 67%;
+                        height: 67%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+
+                        h6{
+                            font-size: clamp(20px, 2.083vw, 40px);
+                            color: #000;
+                            text-align: center;
+                        }
+                        p{
+                            font-size: clamp(16px, 1.302vw, 25px);
+                            text-align: center;
+                            color: #000;
+                            font-family: $primary-font;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 
 
 .play-games-dots{

@@ -35,6 +35,11 @@ h2 {
   }
 }
 
+h4, h5, h6 {
+  color: #fff;
+  font-family: "GoGoHack";
+}
+
 p {
   font-family: "CasCadia";
   font-size: clamp(14px, 0.886vw, 17px);
@@ -1143,6 +1148,126 @@ header .header-text-cont h2 {
   width: 100%;
   -o-object-fit: contain;
      object-fit: contain;
+}
+
+.tokenomics-dots {
+  z-index: -1;
+}
+
+#tokenomics {
+  padding: 10vw 0;
+  position: relative;
+  z-index: 1;
+}
+#tokenomics .tokenomics-sec {
+  width: 62.5%;
+  margin: auto;
+}
+#tokenomics .tokenomics-sec .section-content .section-text p {
+  position: relative;
+  padding-left: 20px;
+}
+#tokenomics .tokenomics-sec .section-content .section-text p::before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 100%;
+  background: #fff;
+  border-radius: 4px;
+  left: 0;
+  top: 0;
+}
+#tokenomics .tokenomics-sec .section-content .section-text h4 {
+  font-size: clamp(22px, 1.78vw, 34px);
+}
+#tokenomics .tokenomics-sec .section-content .section-text .tokenomic-items .tokenomic-item {
+  cursor: pointer;
+}
+#tokenomics .tokenomics-sec .section-content .section-text .tokenomic-items .tokenomic-item h6 {
+  font-size: clamp(16px, 1.15vw, 22px);
+}
+#tokenomics .tokenomics-sec .section-content .section-text .tokenomic-items .tokenomic-item p {
+  padding: 0;
+}
+#tokenomics .tokenomics-sec .section-content .section-text .tokenomic-items .tokenomic-item p::before {
+  content: none;
+}
+#tokenomics .tokenomics-sec .section-content .section-text .tokenomic-items .tokenomic-item.item-1 h6 {
+  color: #ffff00;
+}
+#tokenomics .tokenomics-sec .section-content .section-text .tokenomic-items .tokenomic-item.item-2 h6 {
+  color: #ff0000;
+}
+#tokenomics .tokenomics-sec .section-content .section-text .tokenomic-items .tokenomic-item.item-3 h6 {
+  color: #0037ff;
+}
+#tokenomics .tokenomics-sec .section-content .section-text .tokenomic-items .tokenomic-item.item-4 h6 {
+  color: #5cf246;
+}
+#tokenomics .tokenomics-sec .section-content .section-text .tokenomic-items .tokenomic-item.item-5 h6 {
+  color: #ff7300;
+}
+#tokenomics .tokenomics-sec .section-content .section-text .tokenomic-items .tokenomic-item.item-6 h6 {
+  color: #ff83e8;
+}
+#tokenomics .tokenomics-sec .section-content .section-text .tokenomic-items .tokenomic-item.item-7 h6 {
+  color: #43fff8;
+}
+#tokenomics .tokenomics-sec .section-content .section-text .tokenomic-items .tokenomic-item.item-8 h6 {
+  color: #a200ff;
+}
+#tokenomics .tokenomics-sec .section-content .section-infobar {
+  position: relative;
+}
+#tokenomics .tokenomics-sec .section-content .section-infobar .technomic-chart {
+  position: absolute;
+  width: 28.33vw;
+  height: 28.33vw;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#tokenomics .tokenomics-sec .section-content .section-infobar .technomic-chart .chart-inner-img {
+  width: 67%;
+  height: 67%;
+  overflow: hidden;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+#tokenomics .tokenomics-sec .section-content .section-infobar .technomic-chart .chart-inner-img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+#tokenomics .tokenomics-sec .section-content .section-infobar .technomic-chart .chart-inner-text {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 0, 0.6);
+  z-index: 2;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 67%;
+  height: 67%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#tokenomics .tokenomics-sec .section-content .section-infobar .technomic-chart .chart-inner-text h6 {
+  font-size: clamp(20px, 2.083vw, 40px);
+  color: #000;
+  text-align: center;
+}
+#tokenomics .tokenomics-sec .section-content .section-infobar .technomic-chart .chart-inner-text p {
+  font-size: clamp(16px, 1.302vw, 25px);
+  text-align: center;
+  color: #000;
+  font-family: "GoGoHack";
 }
 
 .play-games-dots {
