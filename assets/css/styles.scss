@@ -77,12 +77,26 @@ h4, h5,h6{
 }
 p{
     font-family: $secondary-font;
-    font-size: clamp(14px,  0.886vw, 17px);
+    font-size: clamp(14px,  1vw, 18px);
     line-height: 26px;
     color: $primary-txt-color;
     @include responsive($sm){
         font-size: 14px;
         line-height: 20px;
+    }
+    &.border-before{
+        padding-left: 20px;
+        position: relative;
+        &::before{
+            content: "";
+            position: absolute;
+            width: 8px;
+            height: 100%;
+            background: #fff;
+            border-radius: 4px;
+            left: 0;
+            top: 0;
+        }
     }
 }
 ul{
@@ -960,20 +974,9 @@ header{
                 }
                 p{
                     position: relative;
-                    padding-left: 20px;
                     span{
                         margin: 3px 0;
                         display: inline-block;
-                    }
-                    &::before{
-                        content: "";
-                        position: absolute;
-                        width: 8px;
-                        height: 100%;
-                        background: #fff;
-                        border-radius: 4px;
-                        left: 0;
-                        top: 0;
                     }
                 }
             }
@@ -1243,6 +1246,17 @@ header{
     }
 }
 
+.ameta-feature-dots{
+    position: relative;
+}
+#ameta-features{
+    margin-bottom: 4vw;
+    .ameta-features-sec{
+        width: 62.5%;
+        margin: auto;
+        padding: 3vw 0 4vw;
+    }
+}
 
 
 .play-games-dots{
@@ -1323,8 +1337,6 @@ header{
             p{
                 width: 97%;
                 font-size: clamp(14px,0.9375vw,18px);
-                position: relative;
-                padding-left: 20px;
                 margin-top: 10px;
 
                 @include responsive($xxl){
@@ -1337,16 +1349,6 @@ header{
 
                 span{
                     color: #ff0000;
-                }
-                &::before{
-                    content: "";
-                    position: absolute;
-                    width: 8px;
-                    height: 100%;
-                    background: #fff;
-                    border-radius: 4px;
-                    left: 0;
-                    top: 0;
                 }
             }
         }

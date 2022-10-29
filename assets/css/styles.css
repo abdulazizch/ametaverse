@@ -42,7 +42,7 @@ h4, h5, h6 {
 
 p {
   font-family: "CasCadia";
-  font-size: clamp(14px, 0.886vw, 17px);
+  font-size: clamp(14px, 1vw, 18px);
   line-height: 26px;
   color: #fff;
 }
@@ -51,6 +51,20 @@ p {
     font-size: 14px;
     line-height: 20px;
   }
+}
+p.border-before {
+  padding-left: 20px;
+  position: relative;
+}
+p.border-before::before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 100%;
+  background: #fff;
+  border-radius: 4px;
+  left: 0;
+  top: 0;
 }
 
 ul {
@@ -1001,21 +1015,10 @@ header .header-text-cont h2 {
 }
 #ameta-token-sale .ameta-token-sec .section-content .section-text p {
   position: relative;
-  padding-left: 20px;
 }
 #ameta-token-sale .ameta-token-sec .section-content .section-text p span {
   margin: 3px 0;
   display: inline-block;
-}
-#ameta-token-sale .ameta-token-sec .section-content .section-text p::before {
-  content: "";
-  position: absolute;
-  width: 8px;
-  height: 100%;
-  background: #fff;
-  border-radius: 4px;
-  left: 0;
-  top: 0;
 }
 #ameta-token-sale .ameta-token-sec .section-content .section-timer {
   width: 55%;
@@ -1276,6 +1279,19 @@ header .header-text-cont h2 {
   font-family: "GoGoHack";
 }
 
+.ameta-feature-dots {
+  position: relative;
+}
+
+#ameta-features {
+  margin-bottom: 4vw;
+}
+#ameta-features .ameta-features-sec {
+  width: 62.5%;
+  margin: auto;
+  padding: 3vw 0 4vw;
+}
+
 .play-games-dots {
   height: 100%;
   padding-top: 25%;
@@ -1380,8 +1396,6 @@ header .header-text-cont h2 {
 #play-games .play-games-sec .section-text p {
   width: 97%;
   font-size: clamp(14px, 0.9375vw, 18px);
-  position: relative;
-  padding-left: 20px;
   margin-top: 10px;
 }
 @media (max-width: 1680px) {
@@ -1397,16 +1411,6 @@ header .header-text-cont h2 {
 }
 #play-games .play-games-sec .section-text p span {
   color: #ff0000;
-}
-#play-games .play-games-sec .section-text p::before {
-  content: "";
-  position: absolute;
-  width: 8px;
-  height: 100%;
-  background: #fff;
-  border-radius: 4px;
-  left: 0;
-  top: 0;
 }
 #play-games .play-games-sec .game-cards-con {
   width: 67%;
