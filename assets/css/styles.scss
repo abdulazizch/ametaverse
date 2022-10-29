@@ -1287,6 +1287,7 @@ header{
     }
 }
 #play-games{
+    overflow: hidden;
     @include responsive($xs){
         margin-top: 12%;
     }
@@ -1302,7 +1303,7 @@ header{
         position: relative;
 
         @include responsiveHeight($hxl){
-            min-height: 114vh;
+            min-height: auto;
         }
         @include responsive($xxl){
             min-height: 110vh;
@@ -1633,8 +1634,9 @@ header{
 
 .roadmap-dots{
     padding-top: 0;
-    // padding-bottom: 0;
+    padding-bottom: 0;
     height: 100%;
+    position: relative;
 }
 .roadmap-dots-sm{
     margin-top: 1%;
@@ -1642,6 +1644,7 @@ header{
 #roadmap{
     position: relative;
     overflow: hidden;
+    padding-top: 0;
     @include responsive($sm){
         margin-top: 15%;
     }
@@ -1650,9 +1653,13 @@ header{
     }
 
     .roadmap-sec{
-        width: 80%;
-        margin-left: 12.5%;
-        padding-top:3.1%;
+        width: 92%;
+        height: auto;
+        margin-left:8%;
+        padding-top:15.1vw;
+        position: absolute;
+        top: 0;
+        left: 0;
 
         @include responsive($sm){
             width: 100%;
@@ -1667,164 +1674,186 @@ header{
                 padding-left: 6px;
             }
         }
+        .cloud-img-items{
+            position: absolute;
+            z-index: 2;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            top: 0;
 
+            .cloud-img-item{
+                position: absolute;
+
+                &:hover{
+                    animation: shake 0.5s infinite;
+                }
+
+                &.item-1{
+                    width: 10.1vw;
+                    min-width: 185px;
+                    max-width: 193px;
+                    top: 33%;
+                    left: 6%;
+
+                    @include responsive($lg){
+                        top: 55%;
+                        left: 60%;
+                    }
+                    @include responsive($sm){
+                        min-width: 90px;
+                        top: 55%;
+                        left: 53%;
+                    }
+                    
+                }
+                &.item-2{
+                    width: 190px;
+                    width: 9.9vw;
+                    min-width: 180px;
+                    max-width: 190px;
+                    left: 31%;
+                    top: 14%;
+                    @include responsive($lg){
+                        top: -2%;
+                        left: 55%;
+                    }
+                    @include responsive($sm){
+                        min-width: 90px;
+                        top: -3%;
+                        left: 50%;
+                    }
+                }
+                &.item-3{
+                    width: 11.04vw;
+                    min-width: 196px;
+                    max-width: 212px;
+                    left: 57%;
+                    top: 14%;
+                    @include responsive($lg){
+                        top: 25%;
+                        left: 0;
+                    }
+                    @include responsive($sm){
+                        min-width: 80px;
+                        top: 25%;
+                        left: 0;
+                    }
+                }
+                &.item-4{
+                    width: 10.4vw;
+                    min-width: 190px;
+                    max-width: 200px;
+                    right: 3%;
+                    top: 33%;
+
+                    @include responsive($lg){
+                        top: 77%;
+                        right: 52%;
+                    }
+                    @include responsive($sm){
+                        min-width: 85px;
+                        top: 80%;
+                        right: 58%;
+                    }
+                }
+
+                img{
+                    width: 100%;
+                    object-fit: contain;
+                }
+            }
+        }
         .roadmap-timeline{
             position: relative;
-            padding-left: 1%;
+            padding-left: 0;
             @include responsive($sm){
                 padding-left: 17%;
             }
 
-            .cloud-img-items{
-                position: absolute;
-                z-index: 2;
-                width: 100%;
-                height: 100%;
-                display: flex;
-
-                .cloud-img-item{
-                    position: absolute;
-
-                    &:hover{
-                        animation: shake 0.5s infinite;
+            
+            .timeline-items-con{
+                .timeline-items-row{
+                    display: flex;
+                    justify-content: start;
+                    padding-left: 6.5%;
+                    &.row-2{
+                        justify-content: center;
                     }
-
-                    &.item-1{
-                        width: 10.1vw;
-                        min-width: 185px;
-                        max-width: 193px;
-                        top: 36%;
-                        left: -2%;
-
+        
+                    .timeline-item{
+                        min-height: 18.5vh;
+        
                         @include responsive($lg){
-                            top: 55%;
-                            left: 60%;
+                            min-height: 10vh;
+                        }
+        
+                        @include responsive($lg){
+                            min-height: 8vh;
                         }
                         @include responsive($sm){
-                            min-width: 90px;
-                            top: 55%;
-                            left: 53%;
+                            min-height: 7.4vh;
+                        }
+                        @include responsiveMinHeight(840px){
+                            min-height: 7.1vh !important;
+                        }
+                        @include responsiveMinHeightxs(800px){
+                            min-height: 6.7vh !important;
                         }
                         
-                    }
-                    &.item-2{
-                        width: 190px;
-                        width: 9.9vw;
-                        min-width: 180px;
-                        max-width: 190px;
-                        left: 25%;
-                        top: 3%;
-                        @include responsive($lg){
-                            top: -2%;
-                            left: 55%;
-                        }
-                        @include responsive($sm){
-                            min-width: 90px;
-                            top: -3%;
-                            left: 50%;
-                        }
-                    }
-                    &.item-3{
-                        width: 11.04vw;
-                        min-width: 196px;
-                        max-width: 212px;
-                        left: 53%;
-                        top: 14%;
-                        @include responsive($lg){
-                            top: 25%;
-                            left: 0;
-                        }
-                        @include responsive($sm){
-                            min-width: 80px;
-                            top: 25%;
-                            left: 0;
-                        }
-                    }
-                    &.item-4{
-                        width: 10.4vw;
-                        min-width: 190px;
-                        max-width: 200px;
-                        right: 3%;
-                        top: 35%;
+                        .item-text{
+                            height: 100%;
 
-                        @include responsive($lg){
-                            top: 77%;
-                            right: 52%;
-                        }
-                        @include responsive($sm){
-                            min-width: 85px;
-                            top: 80%;
-                            right: 58%;
-                        }
-                    }
+                            h3{
+                                font-size: clamp(17px, 2.08vw, 40px);
+                                font-family: $primary-font;
+                                color: #fff;
+                                line-height: 26px;
+                                @include responsive($sm){
+                                    font-size: clamp(9px, 3.5vw, 15px);
+                                }
+                            }
+                            ul{
+                                list-style: none;
+                                position: relative;
+                                padding: 0;
+                                padding-left: 20px;
+                                height: 70%;
+                                // border-left: 10px solid transparent;
+                                // border-image: url(../images/ver-dots-border.png) 12;
+                                &::before{
+                                    content: "";
+                                    width: 10px;
+                                    height: 100%;
+                                    position: absolute;
+                                    top: 10px;
+                                    left: 0;
+                                    background: url(../images/ver-dots-border.png);
+                                    background-size: cover;
+                                    background-position: top left;
+                                }
+                                &.bottom-list{
+                                    &::before{
+                                        top: unset;
+                                        bottom: 10px;
+                                    }
+                                }
+                                li{
+                                    font-size: clamp(14px, 1.04vw, 20px);
+                                    font-family: $primary-font;
+                                    color: #fff;
 
-                    img{
-                        width: 100%;
-                        object-fit: contain;
-                    }
-                }
-            }
-
-            .timeline-item{
-                min-height: 20.5vh;
-
-                @include responsive($lg){
-                    min-height: 10vh;
-                }
-
-                @include responsive($lg){
-                    min-height: 8vh;
-                }
-                @include responsive($sm){
-                    min-height: 7.4vh;
-                }
-                @include responsiveMinHeight(840px){
-                    min-height: 7.1vh !important;
-                }
-                @include responsiveMinHeightxs(800px){
-                    min-height: 6.7vh !important;
-                }
-                
-                .item-text{
-                    h3{
-                        font-size: clamp(17px, 2.08vw, 40px);
-                        font-family: $primary-font;
-                        color: #fff;
-                        line-height: 26px;
-                        @include responsive($sm){
-                            font-size: clamp(9px, 3.5vw, 15px);
-                        }
-                    }
-                    ul{
-                        list-style: none;
-                        padding: 0;
-
-                        li{
-                            font-size: clamp(14px, 1.04vw, 20px);
-                            font-family: $primary-font;
-                            color: #fff;
-
-                            @include responsive($sm){
-                                font-size: clamp(7px, 2.2vw, 11px);
+                                    @include responsive($sm){
+                                        font-size: clamp(7px, 2.2vw, 11px);
+                                    }
+                                }
                             }
                         }
                     }
-                }
-            }
 
-            .col3{
-                .itemQ3{
-                    grid-area: itemQ3;
                 }
-                .itemQ4{
-                    grid-area: itemQ4;
-                }
-                @include responsive($lg){
-                    display: grid;
-                    grid-template-areas: 'itemQ3'
-                                       'itemQ4';
-                } 
             }
+            
         }
         
     }
