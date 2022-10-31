@@ -699,10 +699,12 @@ header .header-text-cont h2 {
   top: 0;
 }
 #what-is-ametaverse .what-is-ameta-sec .flower-anim-con .drops-con .drop-sm {
-  width: 29px;
+  width: 1.51vw;
+  min-width: 20px;
 }
 #what-is-ametaverse .what-is-ameta-sec .flower-anim-con .drops-con .drop-lg {
-  width: 41px;
+  width: 2.1875vw;
+  min-height: 30px;
 }
 #what-is-ametaverse .what-is-ameta-sec .flower-anim-con .drops-con .drop.drop-1 {
   left: 30%;
@@ -711,6 +713,8 @@ header .header-text-cont h2 {
           animation-timing-function: cubic-bezier(1, 0, 0.91, 0.19);
   -webkit-animation-duration: 1s;
           animation-duration: 1s;
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
   -webkit-animation-iteration-count: 1;
           animation-iteration-count: 1;
   opacity: 0;
@@ -734,8 +738,6 @@ header .header-text-cont h2 {
           animation-timing-function: cubic-bezier(1, 0, 0.91, 0.19);
   -webkit-animation-duration: 1s;
           animation-duration: 1s;
-  -webkit-animation-delay: 0.3s;
-          animation-delay: 0.3s;
   -webkit-animation-iteration-count: 1;
           animation-iteration-count: 1;
   opacity: 0;

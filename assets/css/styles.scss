@@ -674,10 +674,12 @@ header{
                     top: 0;
 
                     &-sm{
-                        width: 29px;
+                        width: 1.510vw;
+                        min-width: 20px;
                     }
                     &-lg{
-                        width: 41px;
+                        width: 2.1875vw;
+                        min-height: 30px;
                     }
                     &.drop-1{
                         left: 30%; 
@@ -686,6 +688,7 @@ header{
                         // animation: waterDrop1 cubic-bezier(1,0,.91,.19) 2s infinite;
                         animation-timing-function: cubic-bezier(1,0,.91,.19);
                         animation-duration: 1s;
+                        animation-delay: 0.3s;
                         animation-iteration-count: 1;
                         opacity: 0;
                     }
@@ -706,7 +709,7 @@ header{
                         // animation: waterDrop3 cubic-bezier(1,0,.91,.19) 2s 1s infinite;
                         animation-timing-function: cubic-bezier(1,0,.91,.19);
                         animation-duration: 1s;
-                        animation-delay: 0.3s;
+                        
                         animation-iteration-count: 1;
                         opacity: 0;
                     }
