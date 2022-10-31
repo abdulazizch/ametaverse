@@ -672,9 +672,12 @@ header .header-text-cont h2 {
 #what-is-ametaverse .what-is-ameta-sec .flower-anim-con {
   width: 25%;
   overflow: hidden;
+  position: relative;
 }
 #what-is-ametaverse .what-is-ameta-sec .flower-anim-con .cloud-img-con {
   width: 44.7%;
+  position: relative;
+  z-index: 3;
 }
 #what-is-ametaverse .what-is-ameta-sec .flower-anim-con .cloud-img-con img {
   width: 100%;
@@ -683,6 +686,92 @@ header .header-text-cont h2 {
   -o-object-position: center;
      object-position: center;
   cursor: pointer;
+}
+#what-is-ametaverse .what-is-ameta-sec .flower-anim-con .drops-con {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+#what-is-ametaverse .what-is-ameta-sec .flower-anim-con .drops-con .drop {
+  position: relative;
+  top: 0;
+}
+#what-is-ametaverse .what-is-ameta-sec .flower-anim-con .drops-con .drop-sm {
+  width: 29px;
+}
+#what-is-ametaverse .what-is-ameta-sec .flower-anim-con .drops-con .drop-lg {
+  width: 41px;
+}
+#what-is-ametaverse .what-is-ameta-sec .flower-anim-con .drops-con .drop.drop-1 {
+  left: 30%;
+  top: 5px;
+  -webkit-animation-timing-function: cubic-bezier(1, 0, 0.91, 0.19);
+          animation-timing-function: cubic-bezier(1, 0, 0.91, 0.19);
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  opacity: 0;
+}
+#what-is-ametaverse .what-is-ameta-sec .flower-anim-con .drops-con .drop.drop-2 {
+  left: 60%;
+  -webkit-animation-timing-function: cubic-bezier(1, 0, 0.91, 0.19);
+          animation-timing-function: cubic-bezier(1, 0, 0.91, 0.19);
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  opacity: 0;
+}
+#what-is-ametaverse .what-is-ameta-sec .flower-anim-con .drops-con .drop.drop-3 {
+  left: 40%;
+  top: -5%;
+  -webkit-animation-timing-function: cubic-bezier(1, 0, 0.91, 0.19);
+          animation-timing-function: cubic-bezier(1, 0, 0.91, 0.19);
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  opacity: 0;
+}
+#what-is-ametaverse .what-is-ameta-sec .flower-anim-con .drops-con .drop img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
+}
+#what-is-ametaverse .what-is-ameta-sec .flower-anim-con .shit-con {
+  position: absolute;
+  height: 100%;
+  top: 0;
+}
+#what-is-ametaverse .what-is-ameta-sec .flower-anim-con .shit-con .shit {
+  width: 20%;
+  position: relative;
+  top: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-animation-timing-function: cubic-bezier(1, 0, 0.91, 0.19);
+          animation-timing-function: cubic-bezier(1, 0, 0.91, 0.19);
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  opacity: 0;
+}
+#what-is-ametaverse .what-is-ameta-sec .flower-anim-con .shit-con .shit img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
 }
 #what-is-ametaverse .what-is-ameta-sec .flower-anim-con .flower-con {
   display: flex;
@@ -704,6 +793,7 @@ header .header-text-cont h2 {
   top: -50%;
   left: 54%;
   transform: translate(-50%, 50%);
+  opacity: 0;
 }
 #what-is-ametaverse .what-is-ameta-sec .flower-anim-con .flower-con .flower img.sapling {
   height: 100%;
@@ -711,6 +801,7 @@ header .header-text-cont h2 {
      object-fit: contain;
   z-index: -1;
   position: relative;
+  bottom: -40%;
 }
 #what-is-ametaverse .what-is-ameta-sec .flower-anim-con .flower-con .land-con {
   display: flex;
@@ -742,6 +833,37 @@ header .header-text-cont h2 {
   font-size: clamp(22px, 1.72vw, 33px);
 }
 
+@-webkit-keyframes waterDrop1 {
+  to {
+    top: 87%;
+  }
+}
+
+@keyframes waterDrop1 {
+  to {
+    top: 87%;
+  }
+}
+@-webkit-keyframes waterDrop2 {
+  to {
+    top: 81%;
+  }
+}
+@keyframes waterDrop2 {
+  to {
+    top: 81%;
+  }
+}
+@-webkit-keyframes waterDrop3 {
+  to {
+    top: 71%;
+  }
+}
+@keyframes waterDrop3 {
+  to {
+    top: 71%;
+  }
+}
 #token-generation-event {
   padding-top: 3vw;
   padding-bottom: 5vw;
