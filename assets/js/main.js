@@ -191,10 +191,10 @@ $(".cloud-img-con.cloud-1").click(function(e){
         $(this).next().find('.drop-3').css({"opacity": "0","animation-name": "none"})
         setTimeout(() => {
             $(this).next().next().next().find(".sapling").css({"bottom": sapling1+"%"})
-        }, 2000);
+        }, 1600);
         setTimeout(() => {
             $(this).next().next().next().find(".flower-petal").css({"opacity": "1"})
-        }, 2010);
+        }, 1910);
     }
     setTimeout(() => {
         click1 = 0
@@ -231,7 +231,7 @@ $(".cloud-img-con.cloud-2").click(function(e){
         }, 1600);
         setTimeout(() => {
             $(this).next().next().next().find(".flower-petal").css({"opacity": "1"})
-        }, 1620);
+        }, 1910);
     }
     setTimeout(() => {
         click2 = 0

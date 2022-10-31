@@ -732,6 +732,7 @@ header{
                     animation-duration: 1s;
                     animation-iteration-count: 1;
                     opacity: 0;
+                    transition: all 0.3s;
 
                     img{
                         width: 100%;
@@ -769,6 +770,7 @@ header{
                         z-index: -1;
                         position: relative;
                         bottom: -40%;
+                        transition: all 0.3s ease-in;
                     }
                 }
                 .land-con{

@@ -765,6 +765,7 @@ header .header-text-cont h2 {
   -webkit-animation-iteration-count: 1;
           animation-iteration-count: 1;
   opacity: 0;
+  transition: all 0.3s;
 }
 #what-is-ametaverse .what-is-ameta-sec .flower-anim-con .shit-con .shit img {
   width: 100%;
@@ -802,6 +803,7 @@ header .header-text-cont h2 {
   z-index: -1;
   position: relative;
   bottom: -40%;
+  transition: all 0.3s ease-in;
 }
 #what-is-ametaverse .what-is-ameta-sec .flower-anim-con .flower-con .land-con {
   display: flex;
