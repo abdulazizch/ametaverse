@@ -577,31 +577,6 @@ header .header-text-cont h2 {
   }
 }
 
-.what-is-ameta-dots {
-  height: 100%;
-  padding-top: 0;
-  position: relative;
-}
-.what-is-ameta-dots.bottom-dots {
-  margin-top: -1.90875vw;
-  z-index: -1;
-}
-@media (max-width: 1680px) {
-  .what-is-ameta-dots {
-    min-height: 109vh;
-  }
-}
-@media (max-width: 1366px) {
-  .what-is-ameta-dots {
-    min-height: 139.5vh;
-  }
-}
-@media (max-width: 992px) {
-  .what-is-ameta-dots {
-    min-height: 96vh;
-  }
-}
-
 .get-ameta-dots-sm {
   margin-top: 1%;
 }
@@ -618,6 +593,16 @@ header .header-text-cont h2 {
   margin-left: 1.9vw;
 }
 
+.what-is-ameta-dots {
+  height: 100%;
+  padding-top: 0;
+  position: relative;
+}
+.what-is-ameta-dots.bottom-dots {
+  margin-top: -1.90875vw;
+  z-index: -1;
+}
+
 #what-is-ametaverse {
   width: 100vw;
   min-height: 95vh;
@@ -625,30 +610,30 @@ header .header-text-cont h2 {
   z-index: 2;
   padding-top: 7vw;
 }
-@media (min-height: 1005px) and (min-width: 1600px) {
-  #what-is-ametaverse {
-    min-height: 96vh;
-  }
-}
-@media (max-width: 1680px) {
-  #what-is-ametaverse {
-    min-height: 109vh;
-  }
-}
-@media (max-width: 1366px) {
-  #what-is-ametaverse {
-    min-height: 140vh;
-  }
-}
-@media (max-width: 992px) {
-  #what-is-ametaverse {
-    min-height: 100vh;
-  }
-}
 @media (max-width: 482px) {
   #what-is-ametaverse {
     padding: 0 6.5%;
   }
+}
+#what-is-ametaverse .shit-icon {
+  width: 0.9vw;
+  top: 16.74775vw;
+  right: 6.538125vw;
+  position: absolute;
+  z-index: 5;
+  -webkit-animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+          animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+#what-is-ametaverse .shit-icon img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 #what-is-ametaverse .what-is-ameta-sec {
   width: 100%;
@@ -805,6 +790,7 @@ header .header-text-cont h2 {
   z-index: -1;
   position: relative;
   bottom: -40%;
+  right: 5%;
   transition: all 0.3s ease-in;
 }
 #what-is-ametaverse .what-is-ameta-sec .flower-anim-con .flower-con .land-con {
@@ -866,6 +852,50 @@ header .header-text-cont h2 {
 @keyframes waterDrop3 {
   to {
     top: 71%;
+  }
+}
+@-webkit-keyframes dropShit {
+  50% {
+    top: 87.5%;
+    right: 6.538125vw;
+    scale: 1;
+  }
+  51% {
+    top: 87.5%;
+    right: 6.538125vw;
+    scale: 2;
+  }
+  70% {
+    top: 87.5%;
+    right: 6.538125vw;
+    scale: 2;
+  }
+  100% {
+    top: 87.5%;
+    right: 17%;
+    scale: 3;
+  }
+}
+@keyframes dropShit {
+  50% {
+    top: 87.5%;
+    right: 6.538125vw;
+    scale: 1;
+  }
+  51% {
+    top: 87.5%;
+    right: 6.538125vw;
+    scale: 2;
+  }
+  70% {
+    top: 87.5%;
+    right: 6.538125vw;
+    scale: 2;
+  }
+  100% {
+    top: 87.5%;
+    right: 17%;
+    scale: 3;
   }
 }
 #token-generation-event {
@@ -2169,40 +2199,19 @@ header .header-text-cont h2 {
   padding-bottom: 0;
   height: 100%;
   padding-right: 20px;
+  position: relative;
 }
 
 #FAQ {
-  min-height: 180vh;
-  padding-top: 35vh;
+  padding-top: 0;
   position: relative;
-}
-@media (max-width: 1680px) {
-  #FAQ {
-    min-height: 152vh;
-    padding-top: 17vh;
-  }
-}
-@media (max-width: 1366px) {
-  #FAQ {
-    min-height: 170vh;
-    padding-top: 25vh;
-  }
-}
-@media (max-width: 992px) {
-  #FAQ {
-    min-height: 80vh;
-    padding-top: 16vh;
-  }
-}
-@media (max-width: 482px) {
-  #FAQ {
-    min-height: 100vh;
-    padding-top: 29%;
-  }
 }
 #FAQ .faq-sec {
   width: 60%;
-  margin: auto;
+  position: absolute;
+  left: 50%;
+  top: 20%;
+  transform: translateX(-50%);
 }
 @media (max-width: 992px) {
   #FAQ .faq-sec {

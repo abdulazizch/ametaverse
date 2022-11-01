@@ -118,9 +118,9 @@ $(function(){
     tokenomicItems.forEach(function(element, index) {
         element.addEventListener('mouseenter', function(e) {
             for(var i = 0, len = data.length; i < len; i++){
-                $paths[i].css({
-                        "opacity": "0.2",
-                    })
+                $paths[i].css({"opacity": "0.2"})
+                $(".tokenomic-item").css({"opacity": "0.2"})
+                $(this).css({"opacity": "1"})
             }
             $paths[index].css({
                 "opacity": "1",
@@ -134,6 +134,7 @@ $(function(){
                 $paths[i].css({
                         "opacity": "1"
                     })
+                    $(".tokenomic-item").css({"opacity": "1"})
             }
 
             $(".chart-inner-text").css({"background":data[0].color+"99"})

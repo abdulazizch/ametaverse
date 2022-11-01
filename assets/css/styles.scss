@@ -573,27 +573,6 @@ header{
         }
     }
 }
-
-.what-is-ameta-dots{
-    height: 100%;
-    padding-top:0;
-    position: relative;
-
-    &.bottom-dots{
-        margin-top: -1.90875vw;
-        z-index: -1;
-    }
-
-    @include responsive($xxl){
-        min-height: 109vh;
-    }
-    @include responsive($xl){
-        min-height: 139.5vh;
-    }
-    @include responsive($lg){
-        min-height: 96vh;
-    }
-}
 .get-ameta-dots-sm{
     margin-top: 1%;
 }
@@ -606,6 +585,27 @@ header{
 .ms-2col{
     margin-left: 1.9vw;
 }
+
+.what-is-ameta-dots{
+    height: 100%;
+    padding-top:0;
+    position: relative;
+
+    &.bottom-dots{
+        margin-top: -1.90875vw;
+        z-index: -1;
+    }
+
+    // @include responsive($xxl){
+    //     min-height: 109vh;
+    // }
+    // @include responsive($xl){
+    //     min-height: 139.5vh;
+    // }
+    // @include responsive($lg){
+    //     min-height: 96vh;
+    // }
+}
 #what-is-ametaverse{
     width: 100vw;
     min-height: 95vh;
@@ -613,22 +613,41 @@ header{
     z-index: 2;
     padding-top: 7vw;
 
-    @include responsiveHeight($hxl){
-        min-height: 96vh;
-    }
-    @include responsive($xxl){
-        min-height: 109vh;
-    }
-    @include responsive($xl){
-        min-height: 140vh;
-    }
-    @include responsive($lg){
-        min-height: 100vh;
-    }
+    // @include responsiveHeight($hxl){
+    //     min-height: 96vh;
+    // }
+    // @include responsive($xxl){
+    //     min-height: 109vh;
+    // }
+    // @include responsive($xl){
+    //     min-height: 140vh;
+    // }
+    // @include responsive($lg){
+    //     min-height: 100vh;
+    // }
     @include responsive($sm){
         padding: 0 6.5%;
     }
     
+    .shit-icon{
+        width: 0.9vw;
+        top: (7vw + (($dot-wid-xxl + 0.72vw )* 8.2));
+        right: ($dot-wid-xxl + 0.72vw )* 5.5;
+        position: absolute;
+        // top: 100%;
+        z-index: 5;
+
+        // animation-name: dropShit;
+        animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+        animation-duration: 4s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+
+        img{
+            width: 100%;
+            object-fit: contain;
+        }
+    }
 
     .what-is-ameta-sec{
         width: 100%;
@@ -773,6 +792,7 @@ header{
                         z-index: -1;
                         position: relative;
                         bottom: -40%;
+                        right: 5%;
                         transition: all 0.3s ease-in;
                     }
                 }
@@ -826,6 +846,28 @@ header{
 @keyframes waterDrop3 {
     to{
         top: 71%;
+    }
+}
+@keyframes dropShit {
+    50%{
+        top: 87.5%;
+        right: ($dot-wid-xxl + 0.72vw )* 5.5;
+        scale: (1);
+    }
+    51%{
+        top: 87.5%;
+        right: ($dot-wid-xxl + 0.72vw )* 5.5;
+        scale: (2);
+    }
+    70%{
+        top: 87.5%;
+        right: ($dot-wid-xxl + 0.72vw )* 5.5;
+        scale: (2);
+    }
+    100%{
+        top: 87.5%;
+        right: 17%;
+        scale: (3);
     }
 }
 
@@ -2010,35 +2052,40 @@ header{
     padding-bottom: 0;
     height: 100%;
     padding-right: 20px;
+    position: relative;
 }
 #FAQ{
-    min-height: 180vh;
-    padding-top: 35vh;
+    // min-height: 180vh;
+    padding-top: 0;
     position: relative;
 
-    @include responsive($xxl){
-        min-height: 152vh;
-        padding-top: 17vh;
-    }
-    @include responsive($xl){
-        min-height: 170vh;
-        padding-top: 25vh;
-    }
-    @include responsive($lg){
-        min-height: 80vh;
-        padding-top: 16vh;
-    }
-    @include responsive($sm){
-        min-height: 100vh;
-        padding-top: 29%;
-    }
+    // @include responsive($xxl){
+    //     min-height: 152vh;
+    //     padding-top: 17vw
+    // }
+    // @include responsive($xl){
+    //     min-height: 170vh;
+    //     padding-top: 25vw;
+    // }
+    // @include responsive($lg){
+    //     min-height: 80vh;
+    //     padding-top: 16vw;
+    // }
+    // @include responsive($sm){
+    //     min-height: 100vh;
+    //     padding-top: 29%;
+    // }
     // @include responsiveMinHeight(840px){
     //     min-height: 100vh;
     //     padding-top: 29%;
     // }
     .faq-sec{
         width: 60%;
-        margin: auto;
+        position: absolute;
+        left: 50%;
+        top: 20%;
+        transform: translateX(-50%);
+
         @include responsive($lg){
             width: 85%;
         }

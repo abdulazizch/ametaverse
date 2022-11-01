@@ -166,7 +166,7 @@ let click1 = 0
 let click2 = 0
 $(".cloud-img-con.cloud-1").click(function(e){
     click1++
-    if(click1==3 && sapling1 < 0){
+    if(click1<=6 && sapling1 < 0){
         $(this).next().find('.drop-1').css({"opacity": "1","animation-name": "waterDrop1"})
         $(this).next().find('.drop-2').css({"opacity": "1","animation-name": "waterDrop2"})
         $(this).next().find('.drop-3').css({"opacity": "1","animation-name": "waterDrop3"})
@@ -174,36 +174,40 @@ $(".cloud-img-con.cloud-1").click(function(e){
             $(this).next().find('.drop-1').css({"opacity": "0","animation-name": "none"})
             $(this).next().find('.drop-2').css({"opacity": "0","animation-name": "none"})
             $(this).next().find('.drop-3').css({"opacity": "0","animation-name": "none"})
-            if(sapling1 <=0  && click1==3){
-                sapling1=sapling1+10;
-                $(this).next().next().next().find(".sapling").css({"bottom": sapling1+"%"})
+            if(sapling1 <=0  && click1<=6){
+                sapling1=sapling1+6;
+                if(click1 == 6){
+                    sapling1=0
+                }
+                $(this).next().next().find(".sapling").css({"bottom": sapling1+"%"})
             }
             else{
-                // $(this).next().next().next().find(".flower-petal").css({"opacity": "1"})
+                sapling1=0;
+                $(this).next().next().find(".sapling").css({"bottom": sapling1+"%"})
             }
         }, 1300);
     }
-    else if(click1 == 6){
+    else if(click1 > 6){
         sapling1=0;
-        $(this).next().next().find('.shit').css({"opacity": "1","animation-name": "waterDrop1"})
+        // $(this).next().next().find('.shit').css({"opacity": "1","animation-name": "waterDrop1"})
         $(this).next().find('.drop-1').css({"opacity": "0","animation-name": "none"})
         $(this).next().find('.drop-2').css({"opacity": "0","animation-name": "none"})
         $(this).next().find('.drop-3').css({"opacity": "0","animation-name": "none"})
         setTimeout(() => {
-            $(this).next().next().next().find(".sapling").css({"bottom": sapling1+"%"})
+            $(this).next().next().find(".sapling").css({"bottom": sapling1+"%"})
         }, 1600);
-        setTimeout(() => {
-            $(this).next().next().next().find(".flower-petal").css({"opacity": "1"})
-        }, 1910);
+        // setTimeout(() => {
+        //     $(this).next().next().find(".flower-petal").css({"opacity": "1"})
+        // }, 1910);
     }
-    setTimeout(() => {
-        click1 = 0
-    }, 2000);
+    // setTimeout(() => {
+    //     click1 = 0
+    // }, 2000);
     
 })
 $(".cloud-img-con.cloud-2").click(function(e){
     click2++
-    if(click2==3 && sapling2 < 0){
+    if(click2<=6 && sapling2 < 0){
         $(this).next().find('.drop-1').css({"opacity": "1","animation-name": "waterDrop1"})
         $(this).next().find('.drop-2').css({"opacity": "1","animation-name": "waterDrop2"})
         $(this).next().find('.drop-3').css({"opacity": "1","animation-name": "waterDrop3"})
@@ -211,30 +215,43 @@ $(".cloud-img-con.cloud-2").click(function(e){
             $(this).next().find('.drop-1').css({"opacity": "0","animation-name": "none"})
             $(this).next().find('.drop-2').css({"opacity": "0","animation-name": "none"})
             $(this).next().find('.drop-3').css({"opacity": "0","animation-name": "none"})
-            if(sapling2 <=0  && click2==3){
-                sapling2=sapling2+10;
-                $(this).next().next().next().find(".sapling").css({"bottom": sapling2+"%"})
+            if(sapling2 <=0  && click2<=6){
+                sapling2=sapling2+6;
+                if(click2 == 6){
+                    sapling2=0
+                }
+                $(this).next().next().find(".sapling").css({"bottom": sapling2+"%"})
             }
             else{
-                // $(this).next().next().next().find(".flower-petal").css({"opacity": "1"})
+                sapling2=0;
+                $(this).next().next().find(".sapling").css({"bottom": sapling2+"%"})
             }
         }, 1300);
     }
-    else if(click2 == 6){
+    else if(click2 > 6){
         sapling2=0;
-        $(this).next().next().find('.shit').css({"opacity": "1","animation-name": "waterDrop1"})
+        // $(this).next().next().find('.shit').css({"opacity": "1","animation-name": "waterDrop1"})
         $(this).next().find('.drop-1').css({"opacity": "0","animation-name": "none"})
         $(this).next().find('.drop-2').css({"opacity": "0","animation-name": "none"})
         $(this).next().find('.drop-3').css({"opacity": "0","animation-name": "none"})
         setTimeout(() => {
-            $(this).next().next().next().find(".sapling").css({"bottom": sapling2+"%"})
+            $(this).next().next().find(".sapling").css({"bottom": sapling2+"%"})
         }, 1600);
-        setTimeout(() => {
-            $(this).next().next().next().find(".flower-petal").css({"opacity": "1"})
-        }, 1910);
+        // setTimeout(() => {
+        //     $(this).next().next().find(".flower-petal").css({"opacity": "1"})
+        // }, 1910);
     }
-    setTimeout(() => {
-        click2 = 0
-    }, 2000);
+    // setTimeout(() => {
+    //     click2 = 0
+    // }, 2000);
     
+})
+$(".shit-icon").click(()=>{
+    console.log("clicked")
+    if(click1>= 6 && click2 >= 6){
+        $(".shit-icon").css({"animation-name": "dropShit"})
+        setTimeout(() => {
+            $(".flower-petal").css({"opacity": "1"})
+        }, 4100);
+    }
 })
