@@ -171,23 +171,24 @@ $(".cloud-img-con.cloud-1").click(function(e){
         $(this).next().find('.drop-2').css({"opacity": "1","animation-name": "waterDrop2"})
         $(this).next().find('.drop-3').css({"opacity": "1","animation-name": "waterDrop3"})
         setTimeout(() => {
-            if(sapling1 <=0  && click1<=6){
-                sapling1=sapling1+6;
-                if(click1 == 6){
-                    sapling1=0
-                }
-                $(this).next().next().find(".sapling").css({"bottom": sapling1+"%"})
-            }
-            else{
-                sapling1=0;
-                $(this).next().next().find(".sapling").css({"bottom": sapling1+"%"})
-            }
+            $(this).next().find('.drop-1').css({"animation-name": "waterDropFadeOut1"})
+            $(this).next().find('.drop-2').css({"animation-name": "waterDropFadeOut2"})
+            $(this).next().find('.drop-3').css({"animation-name": "waterDropFadeOut3"})
             setTimeout(() => {
-                $(this).next().find('.drop-1').css({"opacity": "0","animation-name": "fadeOut"})
-                $(this).next().find('.drop-2').css({"opacity": "0","animation-name": "fadeOut"})
-                $(this).next().find('.drop-3').css({"opacity": "0","animation-name": "fadeOut"})
-            }, 100);
-        }, 2600);
+                if(sapling1 <=0  && click1<=6){
+                    sapling1=sapling1+6;
+                    if(click1 == 6){
+                        sapling1=0
+                    }
+                    $(this).next().next().find(".sapling").css({"bottom": sapling1+"%"})
+                }
+                else{
+                    sapling1=0;
+                    $(this).next().next().find(".sapling").css({"bottom": sapling1+"%"})
+                }
+            }, 200);
+            
+        }, 2000);
     }
     else if(click1 > 6){
         sapling1=0;
@@ -214,23 +215,24 @@ $(".cloud-img-con.cloud-2").click(function(e){
         $(this).next().find('.drop-2').css({"opacity": "1","animation-name": "waterDrop2"})
         $(this).next().find('.drop-3').css({"opacity": "1","animation-name": "waterDrop3"})
         setTimeout(() => {
-            if(sapling2 <=0  && click2<=6){
-                sapling2=sapling2+6;
-                if(click2 == 6){
-                    sapling2=0
-                }
-                $(this).next().next().find(".sapling").css({"bottom": sapling2+"%"})
-            }
-            else{
-                sapling2=0;
-                $(this).next().next().find(".sapling").css({"bottom": sapling2+"%"})
-            }
+            $(this).next().find('.drop-1').css({"animation-name": "waterDropFadeOut1"})
+            $(this).next().find('.drop-2').css({"animation-name": "waterDropFadeOut2"})
+            $(this).next().find('.drop-3').css({"animation-name": "waterDropFadeOut3"})
             setTimeout(() => {
-                $(this).next().find('.drop-1').css({"opacity": "0","animation-name": "fadeOut"})
-                $(this).next().find('.drop-2').css({"opacity": "0","animation-name": "fadeOut"})
-                $(this).next().find('.drop-3').css({"opacity": "0","animation-name": "fadeOut"})
-            }, 100);
-        }, 2600);
+                if(sapling2 <=0  && click2<=6){
+                    sapling2=sapling2+6;
+                    if(click2 == 6){
+                        sapling2=0
+                    }
+                    $(this).next().next().find(".sapling").css({"bottom": sapling2+"%"})
+                }
+                else{
+                    sapling2=0;
+                    $(this).next().next().find(".sapling").css({"bottom": sapling2+"%"})
+                }
+            }, 200);
+            
+        }, 2000);
     }
     else if(click2 > 6){
         sapling2=0;
@@ -254,8 +256,8 @@ $(".shit-icon").click(()=>{
     if(click1>= 6 && click2 >= 6){
         $(".shit-icon").css({"animation-name": "dropShit"})
         setTimeout(() => {
-            $(".flower-petal").css({"opacity": "1"})
-        }, 4100);
+            $(".flower-petal").css({"animation-name": "zoomIn"})
+        }, 4300);
     }
 })
 $(".cloud-img-item.item-1").on("mouseenter",()=>{
