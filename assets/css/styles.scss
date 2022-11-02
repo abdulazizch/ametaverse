@@ -1821,7 +1821,7 @@ header{
 }
 #roadmap{
     position: relative;
-    overflow: hidden;
+    // overflow: hidden;
     padding-top: 0;
     @include responsive($sm){
         margin-top: 15%;
@@ -1832,7 +1832,7 @@ header{
 
     .roadmap-sec{
         width: 92%;
-        height: auto;
+        height: 100%;
         margin-left:8%;
         padding-top:15.1vw;
         position: absolute;
@@ -1854,7 +1854,7 @@ header{
         }
         .cloud-img-items{
             position: absolute;
-            z-index: 2;
+            z-index: 3;
             width: 100%;
             height: 100%;
             display: flex;
@@ -1871,7 +1871,7 @@ header{
                     width: 10.1vw;
                     min-width: 185px;
                     max-width: 193px;
-                    top: 33%;
+                    top: 30%;
                     left: 6%;
 
                     @include responsive($lg){
@@ -1891,7 +1891,7 @@ header{
                     min-width: 180px;
                     max-width: 190px;
                     left: 31%;
-                    top: 14%;
+                    top: 11%;
                     @include responsive($lg){
                         top: -2%;
                         left: 55%;
@@ -1907,7 +1907,7 @@ header{
                     min-width: 196px;
                     max-width: 212px;
                     left: 57%;
-                    top: 14%;
+                    top: 11%;
                     @include responsive($lg){
                         top: 25%;
                         left: 0;
@@ -1923,7 +1923,7 @@ header{
                     min-width: 190px;
                     max-width: 200px;
                     right: 3%;
-                    top: 33%;
+                    top: 30%;
 
                     @include responsive($lg){
                         top: 77%;
@@ -1941,6 +1941,109 @@ header{
                     object-fit: contain;
                 }
             }
+           
+        }
+        .cloud-icon-items{
+            position: absolute;
+            z-index: 2;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            top: 0;
+
+            .cloud-icon-item{
+                width: 4.27vw;
+                height: 4.27vw;
+                position: absolute;
+
+                &:hover{
+                    animation: shake 0.5s infinite;
+                }
+
+                &.item-1{
+                    min-width: 35px;
+                    max-width: 82px;
+                    top: 32%;
+                    left: 9%;
+                    // animation-name: smoothBounce;
+                    animation-duration:  3s;
+                    animation-timing-function: ease-out;
+                    animation-iteration-count: 1;
+                    animation-fill-mode: forwards;
+
+                    @include responsive($lg){
+                        top: 55%;
+                        left: 60%;
+                    }
+                    @include responsive($sm){
+                        // min-width: 90px;
+                        top: 55%;
+                        left: 53%;
+                    }
+                    
+                }
+                &.item-2{
+                    max-width: 190px;
+                    left: 34%;
+                    top: 12%;
+                    // animation-name: smoothBounce;
+                    animation-duration:  3s;
+                    animation-timing-function: ease-out;
+                    animation-iteration-count: 1;
+                    animation-fill-mode: forwards;
+
+                    @include responsive($lg){
+                        top: -2%;
+                        left: 58%;
+                    }
+                    @include responsive($sm){
+                        // min-width: 90px;
+                        top: -3%;
+                        left: 50%;
+                    }
+                }
+                &.item-3{
+                    left: 61%;
+                    top: 12%;
+                    // animation-name: smoothBounce;
+                    animation-duration:  3s;
+                    animation-timing-function: ease-out;
+                    animation-iteration-count: 1;
+                    animation-fill-mode: forwards;
+
+                    @include responsive($lg){
+                        top: 25%;
+                        left: 0;
+                    }
+                    @include responsive($sm){
+                        // min-width: 80px;
+                        top: 25%;
+                        left: 0;
+                    }
+                }
+                &.item-4{
+                    right: 6%;
+                    top: 31%;
+                    // animation-name: smoothBounce;
+
+                    @include responsive($lg){
+                        top: 77%;
+                        right: 52%;
+                    }
+                    @include responsive($sm){
+                        // min-width: 85px;
+                        top: 80%;
+                        right: 58%;
+                    }
+                }
+
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                }
+            }
+           
         }
         .roadmap-timeline{
             position: relative;
@@ -2034,6 +2137,126 @@ header{
             
         }
         
+    }
+}
+@keyframes smoothBounce1{
+	40% { 
+        top: 94%;
+        left: 9%;
+        rotate: (0deg);
+    }
+	41% { 
+        top: 94%;
+        left: 9%;
+        rotate: (45deg);
+    }
+    50%{
+        top: 90%;
+        left: 11%;
+        rotate: (50deg);
+    }
+    
+    55%{
+        top: 94%;
+        left: 13%;
+        rotate: (70deg);
+    }
+    65%{
+        top: 92%;
+        left: 14%;
+        rotate: (70deg);
+    }
+    
+    75%{
+        top: 95%;
+        left: 14%;
+        rotate: (60deg);
+    }
+
+	100% { 
+        top: 96%;
+        left: 16%;
+        rotate: (48deg);
+    }
+}
+@keyframes smoothBounce2{
+	40% { 
+        top: 94%;
+        left: 34%;
+        rotate: (0deg);
+    }
+	41% { 
+        top: 94%;
+        left: 34%;
+        rotate: (45deg);
+    }
+    50%{
+        top: 90%;
+        left: 37%;
+        rotate: (50deg);
+    }
+    
+    55%{
+        top: 94%;
+        left: 39%;
+        rotate: (70deg);
+    }
+    65%{
+        top: 92%;
+        left: 40%;
+        rotate: (70deg);
+    }
+    
+    75%{
+        top: 95%;
+        left: 40%;
+        rotate: (60deg);
+    }
+
+	100% { 
+        top: 95%;
+        left: 42%;
+        rotate: (48deg);
+    }
+}
+@keyframes smoothBounce3{
+	40% { 
+        top: 94%;
+        left: 61%;
+        rotate: (0deg);
+    }
+	41% { 
+        top: 94%;
+        left: 61%;
+        rotate: (45deg);
+    }
+    50%{
+        top: 90%;
+        left: 62%;
+        rotate: (20deg);
+    }
+    
+    55%{
+        top: 94%;
+        left: 62%;
+        rotate: (30deg);
+    }
+    65%{
+        top: 92%;
+        left: 63%;
+        rotate: (30deg);
+    }
+    
+    75%{
+        top: 93%;
+        left: 63%;
+        rotate: (20deg);
+    }
+
+	100% { 
+        top: 94%;
+        left: 63%;
+        rotate: (5deg);
     }
 }
 

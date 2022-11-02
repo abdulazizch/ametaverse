@@ -251,11 +251,25 @@ $(".cloud-img-con.cloud-2").click(function(e){
     
 })
 $(".shit-icon").click(()=>{
-    console.log("clicked")
     if(click1>= 6 && click2 >= 6){
         $(".shit-icon").css({"animation-name": "dropShit"})
         setTimeout(() => {
             $(".flower-petal").css({"opacity": "1"})
         }, 4100);
     }
+})
+$(".cloud-img-item.item-1").on("mouseenter",()=>{
+    setTimeout(() => {
+        $(".cloud-icon-item.item-1").css({"animation-name": "smoothBounce1"})
+    }, 500);
+})
+$(".cloud-img-item.item-2").on("mouseenter",()=>{
+    setTimeout(() => {
+        $(".cloud-icon-item.item-2").css({"animation-name": "smoothBounce2"})
+    }, 500);
+})
+$(".cloud-img-item.item-3").on("mouseenter",()=>{
+    setTimeout(() => {
+        $(".cloud-icon-item.item-3").css({"animation-name": "smoothBounce3"})
+    }, 500);
 })

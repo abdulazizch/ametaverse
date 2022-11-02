@@ -1897,7 +1897,6 @@ header .header-text-cont h2 {
 
 #roadmap {
   position: relative;
-  overflow: hidden;
   padding-top: 0;
 }
 @media (max-width: 482px) {
@@ -1912,7 +1911,7 @@ header .header-text-cont h2 {
 }
 #roadmap .roadmap-sec {
   width: 92%;
-  height: auto;
+  height: 100%;
   margin-left: 8%;
   padding-top: 15.1vw;
   position: absolute;
@@ -1937,7 +1936,7 @@ header .header-text-cont h2 {
 }
 #roadmap .roadmap-sec .cloud-img-items {
   position: absolute;
-  z-index: 2;
+  z-index: 3;
   width: 100%;
   height: 100%;
   display: flex;
@@ -1954,7 +1953,7 @@ header .header-text-cont h2 {
   width: 10.1vw;
   min-width: 185px;
   max-width: 193px;
-  top: 33%;
+  top: 30%;
   left: 6%;
 }
 @media (max-width: 992px) {
@@ -1976,7 +1975,7 @@ header .header-text-cont h2 {
   min-width: 180px;
   max-width: 190px;
   left: 31%;
-  top: 14%;
+  top: 11%;
 }
 @media (max-width: 992px) {
   #roadmap .roadmap-sec .cloud-img-items .cloud-img-item.item-2 {
@@ -1996,7 +1995,7 @@ header .header-text-cont h2 {
   min-width: 196px;
   max-width: 212px;
   left: 57%;
-  top: 14%;
+  top: 11%;
 }
 @media (max-width: 992px) {
   #roadmap .roadmap-sec .cloud-img-items .cloud-img-item.item-3 {
@@ -2016,7 +2015,7 @@ header .header-text-cont h2 {
   min-width: 190px;
   max-width: 200px;
   right: 3%;
-  top: 33%;
+  top: 30%;
 }
 @media (max-width: 992px) {
   #roadmap .roadmap-sec .cloud-img-items .cloud-img-item.item-4 {
@@ -2033,6 +2032,120 @@ header .header-text-cont h2 {
 }
 #roadmap .roadmap-sec .cloud-img-items .cloud-img-item img {
   width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+#roadmap .roadmap-sec .cloud-icon-items {
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  top: 0;
+}
+#roadmap .roadmap-sec .cloud-icon-items .cloud-icon-item {
+  width: 4.27vw;
+  height: 4.27vw;
+  position: absolute;
+}
+#roadmap .roadmap-sec .cloud-icon-items .cloud-icon-item:hover {
+  -webkit-animation: shake 0.5s infinite;
+          animation: shake 0.5s infinite;
+}
+#roadmap .roadmap-sec .cloud-icon-items .cloud-icon-item.item-1 {
+  min-width: 35px;
+  max-width: 82px;
+  top: 32%;
+  left: 9%;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+@media (max-width: 992px) {
+  #roadmap .roadmap-sec .cloud-icon-items .cloud-icon-item.item-1 {
+    top: 55%;
+    left: 60%;
+  }
+}
+@media (max-width: 482px) {
+  #roadmap .roadmap-sec .cloud-icon-items .cloud-icon-item.item-1 {
+    top: 55%;
+    left: 53%;
+  }
+}
+#roadmap .roadmap-sec .cloud-icon-items .cloud-icon-item.item-2 {
+  max-width: 190px;
+  left: 34%;
+  top: 12%;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+@media (max-width: 992px) {
+  #roadmap .roadmap-sec .cloud-icon-items .cloud-icon-item.item-2 {
+    top: -2%;
+    left: 58%;
+  }
+}
+@media (max-width: 482px) {
+  #roadmap .roadmap-sec .cloud-icon-items .cloud-icon-item.item-2 {
+    top: -3%;
+    left: 50%;
+  }
+}
+#roadmap .roadmap-sec .cloud-icon-items .cloud-icon-item.item-3 {
+  left: 61%;
+  top: 12%;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+@media (max-width: 992px) {
+  #roadmap .roadmap-sec .cloud-icon-items .cloud-icon-item.item-3 {
+    top: 25%;
+    left: 0;
+  }
+}
+@media (max-width: 482px) {
+  #roadmap .roadmap-sec .cloud-icon-items .cloud-icon-item.item-3 {
+    top: 25%;
+    left: 0;
+  }
+}
+#roadmap .roadmap-sec .cloud-icon-items .cloud-icon-item.item-4 {
+  right: 6%;
+  top: 31%;
+}
+@media (max-width: 992px) {
+  #roadmap .roadmap-sec .cloud-icon-items .cloud-icon-item.item-4 {
+    top: 77%;
+    right: 52%;
+  }
+}
+@media (max-width: 482px) {
+  #roadmap .roadmap-sec .cloud-icon-items .cloud-icon-item.item-4 {
+    top: 80%;
+    right: 58%;
+  }
+}
+#roadmap .roadmap-sec .cloud-icon-items .cloud-icon-item img {
+  width: 100%;
+  height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
 }
@@ -2128,6 +2241,229 @@ header .header-text-cont h2 {
   }
 }
 
+@-webkit-keyframes smoothBounce1 {
+  40% {
+    top: 94%;
+    left: 9%;
+    rotate: 0deg;
+  }
+  41% {
+    top: 94%;
+    left: 9%;
+    rotate: 45deg;
+  }
+  50% {
+    top: 90%;
+    left: 11%;
+    rotate: 50deg;
+  }
+  55% {
+    top: 94%;
+    left: 13%;
+    rotate: 70deg;
+  }
+  65% {
+    top: 92%;
+    left: 14%;
+    rotate: 70deg;
+  }
+  75% {
+    top: 95%;
+    left: 14%;
+    rotate: 60deg;
+  }
+  100% {
+    top: 96%;
+    left: 16%;
+    rotate: 48deg;
+  }
+}
+
+@keyframes smoothBounce1 {
+  40% {
+    top: 94%;
+    left: 9%;
+    rotate: 0deg;
+  }
+  41% {
+    top: 94%;
+    left: 9%;
+    rotate: 45deg;
+  }
+  50% {
+    top: 90%;
+    left: 11%;
+    rotate: 50deg;
+  }
+  55% {
+    top: 94%;
+    left: 13%;
+    rotate: 70deg;
+  }
+  65% {
+    top: 92%;
+    left: 14%;
+    rotate: 70deg;
+  }
+  75% {
+    top: 95%;
+    left: 14%;
+    rotate: 60deg;
+  }
+  100% {
+    top: 96%;
+    left: 16%;
+    rotate: 48deg;
+  }
+}
+@-webkit-keyframes smoothBounce2 {
+  40% {
+    top: 94%;
+    left: 34%;
+    rotate: 0deg;
+  }
+  41% {
+    top: 94%;
+    left: 34%;
+    rotate: 45deg;
+  }
+  50% {
+    top: 90%;
+    left: 37%;
+    rotate: 50deg;
+  }
+  55% {
+    top: 94%;
+    left: 39%;
+    rotate: 70deg;
+  }
+  65% {
+    top: 92%;
+    left: 40%;
+    rotate: 70deg;
+  }
+  75% {
+    top: 95%;
+    left: 40%;
+    rotate: 60deg;
+  }
+  100% {
+    top: 95%;
+    left: 42%;
+    rotate: 48deg;
+  }
+}
+@keyframes smoothBounce2 {
+  40% {
+    top: 94%;
+    left: 34%;
+    rotate: 0deg;
+  }
+  41% {
+    top: 94%;
+    left: 34%;
+    rotate: 45deg;
+  }
+  50% {
+    top: 90%;
+    left: 37%;
+    rotate: 50deg;
+  }
+  55% {
+    top: 94%;
+    left: 39%;
+    rotate: 70deg;
+  }
+  65% {
+    top: 92%;
+    left: 40%;
+    rotate: 70deg;
+  }
+  75% {
+    top: 95%;
+    left: 40%;
+    rotate: 60deg;
+  }
+  100% {
+    top: 95%;
+    left: 42%;
+    rotate: 48deg;
+  }
+}
+@-webkit-keyframes smoothBounce3 {
+  40% {
+    top: 94%;
+    left: 61%;
+    rotate: 0deg;
+  }
+  41% {
+    top: 94%;
+    left: 61%;
+    rotate: 45deg;
+  }
+  50% {
+    top: 90%;
+    left: 62%;
+    rotate: 20deg;
+  }
+  55% {
+    top: 94%;
+    left: 62%;
+    rotate: 30deg;
+  }
+  65% {
+    top: 92%;
+    left: 63%;
+    rotate: 30deg;
+  }
+  75% {
+    top: 93%;
+    left: 63%;
+    rotate: 20deg;
+  }
+  100% {
+    top: 94%;
+    left: 63%;
+    rotate: 5deg;
+  }
+}
+@keyframes smoothBounce3 {
+  40% {
+    top: 94%;
+    left: 61%;
+    rotate: 0deg;
+  }
+  41% {
+    top: 94%;
+    left: 61%;
+    rotate: 45deg;
+  }
+  50% {
+    top: 90%;
+    left: 62%;
+    rotate: 20deg;
+  }
+  55% {
+    top: 94%;
+    left: 62%;
+    rotate: 30deg;
+  }
+  65% {
+    top: 92%;
+    left: 63%;
+    rotate: 30deg;
+  }
+  75% {
+    top: 93%;
+    left: 63%;
+    rotate: 20deg;
+  }
+  100% {
+    top: 94%;
+    left: 63%;
+    rotate: 5deg;
+  }
+}
 @-webkit-keyframes shake {
   0% {
     transform: translate(1px, 1px) rotate(0deg);
@@ -2163,7 +2499,6 @@ header .header-text-cont h2 {
     transform: translate(1px, -2px) rotate(-1deg);
   }
 }
-
 @keyframes shake {
   0% {
     transform: translate(1px, 1px) rotate(0deg);
