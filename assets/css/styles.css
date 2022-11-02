@@ -666,6 +666,10 @@ header .header-text-cont h2 {
   -webkit-animation: wiggle 1.5s infinite ease-in-out alternate;
           animation: wiggle 1.5s infinite ease-in-out alternate;
 }
+#what-is-ametaverse .what-is-ameta-sec .flower-anim-con .cloud-img-con:hover {
+  -webkit-animation: shake 0.5s infinite;
+          animation: shake 0.5s infinite;
+}
 #what-is-ametaverse .what-is-ameta-sec .flower-anim-con .cloud-img-con img {
   width: 100%;
   -o-object-fit: contain;
@@ -843,7 +847,7 @@ header .header-text-cont h2 {
     rotate: -5deg;
   }
   to {
-    rotate: 5deg;
+    rotate: 3deg;
   }
 }
 
@@ -852,7 +856,7 @@ header .header-text-cont h2 {
     rotate: -5deg;
   }
   to {
-    rotate: 5deg;
+    rotate: 3deg;
   }
 }
 @-webkit-keyframes waterDrop1 {

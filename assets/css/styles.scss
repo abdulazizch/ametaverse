@@ -676,6 +676,10 @@ header{
                 z-index: 9;
                 animation: wiggle 1.5s infinite ease-in-out alternate;
 
+                &:hover{
+                    animation: shake 0.5s infinite;
+                }
+
                 img{
                     width: 100%;
                     object-fit: contain;
@@ -846,7 +850,7 @@ header{
         rotate: (-5deg);
     }
     to{
-        rotate: (5deg);
+        rotate: (3deg);
     }
 }
 @keyframes waterDrop1 {
