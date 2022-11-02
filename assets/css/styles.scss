@@ -674,6 +674,7 @@ header{
                 width: 44.7%;
                 position: relative;
                 z-index: 9;
+                animation: wiggle 1.5s infinite ease-in-out alternate;
 
                 img{
                     width: 100%;
@@ -840,7 +841,14 @@ header{
     }
     
 }
-
+@keyframes wiggle{
+    from{
+        rotate: (-5deg);
+    }
+    to{
+        rotate: (5deg);
+    }
+}
 @keyframes waterDrop1 {
     0%{
         opacity: 0;
@@ -1926,6 +1934,7 @@ header{
 
             .cloud-img-item{
                 position: absolute;
+                animation: wiggle 1.5s infinite ease-in-out alternate;
 
                 &:hover{
                     animation: shake 0.5s infinite;
