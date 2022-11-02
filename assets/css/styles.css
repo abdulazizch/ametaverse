@@ -621,8 +621,8 @@ header .header-text-cont h2 {
   right: 6.538125vw;
   position: absolute;
   z-index: 5;
-  -webkit-animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
-          animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+  -webkit-animation-timing-function: cubic-bezier(0.95, 0, 0.9, 0.59);
+          animation-timing-function: cubic-bezier(0.95, 0, 0.9, 0.59);
   -webkit-animation-duration: 4s;
           animation-duration: 4s;
   -webkit-animation-iteration-count: 1;
@@ -662,7 +662,7 @@ header .header-text-cont h2 {
 #what-is-ametaverse .what-is-ameta-sec .flower-anim-con .cloud-img-con {
   width: 44.7%;
   position: relative;
-  z-index: 3;
+  z-index: 9;
 }
 #what-is-ametaverse .what-is-ameta-sec .flower-anim-con .cloud-img-con img {
   width: 100%;
@@ -678,10 +678,12 @@ header .header-text-cont h2 {
   top: 0;
   left: 50%;
   transform: translateX(-50%);
+  z-index: 6;
 }
 #what-is-ametaverse .what-is-ameta-sec .flower-anim-con .drops-con .drop {
   position: relative;
   top: 0;
+  transition: all 0.3s;
 }
 #what-is-ametaverse .what-is-ameta-sec .flower-anim-con .drops-con .drop-sm {
   width: 1.51vw;
@@ -694,38 +696,41 @@ header .header-text-cont h2 {
 #what-is-ametaverse .what-is-ameta-sec .flower-anim-con .drops-con .drop.drop-1 {
   left: 30%;
   top: 5px;
-  -webkit-animation-timing-function: cubic-bezier(1, 0, 0.91, 0.19);
-          animation-timing-function: cubic-bezier(1, 0, 0.91, 0.19);
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
+  -webkit-animation-timing-function: cubic-bezier(0.95, 0, 0.9, 0.59);
+          animation-timing-function: cubic-bezier(0.95, 0, 0.9, 0.59);
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
   -webkit-animation-delay: 0.3s;
           animation-delay: 0.3s;
   -webkit-animation-iteration-count: 1;
           animation-iteration-count: 1;
-  opacity: 0;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 #what-is-ametaverse .what-is-ameta-sec .flower-anim-con .drops-con .drop.drop-2 {
   left: 60%;
-  -webkit-animation-timing-function: cubic-bezier(1, 0, 0.91, 0.19);
-          animation-timing-function: cubic-bezier(1, 0, 0.91, 0.19);
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
+  -webkit-animation-timing-function: cubic-bezier(0.95, 0, 0.9, 0.59);
+          animation-timing-function: cubic-bezier(0.95, 0, 0.9, 0.59);
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
   -webkit-animation-delay: 0.1s;
           animation-delay: 0.1s;
   -webkit-animation-iteration-count: 1;
           animation-iteration-count: 1;
-  opacity: 0;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 #what-is-ametaverse .what-is-ameta-sec .flower-anim-con .drops-con .drop.drop-3 {
   left: 40%;
   top: -5%;
-  -webkit-animation-timing-function: cubic-bezier(1, 0, 0.91, 0.19);
-          animation-timing-function: cubic-bezier(1, 0, 0.91, 0.19);
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
+  -webkit-animation-timing-function: cubic-bezier(0.95, 0, 0.9, 0.59);
+          animation-timing-function: cubic-bezier(0.95, 0, 0.9, 0.59);
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
   -webkit-animation-iteration-count: 1;
           animation-iteration-count: 1;
-  opacity: 0;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 #what-is-ametaverse .what-is-ameta-sec .flower-anim-con .drops-con .drop img {
   width: 100%;
@@ -825,33 +830,33 @@ header .header-text-cont h2 {
 
 @-webkit-keyframes waterDrop1 {
   to {
-    top: 87%;
+    top: 90%;
   }
 }
 
 @keyframes waterDrop1 {
   to {
-    top: 87%;
+    top: 90%;
   }
 }
 @-webkit-keyframes waterDrop2 {
   to {
-    top: 81%;
+    top: 84%;
   }
 }
 @keyframes waterDrop2 {
   to {
-    top: 81%;
+    top: 84%;
   }
 }
 @-webkit-keyframes waterDrop3 {
   to {
-    top: 71%;
+    top: 76%;
   }
 }
 @keyframes waterDrop3 {
   to {
-    top: 71%;
+    top: 76%;
   }
 }
 @-webkit-keyframes dropShit {
@@ -2736,6 +2741,22 @@ footer .footer-sec .copyrights p {
   100% {
     opacity: 1;
     filter: blur(0);
+  }
+}
+@-webkit-keyframes fadePut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes fadePut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
   }
 }
 .sub-page-wrapper .bg-dots-con {
