@@ -55,9 +55,12 @@ $(document).ready(function(){
     const elem = $(".ameta-features-side-dots-con");
     var x = elem.position();
     // console.log("Top position: " + x.top + " Left position: " + x.left);
-    $(".ameta-features-side-dots").css({"top": (x.top/2 - elem.height()/2.2), "left": (x.left-177)})
+    $(".ameta-features-side-dots").css({"top": (x.top/2 - elem.height()/2.8), "left": (x.left + 20)})
     if(window.innerWidth < 1681){
-        $(".ameta-features-side-dots").css({"top": (x.top/2 - elem.height()/3), "left": (x.left-177)})
+        $(".ameta-features-side-dots").css({"top": (x.top/2 - elem.height()/3), "left": (x.left)})
+    }
+    if(window.innerWidth < 482){
+        $(".ameta-features-side-dots").css({"top": (x.top/2 - elem.height()/4.8), "left": (x.left - 45)})
     }
   });
 

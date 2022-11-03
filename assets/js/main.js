@@ -167,13 +167,13 @@ let click2 = 0
 $(".cloud-img-con.cloud-1").click(function(e){
     click1++
     if(click1<=6 && sapling1 < 0){
-        $(this).next().find('.drop-1').css({"opacity": "1","animation-name": "waterDrop1"})
-        $(this).next().find('.drop-2').css({"opacity": "1","animation-name": "waterDrop2"})
-        $(this).next().find('.drop-3').css({"opacity": "1","animation-name": "waterDrop3"})
+        $(this).next().find('.drop-1').css({"opacity": "1", "animation-name": "waterDrop1", "animation-duration":"1.3s"})
+        $(this).next().find('.drop-2').css({"opacity": "1", "animation-name": "waterDrop2", "animation-duration":"1.1s"})
+        $(this).next().find('.drop-3').css({"opacity": "1", "animation-name": "waterDrop3", "animation-duration":"1s"})
         setTimeout(() => {
-            $(this).next().find('.drop-1').css({"animation-name": "waterDropFadeOut1"})
-            $(this).next().find('.drop-2').css({"animation-name": "waterDropFadeOut2"})
-            $(this).next().find('.drop-3').css({"animation-name": "waterDropFadeOut3"})
+            $(this).next().find('.drop-1').css({"animation-name": "waterDropFadeOut1", "animation-duration":"0.5s", "animation-delay": "0"})
+            $(this).next().find('.drop-2').css({"animation-name": "waterDropFadeOut2", "animation-duration":"0.5s", "animation-delay": "0"})
+            $(this).next().find('.drop-3').css({"animation-name": "waterDropFadeOut3", "animation-duration":"0.5s", "animation-delay": "0"})
             setTimeout(() => {
                 if(sapling1 <=0  && click1<=6){
                     sapling1=sapling1+6;
@@ -188,7 +188,7 @@ $(".cloud-img-con.cloud-1").click(function(e){
                 }
             }, 200);
             
-        }, 2000);
+        }, 1200);
     }
     else if(click1 > 6){
         sapling1=0;
@@ -211,13 +211,13 @@ $(".cloud-img-con.cloud-1").click(function(e){
 $(".cloud-img-con.cloud-2").click(function(e){
     click2++
     if(click2<=6 && sapling2 < 0){
-        $(this).next().find('.drop-1').css({"opacity": "1","animation-name": "waterDrop1"})
-        $(this).next().find('.drop-2').css({"opacity": "1","animation-name": "waterDrop2"})
-        $(this).next().find('.drop-3').css({"opacity": "1","animation-name": "waterDrop3"})
+        $(this).next().find('.drop-1').css({"opacity": "1", "animation-name": "waterDrop1", "animation-duration":"1.3s"})
+        $(this).next().find('.drop-2').css({"opacity": "1", "animation-name": "waterDrop2", "animation-duration":"1.1s"})
+        $(this).next().find('.drop-3').css({"opacity": "1", "animation-name": "waterDrop3", "animation-duration":"1s"})
         setTimeout(() => {
-            $(this).next().find('.drop-1').css({"animation-name": "waterDropFadeOut1"})
-            $(this).next().find('.drop-2').css({"animation-name": "waterDropFadeOut2"})
-            $(this).next().find('.drop-3').css({"animation-name": "waterDropFadeOut3"})
+            $(this).next().find('.drop-1').css({"animation-name": "waterDropFadeOut1", "animation-duration":"0.5s", "animation-delay": "0"})
+            $(this).next().find('.drop-2').css({"animation-name": "waterDropFadeOut2", "animation-duration":"0.5s", "animation-delay": "0"})
+            $(this).next().find('.drop-3').css({"animation-name": "waterDropFadeOut3", "animation-duration":"0.5s", "animation-delay": "0"})
             setTimeout(() => {
                 if(sapling2 <=0  && click2<=6){
                     sapling2=sapling2+6;
@@ -232,24 +232,18 @@ $(".cloud-img-con.cloud-2").click(function(e){
                 }
             }, 200);
             
-        }, 2000);
+        }, 1200);
     }
     else if(click2 > 6){
         sapling2=0;
-        // $(this).next().next().find('.shit').css({"opacity": "1","animation-name": "waterDrop1"})
         $(this).next().find('.drop-1').css({"opacity": "0","animation-name": "none"})
         $(this).next().find('.drop-2').css({"opacity": "0","animation-name": "none"})
         $(this).next().find('.drop-3').css({"opacity": "0","animation-name": "none"})
         setTimeout(() => {
             $(this).next().next().find(".sapling").css({"bottom": sapling2+"%"})
         }, 1600);
-        // setTimeout(() => {
-        //     $(this).next().next().find(".flower-petal").css({"opacity": "1"})
-        // }, 1910);
     }
-    // setTimeout(() => {
-    //     click2 = 0
-    // }, 2000);
+
     
 })
 $(".shit-icon").click(()=>{
@@ -257,7 +251,15 @@ $(".shit-icon").click(()=>{
         $(".shit-icon").css({"animation-name": "dropShit"})
         setTimeout(() => {
             $(".flower-petal").css({"animation-name": "zoomIn"})
-        }, 4300);
+        }, 4100);
+    }
+    if(window.innerWidth < 480 ){
+        if(click2 >= 6){
+            $(".shit-icon").css({"animation-name": "dropShit"})
+            setTimeout(() => {
+                $(".flower-petal").css({"animation-name": "zoomIn"})
+            }, 4100);
+        }
     }
 })
 $(".cloud-img-item.item-1").on("mouseenter",()=>{
@@ -275,3 +277,100 @@ $(".cloud-img-item.item-3").on("mouseenter",()=>{
         $(".cloud-icon-item.item-3").css({"animation-name": "smoothBounce3"})
     }, 500);
 })
+$(".cloud-img-item.item-4").on("mouseenter",()=>{
+    setTimeout(() => {
+        $(".cloud-icon-item.item-4").css({"animation-name": "AmetaDrop"})
+    }, 500);
+})
+
+
+
+if(document.querySelector(".skater-anim-con")){
+    const { to, set } = gsap;
+
+        document.querySelectorAll('.skater-anim-con').forEach(loading => {
+            loading.count = 0
+            let lines = to(loading, {
+                keyframes: [{
+                    '--line-top-x': '-100%',
+                    '--line-bottom-x': '-200%',
+                    onComplete() {
+                        set(loading, {
+                            '--line-top-x': '200%',
+                            '--line-bottom-x': '100%',
+                        })
+                    }
+                }, {
+                    '--line-top-x': '0%',
+                    '--line-bottom-x': '0%'
+                }],
+                duration: 1,
+                repeat: -1
+            })
+
+
+            const skater = document.querySelector(".skater-anim-con")
+            skater.addEventListener('mouseenter', e => fast(loading, lines))
+            skater.addEventListener('mouseleave', e => !loading.ouch && reset(loading, lines))
+        })
+
+        const fast = (loading, lines) => {
+            if(loading.active) {
+                return
+            }
+            loading.active = true
+            loading.count += 1
+            lines.timeScale(2.5)
+            to(loading, {
+                '--skate-x': '12px',
+                duration: .3
+            })
+            to(loading, {
+                duration: .2,
+                '--arm-front': '24deg',
+                '--arm-front-end': '-48deg',
+                '--arm-back': '164deg',
+                '--arm-back-end': '-36deg',
+                '--leg-front': '-4deg',
+                '--leg-front-end': '66deg',
+                '--leg-back': '111deg',
+                '--leg-back-end': '-36deg',
+                '--board-r': '0deg',
+                '--body-r': '34deg',
+                '--body-y': '-53%',
+                '--body-x': '-28%',
+            })
+        }
+
+        const reset = (loading, lines) => {
+            if(!loading.active) {
+                return
+            }
+            to(loading, {
+                '--skate-x': '0px',
+                duration: .3
+            })
+            to(loading, {
+                duration: .2,
+                '--arm-front': '24deg',
+                '--arm-front-end': '-48deg',
+                '--arm-back': '164deg',
+                '--arm-back-end': '-50deg',
+                '--leg-front': '40deg',
+                '--leg-front-end': '30deg',
+                '--leg-back': '120deg',
+                '--leg-back-end': '-36deg',
+                '--board-r': '0deg',
+                '--board-x': '0px',
+                '--body-r': '12deg',
+                '--body-y': '-65%',
+                '--body-x': '-85%',
+                onComplete() {
+                    loading.active = false
+                    lines.play()
+                    lines.timeScale(1)
+                }
+            })
+        }
+        
+}
