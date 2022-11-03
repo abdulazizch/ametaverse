@@ -3483,6 +3483,7 @@ footer{
     --line-bottom-x: 0%;
     position: absolute;
     top: -8%;
+    left: 8%;
 
     @include responsive($sm){
         top: -15%;

@@ -4201,6 +4201,7 @@ footer .footer-sec .copyrights p {
   --line-bottom-x: 0%;
   position: absolute;
   top: -8%;
+  left: 8%;
 }
 @media (max-width: 482px) {
   .skater-anim-con {
