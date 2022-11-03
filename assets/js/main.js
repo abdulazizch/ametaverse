@@ -171,8 +171,8 @@ $(".cloud-img-con.cloud-1").click(function(e){
         $(this).next().find('.drop-2').css({"opacity": "1", "animation-name": "waterDrop2", "animation-duration":"1.1s"})
         $(this).next().find('.drop-3').css({"opacity": "1", "animation-name": "waterDrop3", "animation-duration":"1s"})
         setTimeout(() => {
-            $(this).next().find('.drop-1').css({"animation-name": "waterDropFadeOut1", "animation-duration":"0.5s", "animation-delay": "0.4s"})
-            $(this).next().find('.drop-2').css({"animation-name": "waterDropFadeOut2", "animation-duration":"0.5s", "animation-delay": "0.2s"})
+            $(this).next().find('.drop-1').css({"animation-name": "waterDropFadeOut1", "animation-duration":"0.9s", "animation-delay": "0"})
+            $(this).next().find('.drop-2').css({"animation-name": "waterDropFadeOut2", "animation-duration":"0.7s", "animation-delay": "0"})
             $(this).next().find('.drop-3').css({"animation-name": "waterDropFadeOut3", "animation-duration":"0.5s", "animation-delay": "0"})
             setTimeout(() => {
                 if(sapling1 <=0  && click1<=6){
@@ -215,8 +215,8 @@ $(".cloud-img-con.cloud-2").click(function(e){
         $(this).next().find('.drop-2').css({"opacity": "1", "animation-name": "waterDrop2", "animation-duration":"1.1s"})
         $(this).next().find('.drop-3').css({"opacity": "1", "animation-name": "waterDrop3", "animation-duration":"1s"})
         setTimeout(() => {
-            $(this).next().find('.drop-1').css({"animation-name": "waterDropFadeOut1", "animation-duration":"0.5s", "animation-delay": "0.4s"})
-            $(this).next().find('.drop-2').css({"animation-name": "waterDropFadeOut2", "animation-duration":"0.5s", "animation-delay": "0.2s"})
+            $(this).next().find('.drop-1').css({"animation-name": "waterDropFadeOut1", "animation-duration":"0.9s", "animation-delay": "0"})
+            $(this).next().find('.drop-2').css({"animation-name": "waterDropFadeOut2", "animation-duration":"0.7s", "animation-delay": "0"})
             $(this).next().find('.drop-3').css({"animation-name": "waterDropFadeOut3", "animation-duration":"0.5s", "animation-delay": "0"})
             setTimeout(() => {
                 if(sapling2 <=0  && click2<=6){
@@ -246,8 +246,9 @@ $(".cloud-img-con.cloud-2").click(function(e){
 
     
 })
-$(".shit-icon").click(()=>{
+$(".shit-drop-dot").click(()=>{
     if(click1>= 6 && click2 >= 6){
+        $(".shit-drop-dot").removeClass("dot-orng")
         $(".shit-icon").css({"animation-name": "dropShit"})
         setTimeout(() => {
             $(".flower-petal").css({"animation-name": "zoomIn"})
@@ -258,6 +259,7 @@ $(".shit-icon").click(()=>{
             $(".shit-icon").css({"animation-name": "dropShit"})
             setTimeout(() => {
                 $(".flower-petal").css({"animation-name": "zoomIn"})
+                // $(".shit-icon").css({"animation-name": "dropShitFadeout", "animation-duration": "0.5s"})
             }, 4100);
         }
     }

@@ -625,7 +625,7 @@ header .header-text-cont h2 {
 }
 #what-is-ametaverse .shit-icon {
   width: 0.9vw;
-  top: 16.74775vw;
+  top: 14.964625vw;
   right: 6.538125vw;
   position: absolute;
   z-index: 5;
@@ -1077,7 +1077,7 @@ header .header-text-cont h2 {
     scale: 2;
   }
   100% {
-    top: 87.5%;
+    top: 89%;
     right: 17%;
     scale: 3;
   }
@@ -1099,9 +1099,25 @@ header .header-text-cont h2 {
     scale: 2;
   }
   100% {
-    top: 87.5%;
+    top: 89%;
     right: 17%;
     scale: 3;
+  }
+}
+@-webkit-keyframes dropShitFadeout {
+  to {
+    top: 89%;
+    right: 17%;
+    scale: 4;
+    opacity: 0;
+  }
+}
+@keyframes dropShitFadeout {
+  to {
+    top: 89%;
+    right: 17%;
+    scale: 4;
+    opacity: 0;
   }
 }
 @-webkit-keyframes zoomIn {
