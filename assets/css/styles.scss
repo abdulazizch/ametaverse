@@ -3482,11 +3482,11 @@ footer{
     --line-top-x: 0%;
     --line-bottom-x: 0%;
     position: absolute;
-    top: -8%;
+    top: -8.2%;
     left: 8%;
 
     @include responsive($sm){
-        top: -15%;
+        top: -16%;
     }
     .skate {
         position: relative;
