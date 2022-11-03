@@ -632,7 +632,7 @@ header{
         z-index: 5;
         // animation-name: dropShit;
         animation-timing-function: cubic-bezier(0.95,0,0.9,0.59);
-        animation-duration: 4s;
+        animation-duration: 5s;
         animation-iteration-count: 1;
         animation-fill-mode: forwards;
 
@@ -957,33 +957,40 @@ header{
     }
 }
 @keyframes dropShit {
-    50%{
+    40%{
         top: 87.5%;
         right: ($dot-wid-xxl + 0.72vw )* 5.5;
         scale: (1);
     }
-    51%{
+    41%{
         top: 87.5%;
         right: ($dot-wid-xxl + 0.72vw )* 5.5;
         scale: (2);
     }
-    70%{
+    55%{
         top: 87.5%;
         right: ($dot-wid-xxl + 0.72vw )* 5.5;
         scale: (2);
+    }
+    85%{
+        top: 89%;
+        right: 17%;
+        scale: (3);
+        animation-timing-function: ease-out;
+    }
+    90%{
+        top: 89%;
+        right: 17%;
+        scale: (3);
+        opacity: 1;
+        animation-timing-function: ease-out;
     }
     100%{
         top: 89%;
         right: 17%;
         scale: (3);
-    }
-}
-@keyframes dropShitFadeout {
-    to{
-        top: 89%;
-        right: 17%;
-        scale: (4);
         opacity: 0;
+        animation-timing-function: ease-out;
     }
 }
 @keyframes zoomIn{

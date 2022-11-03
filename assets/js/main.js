@@ -252,15 +252,14 @@ $(".shit-drop-dot").click(()=>{
         $(".shit-icon").css({"animation-name": "dropShit"})
         setTimeout(() => {
             $(".flower-petal").css({"animation-name": "zoomIn"})
-        }, 4100);
+        }, 4500);
     }
     if(window.innerWidth < 480 ){
         if(click2 >= 6){
             $(".shit-icon").css({"animation-name": "dropShit"})
             setTimeout(() => {
                 $(".flower-petal").css({"animation-name": "zoomIn"})
-                // $(".shit-icon").css({"animation-name": "dropShitFadeout", "animation-duration": "0.5s"})
-            }, 4100);
+            }, 4500);
         }
     }
 })
