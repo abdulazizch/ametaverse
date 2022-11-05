@@ -137,24 +137,7 @@ fadeInRight.forEach((el) => fadeRight.observe(el))
 fadeInLeft.forEach((el) => fadeLeft.observe(el))
 fadein.forEach((el) => fadeIn.observe(el))
 
-$(window).bind("load",function(){
-    setTimeout(()=>{
-        if(document.getElementById("banner-bg-vid")){
-            var vid = document.getElementById("banner-bg-vid");
-            vid.play();
-        }
-        $('.lSPager').prepend("<span class='me-2 mb-2 btn-slider-nav btn-slide-prev text-white'><img src='./assets/images/icons/arrow-slide-left.png' ></span>")
-        $('.lSPager').append("<span class='ms-2 mb-2 btn-slider-nav btn-slide-next text-white'> <img src='./assets/images/icons/arrow-slide-right.png'></span>")
-        
-        $(".btn-slide-prev").click(()=>{
-            slider.goToPrevSlide();
-        })
-        $(".btn-slide-next").click(()=>{
-            slider.goToNextSlide();
-        })
-        
-    },3000)
-})
+
 
 $(".connect-wallet-btn").click((e)=>{
     e.preventDefault();
@@ -164,10 +147,9 @@ let sapling1 = -40;
 let sapling2 = -40;
 let click = true
 let clickB = true
-let click1 = 0
-let click2 = 0
+let click1 = 1
+let click2 = 1
 $(".cloud-img-con.cloud-1").click(function(e){
-    click1++
     setTimeout(() => {
         click = false
     }, 10);
@@ -192,9 +174,15 @@ $(".cloud-img-con.cloud-1").click(function(e){
                     $(this).next().next().find(".sapling").css({"bottom": sapling1+"%"})
                 }
                 click = true;
+                click1++
             }, 200);
             
         }, 1200);
+    }
+    if(click1==6){
+        setTimeout(() => {
+            $(this).next().next().find(".flower-petal.petal-1").css({"animation-name": "zoomIn"})
+        }, 1500);
     }
     else if(click1 > 6){
         sapling1=0;
@@ -210,11 +198,11 @@ $(".cloud-img-con.cloud-1").click(function(e){
         // }, 1910);
     }
 })
+
 $(".cloud-img-con.cloud-2").click(function(e){
-    click2++
     setTimeout(() => {
         clickB = false
-    }, 1000);
+    }, 10);
     if(click2<=6 && sapling2 < 0 && clickB == true){
         $(this).next().find('.drop-1').css({"opacity": "1", "animation-name": "waterDrop1", "animation-duration":"1.3s"})
         $(this).next().find('.drop-2').css({"opacity": "1", "animation-name": "waterDrop2", "animation-duration":"1.1s"})
@@ -236,47 +224,75 @@ $(".cloud-img-con.cloud-2").click(function(e){
                     $(this).next().next().find(".sapling").css({"bottom": sapling2+"%"})
                 }
                 clickB = true;
+                click2++
             }, 200);
             
         }, 1200);
     }
+    if(click2==6){
+        setTimeout(() => {
+            $(this).next().next().find(".flower-petal.petal-1").css({"animation-name": "zoomIn"})
+        }, 1500);
+    }
     else if(click2 > 6){
         sapling2=0;
+        // $(this).next().next().find('.shit').css({"opacity": "1","animation-name": "waterDrop1"})
         $(this).next().find('.drop-1').css({"opacity": "0","animation-name": "none"})
         $(this).next().find('.drop-2').css({"opacity": "0","animation-name": "none"})
         $(this).next().find('.drop-3').css({"opacity": "0","animation-name": "none"})
         setTimeout(() => {
             $(this).next().next().find(".sapling").css({"bottom": sapling2+"%"})
         }, 1600);
+        // setTimeout(() => {
+        //     $(this).next().next().find(".flower-petal").css({"opacity": "1"})
+        // }, 1910);
     }
-    clickB = false;
-    
 })
+
+
+
+$(".shit-drop-text").click(()=>{
+    if(click1>= 6 && click2 >= 6){
+        $(".shit-icon.shit-1").css({"animation-name": "dropShit1"})
+        setTimeout(() => {
+            $(".flower-1 .flower-petal.petal-2").css({"animation-name": "zoomIn"})
+        }, 4500);
+        setTimeout(() => {
+            $(".flower-1 .flower-petal.petal-1").css({"animation-name": "none","opacity": "0"})
+            $(".flower-1 .flower-petal.petal-2").css({"animation-name": "spin","animation-duration":"13s", "animation-iteration-count": "infinite"})
+        }, 5800);
+
+    }
+})
+
 $(".shit-drop-dot").click(()=>{
     if(click1>= 6 && click2 >= 6){
         $(".shit-drop-dot").removeClass("dot-orng")
-        $(".shit-icon").css({"animation-name": "dropShit"})
+        $(".shit-icon.shit-2").css({"animation-name": "dropShit"})
         setTimeout(() => {
-            $(".flower-petal").css({"animation-name": "zoomIn"})
+            $(".flower-2 .flower-petal.petal-2").css({"animation-name": "zoomIn"})
         }, 4500);
         setTimeout(() => {
-            $(".flower-petal").css({"animation-name": "spin","animation-duration":"4s", "animation-iteration-count": "infinite"})
-        }, 6000);
+            $(".flower-2 .flower-petal.petal-1").css({"animation-name": "none","opacity": "0"})
+            $(".flower-2 .flower-petal.petal-2").css({"animation-name": "spin","animation-duration":"13s", "animation-iteration-count": "infinite"})
+        }, 5800);
 
     }
     if(window.innerWidth < 480 ){
         if(click2 >= 6){
-            $(".shit-icon").css({"animation-name": "dropShit"})
+            $(".shit-icon.shit-2").css({"animation-name": "dropShit"})
             setTimeout(() => {
-                $(".flower-petal").css({"animation-name": "zoomIn"})
+                $(".flower-2 .flower-petal.petal-2").css({"animation-name": "zoomIn"})
             }, 4500);
             setTimeout(() => {
-                $(".flower-petal").css({"animation-name": "spin","animation-duration":"4s", "animation-iteration-count": "infinite"})
-            }, 6000);
+                $(".flower-2 .flower-petal.petal-1").css({"animation-name": "none","opacity": "0"})
+                $(".flower-2 .flower-petal.petal-2").css({"animation-name": "spin","animation-duration":"13s", "animation-iteration-count": "infinite"})
+            }, 5800);
     
         }
     }
 })
+
 // $(".cloud-img-item.item-1").on("mouseenter",()=>{
 //     setTimeout(() => {
 //         $(".cloud-icon-item.item-1").css({"animation-name": "bounce-in-top"})
@@ -389,3 +405,25 @@ if(document.querySelector(".skater-anim-con")){
         }
         
 }
+
+
+
+$(window).bind("load",function(){
+    setTimeout(()=>{
+        if(document.getElementById("banner-bg-vid")){
+            var vid = document.getElementById("banner-bg-vid");
+            vid.play();
+        }
+        $('.lSPager').prepend("<span class='me-2 mb-2 btn-slider-nav btn-slide-prev text-white'><img src='./assets/images/icons/arrow-slide-left.png' ></span>")
+        $('.lSPager').append("<span class='ms-2 mb-2 btn-slider-nav btn-slide-next text-white'> <img src='./assets/images/icons/arrow-slide-right.png'></span>")
+        
+        $(".btn-slide-prev").click(()=>{
+            slider.goToPrevSlide();
+        })
+        $(".btn-slide-next").click(()=>{
+            slider.goToNextSlide();
+        })
+        
+    },3000)
+    $(".loader").hide()
+})

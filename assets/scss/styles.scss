@@ -633,7 +633,7 @@ header{
         // animation-name: dropShit;
         // animation-timing-function: cubic-bezier(0.95,0,0.9,0.59);
         animation-duration: 5s;
-        animation-iteration-count: infinite;
+        animation-iteration-count: 1;
         animation-fill-mode: forwards;
 
         @include responsive($lg){
@@ -744,7 +744,7 @@ header{
                         }
                         &.drop-2{
                             left: 60%;    
-                            top: 87%;   
+                            top: 88%;   
                             // animation: waterDrop2 cubic-bezier(1,0,.91,.19) 2s 0.5s infinite;
                             animation-timing-function: cubic-bezier(0.95,0,0.9,0.59);
                             animation-duration: 1.1s;
@@ -758,7 +758,7 @@ header{
                         }
                         &.drop-3{
                             left: 40%;   
-                            top: 80%;   
+                            top: 82%;   
                             // animation: waterDrop3 cubic-bezier(1,0,.91,.19) 2s 1s infinite;
                             animation-timing-function: cubic-bezier(0.95,0,0.9,0.59);
                             animation-duration: 1s;
@@ -809,6 +809,17 @@ header{
                             transform-origin: center;
                             animation-iteration-count: 1;
                             animation-timing-function: linear;
+                            
+                            &.petal-1{
+                                opacity: 0;
+                                // animation-name: zoomIn;
+                                animation-duration: 0.5s;
+                                transform-origin: left bottom;
+                                top: -9%;
+                                left: 50%;
+                                width: 60%;
+                                transform: translateX(-50%);
+                            }
                         }
                         img.sapling{
                             height: 100%;
@@ -845,9 +856,11 @@ header{
                 }
             }
             .section-text{
-                width: 37%;
+                width: 50%;
                 margin-top: 10px;
                 margin-bottom: 3.5vw;
+                position: relative;
+
                 @include responsive($sm){
                     width:100%;
                     padding: 0 6.5%;
@@ -863,9 +876,11 @@ header{
                     text-align: left;
                     font-size: clamp(13px,  0.9375vw, 18px);
                     line-height: auto;
+                    position: relative;
+                    z-index: 6;
                 }
                 .section-btns-con{
-                    margin-top: 3vw;
+                    margin-top: 2vw;
                     .button-primary{
                         min-width: 15.16vw;
                         margin: 15px;
@@ -875,6 +890,31 @@ header{
                             margin: 20px 0;
                             min-width: none;
                         }
+                    }
+                }
+                .shit-drop-text{
+                    cursor: default;
+                }
+                .shit-icon{
+                    width: 0.9vw;
+                    top: 81%;
+                    left:  0%;
+                    position: absolute;
+                    z-index: 5;
+                    // animation-name: dropShit1;
+                    animation-duration: 5s;
+                    animation-iteration-count: 1;
+                    animation-fill-mode: forwards;
+                    opacity: 0;
+            
+                    @include responsive($lg){
+                        top: (7vw + (($dot-wid-xxl + 0.72vw )* 7.4));
+                        right: ($dot-wid-xxl + 0.72vw )* 5.3;
+                    }
+            
+                    img{
+                        width: 100%;
+                        object-fit: contain;
                     }
                 }
             }
@@ -937,7 +977,7 @@ header{
          top: 0; 
     }
     to{
-        top: 87%;
+        top: 88%;
     }
 }
 @keyframes waterDrop3 {
@@ -946,7 +986,7 @@ header{
          top: -5%; 
     }
     to{
-        top: 80%;
+        top: 82%;
     }
 }
 @keyframes waterDropFadeOut1 {
@@ -961,21 +1001,21 @@ header{
 }
 @keyframes waterDropFadeOut2 {
     from{
-        top: 87%;
+        top: 88%;
         opacity: 1;
     }
     to{
-        top: 87%;
+        top: 88%;
         opacity: 0;
     }
 }
 @keyframes waterDropFadeOut3 {
     from{
-        top: 80%;
+        top: 82%;
         opacity: 1;
     }
     to{
-        top: 80%;
+        top: 82%;
         opacity: 0;
     }
 }
@@ -999,7 +1039,7 @@ header{
     }
     50%{
         top: 88%;
-        right: 10%;
+        right: 8%;
         scale: (2);
         animation-timing-function: ease-out;
     }
@@ -1011,20 +1051,73 @@ header{
     }
     88%{
         top: 89%;
-        right: 17%;
+        right: 12%;
         scale: (3);
         animation-timing-function: ease-out;
     }
     95%{
         top: 89%;
-        right: 17%;
+        right: 12%;
         scale: (3);
         opacity: 1;
         animation-timing-function: ease-out;
     }
     100%{
         top: 89%;
-        right: 17%;
+        right: 12%;
+        scale: (3);
+        opacity: 0;
+        animation-timing-function: ease-out;
+    }
+}
+@keyframes dropShit1 {
+    0%{
+        animation-timing-function: ease-in;
+        opacity: 1;
+    }
+    10%{
+        top: 104%;
+        left: 0;
+        scale: (1);
+        animation-timing-function: ease-out;
+    }
+    31%{
+        top: 80%;
+        scale: (2);
+        animation-timing-function: ease-in;
+    }
+    40%{
+        top: 104%;
+        left: -15%;
+        scale: (2);
+        animation-timing-function: ease-out;
+    }
+    55%{
+        top: 96%;
+        scale: (2);
+        animation-timing-function: ease-in;
+    }
+    78%{
+        top: 104%;
+        // left: -15%;
+        scale: (2);
+        animation-timing-function: ease-out;
+    }
+    88%{
+        top: 104%;
+        scale: (3);
+        animation-timing-function: ease-in;
+    }
+    95%{
+        top: 104%;
+        left: -25%;
+        scale: (3);
+        opacity: 1;
+        animation-timing-function: ease-out;
+    }
+    100%{
+        top: 104%;
+        left: -25%;
         scale: (3);
         opacity: 0;
         animation-timing-function: ease-out;
@@ -1032,7 +1125,7 @@ header{
 }
 @keyframes zoomIn{
     from{
-        opacity: 0;
+        opacity: 1;
         scale: (0);
     }
     to{
@@ -3932,4 +4025,79 @@ footer{
         text-transform: uppercase;
         margin-bottom: 10px;
       }
+}
+
+
+
+
+// Loader styles 
+
+.loader{
+    @mixin position-center($text-align: center) {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        text-align: $text-align;
+    }
+
+    .loading {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #000;
+        z-index: 9999;
+    }
+
+    .loading-text {
+        @include position-center;
+        width: 100%;
+        height: 100px;
+        line-height: 100px;
+        span {
+            display: inline-block;
+            margin: 0 5px;
+            color: #fff;
+            font-size: clamp(22px, 1.875vw,36px);
+            font-family: $primary-font, sans-serif;
+            @for $i from 0 through 6 {
+                &:nth-child(#{$i + 1}) {
+                    filter: blur(0px);
+                    animation: blur-text 1.5s (#{$i/5})+s infinite linear alternate;
+                }
+            }
+
+            &.pink-d{
+                color: #88055d;
+            }
+            &.orng{
+                color: #da4812;
+            }
+            &.yell{
+                color: #f9e600;
+            }
+            &.green{
+                color: #70ce23;
+            }
+            &.vlt{
+                color: #05c5e8;
+            }
+            &.purp{
+                color: #4c0282;
+            }
+            &.pink-l{
+                color: #f34da7;
+            }
+        }
+    }
+
+    @keyframes blur-text {
+        0% {filter: blur(0px);}
+        100% {filter: blur(4px);}
+    }
+
 }
