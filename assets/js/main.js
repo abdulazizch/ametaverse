@@ -162,11 +162,16 @@ $(".connect-wallet-btn").click((e)=>{
 })
 let sapling1 = -40;
 let sapling2 = -40;
+let click = true
+let clickB = true
 let click1 = 0
 let click2 = 0
 $(".cloud-img-con.cloud-1").click(function(e){
     click1++
-    if(click1<=6 && sapling1 < 0){
+    setTimeout(() => {
+        click = false
+    }, 10);
+    if(click1<=6 && sapling1 < 0 && click == true){
         $(this).next().find('.drop-1').css({"opacity": "1", "animation-name": "waterDrop1", "animation-duration":"1.3s"})
         $(this).next().find('.drop-2').css({"opacity": "1", "animation-name": "waterDrop2", "animation-duration":"1.1s"})
         $(this).next().find('.drop-3').css({"opacity": "1", "animation-name": "waterDrop3", "animation-duration":"1s"})
@@ -186,6 +191,7 @@ $(".cloud-img-con.cloud-1").click(function(e){
                     sapling1=0;
                     $(this).next().next().find(".sapling").css({"bottom": sapling1+"%"})
                 }
+                click = true;
             }, 200);
             
         }, 1200);
@@ -203,14 +209,13 @@ $(".cloud-img-con.cloud-1").click(function(e){
         //     $(this).next().next().find(".flower-petal").css({"opacity": "1"})
         // }, 1910);
     }
-    // setTimeout(() => {
-    //     click1 = 0
-    // }, 2000);
-    
 })
 $(".cloud-img-con.cloud-2").click(function(e){
     click2++
-    if(click2<=6 && sapling2 < 0){
+    setTimeout(() => {
+        clickB = false
+    }, 1000);
+    if(click2<=6 && sapling2 < 0 && clickB == true){
         $(this).next().find('.drop-1').css({"opacity": "1", "animation-name": "waterDrop1", "animation-duration":"1.3s"})
         $(this).next().find('.drop-2').css({"opacity": "1", "animation-name": "waterDrop2", "animation-duration":"1.1s"})
         $(this).next().find('.drop-3').css({"opacity": "1", "animation-name": "waterDrop3", "animation-duration":"1s"})
@@ -230,6 +235,7 @@ $(".cloud-img-con.cloud-2").click(function(e){
                     sapling2=0;
                     $(this).next().next().find(".sapling").css({"bottom": sapling2+"%"})
                 }
+                clickB = true;
             }, 200);
             
         }, 1200);
@@ -243,7 +249,7 @@ $(".cloud-img-con.cloud-2").click(function(e){
             $(this).next().next().find(".sapling").css({"bottom": sapling2+"%"})
         }, 1600);
     }
-
+    clickB = false;
     
 })
 $(".shit-drop-dot").click(()=>{
@@ -253,6 +259,10 @@ $(".shit-drop-dot").click(()=>{
         setTimeout(() => {
             $(".flower-petal").css({"animation-name": "zoomIn"})
         }, 4500);
+        setTimeout(() => {
+            $(".flower-petal").css({"animation-name": "spin","animation-duration":"4s", "animation-iteration-count": "infinite"})
+        }, 6000);
+
     }
     if(window.innerWidth < 480 ){
         if(click2 >= 6){
@@ -260,27 +270,31 @@ $(".shit-drop-dot").click(()=>{
             setTimeout(() => {
                 $(".flower-petal").css({"animation-name": "zoomIn"})
             }, 4500);
+            setTimeout(() => {
+                $(".flower-petal").css({"animation-name": "spin","animation-duration":"4s", "animation-iteration-count": "infinite"})
+            }, 6000);
+    
         }
     }
 })
-$(".cloud-img-item.item-1").on("mouseenter",()=>{
-    setTimeout(() => {
-        $(".cloud-icon-item.item-1").css({"animation-name": "smoothBounce1"})
-    }, 500);
-})
-$(".cloud-img-item.item-2").on("mouseenter",()=>{
-    setTimeout(() => {
-        $(".cloud-icon-item.item-2").css({"animation-name": "smoothBounce2"})
-    }, 500);
-})
-$(".cloud-img-item.item-3").on("mouseenter",()=>{
-    setTimeout(() => {
-        $(".cloud-icon-item.item-3").css({"animation-name": "smoothBounce3"})
-    }, 500);
-})
+// $(".cloud-img-item.item-1").on("mouseenter",()=>{
+//     setTimeout(() => {
+//         $(".cloud-icon-item.item-1").css({"animation-name": "bounce-in-top"})
+//     }, 500);
+// })
+// $(".cloud-img-item.item-2").on("mouseenter",()=>{
+//     setTimeout(() => {
+//         $(".cloud-icon-item.item-2").css({"animation-name": "bounce-in-top"})
+//     }, 500);
+// })
+// $(".cloud-img-item.item-3").on("mouseenter",()=>{
+//     setTimeout(() => {
+//         $(".cloud-icon-item.item-3").css({"animation-name": "bounce-in-top"})
+//     }, 500);
+// })
 $(".cloud-img-item.item-4").on("mouseenter",()=>{
     setTimeout(() => {
-        $(".cloud-icon-item.item-4").css({"animation-name": "AmetaDrop"})
+        $(".cloud-icon-item.item-4").css({"animation-name": "ball-bounce"})
     }, 500);
 })
 

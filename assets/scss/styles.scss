@@ -631,9 +631,9 @@ header{
         position: absolute;
         z-index: 5;
         // animation-name: dropShit;
-        animation-timing-function: cubic-bezier(0.95,0,0.9,0.59);
+        // animation-timing-function: cubic-bezier(0.95,0,0.9,0.59);
         animation-duration: 5s;
-        animation-iteration-count: 1;
+        animation-iteration-count: infinite;
         animation-fill-mode: forwards;
 
         @include responsive($lg){
@@ -687,7 +687,6 @@ header{
                     width: 44.7%;
                     position: relative;
                     z-index: 9;
-                    animation: wiggle 1.5s infinite ease-in-out alternate;
     
                     &:hover{
                         animation: shake 0.5s infinite;
@@ -800,15 +799,16 @@ header{
                             width: 100%;
                             max-width: 99px;
                             position: absolute;
-                            top: -45%;
-                            left: 50%;
-                            transform: translate(-50%, 50%);
+                            top: -14%;
+                            left: 0;
+                            // transform: translate(-50%, 50%);
                             opacity: 0;
                             // animation-name: zoomIn;
                             animation-duration: 1s;
                             animation-fill-mode: forwards;
-                            transform-origin: left center;
+                            transform-origin: center;
                             animation-iteration-count: 1;
+                            animation-timing-function: linear;
                         }
                         img.sapling{
                             height: 100%;
@@ -882,6 +882,29 @@ header{
 
     }
     
+}
+
+.wiggle{
+    animation: wiggle 1.5s infinite ease-in-out alternate;
+
+    &._1{
+        animation-delay: 0.3s;
+        animation-direction: alternate-reverse;
+    }
+    &._2{
+        animation-delay: 0.6s;
+    }
+    &._3{
+        animation-delay: 0.9s;
+        animation-direction: alternate-reverse;
+    }
+    &._4{
+        animation-delay: 1.2s;
+    }
+    &._5{
+        animation-delay: 1.5s;
+        animation-direction: alternate-reverse;
+    }
 }
 @keyframes wiggle{
     from{
@@ -957,28 +980,42 @@ header{
     }
 }
 @keyframes dropShit {
-    40%{
-        top: 87.5%;
+    0%{
+        // top: (7vw + (($dot-wid-xxl + 0.72vw )* 6.7));
+        // right: ($dot-wid-xxl + 0.72vw )* 5.5;
+        animation-timing-function: ease-in
+    }
+    30%{
+        top: 88%;
         right: ($dot-wid-xxl + 0.72vw )* 5.5;
         scale: (1);
+        animation-timing-function: ease-out;
     }
     41%{
-        top: 87.5%;
-        right: ($dot-wid-xxl + 0.72vw )* 5.5;
+        top: 80%;
+        // right: 10%;
         scale: (2);
+        animation-timing-function: ease-in;
     }
-    55%{
-        top: 87.5%;
-        right: ($dot-wid-xxl + 0.72vw )* 5.5;
+    50%{
+        top: 88%;
+        right: 10%;
         scale: (2);
+        animation-timing-function: ease-out;
     }
-    85%{
+    65%{
+        top: 86%;
+        // right: 5%;
+        scale: (2);
+        animation-timing-function: ease-in;
+    }
+    88%{
         top: 89%;
         right: 17%;
         scale: (3);
         animation-timing-function: ease-out;
     }
-    90%{
+    95%{
         top: 89%;
         right: 17%;
         scale: (3);
@@ -999,6 +1036,18 @@ header{
         scale: (0);
     }
     to{
+        opacity: 1;
+        scale: (1);
+    }
+}
+@keyframes spin{
+    from{
+        opacity: 1;
+        scale: (1);
+        rotate: (0);
+    }
+    to{
+        rotate: (360deg);
         opacity: 1;
         scale: (1);
     }
@@ -2166,7 +2215,7 @@ header{
         width: 92%;
         height: 100%;
         margin-left:8%;
-        padding-top:15.1vw;
+        padding-top:15.9vw;
         position: absolute;
         top: 0;
         left: 0;
@@ -2198,7 +2247,6 @@ header{
 
             .cloud-img-item{
                 position: absolute;
-                animation: wiggle 1.5s infinite ease-in-out alternate;
 
                 &:hover{
                     animation: shake 0.5s infinite;
@@ -2227,7 +2275,7 @@ header{
                     width: 9.9vw;
                     min-width: 180px;
                     max-width: 190px;
-                    left: 31%;
+                    left: 30%;
                     top: 11%;
                     @include responsive($lg){
                         top: -2%;
@@ -2243,7 +2291,7 @@ header{
                     width: 11.04vw;
                     min-width: 196px;
                     max-width: 212px;
-                    left: 57%;
+                    left: 55%;
                     top: 11%;
                     @include responsive($lg){
                         top: 25%;
@@ -2259,7 +2307,7 @@ header{
                     width: 10.4vw;
                     min-width: 190px;
                     max-width: 200px;
-                    right: 9%;
+                    right: 15%;
                     top: 30%;
 
                     @include responsive($lg){
@@ -2305,10 +2353,10 @@ header{
                     min-width: 35px;
                     max-width: 82px;
                     top: 32%;
-                    left: 9%;
+                    left: 9.3%;
                     // animation-name: smoothBounce;
-                    animation-duration:  3s;
-                    animation-timing-function: ease-out;
+                    animation-duration:  2.5s;
+                    // animation-timing-function: ease-out;
                     animation-iteration-count: 1;
                     animation-fill-mode: forwards;
 
@@ -2325,10 +2373,10 @@ header{
                 }
                 &.item-2{
                     max-width: 190px;
-                    left: 34%;
+                    left: 35.3%;
                     top: 12%;
                     // animation-name: smoothBounce;
-                    animation-duration:  3s;
+                    animation-duration:  2.5s;
                     animation-timing-function: ease-out;
                     animation-iteration-count: 1;
                     animation-fill-mode: forwards;
@@ -2344,7 +2392,7 @@ header{
                     }
                 }
                 &.item-3{
-                    left: 61%;
+                    left: 60%;
                     top: 12%;
                     // animation-name: smoothBounce;
                     animation-duration:  3s;
@@ -2404,7 +2452,7 @@ header{
                 .timeline-items-row{
                     display: flex;
                     justify-content: start;
-                    padding-left: 6.5%;
+                    padding-left: 5%;
                     &.row-2{
                         justify-content: center;
                     }
@@ -2495,48 +2543,49 @@ header{
     }
 }
 
-// @keyframes bounce-in-top {
-//     0% {
-//         transform: translateY(-500px);
-//         animation-timing-function: ease-in;
-//         opacity: 0;
-//     }
-//     38% {
-//         transform: translateY(0);
-//         animation-timing-function: ease-out;
-//         opacity: 1;
-//     }
-//     55% {
+@keyframes bounce-in-top {
+    0% {
+        // top: 32%;
+        animation-timing-function: ease-in;
+        opacity: 1;
+    }
+    38% {
+        top: 100.5%;
+        animation-timing-function: ease-out;
+    }
+    55% {
         
-//         transform: translateY(-65px);
-//         animation-timing-function: ease-in;
-//     }
-//     72% {
+        top: 94%;
+        animation-timing-function: ease-in;
+    }
+    72% {
         
-//         transform: translateY(0);
-//         animation-timing-function: ease-out;
-//     }
-//     81% {
+        top: 100.5%;
+        animation-timing-function: ease-out;
+    }
+    81% {
         
-//         transform: translateY(-28px);
-//         animation-timing-function: ease-in;
-//     }
-//     90% {
+        top: 96%;
+        animation-timing-function: ease-in;
+    }
+    90% {
         
-//         transform: translateY(0);
-//         animation-timing-function: ease-out;
-//     }
-//     95% {
+        top: 100.5%;
+        animation-timing-function: ease-out;
+    }
+    95% {
         
-//         transform: translateY(-8px);
-//         animation-timing-function: ease-in;
-//     }
-//     100% {
+        top: 98%;
+        animation-timing-function: ease-in;
+    }
+    100% {
         
-//         transform: translateY(0);
-//         animation-timing-function: ease-out;
-//     }
-// }
+        top: 100.5%;
+        animation-timing-function: ease-out;
+        opacity: 1;
+    }
+}
+
   
 @keyframes smoothBounce1{
     0%{
@@ -2544,12 +2593,12 @@ header{
     }
 	40% { 
         top: 94%;
-        left: 9%;
+        left: 10%;
         rotate: (0deg);
     }
 	41% { 
         top: 94%;
-        left: 9%;
+        left: 10%;
         rotate: (45deg);
     }
     50%{
@@ -2711,12 +2760,12 @@ header{
             width: 4.27vw;
             height: 4.27vw;
             position: absolute;
-            right: 6%;
+            right: 18%;
             top: -40%;
             opacity: 0;
 
-            // animation-name: AmetaDrop;
-            animation-timing-function: linear;
+            // animation-name: ball-bounce;
+            // animation-timing-function: linear;
             animation-duration: 10s;
             animation-fill-mode: forwards;
             animation-iteration-count: 1;
@@ -2925,6 +2974,97 @@ header{
         right: 48%;
         top: 88%;
         opacity: 1;
+    }
+}
+@keyframes ball-bounce{
+    0% {
+        // top: 32%;
+        animation-timing-function: ease-in;
+        opacity: 1;
+    }
+    10% {
+        top: 2%;
+        right: 18%;
+        animation-timing-function: ease-out;
+    }
+    16% {
+        
+        top: -6%;
+        // right: 13%;
+        animation-timing-function: ease-in;
+    }
+    22% {
+        
+        top: 2.3%;
+        right: 10%;
+        animation-timing-function: ease-in-out;
+    }
+    28% {
+        top: -2%;
+        // right: 13%;
+        // animation-timing-function: ease-in;
+    }
+    29% {
+        top: -1.6%;
+        right: 14%;
+        animation-timing-function: ease-out;
+    }
+    40% {
+        
+        top: 80%;
+        right: 14%;
+        // animation-timing-function: ease-in;
+    }
+    50% {
+        
+        top: 50%;
+        right: 30%;
+        animation-timing-function: ease-out;
+    }
+    51% {
+        
+        top: 50%;
+        // right: 32%;
+        animation-timing-function: ease-in
+    }
+    60%{
+        top: 89%;
+        // right: 35%;
+        animation-timing-function: ease-out;
+    }
+    70%{
+        top:70%;
+        right: 35%;
+        animation-timing-function: ease-in;
+    }
+    80%{
+        top: 89%;
+        // right: 35%;
+        animation-timing-function: ease-out;
+    }
+    88%{
+        top: 80%;
+        right: 40%;
+        animation-timing-function: ease-in;
+    }
+    94%{
+        top: 89%;
+        // right: 42%;
+        animation-timing-function: ease-out;
+    }
+    98%{
+        top: 87%;
+        right: 45%;
+        animation-timing-function: ease-in;
+        rotate: (-45deg);
+    }
+    100% {
+        
+        top: 89%;
+        right: 48%;
+        animation-timing-function: ease-out;
+        opacity: 1;
+        rotate: (-90deg);
     }
 }
 
