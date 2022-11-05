@@ -627,7 +627,7 @@ header{
     .shit-icon{
         width: 0.9vw;
         top: (7vw + (($dot-wid-xxl + 0.72vw )* 6.7));
-        right: ($dot-wid-xxl + 0.72vw )* 5.5;
+        right: ($dot-wid-xxl + 0.72vw )* 2.3;
         position: absolute;
         z-index: 5;
         // animation-name: dropShit;
@@ -638,13 +638,12 @@ header{
 
         @include responsive($lg){
             top: (7vw + (($dot-wid-xxl + 0.72vw )* 7.4));
-            right: ($dot-wid-xxl + 0.72vw )* 5.3;
+            right: ($dot-wid-xxl + 0.72vw )* 2.1;
         }
         @include responsive($sm){
             width: 3vw;
             top: (7vw + (($dot-wid-xxl + 0.72vw )* 9));
-            // top: 100%;
-            right: ($dot-wid-xxl + 0.72vw )* 12.5;
+            right: ($dot-wid-xxl + 0.72vw )* 9.2;
         }
 
         img{
@@ -1027,7 +1026,7 @@ header{
     }
     30%{
         top: 88%;
-        right: ($dot-wid-xxl + 0.72vw )* 5.5;
+        right: ($dot-wid-xxl + 0.72vw )* 2.3;
         scale: (1);
         animation-timing-function: ease-out;
     }

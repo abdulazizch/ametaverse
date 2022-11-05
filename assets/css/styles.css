@@ -626,7 +626,7 @@ header .header-text-cont h2 {
 #what-is-ametaverse .shit-icon {
   width: 0.9vw;
   top: 14.964625vw;
-  right: 6.538125vw;
+  right: 2.734125vw;
   position: absolute;
   z-index: 5;
   -webkit-animation-duration: 5s;
@@ -639,14 +639,14 @@ header .header-text-cont h2 {
 @media (max-width: 992px) {
   #what-is-ametaverse .shit-icon {
     top: 15.79675vw;
-    right: 6.300375vw;
+    right: 2.496375vw;
   }
 }
 @media (max-width: 482px) {
   #what-is-ametaverse .shit-icon {
     width: 3vw;
     top: 17.69875vw;
-    right: 14.859375vw;
+    right: 10.9365vw;
   }
 }
 #what-is-ametaverse .shit-icon img {
@@ -1133,7 +1133,7 @@ header .header-text-cont h2 {
   }
   30% {
     top: 88%;
-    right: 6.538125vw;
+    right: 2.734125vw;
     scale: 1;
     -webkit-animation-timing-function: ease-out;
             animation-timing-function: ease-out;
@@ -1188,7 +1188,7 @@ header .header-text-cont h2 {
   }
   30% {
     top: 88%;
-    right: 6.538125vw;
+    right: 2.734125vw;
     scale: 1;
     -webkit-animation-timing-function: ease-out;
             animation-timing-function: ease-out;

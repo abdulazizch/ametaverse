@@ -267,7 +267,7 @@ $(".shit-drop-text").click(()=>{
 
 $(".shit-drop-dot").click(()=>{
     if(click1>= 6 && click2 >= 6){
-        $(".shit-drop-dot").removeClass("dot-orng")
+        $(".shit-drop-dot").removeClass("dot-purp-d")
         $(".shit-icon.shit-2").css({"animation-name": "dropShit"})
         setTimeout(() => {
             $(".flower-2 .flower-petal.petal-2").css({"animation-name": "zoomIn"})
@@ -424,6 +424,6 @@ $(window).bind("load",function(){
             slider.goToNextSlide();
         })
         
+        $(".loader").hide()
     },3000)
-    $(".loader").hide()
 })
