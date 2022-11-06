@@ -60,21 +60,9 @@ $(document).ready(function(){
         $(".ameta-features-side-dots").css({"top": (x.top/2 - elem.height()/3), "left": (x.left)})
     }
     if(window.innerWidth < 482){
-        $(".ameta-features-side-dots").css({"top": (x.top/2 - elem.height()/4.8), "left": (x.left - 45)})
+        $(".ameta-features-side-dots").css({"top": (x.top/2 - elem.height()/1.5), "left": (x.left - 45)})
+    }
+    if(window.innerWidth < 376 && window.innerHeight < 668){
+        $(".ameta-features-side-dots").css({"top": (x.top/2 - elem.height())+30, "left": (x.left - 45)})
     }
   });
-
-// const example = document.getElementById('dot-interact');
-
-// example.onmouseenter = function(e) { 
-//     const x = e.pageX - e.currentTarget.offsetLeft; 
-//     const y = e.pageY - e.currentTarget.offsetTop; 
-//     console.log("x: "+x+", y: "+y)
-// }
-// $(document).bind("mousemove",function(){
-//     var elem = $(".dot-interact").position();
-//     const x = e.pageX - e.currentTarget.offsetLeft; 
-//     const y = e.pageY - e.currentTarget.offsetTop; 
-//     console.log("Top position: " + x.top + " Left position: " + x.left);
-
-// });

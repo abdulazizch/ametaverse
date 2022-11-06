@@ -186,16 +186,12 @@ $(".cloud-img-con.cloud-1").click(function(e){
     }
     else if(click1 > 6){
         sapling1=0;
-        // $(this).next().next().find('.shit').css({"opacity": "1","animation-name": "waterDrop1"})
         $(this).next().find('.drop-1').css({"opacity": "0","animation-name": "none"})
         $(this).next().find('.drop-2').css({"opacity": "0","animation-name": "none"})
         $(this).next().find('.drop-3').css({"opacity": "0","animation-name": "none"})
         setTimeout(() => {
             $(this).next().next().find(".sapling").css({"bottom": sapling1+"%"})
         }, 1600);
-        // setTimeout(() => {
-        //     $(this).next().next().find(".flower-petal").css({"opacity": "1"})
-        // }, 1910);
     }
 })
 
@@ -236,16 +232,12 @@ $(".cloud-img-con.cloud-2").click(function(e){
     }
     else if(click2 > 6){
         sapling2=0;
-        // $(this).next().next().find('.shit').css({"opacity": "1","animation-name": "waterDrop1"})
         $(this).next().find('.drop-1').css({"opacity": "0","animation-name": "none"})
         $(this).next().find('.drop-2').css({"opacity": "0","animation-name": "none"})
         $(this).next().find('.drop-3').css({"opacity": "0","animation-name": "none"})
         setTimeout(() => {
             $(this).next().next().find(".sapling").css({"bottom": sapling2+"%"})
         }, 1600);
-        // setTimeout(() => {
-        //     $(this).next().next().find(".flower-petal").css({"opacity": "1"})
-        // }, 1910);
     }
 })
 
@@ -280,6 +272,7 @@ $(".shit-drop-dot").click(()=>{
     }
     if(window.innerWidth < 480 ){
         if(click2 >= 6){
+            $(".shit-drop-dot").removeClass("dot-purp-d")
             $(".shit-icon.shit-2").css({"animation-name": "dropShit"})
             setTimeout(() => {
                 $(".flower-2 .flower-petal.petal-2").css({"animation-name": "zoomIn"})
@@ -292,22 +285,25 @@ $(".shit-drop-dot").click(()=>{
         }
     }
 })
+$(".shit-icon.shit-2").click(()=>{
+    if(window.innerWidth < 480 ){
+        if(click2 >= 6){
+            $(".shit-drop-dot").removeClass("dot-purp-d")
+            $(".shit-icon.shit-2").css({"animation-name": "dropShit"})
+            console.log("clicked")
+            setTimeout(() => {
+                $(".flower-2 .flower-petal.petal-2").css({"animation-name": "zoomIn"})
+            }, 4500);
+            setTimeout(() => {
+                $(".flower-2 .flower-petal.petal-1").css({"animation-name": "none","opacity": "0"})
+                $(".flower-2 .flower-petal.petal-2").css({"animation-name": "spin","animation-duration":"13s", "animation-iteration-count": "infinite"})
+            }, 5800);
+    
+        }
+        
+    }
+})
 
-// $(".cloud-img-item.item-1").on("mouseenter",()=>{
-//     setTimeout(() => {
-//         $(".cloud-icon-item.item-1").css({"animation-name": "bounce-in-top"})
-//     }, 500);
-// })
-// $(".cloud-img-item.item-2").on("mouseenter",()=>{
-//     setTimeout(() => {
-//         $(".cloud-icon-item.item-2").css({"animation-name": "bounce-in-top"})
-//     }, 500);
-// })
-// $(".cloud-img-item.item-3").on("mouseenter",()=>{
-//     setTimeout(() => {
-//         $(".cloud-icon-item.item-3").css({"animation-name": "bounce-in-top"})
-//     }, 500);
-// })
 $(".cloud-img-item.item-4").on("mouseenter",()=>{
     setTimeout(() => {
         $(".cloud-icon-item.item-4").css({"animation-name": "ball-bounce"})
