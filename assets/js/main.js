@@ -181,7 +181,7 @@ $(".cloud-img-con.cloud-1").click(function(e){
     }
     if(click1==6){
         setTimeout(() => {
-            $(this).next().next().find(".flower-petal.petal-1").css({"animation-name": "zoomIn"})
+            $(this).next().next().find(".flower-petal.petal-1").addClass("bounceIn")
         }, 1500);
     }
     else if(click1 > 6){
@@ -227,7 +227,8 @@ $(".cloud-img-con.cloud-2").click(function(e){
     }
     if(click2==6){
         setTimeout(() => {
-            $(this).next().next().find(".flower-petal.petal-1").css({"animation-name": "zoomIn"})
+            // $(this).next().next().find(".flower-petal.petal-1").css({"animation-name": "zoomIn"})
+            $(this).next().next().find(".flower-petal.petal-1").addClass("bounceIn")
         }, 1500);
     }
     else if(click2 > 6){
@@ -244,13 +245,14 @@ $(".cloud-img-con.cloud-2").click(function(e){
 
 
 $(".shit-drop-text").click(()=>{
-    if(click1>= 6 && click2 >= 6){
+    if(click1>= 6 ){
         $(".shit-icon.shit-1").css({"animation-name": "dropShit1"})
         setTimeout(() => {
-            $(".flower-1 .flower-petal.petal-2").css({"animation-name": "zoomIn"})
+            // $(".flower-1 .flower-petal.petal-2").css({"animation-name": "zoomIn"})
+            $(".flower-1 .flower-petal.petal-2").addClass("bounceIn")
+            $(".flower-1 .flower-petal.petal-1").css({"animation-name": "none","opacity": "0"})
         }, 4500);
         setTimeout(() => {
-            $(".flower-1 .flower-petal.petal-1").css({"animation-name": "none","opacity": "0"})
             $(".flower-1 .flower-petal.petal-2").css({"animation-name": "spin","animation-duration":"13s", "animation-iteration-count": "infinite"})
         }, 5800);
 
@@ -258,14 +260,15 @@ $(".shit-drop-text").click(()=>{
 })
 
 $(".shit-drop-dot").click(()=>{
-    if(click1>= 6 && click2 >= 6){
+    if( click2 >= 6){
         $(".shit-drop-dot").removeClass("dot-purp-d")
         $(".shit-icon.shit-2").css({"animation-name": "dropShit"})
         setTimeout(() => {
-            $(".flower-2 .flower-petal.petal-2").css({"animation-name": "zoomIn"})
+            // $(".flower-2 .flower-petal.petal-2").css({"animation-name": "zoomIn"})
+            $(".flower-2 .flower-petal.petal-2").addClass("bounceIn")
+            $(".flower-2 .flower-petal.petal-1").css({"animation-name": "none","opacity": "0"})
         }, 4500);
         setTimeout(() => {
-            $(".flower-2 .flower-petal.petal-1").css({"animation-name": "none","opacity": "0"})
             $(".flower-2 .flower-petal.petal-2").css({"animation-name": "spin","animation-duration":"13s", "animation-iteration-count": "infinite"})
         }, 5800);
 

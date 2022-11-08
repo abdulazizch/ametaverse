@@ -915,8 +915,8 @@ header .header-text-cont h2 {
   top: -14%;
   left: 0;
   opacity: 0;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
   transform-origin: center;
@@ -929,7 +929,7 @@ header .header-text-cont h2 {
   opacity: 0;
   -webkit-animation-duration: 0.5s;
           animation-duration: 0.5s;
-  transform-origin: left bottom;
+  transform-origin: center bottom;
   top: -9%;
   left: 50%;
   width: 60%;
@@ -942,13 +942,8 @@ header .header-text-cont h2 {
   z-index: -1;
   position: relative;
   bottom: -40%;
-  right: 5%;
-  transition: all 0.3s ease-in;
-}
-@media (max-width: 482px) {
-  #what-is-ametaverse .what-is-ameta-sec .section-content .flower-anim-con .flower-con .flower img.sapling {
-    right: 3%;
-  }
+  right: 0;
+  transition: all 0.2s ease-in;
 }
 #what-is-ametaverse .what-is-ameta-sec .section-content .flower-anim-con .flower-con .land-con {
   display: flex;

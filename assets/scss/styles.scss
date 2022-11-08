@@ -856,7 +856,7 @@ header{
                             // transform: translate(-50%, 50%);
                             opacity: 0;
                             // animation-name: zoomIn;
-                            animation-duration: 1s;
+                            animation-duration: 0.5s;
                             animation-fill-mode: forwards;
                             transform-origin: center;
                             animation-iteration-count: 1;
@@ -866,7 +866,7 @@ header{
                                 opacity: 0;
                                 // animation-name: zoomIn;
                                 animation-duration: 0.5s;
-                                transform-origin: left bottom;
+                                transform-origin: center bottom;
                                 top: -9%;
                                 left: 50%;
                                 width: 60%;
@@ -879,12 +879,9 @@ header{
                             z-index: -1;
                             position: relative;
                             bottom: -40%;
-                            right: 5%;
-                            transition: all 0.3s ease-in;
+                            right: 0;
+                            transition: all 0.2s ease-in;
 
-                            @include responsive($sm){
-                                right: 3%;
-                            }
                         }
                     }
                     .land-con{
