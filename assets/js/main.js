@@ -35,6 +35,7 @@ $(document).ready(function() {
         onSliderLoad: function() {
             setTimeout(()=>{
                 $('#game-cards-crsl').removeClass('cS-hidden');
+                $('.slider-navigation-dots').removeClass('cS-hidden');
                 // $('.lSPager').prepend("<span class='me-2 mb-2 btn-slider-nav btn-slide-prev text-white'><img src='./assets/images/icons/arrow-slide-left.png' ></span>")
                 // $('.lSPager').append("<span class='ms-2 mb-2 btn-slider-nav btn-slide-next text-white'> <img src='./assets/images/icons/arrow-slide-right.png'></span>")
                 if(window.innerWidth<480){

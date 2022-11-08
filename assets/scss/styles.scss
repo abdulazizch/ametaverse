@@ -1539,9 +1539,11 @@ header{
                         overflow: hidden;
                         border-radius: 50%;
                         position: absolute;
-                        left: 50%;
-                        top: 50%;
-                        transform: translate(-50%, -50%);
+                        left: 16.4%;
+                        top: 16.4%;
+                        // transform: translate(-50%, -50%);
+                        animation: spin 7s infinite linear;
+                        transform-origin: center;
     
                         img{
                             width: 100%;
@@ -1563,6 +1565,7 @@ header{
                         flex-direction: column;
                         justify-content: center;
                         align-items: center;
+                        opacity: 0;
 
                         h6{
                             font-size: clamp(20px, 2.083vw, 40px);

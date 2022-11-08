@@ -125,7 +125,7 @@ $(function(){
             $paths[index].css({
                 "opacity": "1",
             })
-            $(".chart-inner-text").css({"background":data[index].color+"99"})
+            $(".chart-inner-text").css({"background":data[index].color+"99", "opacity": "1"})
             $(".chart-summary-title").html(data[index].title)
             $(".chart-summary-text").html(data[index].text)
         });
@@ -137,7 +137,7 @@ $(function(){
                     $(".tokenomic-item").css({"opacity": "1"})
             }
 
-            $(".chart-inner-text").css({"background":data[0].color+"99"})
+            $(".chart-inner-text").css({"background":data[0].color+"99", "opacity": "0"})
             $(".chart-summary-title").html(data[0].title)
             $(".chart-summary-text").html(data[0].text)
         });
@@ -181,7 +181,7 @@ $(function(){
         $paths[order].css({
             "opacity": "1",
         })
-        $(".chart-inner-text").css({"background":data[order].color+"99"})
+        $(".chart-inner-text").css({"background":data[order].color+"99", "opacity": "1"})
         $(".chart-summary-title").html(data[order].title)
         $(".chart-summary-text").html(data[order].text)
       }
@@ -191,7 +191,7 @@ $(function(){
                     "opacity": "1",
                 })
         }
-        $(".chart-inner-text").css({"background":data[0].color+"99"})
+        $(".chart-inner-text").css({"background":data[0].color+"99","opacity": "0"})
         $(".chart-summary-title").html(data[0].title)
         $(".chart-summary-text").html(data[0].text)
       }

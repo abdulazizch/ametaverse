@@ -1619,9 +1619,11 @@ header .header-text-cont h2 {
   overflow: hidden;
   border-radius: 50%;
   position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  left: 16.4%;
+  top: 16.4%;
+  -webkit-animation: spin 7s infinite linear;
+          animation: spin 7s infinite linear;
+  transform-origin: center;
 }
 #tokenomics .tokenomics-sec .section-content .section-infobar .technomic-chart .chart-inner-img img {
   width: 100%;
@@ -1643,6 +1645,7 @@ header .header-text-cont h2 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  opacity: 0;
 }
 #tokenomics .tokenomics-sec .section-content .section-infobar .technomic-chart .chart-inner-text h6 {
   font-size: clamp(20px, 2.083vw, 40px);
