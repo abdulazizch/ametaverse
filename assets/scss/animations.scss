@@ -732,3 +732,18 @@ $dot-wid-xs: 0.104vw;
         }
     }
 }
+
+
+@keyframes bounceOut{
+    0%{
+        animation-timing-function: ease-in;
+    }
+    25%{
+        top: 30%;
+        animation-timing-function: ease-out;
+    }
+    100%{
+        top: -120%;
+        animation-timing-function: ease-in;
+    }
+}

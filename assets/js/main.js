@@ -411,25 +411,6 @@ if(document.querySelector(".skater-anim-con")){
 
 
 
-$(window).bind("load",function(){
-    setTimeout(()=>{
-        if(document.getElementById("banner-bg-vid")){
-            var vid = document.getElementById("banner-bg-vid");
-            vid.play();
-        }
-        $(".btn-slide-prev").click(()=>{
-            slider.goToPrevSlide();
-            checkNav()
-        })
-        $(".btn-slide-next").click(()=>{
-            slider.goToNextSlide();
-            checkNav()
-        })
-        
-        $(".loader").hide()
-    },3000)
-})
-
 const gameSlides = document.querySelectorAll(".slide-item")
 const gameSlideNavs = document.querySelectorAll(".slider-nav-dot")
 
@@ -446,4 +427,30 @@ gameSlideNavs.forEach((e, index)=>{
         slider.goToSlide(index)
         checkNav()
     })
+})
+
+
+
+
+$(window).bind("load",function(){
+    setTimeout(()=>{
+        if(document.getElementById("banner-bg-vid")){
+            var vid = document.getElementById("banner-bg-vid");
+            vid.play();
+        }
+        $(".btn-slide-prev").click(()=>{
+            slider.goToPrevSlide();
+            checkNav()
+        })
+        $(".btn-slide-next").click(()=>{
+            slider.goToNextSlide();
+            checkNav()
+        })
+        
+        
+        $(".loader .loading-text").css({"animation-name": "bounceOut"})
+        setTimeout(() => {
+            $(".loader").hide()
+        }, 1000);
+    },2000)
 })
