@@ -45,7 +45,10 @@ $(document).ready(function() {
 
                 }
             },2000)
-        } 
+        } ,
+        onAfterSlide: function (el) {
+            checkNav()
+        }
         });
     }  
 });
@@ -413,16 +416,33 @@ $(window).bind("load",function(){
             var vid = document.getElementById("banner-bg-vid");
             vid.play();
         }
-        $('.lSPager').prepend("<span class='me-2 mb-2 btn-slider-nav btn-slide-prev text-white'><img src='./assets/images/icons/arrow-slide-left.png' ></span>")
-        $('.lSPager').append("<span class='ms-2 mb-2 btn-slider-nav btn-slide-next text-white'> <img src='./assets/images/icons/arrow-slide-right.png'></span>")
-        
         $(".btn-slide-prev").click(()=>{
             slider.goToPrevSlide();
+            checkNav()
         })
         $(".btn-slide-next").click(()=>{
             slider.goToNextSlide();
+            checkNav()
         })
         
         $(".loader").hide()
     },3000)
+})
+
+const gameSlides = document.querySelectorAll(".slide-item")
+const gameSlideNavs = document.querySelectorAll(".slider-nav-dot")
+
+function checkNav(){
+    gameSlides.forEach((e, index)=>{
+        if(gameSlides[index].classList.contains('active')){
+            $(".slider-nav-dot").removeClass("active")
+            gameSlideNavs[index].classList.add("active")
+        }
+    })
+}
+gameSlideNavs.forEach((e, index)=>{
+    e.addEventListener("click", function(){
+        slider.goToSlide(index)
+        checkNav()
+    })
 })
