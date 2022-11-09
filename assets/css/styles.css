@@ -1969,10 +1969,9 @@ header .header-text-cont h2 {
      object-fit: contain;
 }
 #play-games .play-games-sec .game-cards-con ul.game-cards-crsl .item-card .card-data-con {
-  width: 90%;
+  width: 98%;
   margin: auto;
   margin-top: 30px;
-  margin-left: 2%;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -1984,6 +1983,9 @@ header .header-text-cont h2 {
     margin-left: 2%;
     height: 40%;
   }
+}
+#play-games .play-games-sec .game-cards-con ul.game-cards-crsl .item-card .card-data-con .card-data {
+  justify-content: space-evenly;
 }
 #play-games .play-games-sec .game-cards-con ul.game-cards-crsl .item-card .card-data-con .card-data .data-icon {
   width: 33px;

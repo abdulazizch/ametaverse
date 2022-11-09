@@ -1872,10 +1872,9 @@ header{
                         
                     }
                     .card-data-con{
-                        width: 90%;
+                        width: 98%;
                         margin: auto;
                         margin-top: 30px;
-                        margin-left: 2%;
                         position: absolute;
                         left: 50%;
                         transform: translateX(-50%);
@@ -1888,6 +1887,7 @@ header{
                         }
                         
                         .card-data{
+                            justify-content: space-evenly;
                             .data-icon{
                                 width: 33px;
                                 margin-right: 4px;
