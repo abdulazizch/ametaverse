@@ -1101,7 +1101,7 @@
 @-webkit-keyframes fadeInRight {
   0% {
     opacity: 0;
-    transform: translateX(-200px);
+    transform: translateX(-100px);
     filter: blur(5px);
   }
   100% {
@@ -1113,7 +1113,7 @@
 @keyframes fadeInRight {
   0% {
     opacity: 0;
-    transform: translateX(-200px);
+    transform: translateX(-100px);
     filter: blur(5px);
   }
   100% {
@@ -1125,7 +1125,7 @@
 @-webkit-keyframes fadeInLeft {
   0% {
     opacity: 0;
-    transform: translateX(50%);
+    transform: translateX(10%);
     filter: blur(5px);
   }
   100% {
@@ -1137,7 +1137,7 @@
 @keyframes fadeInLeft {
   0% {
     opacity: 0;
-    transform: translateX(50%);
+    transform: translateX(10%);
     filter: blur(5px);
   }
   100% {
