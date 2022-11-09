@@ -1,4 +1,4 @@
-const launchDate = 10 
+const launchDate = 14 
 const launchMonth = 11
 const launchYear = 2022
 
@@ -10,11 +10,14 @@ setInterval(() => {
   const countToDate = new Date().setHours(new Date().getHours() + (2* 24))
   let previousTimeBetweenDates
 
-    const currentDate = new Date()
-    const timeBetweenDates = Math.ceil((countToDate - currentDate) / 1000)
-    flipAllCards(diff.getUTCDate()+1,diff.getUTCHours(), diff.getUTCMinutes(), diff.getUTCSeconds())
-
-    previousTimeBetweenDates = timeBetweenDates
+  const currentDate = new Date()
+  const timeBetweenDates = Math.ceil((countToDate - currentDate) / 1000)
+  let remDays = diff.getUTCDate()
+  if(remDays == 31){
+    remDays = 00;
+  }
+  flipAllCards(remDays,diff.getUTCHours(), diff.getUTCMinutes(), diff.getUTCSeconds())
+  previousTimeBetweenDates = timeBetweenDates
 }, 250)
 
 function flipAllCards(days, hours, minutes, seconds) {
