@@ -478,7 +478,7 @@ ul li {
 }
 
 header {
-  padding: 36px 33px;
+  padding: 36.5px 33px;
   box-sizing: border-box;
   position: relative;
   min-height: 100vh;
@@ -504,7 +504,7 @@ header nav.navbar {
   z-index: 2;
 }
 header nav.navbar .logo {
-  width: 20.5%;
+  width: 21%;
 }
 @media (max-width: 992px) {
   header nav.navbar .logo {
@@ -1241,7 +1241,8 @@ header .header-text-cont h2 {
 @media (max-width: 482px) {
   #token-generation-event .token-gen-sec .section-content .section-phases-con .section-phases .phase-item-con .phase-item .monkey-1 {
     width: 35px;
-    left: -4%;
+    left: -5%;
+    bottom: 108%;
   }
 }
 #token-generation-event .token-gen-sec .section-content .section-phases-con .section-phases .phase-item-con .phase-item .monkey-1 img {

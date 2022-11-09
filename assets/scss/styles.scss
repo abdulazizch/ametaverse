@@ -476,7 +476,7 @@ $dot-wid-xs: 0.104vw;
     }
 }
 header{
-    padding: 36px 33px;
+    padding: 36.5px 33px;
     box-sizing: border-box;
     position: relative;
     min-height: 100vh;
@@ -497,7 +497,8 @@ header{
         z-index: 2;
         
         .logo{
-            width: 20.5%;
+            // display: inline-block;
+            width: 21%;
             @include responsive($lg){
                 width: 50%;
             }
@@ -1179,7 +1180,8 @@ header{
 
                                 @include responsive($sm){
                                     width: 35px;
-                                    left: -4%;
+                                    left: -5%;
+                                    bottom: 108%;
                                 }
 
                                 img{
