@@ -2,7 +2,7 @@ $(function(){
     $("#doughnutChart").drawDoughnutChart([
         { title: "ICO / IDO",  text: "the tokens that <br/>are not sold <br/>will be burnt", value : 20,  color: "#ffff00" },
         { title: "Development", text: "8% unlocked at listing <br/>And <br/>2% monthly thereafter", value:  30, color: "#ff0000" },
-        { title: "Exchanges<br/>+ Liquidity",  text: "100% unlocked at listing", value:  8,   color: "#0b3cf4" },
+        { title: "Exchanges + Liquidity",  text: "100% unlocked at listing", value:  8,   color: "#0b3cf4" },
         { title: "Marketing",   text: "5% unlocked at listing<br/>And<br/>2% monthly thereafter", value : 10, color: "#5cf246" },
         { title: "Team", text: "12 months cliff<br/>Then<br/>10% every 6 months", value : 12, color: "#ff7300" },
         { title: "Staking", text: "Available right <br/>after listing", value : 15, color: "#ff83e8" },
@@ -10,16 +10,6 @@ $(function(){
         { title: "Advisors", text: "6 months cliff<br/>Then<br/>20% every 6 months", value : 2, color: "#8d3ef5" },
     ]);
   });
-  /*!
-   * jquery.drawDoughnutChart.js
-   * Version: 0.4.1(Beta)
-   * Inspired by Chart.js(http://www.chartjs.org/)
-   *
-   * Copyright 2014 hiro
-   * https://github.com/githiro/drawDoughnutChart
-   * Released under the MIT license.
-   * 
-   */
   ;(function($, undefined) {
     $.fn.drawDoughnutChart = function(data, options) {
       var $this = this,
@@ -34,7 +24,7 @@ $(function(){
           segmentShowStroke : false,
           segmentStrokeColor : "#0C1013",
           segmentStrokeWidth : 0,
-          baseColor: "rgba(0,0,0,0.5)",
+          baseColor: "#fff",
           baseOffset: 4,
           edgeOffset : 10,//offset from edge of $this
           percentageInnerCutout : 75,
@@ -97,6 +87,10 @@ $(function(){
       var $pathGroup = $(document.createElementNS('http://www.w3.org/2000/svg', 'g'));
       $pathGroup.attr({opacity: 0}).appendTo($svg);
   
+      //Set up tooltip
+      var $tip = $('<div class="' + settings.tipClass + '" />').appendTo('body').hide(),
+      tipW = $tip.width(),
+      tipH = $tip.height();
 
       for (var i = 0, len = data.length; i < len; i++) {
         segmentTotal += data[i].value;
@@ -173,6 +167,10 @@ $(function(){
       };
       function pathMouseEnter(e) {
         var order = $(this).data().order;
+        $tip.text(data[order].title + ": " + data[order].value +"%")
+          .fadeIn(200);
+        settings.onPathEnter.apply($(this),[e,data]);
+
         for(var i = 0, len = data.length; i < len; i++){
             $paths[i].css({
                     "opacity": "0.2",
@@ -186,6 +184,8 @@ $(function(){
         $(".chart-summary-text").html(data[order].text)
       }
       function pathMouseLeave(e) {
+        $tip.hide();
+        settings.onPathLeave.apply($(this),[e,data]);
         for(var i = 0, len = data.length; i < len; i++){
             $paths[i].css({
                     "opacity": "1",
@@ -196,7 +196,10 @@ $(function(){
         $(".chart-summary-text").html(data[0].text)
       }
       function pathMouseMove(e) {
-        
+        $tip.css({
+          top: e.pageY + settings.tipOffsetY,
+          left: e.pageX - $tip.width() / 2 + settings.tipOffsetX
+        });
       }
 
       function drawPieSegments (animationDecimal) {
