@@ -840,8 +840,8 @@ header .header-text-cont h2 {
   top: 93%;
   -webkit-animation-timing-function: cubic-bezier(0.95, 0, 0.9, 0.59);
           animation-timing-function: cubic-bezier(0.95, 0, 0.9, 0.59);
-  -webkit-animation-duration: 1.3s;
-          animation-duration: 1.3s;
+  -webkit-animation-duration: 1.1s;
+          animation-duration: 1.1s;
   -webkit-animation-iteration-count: 1;
           animation-iteration-count: 1;
   -webkit-animation-fill-mode: forwards;
@@ -859,8 +859,8 @@ header .header-text-cont h2 {
   top: 88%;
   -webkit-animation-timing-function: cubic-bezier(0.95, 0, 0.9, 0.59);
           animation-timing-function: cubic-bezier(0.95, 0, 0.9, 0.59);
-  -webkit-animation-duration: 1.1s;
-          animation-duration: 1.1s;
+  -webkit-animation-duration: 0.9s;
+          animation-duration: 0.9s;
   -webkit-animation-iteration-count: 1;
           animation-iteration-count: 1;
   -webkit-animation-fill-mode: forwards;
@@ -877,8 +877,8 @@ header .header-text-cont h2 {
   top: 82%;
   -webkit-animation-timing-function: cubic-bezier(0.95, 0, 0.9, 0.59);
           animation-timing-function: cubic-bezier(0.95, 0, 0.9, 0.59);
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
+  -webkit-animation-duration: 0.8s;
+          animation-duration: 0.8s;
   -webkit-animation-iteration-count: 1;
           animation-iteration-count: 1;
   -webkit-animation-fill-mode: forwards;
@@ -921,7 +921,7 @@ header .header-text-cont h2 {
   max-width: 99px;
   position: absolute;
   top: -14%;
-  left: 0;
+  left: 7%;
   opacity: 0;
   -webkit-animation-duration: 0.5s;
           animation-duration: 0.5s;
@@ -939,9 +939,9 @@ header .header-text-cont h2 {
           animation-duration: 0.5s;
   transform-origin: center bottom;
   top: -9%;
-  left: 50%;
+  left: 25%;
   width: 60%;
-  transform: translateX(-50%);
+  transform: none;
 }
 #what-is-ametaverse .what-is-ameta-sec .section-content .flower-anim-con .flower-con .flower img.sapling {
   height: 100%;
