@@ -153,6 +153,9 @@ let click = true
 let clickB = true
 let click1 = 1
 let click2 = 1
+var saplingAudio = document.querySelector(".sapling-rise-audio");
+var smallFlowerAudio = document.querySelector(".small-flower-audio");
+var bigFlowerAudio = document.querySelector(".big-flower-audio");
 $(".cloud-img-con.cloud-1").click(function(e){
     setTimeout(() => {
         click = false
@@ -171,6 +174,7 @@ $(".cloud-img-con.cloud-1").click(function(e){
                     if(click1 == 6){
                         sapling1=0
                     }
+                    saplingAudio.play()
                     $(this).next().next().find(".sapling").css({"bottom": sapling1+"%"})
                 }
                 else{
@@ -185,6 +189,7 @@ $(".cloud-img-con.cloud-1").click(function(e){
     }
     if(click1==6){
         setTimeout(() => {
+            smallFlowerAudio.play()
             $(this).next().next().find(".flower-petal.petal-1").addClass("bounceIn")
         }, 1500);
     }
@@ -217,6 +222,7 @@ $(".cloud-img-con.cloud-2").click(function(e){
                     if(click2 == 6){
                         sapling2=0
                     }
+                    saplingAudio.play()
                     $(this).next().next().find(".sapling").css({"bottom": sapling2+"%"})
                 }
                 else{
@@ -232,6 +238,7 @@ $(".cloud-img-con.cloud-2").click(function(e){
     if(click2==6){
         setTimeout(() => {
             // $(this).next().next().find(".flower-petal.petal-1").css({"animation-name": "zoomIn"})
+            smallFlowerAudio.play()
             $(this).next().next().find(".flower-petal.petal-1").addClass("bounceIn")
         }, 1500);
     }
@@ -253,6 +260,7 @@ $(".shit-drop-text").click(()=>{
         $(".shit-icon.shit-1").css({"animation-name": "dropShit1"})
         setTimeout(() => {
             // $(".flower-1 .flower-petal.petal-2").css({"animation-name": "zoomIn"})
+            bigFlowerAudio.play()
             $(".flower-1 .flower-petal.petal-2").addClass("bounceIn")
             $(".flower-1 .flower-petal.petal-1").css({"animation-name": "none","opacity": "0"})
         }, 4500);
@@ -269,6 +277,7 @@ $(".shit-drop-dot").click(()=>{
         $(".shit-icon.shit-2").css({"animation-name": "dropShit"})
         setTimeout(() => {
             // $(".flower-2 .flower-petal.petal-2").css({"animation-name": "zoomIn"})
+            bigFlowerAudio.play()
             $(".flower-2 .flower-petal.petal-2").addClass("bounceIn")
             $(".flower-2 .flower-petal.petal-1").css({"animation-name": "none","opacity": "0"})
         }, 4500);
@@ -344,6 +353,8 @@ if(document.querySelector(".skater-anim-con")){
 
 
             const skater = document.querySelector(".skater-anim-con")
+            $(".timer-border-dots-con").mouseenter(e => fast(loading, lines))
+            $(".timer-border-dots-con").mouseleave(e => !loading.ouch && reset(loading, lines))
             skater.addEventListener('mouseenter', e => fast(loading, lines))
             skater.addEventListener('mouseleave', e => !loading.ouch && reset(loading, lines))
         })
@@ -429,6 +440,12 @@ gameSlideNavs.forEach((e, index)=>{
     })
 })
 
+$(".timer-border-dots-con").mouseenter(function(){
+    $(".border-dots .iteration").css({"animation-duration": "4s"})
+})
+$(".timer-border-dots-con").mouseleave(function(){
+    $(".border-dots .iteration").css({"animation-duration": "8s"})
+})
 
 
 
@@ -448,9 +465,9 @@ $(window).bind("load",function(){
         })
         
         
-        $(".loader .loading-text").css({"animation-name": "bounceOut"})
-        setTimeout(() => {
-            $(".loader").hide()
-        }, 1000);
+        // $(".loader .loading-text").css({"animation-name": "bounceOut"})
+        // setTimeout(() => {
+        //     $(".loader").hide()
+        // }, 1000);
     },2000)
 })

@@ -950,7 +950,7 @@ header .header-text-cont h2 {
   z-index: -1;
   position: relative;
   bottom: -40%;
-  right: 0;
+  right: 1%;
   transition: all 0.2s ease-in;
 }
 #what-is-ametaverse .what-is-ameta-sec .section-content .flower-anim-con .flower-con .land-con {
@@ -1080,9 +1080,14 @@ header .header-text-cont h2 {
   margin: auto;
   padding-left: 3.8%;
 }
+#token-generation-event .token-gen-sec .section-title {
+  width: 94%;
+}
 #token-generation-event .token-gen-sec .section-content .section-text {
   width: 40%;
-  margin: auto;
+  left: 45%;
+  position: relative;
+  transform: translateX(-50%);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1103,9 +1108,10 @@ header .header-text-cont h2 {
   line-height: auto;
 }
 #token-generation-event .token-gen-sec .section-content .discord-icon {
-  margin: 1vw auto 1.5vw;
+  margin: 1vw 0 1.5vw;
   width: 41px;
   height: 41px;
+  width: 94%;
 }
 #token-generation-event .token-gen-sec .section-content .discord-icon img {
   width: 100%;
@@ -1170,7 +1176,7 @@ header .header-text-cont h2 {
 #token-generation-event .token-gen-sec .section-content .section-phases-con .section-phases .phase-item-con .phase-item {
   width: 100%;
   border: 10px solid transparent;
-  padding: 27px 10px;
+  padding: 15px 10px;
   text-align: center;
   position: relative;
 }
@@ -1414,16 +1420,58 @@ header .header-text-cont h2 {
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  border: 10px solid transparent;
   padding: 40px;
-  -o-border-image: url(../images/border-dots.png) 12;
-     border-image: url(../images/border-dots.png) 12;
+  position: relative;
+  overflow: hidden;
 }
-@media (max-width: 482px) {
-  #ameta-token-sale .ameta-token-sec .section-content .section-timer .timer-sec {
-    -o-border-image: url(../images/border-dots.png) 17;
-       border-image: url(../images/border-dots.png) 17;
-  }
+#ameta-token-sale .ameta-token-sec .section-content .section-timer .timer-sec .timer-border-dots-con {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+#ameta-token-sale .ameta-token-sec .section-content .section-timer .timer-sec .timer-border-dots-con .border-dots {
+  position: absolute;
+  background: #000000;
+}
+#ameta-token-sale .ameta-token-sec .section-content .section-timer .timer-sec .timer-border-dots-con .border-dots .iteration {
+  -webkit-animation-duration: 8s;
+          animation-duration: 8s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+#ameta-token-sale .ameta-token-sec .section-content .section-timer .timer-sec .timer-border-dots-con .border-dots._top {
+  top: -2.5%;
+  left: 0;
+}
+#ameta-token-sale .ameta-token-sec .section-content .section-timer .timer-sec .timer-border-dots-con .border-dots._top .iteration {
+  -webkit-animation-name: moveLeft;
+          animation-name: moveLeft;
+}
+#ameta-token-sale .ameta-token-sec .section-content .section-timer .timer-sec .timer-border-dots-con .border-dots._bottom {
+  bottom: -2.5%;
+  left: -101%;
+}
+#ameta-token-sale .ameta-token-sec .section-content .section-timer .timer-sec .timer-border-dots-con .border-dots._bottom .iteration {
+  -webkit-animation-name: moveRight;
+          animation-name: moveRight;
+}
+#ameta-token-sale .ameta-token-sec .section-content .section-timer .timer-sec .timer-border-dots-con .border-dots._left {
+  left: 0;
+}
+#ameta-token-sale .ameta-token-sec .section-content .section-timer .timer-sec .timer-border-dots-con .border-dots._left .iteration {
+  -webkit-animation-name: moveDown;
+          animation-name: moveDown;
+}
+#ameta-token-sale .ameta-token-sec .section-content .section-timer .timer-sec .timer-border-dots-con .border-dots._right {
+  right: 0;
+}
+#ameta-token-sale .ameta-token-sec .section-content .section-timer .timer-sec .timer-border-dots-con .border-dots._right .iteration {
+  -webkit-animation-name: moveUp;
+          animation-name: moveUp;
 }
 #ameta-token-sale .ameta-token-sec .section-content .section-timer .timer-sec h3 {
   font-family: "GoGoHack";
@@ -1629,6 +1677,7 @@ header .header-text-cont h2 {
 }
 #tokenomics .tokenomics-sec .section-content .section-text .tokenomic-items .tokenomic-item p {
   padding: 0;
+  font-size: clamp(12px, 0.9vw, 16px);
 }
 #tokenomics .tokenomics-sec .section-content .section-text .tokenomic-items .tokenomic-item p::before {
   content: none;

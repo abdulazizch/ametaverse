@@ -893,7 +893,7 @@ header{
                             z-index: -1;
                             position: relative;
                             bottom: -40%;
-                            right: 0;
+                            right: 1%;
                             transition: all 0.2s ease-in;
 
                         }
@@ -1018,11 +1018,15 @@ header{
         width: 82.297%;
         margin: auto;
         padding-left: 3.8%;
-
+        .section-title{
+            width: 94%;
+        }
         .section-content{
             .section-text{
                 width: 40%;
-                margin: auto;
+                left: 45%;
+                position: relative;
+                transform: translateX(-50%);
                 display: flex;
                 flex-direction: column;
                 align-items: center;
@@ -1041,9 +1045,10 @@ header{
                 }
             }
             .discord-icon{
-                margin: 1vw auto 1.5vw;
+                margin: 1vw 0 1.5vw;
                 width: 41px;
                 height: 41px;
+                width: 94%;
 
                 img{
                     width: 100%;
@@ -1108,7 +1113,7 @@ header{
                         .phase-item{
                             width: 100%;
                             border: 10px solid transparent;
-                            padding: 27px 10px ;
+                            padding: 15px 10px ;
                             // border-image: url(../images/phase-border-dots.png) 10 ;
                             text-align: center;
                             position: relative;
@@ -1348,12 +1353,61 @@ header{
                     flex-direction: column;
                     align-items: center;
                     justify-content: space-evenly;
-                    border: 10px solid transparent;
+                    // border: 10px solid transparent;
                     padding: 40px ;
-                    border-image: url(../images/border-dots.png) 12 ;
+                    position: relative;
+                    overflow: hidden;
+                    // border-image: url(../images/border-dots.png) 12 ;
 
+                    .timer-border-dots-con{
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+
+                        .border-dots{
+                            position: absolute;
+                            background: $primary-bg;
+
+                            .iteration{
+                                animation-duration: 8s;
+                                animation-timing-function: linear;
+                                animation-iteration-count: infinite;
+                            }
+
+                            &._top{
+                                top: -2.5%;
+                                left: 0;
+                                
+                                .iteration{
+                                    animation-name: moveLeft;
+                                }
+                            }
+                            &._bottom{
+                                bottom: -2.5%;
+                                left: -101%;
+                                .iteration{
+                                    animation-name: moveRight;
+                                }
+                            }
+                            &._left{
+                                left: 0;
+                                .iteration{
+                                    animation-name: moveDown;
+                                }
+                            }
+                            &._right{
+                                right: 0;
+                                .iteration{
+                                    animation-name: moveUp;
+                                }
+                            }
+                            
+                        }
+                    }
                     @include responsive($sm){
-                        border-image: url(../images/border-dots.png) 17 ;
+                        // border-image: url(../images/border-dots.png) 17 ;
                     }
                     h3{
                         font-family: $primary-font;
@@ -1553,6 +1607,8 @@ header{
                         }
                         p{
                             padding: 0;
+                            font-size: clamp(12px, 0.9vw, 16px);
+
                             &::before{
                                 content: none;
                             }

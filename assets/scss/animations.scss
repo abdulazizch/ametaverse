@@ -138,47 +138,46 @@ $dot-wid-xs: 0.104vw;
         // right: ($dot-wid-xxl + 0.72vw )* 5.5;
         animation-timing-function: ease-in
     }
-    30%{
+    35%{
         top: 88%;
         right: ($dot-wid-xxl + 0.72vw )* 2.3;
         scale: (1);
         animation-timing-function: ease-out;
     }
-    41%{
-        top: 80%;
-        // right: 10%;
+    46%{
+        top: 82%;
         scale: (2);
         animation-timing-function: ease-in;
     }
-    50%{
+    60%{
         top: 88%;
-        right: 8%;
+        right: 7%;
         scale: (2);
         animation-timing-function: ease-out;
     }
-    65%{
-        top: 86%;
-        // right: 5%;
+    75%{
+        top: 85%;
         scale: (2);
         animation-timing-function: ease-in;
     }
-    88%{
+    90%{
         top: 89%;
         right: 12%;
-        scale: (3);
-        animation-timing-function: ease-out;
+        scale: (2);
+        opacity: 1;
+        // animation-timing-function: ease-out;
     }
     95%{
         top: 89%;
         right: 12%;
-        scale: (3);
+        scale: (2);
         opacity: 1;
         animation-timing-function: ease-out;
     }
     100%{
         top: 89%;
         right: 12%;
-        scale: (3);
+        scale: (2);
         opacity: 0;
         animation-timing-function: ease-out;
     }
@@ -194,14 +193,14 @@ $dot-wid-xs: 0.104vw;
         scale: (1);
         animation-timing-function: ease-out;
     }
-    31%{
-        top: 80%;
+    25%{
+        top: 89%;
         scale: (2);
         animation-timing-function: ease-in;
     }
     40%{
         top: 104%;
-        left: -15%;
+        left: -12%;
         scale: (2);
         animation-timing-function: ease-out;
     }
@@ -218,20 +217,20 @@ $dot-wid-xs: 0.104vw;
     }
     88%{
         top: 104%;
-        scale: (3);
+        scale: (2);
         animation-timing-function: ease-in;
     }
     95%{
         top: 104%;
         left: -25%;
-        scale: (3);
+        scale: (2);
         opacity: 1;
         animation-timing-function: ease-out;
     }
     100%{
         top: 104%;
         left: -25%;
-        scale: (3);
+        scale: (2);
         opacity: 0;
         animation-timing-function: ease-out;
     }
@@ -469,48 +468,50 @@ $dot-wid-xs: 0.104vw;
         right: 14%;
         // animation-timing-function: ease-in;
     }
-    50% {
+    48% {
         
-        top: 50%;
+        top: 60%;
+        // right: 20%;
+        animation-timing-function: ease-in;
+    }
+    56%{
+        top: 84%;
+        right: 20%;
+        animation-timing-function: ease-out;
+    }
+    65%{
+        top:70%;
+        // right: 35%;
+        animation-timing-function: ease-in;
+    }
+    73%{
+        top: 86%;
         right: 30%;
         animation-timing-function: ease-out;
-    }
-    51% {
-        
-        top: 50%;
-        // right: 32%;
-        animation-timing-function: ease-in
-    }
-    60%{
-        top: 89%;
-        // right: 35%;
-        animation-timing-function: ease-out;
-    }
-    70%{
-        top:70%;
-        right: 35%;
-        animation-timing-function: ease-in;
+        rotate: (180deg);
     }
     80%{
-        top: 89%;
-        // right: 35%;
-        animation-timing-function: ease-out;
-    }
-    88%{
-        top: 80%;
-        right: 40%;
+        top: 84%;
+        // right: 40%;
         animation-timing-function: ease-in;
+    }
+    86%{
+        top: 89%;
+        right: 39%;
+        animation-timing-function: ease-out;
+        rotate: (90deg);
+    }
+    92%{
+        top: 87%;
+        // right: 45%;
+        animation-timing-function: ease-in;
+        // rotate: (45deg);
     }
     94%{
         top: 89%;
-        // right: 42%;
-        animation-timing-function: ease-out;
-    }
-    98%{
-        top: 87%;
         right: 45%;
         animation-timing-function: ease-in;
-        rotate: (-45deg);
+        // rotate: (45deg);
     }
     100% {
         
@@ -745,5 +746,50 @@ $dot-wid-xs: 0.104vw;
     100%{
         top: -120%;
         animation-timing-function: ease-in;
+    }
+}
+
+@keyframes moveLeft{
+    0%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+    
+    100%{
+        transform: translateX(-101%);
+        opacity: 1;
+    }
+}
+@keyframes moveRight{
+    0%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+    
+    100%{
+        transform: translateX(101%);
+        opacity: 1;
+    }
+}
+@keyframes moveUp{
+    0%{
+        transform: translatey(0);
+        opacity: 1;
+    }
+    
+    100%{
+        transform: translatey(-101%);
+        opacity: 1;
+    }
+}
+@keyframes moveDown{
+    0%{
+        transform: translatey(-101%);
+        opacity: 1;
+    }
+    
+    100%{
+        transform: translatey(0%);
+        opacity: 1;
     }
 }
