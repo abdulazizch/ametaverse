@@ -24,7 +24,7 @@ $(function(){
           segmentShowStroke : false,
           segmentStrokeColor : "#0C1013",
           segmentStrokeWidth : 0,
-          baseColor: "#fff",
+          baseColor: "#000",
           baseOffset: 4,
           edgeOffset : 10,//offset from edge of $this
           percentageInnerCutout : 75,

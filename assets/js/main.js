@@ -324,6 +324,9 @@ $(".cloud-img-item.item-4").on("mouseenter",()=>{
     setTimeout(() => {
         $(".cloud-icon-item.item-4").css({"animation-name": "ball-bounce"})
     }, 500);
+    setTimeout(() => {
+        $(".spinner-dots").css({"animation-name": "spin-around"})
+    }, 1150);
 })
 
 
@@ -444,6 +447,12 @@ $(".timer-border-dots-con").mouseenter(function(){
     $(".border-dots .iteration").css({"animation-duration": "4s"})
 })
 $(".timer-border-dots-con").mouseleave(function(){
+    $(".border-dots .iteration").css({"animation-duration": "8s"})
+})
+$(".skater-anim-con").mouseenter(function(){
+    $(".border-dots .iteration").css({"animation-duration": "4s"})
+})
+$(".skater-anim-con").mouseleave(function(){
     $(".border-dots .iteration").css({"animation-duration": "8s"})
 })
 
