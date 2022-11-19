@@ -200,7 +200,7 @@ ul{
     border: 1px solid #885df3;
     font-size: clamp(15px, 1.3vw,25px);   
     font-family: $primary-font;
-    padding: 5px 14px;
+    padding: 6px 14px 10px;
     border-radius: 20px;
     display: inline-flex;
     justify-content: center;
@@ -248,6 +248,9 @@ $dot-wid-md: 0.208vw;
 $dot-wid-sm: 0.15625vw;
 // $dot-wid-xs: 2px;
 $dot-wid-xs: 0.104vw;
+.flash {
+    animation: flash 3s steps(1, end) infinite;
+}
 .bg-dots-con{
     width: 100%;
     max-width: 1920px;
@@ -1048,7 +1051,7 @@ header{
                 margin: 1vw 0 1.5vw;
                 width: 41px;
                 height: 41px;
-                width: 94%;
+                width: 94.7%;
 
                 img{
                     width: 100%;
@@ -1666,23 +1669,22 @@ header{
                     }
 
                     .chart-inner-img{
-                        width: 67%;
-                        height: 67%;
+                        width: 69%;
+                        height: 69%;
                         overflow: hidden;
                         border-radius: 50%;
                         position: absolute;
-                        left: 16.4%;
-                        top: 16.4%;
+                        left: 15.52%;
+                        top: 15.52%;
                         animation: spin 7s infinite linear;
                         transform-origin: center;
-                        background: #fff;
                         display: flex;
                         justify-content: center;
                         align-items: center;
     
                         img{
-                            width: 80%;
-                            height: 80%;
+                            width:100%;
+                            height:100%;
                             object-position: center;
                             object-fit: contain;
                         }
@@ -1950,10 +1952,7 @@ header{
                 @include responsiveMaxHeightxs(700px){
                     height: 63vh !important;
                 }
-                // margin-top: 0;
-                // .slide-item{
-                //     transform: scale(1.05);
-                // }
+                
                 .item-card{
                     width: 20.5vw;
                     min-width: 200px;
@@ -2006,6 +2005,10 @@ header{
                                 justify-content: center;
                                 align-items: center;
                                 margin-right: 4px;
+                                @include responsive($sm){
+                                    width: 24px;
+                                    height: 24px;
+                                }
 
                                 &.polygon{
                                     background: #8247e5;
@@ -2038,22 +2041,6 @@ header{
                                         font-size: 5px
                                     }
 
-                                }
-                            }
-                            .item-1,.item-3{
-                                .data-icon{
-                                    width: 33px;
-                                    @include responsive($sm){
-                                        width: 26px;
-                                    }
-                                }
-                            }
-                            .item-2{
-                                .data-icon{
-                                    width: 33px;
-                                    @include responsive($sm){
-                                        width: 26px;
-                                    }
                                 }
                             }
                         }
@@ -2533,6 +2520,15 @@ header{
                     .timeline-item{
                         min-height: 18.5vh;
         
+                        &.item-2{
+                            padding-left: 0.7%;
+                        }
+                        &.item-3{
+                            padding-left: 1.5%;
+                        }
+                        &.item-4{
+                            padding-left: 2.3%;
+                        }
                         @include responsive($lg){
                             min-height: 10vh;
                         }
@@ -2594,6 +2590,16 @@ header{
                                     @include responsive($sm){
                                         font-size: 13px;
                                     }
+
+                                    .check-icon{
+                                        width: 25px;
+                                        display: inline-block;
+                                        img{
+                                            width: 100%;
+                                            height: 100%;
+                                            object-fit: contain;
+                                        }
+                                    }
                                 }
                             }
                         }
@@ -2603,6 +2609,10 @@ header{
             }
             .timeline-dots-hor{
                 margin-left: -3%;
+                margin-top: 1px;
+            }
+            .roadmap-hor-dots{
+
             }
             
         }
@@ -2612,6 +2622,7 @@ header{
             animation-duration: 5s;
             animation-iteration-count: 1;
             transform-origin: center;
+            animation-timing-function: linear;
             opacity: 1 ;
         }
         
@@ -2675,7 +2686,7 @@ header{
                 animation-timing-function: linear;
                 animation-duration: 1s;
                 animation-fill-mode: forwards;
-                animation-iteration-count: 17;
+                animation-iteration-count: 11;
             }
         }
        
@@ -2821,13 +2832,17 @@ footer{
                         font-size: 28px;
                         width: 40px;
                         height: 40px;
-                        display: inline-flex;
-                        justify-content: center;
-                        align-items: center;
+                        display: block;
+                        margin-bottom: 20px;
+
+                        @include responsive($sm){
+                            width: 30px;
+                            height: 30px;
+                        }
 
                         img{
-                            width: 70%;
-                            height: 70%;
+                            width: 100%;
+                            height: 100%;
                             object-fit: contain;
                             object-position: center;
                         }
@@ -2837,7 +2852,7 @@ footer{
                     form{
                         position: relative;
                         width: 80%;
-                        margin-left: auto;
+                        margin-left: 0;
 
                         @include responsive($lg){
                             margin: auto;

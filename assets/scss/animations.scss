@@ -468,118 +468,105 @@ $dot-wid-xs: 0.104vw;
         right: 14%;
         // animation-timing-function: ease-in;
     }
-    37% {
+    36% {
         
         top: 70%;
         // right: 20%;
         animation-timing-function: ease-in;
     }
-    40%{
+    39%{
         top: 84%;
         right: 20%;
         animation-timing-function: ease-out;
     }
-    43%{
-        top:74%;
+    41%{
+        top:77%;
         // right: 35%;
         animation-timing-function: ease-in;
     }
-    48%{
+    45%{
         top: 86%;
         right: 30%;
         animation-timing-function: ease-out;
         // rotate: (180deg);
     }
-    51%{
+    48%{
         top: 82%;
         // right: 40%;
         animation-timing-function: ease-in;
     }
-    54%{
+    51%{
         top: 88.5%;
         right: 39%;
         animation-timing-function: ease-out;
         // rotate: (90deg);
     }
-    57%{
-        top: 85%;
+    55%{
+        top: 87%;
         // right: 40%;
         animation-timing-function: ease-in;
     }
-    60%{
+    57%{
         top: 88.5%;
-        right: 46%;
+        right: 44%;
         animation-timing-function: ease-out;
     }
-    61%{
-        top: 87%;
-        // right: 46%;
-        animation-timing-function: ease-out;
-    }
-    63%{
-        top: 88.5%;
-        right: 50%;
-        animation-timing-function: ease-out;
-    }
-    70%{
+    // 58%{
+    //     top: 88.3%;
+    //     // right: 46%;
+    //     animation-timing-function: ease-out;
+    // }
+    // 60%{
+    //     top: 88.5%;
+    //     right: 48%;
+    //     animation-timing-function: ease-out;
+    // }
+    75%{
         // top: 87%;
         right: 63.5%;
-        // animation-timing-function: ease-in;
-        // rotate: (-45deg);
+        animation-timing-function: linear;
+        // rotate: (45deg);
     }
-    71%{
+    76%{
         // top: 87%;
-        right: 63%;
-        // animation-timing-function: ease-in;
-        // rotate: (-45deg);
+        right: 63.5%;
+        animation-timing-function:linear;
+        // rotate: (45deg);
     }
-    // 94%{
-    //     top: 88.5%;
-    //     right: 50%;
-    //     // animation-timing-function: ease-in;
-    //     // rotate: (45deg);
-    // }
+
     100% {
         
         top: 88.5%;
-        right: 48%;
+        right: 55%;
         animation-timing-function: ease-out;
         opacity: 1;
-        // rotate: (-360deg);
+        rotate: (360deg);
     }
 }
 
 @keyframes spin-around{
     0%{
         transform: rotate(0deg);
-        animation-timing-function: ease-out;
     }
-    15%{
-        transform: rotate(-80deg);
-        animation-timing-function: ease-out;
+    10%{
+        transform: rotate(-360deg);
     }
-    30%{
-        transform: rotate(50deg);
-        animation-timing-function: ease-out;
+    20%{
+        transform: rotate(-720deg);
     }
-    45%{
-        transform: rotate(-40deg);
-        animation-timing-function: ease-out;
+    35%{
+        transform: rotate(-1080deg);
     }
-    60%{
-        transform: rotate(30deg);
-        animation-timing-function: ease-out;
-    }
-    75%{
-        transform: rotate(-20deg);
+    55%{
+        transform: rotate(-1440deg);
         animation-timing-function: ease-out;
     }
     90%{
-        transform: rotate(10deg);
+        transform: rotate(-1820deg);
         animation-timing-function: ease-out;
     }
    100%{
-        transform: rotate(0deg);
+        transform: rotate(-1800deg);
         animation-timing-function: ease-out;
     }
 
@@ -854,3 +841,53 @@ $dot-wid-xs: 0.104vw;
         opacity: 1;
     }
 }
+@keyframes flash {
+    0% {
+      color: #fff;
+    }
+    6.25% {
+      color: #004cba;
+    }
+    12.5% {
+      color: #039dd9;
+    }
+    18.75% {
+      color: #4c0282;
+    }
+    25% {
+      color: #8a24d2;
+    }
+    31.25% {
+      color: #06edf7;
+    }
+    37.5% {
+      color: #f44da8;
+    }
+    43.75% {
+      color: #bd2782;
+    }
+    50% {
+      color: #70ce23;
+    }
+    56.25% {
+      color: #472b1b;
+    }
+    62.5% {
+      color: #fcbb00;
+    }
+    68.75% {
+      color: #49a00c;
+    }
+    75% {
+      color: #da4812;
+    }
+    81.25% {
+      color: #98ff98;
+    }
+    87.5% {
+      color: #5090d0;
+    }
+    93.75% {
+      color: #b8b8b8;
+    }
+  }

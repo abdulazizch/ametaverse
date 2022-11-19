@@ -121,6 +121,9 @@ $(function(){
             })
             $(".chart-inner-text").css({"background":data[index].color+"99", "opacity": "1"})
             $(".chart-summary-title").html(data[index].title)
+            if(index == 0){
+              $(".chart-summary-title").html("")
+            }
             $(".chart-summary-text").html(data[index].text)
         });
         element.addEventListener('mouseleave', function(e) {
@@ -181,6 +184,9 @@ $(function(){
         })
         $(".chart-inner-text").css({"background":data[order].color+"99", "opacity": "1"})
         $(".chart-summary-title").html(data[order].title)
+        if(order == 0){
+          $(".chart-summary-title").html("")
+        }
         $(".chart-summary-text").html(data[order].text)
       }
       function pathMouseLeave(e) {

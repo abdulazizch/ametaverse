@@ -204,7 +204,7 @@ ul li {
   border: 1px solid #885df3;
   font-size: clamp(15px, 1.3vw, 25px);
   font-family: "GoGoHack";
-  padding: 5px 14px;
+  padding: 6px 14px 10px;
   border-radius: 20px;
   display: inline-flex;
   justify-content: center;
@@ -232,6 +232,11 @@ ul li {
 }
 .button-primary:hover::after {
   width: 100%;
+}
+
+.flash {
+  -webkit-animation: flash 3s steps(1, end) infinite;
+          animation: flash 3s steps(1, end) infinite;
 }
 
 .bg-dots-con {
@@ -1111,7 +1116,7 @@ header .header-text-cont h2 {
   margin: 1vw 0 1.5vw;
   width: 41px;
   height: 41px;
-  width: 94%;
+  width: 94.7%;
 }
 #token-generation-event .token-gen-sec .section-content .discord-icon img {
   width: 100%;
@@ -1733,24 +1738,23 @@ header .header-text-cont h2 {
   }
 }
 #tokenomics .tokenomics-sec .section-content .section-infobar .tokenomic-chart .chart-inner-img {
-  width: 67%;
-  height: 67%;
+  width: 69%;
+  height: 69%;
   overflow: hidden;
   border-radius: 50%;
   position: absolute;
-  left: 16.4%;
-  top: 16.4%;
+  left: 15.52%;
+  top: 15.52%;
   -webkit-animation: spin 7s infinite linear;
           animation: spin 7s infinite linear;
   transform-origin: center;
-  background: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 #tokenomics .tokenomics-sec .section-content .section-infobar .tokenomic-chart .chart-inner-img img {
-  width: 80%;
-  height: 80%;
+  width: 100%;
+  height: 100%;
   -o-object-position: center;
      object-position: center;
   -o-object-fit: contain;
@@ -2093,6 +2097,12 @@ header .header-text-cont h2 {
   align-items: center;
   margin-right: 4px;
 }
+@media (max-width: 482px) {
+  #play-games .play-games-sec .game-cards-con ul.game-cards-crsl .item-card .card-data-con .card-data .data-icon {
+    width: 24px;
+    height: 24px;
+  }
+}
 #play-games .play-games-sec .game-cards-con ul.game-cards-crsl .item-card .card-data-con .card-data .data-icon.polygon {
   background: #8247e5;
 }
@@ -2126,22 +2136,6 @@ header .header-text-cont h2 {
 @media (max-width: 482px) {
   #play-games .play-games-sec .game-cards-con ul.game-cards-crsl .item-card .card-data-con .card-data .data-text p {
     font-size: 5px;
-  }
-}
-#play-games .play-games-sec .game-cards-con ul.game-cards-crsl .item-card .card-data-con .card-data .item-1 .data-icon, #play-games .play-games-sec .game-cards-con ul.game-cards-crsl .item-card .card-data-con .card-data .item-3 .data-icon {
-  width: 33px;
-}
-@media (max-width: 482px) {
-  #play-games .play-games-sec .game-cards-con ul.game-cards-crsl .item-card .card-data-con .card-data .item-1 .data-icon, #play-games .play-games-sec .game-cards-con ul.game-cards-crsl .item-card .card-data-con .card-data .item-3 .data-icon {
-    width: 26px;
-  }
-}
-#play-games .play-games-sec .game-cards-con ul.game-cards-crsl .item-card .card-data-con .card-data .item-2 .data-icon {
-  width: 33px;
-}
-@media (max-width: 482px) {
-  #play-games .play-games-sec .game-cards-con ul.game-cards-crsl .item-card .card-data-con .card-data .item-2 .data-icon {
-    width: 26px;
   }
 }
 #play-games .play-games-sec .game-cards-con ul.game-cards-crsl .item-card .slide-card-btn {
@@ -2656,6 +2650,15 @@ header .header-text-cont h2 {
 #roadmap .roadmap-sec .roadmap-timeline .timeline-items-con .timeline-items-row .timeline-item {
   min-height: 18.5vh;
 }
+#roadmap .roadmap-sec .roadmap-timeline .timeline-items-con .timeline-items-row .timeline-item.item-2 {
+  padding-left: 0.7%;
+}
+#roadmap .roadmap-sec .roadmap-timeline .timeline-items-con .timeline-items-row .timeline-item.item-3 {
+  padding-left: 1.5%;
+}
+#roadmap .roadmap-sec .roadmap-timeline .timeline-items-con .timeline-items-row .timeline-item.item-4 {
+  padding-left: 2.3%;
+}
 @media (max-width: 992px) {
   #roadmap .roadmap-sec .roadmap-timeline .timeline-items-con .timeline-items-row .timeline-item {
     min-height: 10vh;
@@ -2723,8 +2726,19 @@ header .header-text-cont h2 {
     font-size: 13px;
   }
 }
+#roadmap .roadmap-sec .roadmap-timeline .timeline-items-con .timeline-items-row .timeline-item .item-text ul li .check-icon {
+  width: 25px;
+  display: inline-block;
+}
+#roadmap .roadmap-sec .roadmap-timeline .timeline-items-con .timeline-items-row .timeline-item .item-text ul li .check-icon img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
 #roadmap .roadmap-sec .roadmap-timeline .timeline-dots-hor {
   margin-left: -3%;
+  margin-top: 1px;
 }
 #roadmap .roadmap-sec .spinner-dots {
   -webkit-animation-duration: 5s;
@@ -2732,6 +2746,8 @@ header .header-text-cont h2 {
   -webkit-animation-iteration-count: 1;
           animation-iteration-count: 1;
   transform-origin: center;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
   opacity: 1;
 }
 
@@ -2799,8 +2815,8 @@ header .header-text-cont h2 {
           animation-duration: 1s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
-  -webkit-animation-iteration-count: 17;
-          animation-iteration-count: 17;
+  -webkit-animation-iteration-count: 11;
+          animation-iteration-count: 11;
 }
 #FAQ .faq-sec {
   width: 60%;
@@ -2953,13 +2969,18 @@ footer .footer-sec .footer-content .footer-col .social-menu a {
   font-size: 28px;
   width: 40px;
   height: 40px;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
+  display: block;
+  margin-bottom: 20px;
+}
+@media (max-width: 482px) {
+  footer .footer-sec .footer-content .footer-col .social-menu a {
+    width: 30px;
+    height: 30px;
+  }
 }
 footer .footer-sec .footer-content .footer-col .social-menu a img {
-  width: 70%;
-  height: 70%;
+  width: 100%;
+  height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
   -o-object-position: center;
@@ -2968,7 +2989,7 @@ footer .footer-sec .footer-content .footer-col .social-menu a img {
 footer .footer-sec .footer-content .footer-col .newsletter-form-con form {
   position: relative;
   width: 80%;
-  margin-left: auto;
+  margin-left: 0;
 }
 @media (max-width: 992px) {
   footer .footer-sec .footer-content .footer-col .newsletter-form-con form {
