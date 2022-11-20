@@ -910,6 +910,7 @@
     right: 63.5%;
     -webkit-animation-timing-function: linear;
             animation-timing-function: linear;
+    rotate: 0;
   }
   100% {
     top: 88.5%;
@@ -1010,6 +1011,7 @@
     right: 63.5%;
     -webkit-animation-timing-function: linear;
             animation-timing-function: linear;
+    rotate: 0;
   }
   100% {
     top: 88.5%;

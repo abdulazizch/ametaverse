@@ -1022,12 +1022,12 @@ header{
         margin: auto;
         padding-left: 3.8%;
         .section-title{
-            width: 94%;
+            width: 95%;
         }
         .section-content{
             .section-text{
                 width: 40%;
-                left: 45%;
+                left: 47%;
                 position: relative;
                 transform: translateX(-50%);
                 display: flex;
@@ -2522,12 +2522,14 @@ header{
         
                         &.item-2{
                             padding-left: 0.7%;
+                            margin-top: 1vw;
                         }
                         &.item-3{
                             padding-left: 1.5%;
                         }
                         &.item-4{
                             padding-left: 2.3%;
+                            margin-top: 1vw;
                         }
                         @include responsive($lg){
                             min-height: 10vh;
@@ -2586,6 +2588,9 @@ header{
                                     font-size: clamp(16px, 1.04vw, 20px);
                                     font-family: $primary-font;
                                     color: #fff;
+                                    .flash{
+                                        font-family: $secondary-font;
+                                    }
 
                                     @include responsive($sm){
                                         font-size: 13px;
@@ -2610,9 +2615,6 @@ header{
             .timeline-dots-hor{
                 margin-left: -3%;
                 margin-top: 1px;
-            }
-            .roadmap-hor-dots{
-
             }
             
         }
@@ -2686,7 +2688,7 @@ header{
                 animation-timing-function: linear;
                 animation-duration: 1s;
                 animation-fill-mode: forwards;
-                animation-iteration-count: 11;
+                animation-iteration-count: 16;
             }
         }
        

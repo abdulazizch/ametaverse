@@ -1086,11 +1086,11 @@ header .header-text-cont h2 {
   padding-left: 3.8%;
 }
 #token-generation-event .token-gen-sec .section-title {
-  width: 94%;
+  width: 95%;
 }
 #token-generation-event .token-gen-sec .section-content .section-text {
   width: 40%;
-  left: 45%;
+  left: 47%;
   position: relative;
   transform: translateX(-50%);
   display: flex;
@@ -2652,12 +2652,14 @@ header .header-text-cont h2 {
 }
 #roadmap .roadmap-sec .roadmap-timeline .timeline-items-con .timeline-items-row .timeline-item.item-2 {
   padding-left: 0.7%;
+  margin-top: 1vw;
 }
 #roadmap .roadmap-sec .roadmap-timeline .timeline-items-con .timeline-items-row .timeline-item.item-3 {
   padding-left: 1.5%;
 }
 #roadmap .roadmap-sec .roadmap-timeline .timeline-items-con .timeline-items-row .timeline-item.item-4 {
   padding-left: 2.3%;
+  margin-top: 1vw;
 }
 @media (max-width: 992px) {
   #roadmap .roadmap-sec .roadmap-timeline .timeline-items-con .timeline-items-row .timeline-item {
@@ -2720,6 +2722,9 @@ header .header-text-cont h2 {
   font-size: clamp(16px, 1.04vw, 20px);
   font-family: "GoGoHack";
   color: #fff;
+}
+#roadmap .roadmap-sec .roadmap-timeline .timeline-items-con .timeline-items-row .timeline-item .item-text ul li .flash {
+  font-family: "CasCadia";
 }
 @media (max-width: 482px) {
   #roadmap .roadmap-sec .roadmap-timeline .timeline-items-con .timeline-items-row .timeline-item .item-text ul li {
@@ -2815,8 +2820,8 @@ header .header-text-cont h2 {
           animation-duration: 1s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
-  -webkit-animation-iteration-count: 11;
-          animation-iteration-count: 11;
+  -webkit-animation-iteration-count: 16;
+          animation-iteration-count: 16;
 }
 #FAQ .faq-sec {
   width: 60%;

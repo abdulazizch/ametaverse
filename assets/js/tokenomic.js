@@ -184,8 +184,8 @@ $(function(){
         })
         $(".chart-inner-text").css({"background":data[order].color+"99", "opacity": "1"})
         $(".chart-summary-title").html(data[order].title)
-        if(order == 0){
-          $(".chart-summary-title").html("")
+        if(order == 1 || order == 2 || order == 3 || order == 4){
+          $(".chart-summary-title").html("VESTING")
         }
         $(".chart-summary-text").html(data[order].text)
       }
