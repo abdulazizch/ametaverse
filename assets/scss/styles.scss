@@ -1329,7 +1329,7 @@ header{
         }
 
         .section-content{
-            padding-top: 5vw;
+            padding-top: 10vw;
 
             .section-text{
                 width: 45%;
@@ -2916,6 +2916,7 @@ footer{
         .copyrights{
             a{
                 font-size: clamp(13px, 0.9375vw, 18px);
+                font-family: $secondary-font;
             }
             p{
                 font-size: clamp(13px, 0.9375vw, 18px);
@@ -3191,11 +3192,21 @@ footer{
                     
                     .game-data{
                         .data-icon{
-                            width: 33px;
+                            width: 47px;
+                            height: 47px;
+                            border: 2px solid #fff;
+                            border-radius: 50%;
                             margin-right: 4px;
+                            display: inline-flex;
+                            justify-content: center;
+                            align-items: center;
+                            background: #000;
                             img{
-                                width: 100%;
+                                width: 60%;
                                 object-fit: contain;
+                            }
+                            @include responsive($xl){
+                                width: 38px;
                             }
                         }
                         .data-text{
@@ -3224,12 +3235,9 @@ footer{
 
                             }
                         }
-                        .item-1,.item-2,.item-3{
+                        .item-2{
                             .data-icon{
-                                width: 47px;
-                                @include responsive($xl){
-                                    width: 38px;
-                                }
+                                background: #8247e5;
                             }
                         }
                     }

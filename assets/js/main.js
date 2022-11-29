@@ -1,3 +1,4 @@
+scrollToElement(0,0)
 $(".swap-btn").click(function(){
     const swapFrom = $(".swap-from").html();
     const swapTo = $(".swap-to").html();
@@ -456,6 +457,33 @@ $(".skater-anim-con").mouseleave(function(){
     $(".border-dots .iteration").css({"animation-duration": "8s"})
 })
 
+function scrollToElement(pageElement, val) {    
+    var positionX = 0,         
+        positionY = 0;    
+
+    while(pageElement != null){        
+        positionX += pageElement.offsetLeft;        
+        positionY += pageElement.offsetTop;        
+        pageElement = pageElement.offsetParent;        
+        window.scrollTo(positionX, positionY + val);    
+    }
+}
+
+var pageElement = document.getElementById("what-is-ametaverse");
+
+
+$("a.what-is-ametaverse").click(function(e){
+    e.preventDefault();
+    setTimeout(() => {
+        scrollToElement(document.getElementById("what-is-ametaverse"), 300);
+    }, 1000);
+})
+$("a.ameta-token-sale").click(function(e){
+    e.preventDefault();
+    setTimeout(() => {
+        scrollToElement(document.getElementById("ameta-token-sale"), 200);
+    }, 1000);
+})
 
 
 $(window).bind("load",function(){

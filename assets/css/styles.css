@@ -1393,7 +1393,7 @@ header .header-text-cont h2 {
   }
 }
 #ameta-token-sale .ameta-token-sec .section-content {
-  padding-top: 5vw;
+  padding-top: 10vw;
 }
 #ameta-token-sale .ameta-token-sec .section-content .section-text {
   width: 45%;
@@ -3061,6 +3061,7 @@ footer .footer-sec .bg-dots-con {
 }
 footer .footer-sec .copyrights a {
   font-size: clamp(13px, 0.9375vw, 18px);
+  font-family: "CasCadia";
 }
 footer .footer-sec .copyrights p {
   font-size: clamp(13px, 0.9375vw, 18px);
@@ -3363,13 +3364,25 @@ footer .footer-sec .copyrights p {
   }
 }
 .main-page-wrapper .page-content-wrapper .page-content .left-side-content .game-data-con .game-data .data-icon {
-  width: 33px;
+  width: 47px;
+  height: 47px;
+  border: 2px solid #fff;
+  border-radius: 50%;
   margin-right: 4px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background: #000;
 }
 .main-page-wrapper .page-content-wrapper .page-content .left-side-content .game-data-con .game-data .data-icon img {
-  width: 100%;
+  width: 60%;
   -o-object-fit: contain;
      object-fit: contain;
+}
+@media (max-width: 1366px) {
+  .main-page-wrapper .page-content-wrapper .page-content .left-side-content .game-data-con .game-data .data-icon {
+    width: 38px;
+  }
 }
 .main-page-wrapper .page-content-wrapper .page-content .left-side-content .game-data-con .game-data .data-text h6 {
   font-size: 25px;
@@ -3400,13 +3413,8 @@ footer .footer-sec .copyrights p {
     line-height: 15px;
   }
 }
-.main-page-wrapper .page-content-wrapper .page-content .left-side-content .game-data-con .game-data .item-1 .data-icon, .main-page-wrapper .page-content-wrapper .page-content .left-side-content .game-data-con .game-data .item-2 .data-icon, .main-page-wrapper .page-content-wrapper .page-content .left-side-content .game-data-con .game-data .item-3 .data-icon {
-  width: 47px;
-}
-@media (max-width: 1366px) {
-  .main-page-wrapper .page-content-wrapper .page-content .left-side-content .game-data-con .game-data .item-1 .data-icon, .main-page-wrapper .page-content-wrapper .page-content .left-side-content .game-data-con .game-data .item-2 .data-icon, .main-page-wrapper .page-content-wrapper .page-content .left-side-content .game-data-con .game-data .item-3 .data-icon {
-    width: 38px;
-  }
+.main-page-wrapper .page-content-wrapper .page-content .left-side-content .game-data-con .game-data .item-2 .data-icon {
+  background: #8247e5;
 }
 .main-page-wrapper .page-content-wrapper .page-content .right-side-content {
   width: 15%;

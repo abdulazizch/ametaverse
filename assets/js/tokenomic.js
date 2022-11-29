@@ -1,13 +1,13 @@
 $(function(){
     $("#doughnutChart").drawDoughnutChart([
-        { title: "ICO / IDO",  text: "the tokens that <br/>are not sold <br/>will be burnt", value : 20,  color: "#ffff00" },
-        { title: "Development", text: "8% unlocked at listing <br/>And <br/>2% monthly thereafter", value:  30, color: "#ff0000" },
+        { title: "ICO / IDO",  text: "Distributed，</br>the tokens that， </br>are not sold， </br>will be burnt", value : 20,  color: "#ffff00" },
+        { title: "Development", text: "8% unlocked at listing <br/>And <br/>2% monthly thereafter", value:  20, color: "#ff0000" },
         { title: "Exchanges + Liquidity",  text: "100% unlocked at listing", value:  8,   color: "#0b3cf4" },
         { title: "Marketing",   text: "5% unlocked at listing<br/>And<br/>2% monthly thereafter", value : 10, color: "#5cf246" },
         { title: "Team", text: "12 months cliff<br/>Then<br/>10% every 6 months", value : 12, color: "#ff7300" },
         { title: "Staking", text: "Available right <br/>after listing", value : 15, color: "#ff83e8" },
-        { title: "Activity Rewards", text: "100% unlocked <br/>And<br/>Ready To Use", value : 3,   color: "#46f0f0" },
-        { title: "Advisors", text: "6 months cliff<br/>Then<br/>20% every 6 months", value : 2, color: "#8d3ef5" },
+        { title: "Airdrop + Rewards", text: "Distributed, Release </br>within ,24 months </br>following the event", value : 10,   color: "#46f0f0" },
+        { title: "Company Reserve", text: "Locked. </br>Reserved for </br>future projects", value : 5, color: "#8d3ef5" },
     ]);
   });
   ;(function($, undefined) {
