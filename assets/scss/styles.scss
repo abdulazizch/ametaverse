@@ -1362,12 +1362,14 @@ header{
                     overflow: hidden;
                     // border-image: url(../images/border-dots.png) 12 ;
 
+                    
                     .timer-border-dots-con{
                         position: absolute;
                         top: 0;
                         left: 0;
                         width: 100%;
                         height: 100%;
+                        overflow: hidden;
 
                         .border-dots{
                             position: absolute;
@@ -1380,7 +1382,7 @@ header{
                             }
 
                             &._top{
-                                top: -2.5%;
+                                top: -2.3%;
                                 left: 0;
                                 
                                 .iteration{
@@ -1388,7 +1390,7 @@ header{
                                 }
                             }
                             &._bottom{
-                                bottom: -2.5%;
+                                bottom: -2.3%;
                                 left: -101%;
                                 .iteration{
                                     animation-name: moveRight;
@@ -1433,6 +1435,8 @@ header{
                         justify-content: space-between;
                         align-items: center;
                         margin-bottom: 1vw;
+                        position: relative;
+                        z-index: 3;
                         .amount-input-con{
                             label{
                                 font-size: clamp(15px,  0.9375vw, 18px);
@@ -1475,11 +1479,11 @@ header{
                                     color: #fff;
                                     text-align: right;
                                     padding-right: 10px;
-                                    font-size: 12px;
+                                    font-size: 15px;
                                     &::placeholder{
                                         color: #fff;
                                         font-family: $secondary-font;
-                                        font-size: 12px;
+                                        font-size: 16px;
 
                                     }
 
@@ -1488,12 +1492,17 @@ header{
                         }
                     }
                 }
+
+                .warning-text{
+                    font-weight: 500;
+                    opacity: 0;
+                }
             }
         }
         .ameta-address-con{
             display: flex ;
             justify-content: center;
-            margin-top: 2.5vw;
+            margin-top: 3vw;
 
             .ameta-address{
                 text-align: center;
@@ -1886,19 +1895,19 @@ header{
         }
         .section-text{
             width: 33%;
-            margin-top: 15%;
+            margin-top: 18%;
             height: 100%;
             @include responsive($xl){
-                margin-top:12%;
+                margin-top:14%;
             }
             @include responsive($lg){
                 width: 95%;
-                margin-top:12%;
+                margin-top:14%;
             }
             @include responsive($sm){
                 width: 100%;
                 padding-right: 6.5%;
-                margin-top: 5%;
+                margin-top: 6%;
             }
 
             p{
@@ -2698,6 +2707,7 @@ header{
         position: absolute;
         left: 50%;
         top: 20%;
+        z-index: 3;
         transform: translateX(-50%);
 
         @include responsive($lg){

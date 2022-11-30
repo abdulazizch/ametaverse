@@ -1,4 +1,4 @@
-scrollToElement(0,0)
+// scrollToElement(0,0)
 $(".swap-btn").click(function(){
     const swapFrom = $(".swap-from").html();
     const swapTo = $(".swap-to").html();
@@ -223,6 +223,7 @@ $(".cloud-img-con.cloud-2").click(function(e){
                     if(click2 == 6){
                         sapling2=0
                     }
+                    saplingAudio.load()
                     saplingAudio.play()
                     $(this).next().next().find(".sapling").css({"bottom": sapling2+"%"})
                 }
@@ -485,6 +486,28 @@ $("a.ameta-token-sale").click(function(e){
     }, 1000);
 })
 
+
+$("#ameta-pay-amount").keydown(function(event){
+    if ( event.keyCode == 46 || event.keyCode == 8 ) {
+        $("#ameta-rcv-amount").val($(this).val())
+    }
+    else{
+        if (event.keyCode < 48 || event.keyCode > 57 ) {
+            event.preventDefault(); 
+        }
+        else{
+            $(this).bind("keyup paste", function(){
+                if($(this).val() <3 || $(this).val() >3000){
+                    $(".warning-text").css({"opacity":"1"})
+                }
+                else{
+                    $(".warning-text").css({"opacity":"0"})
+                }
+                $("#ameta-rcv-amount").val($(this).val())
+            })
+        }
+    }
+})
 
 $(window).bind("load",function(){
     setTimeout(()=>{
