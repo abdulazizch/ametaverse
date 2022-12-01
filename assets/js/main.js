@@ -476,14 +476,50 @@ var pageElement = document.getElementById("what-is-ametaverse");
 $("a.what-is-ametaverse").click(function(e){
     e.preventDefault();
     setTimeout(() => {
-        scrollToElement(document.getElementById("what-is-ametaverse"), 300);
-    }, 1000);
+        scrollToElement(document.getElementById("what-is-ametaverse"), 280);
+    }, 200);
+})
+$("a.token-generation-event").click(function(e){
+    e.preventDefault();
+    setTimeout(() => {
+        scrollToElement(document.getElementById("token-generation-event"), 0);
+    }, 200);
 })
 $("a.ameta-token-sale").click(function(e){
     e.preventDefault();
     setTimeout(() => {
         scrollToElement(document.getElementById("ameta-token-sale"), 200);
-    }, 1000);
+    }, 200);
+})
+$("a.tokenomics").click(function(e){
+    e.preventDefault();
+    setTimeout(() => {
+        scrollToElement(document.getElementById("tokenomics"), 200);
+    }, 200);
+})
+$("a.ameta-features").click(function(e){
+    e.preventDefault();
+    setTimeout(() => {
+        scrollToElement(document.getElementById("ameta-features"), 0);
+    }, 200);
+})
+$("a.play-games").click(function(e){
+    e.preventDefault();
+    setTimeout(() => {
+        scrollToElement(document.getElementById("play-games"), -50);
+    }, 200);
+})
+$("a.roadmap").click(function(e){
+    e.preventDefault();
+    setTimeout(() => {
+        scrollToElement(document.getElementById("roadmap"), 0);
+    }, 200);
+})
+$("a.FAQ").click(function(e){
+    e.preventDefault();
+    setTimeout(() => {
+        scrollToElement(document.getElementById("FAQ"), 270);
+    }, 200);
 })
 
 
