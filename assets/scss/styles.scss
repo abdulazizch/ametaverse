@@ -2989,9 +2989,11 @@ footer{
             }
             .copyright-links{
                 @include responsive($sm){
-                    width: 88%;
+                    width: 100%;
                     margin: auto;
                     display: flex;
+                    flex-wrap: wrap;
+                    gap: 10px;
                     justify-content: space-between;
                 }
             }
