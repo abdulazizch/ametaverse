@@ -734,7 +734,7 @@
                 </div>
                 <div class="bg-dots-con fadeInDown header-dots-sm d-block d-sm-none">
                     
-                    <div class="dots-row">
+                    <div class="dots-row d-none">
                         <div class="dot dot-purp-l"></div>
                         <div class="dot dot-pink-d"></div>
                         <div class="dot dot-orng"></div>
@@ -2578,8 +2578,11 @@
                                     <p>Presale Supply : 300,000 AMETA</p>
                                 </div>
                                 <div class="swap-amount-con d-none">
-                                    <div class="amount-input-con pay-amount">
-                                        <label for="payAmount">PAY</label>
+                                    <div class="amount-input-con pay-amount mt-2 mt-sm-0">
+                                        <div class="label-con d-flex justify-content-between">
+                                            <label for="payAmount">PAY</label>
+                                            <label for="" class="d-inline-block d-sm-none">Balance : 1075.4431</label>
+                                        </div>
                                         <div class="amount-input pay-amount-input my-2">
                                             <div class="input-icon ">
                                                 <img src="./assets/images/polygon-icon.png" alt="">
@@ -2587,13 +2590,20 @@
                                             </div>
                                             <input type="text" name="payAmount" id="ameta-pay-amount" placeholder="ENTER AMOUNT">
                                         </div>
-                                        <label for="">Balance : 1075.4431</label>
+                                        <label for="" class="d-none d-sm-inline-block">Balance : 1075.4431</label>
+                                    </div>
+                                    <div class="warning-text-con d-block d-sm-none">
+                                        <p class="warning-text _1 text-danger text-center">*The minimum purchase quantity is 30 matic</p>
+                                        <p class="warning-text _2 text-danger text-center">*The maximum purchase quantity is 3000 matic</p>
                                     </div>
                                     <div class="arrow-icon m-3">
-                                        <img src="./assets/images/icons/arrow-right.png" alt="">
+                                        <img src="./assets/images/icons/arrow-right.png" class="w-100" alt="">
                                     </div>
-                                    <div class="amount-input-con rcv-amount">
-                                        <label for="rcvAmount">RECEIVE</label>
+                                    <div class="amount-input-con rcv-amount  mt-0">
+                                        <div class="label-con d-flex justify-content-between">
+                                            <label for="rcvAmount">RECEIVE</label>
+                                            <label for="" class="d-inline-block d-sm-none">Balance : 0</label>
+                                        </div>
                                         <div class="amount-input pay-amount-input my-2">
                                             <div class="input-icon">
                                                 <img src="./assets/images/AMETA-TOKEN-ICON.png" alt="">
@@ -2601,16 +2611,15 @@
                                             </div>
                                             <input type="text" name="rcvAmount" id="ameta-rcv-amount" placeholder="RECEIVE AMOUNT">
                                         </div>
-                                        <label for="">Balance : 0</label>
+                                        <label for="" class="d-none d-sm-inline-block">Balance : 0</label>
                                     </div>
                                 </div>
-                                <div class="my-3">
-                                    <p class="warning-text text-danger text-center">*The minimum purchase quantity is 30 matic</p>
+                                <div class="warning-text-con d-none d-sm-block">
+                                    <p class="warning-text _1 text-danger text-center">*The minimum purchase quantity is 30 matic</p>
+                                    <p class="warning-text _2 text-danger text-center">*The maximum purchase quantity is 3000 matic</p>
                                 </div>
                                 <a href="" class="button-primary connect-wallet-btn">Connect Wallet</a>
-                            </div>
-                            <div class=" my-3 ">
-                                <p class="warning-text text-danger text-center">*The maximum purchase quantity is 3000 matic</p>
+                                <a href="" class="button-primary purchase-token-btn disabled" >Purchase Token</a>
                             </div>
                         </div>
                     </div>
@@ -3303,7 +3312,7 @@
                     </div>
                     <div class="section-content row m-0">
                         <div class="section-text col-12 col-md-6 fadeInRight p-0">
-                            <p>
+                            <p class="border-before">
                                 $AMETA is AMETAVERSE's native cryptocurrency, an integrated innovative game reward
                                  model that maintains constant demand for $AMETA to continuously stimulates its 
                                  value growth. 
@@ -4155,7 +4164,6 @@
                             Participate in a real-time battle game using blockchain technology. When 
                             several players put in the same amount of AMETA as a bet, the winner will 
                             receive all the bets
-                            <br/><br/>
                             <span>
                                 
                             </span>
@@ -5243,18 +5251,18 @@
                                     <div class="dot dot-blue-d"></div>
                                     <div class="dot dot-pink-l"></div>
                                     <div class="dot dot-blue-d"></div>
-                                    <div class="dot d-none d-md-inline-block  dot-orng-d"></div>
-                                    <div class="dot d-none d-md-inline-block  dot-green-l"></div>
-                                    <div class="dot d-none d-md-inline-block  dot-orng-d"></div>
-                                    <div class="dot d-none d-md-inline-block  dot-blue-d"></div>
-                                    <div class="dot d-none d-md-inline-block  dot-green-l"></div>
-                                    <div class="dot d-none d-md-inline-block  dot-vlt"></div>
-                                    <div class="dot d-none d-md-inline-block  dot-blue-l"></div>
-                                    <div class="dot d-none d-md-inline-block  dot-blue-d"></div>
-                                    <div class="dot d-none d-md-inline-block  dot-blue-d"></div>
-                                    <div class="dot d-none d-md-inline-block  dot-vlt"></div>
-                                    <div class="dot d-none d-md-inline-block  dot-blue-l"></div>
-                                    <div class="dot d-none d-md-inline-block  dot-orng"></div>
+                                    <div class="dot dot-orng-d"></div>
+                                    <div class="dot dot-green-l"></div>
+                                    <div class="dot dot-orng-d"></div>
+                                    <div class="dot dot-blue-d"></div>
+                                    <div class="dot dot-green-l"></div>
+                                    <div class="dot dot-vlt"></div>
+                                    <div class="dot dot-blue-l"></div>
+                                    <div class="dot dot-purp-d"></div>
+                                    <div class="dot dot-blue-d"></div>
+                                    <div class="dot d-none d-md-inline-block dot-vlt"></div>
+                                    <div class="dot d-none d-md-inline-block dot-green-d"></div>
+                                    <div class="dot d-none d-md-inline-block dot-orng"></div>
                                     <div class="dot d-none d-md-inline-block dot-purp-d"></div>
                                     <div class="dot d-none d-md-inline-block dot-orng"></div>
                                     <div class="dot d-none d-md-inline-block dot-orng-d"></div>
@@ -6844,7 +6852,7 @@
                 </div>
                 
                 <div class="faq-sec">
-                    <div class="section-title fadeInDown">
+                    <div class="p-2 p-sm-0 section-title fadeInDown">
                         <h2>Frequently Asked Questions</h2>
                     </div>
                     <div class="faq-dropdowns-con mb-5 fadeInDown _2">

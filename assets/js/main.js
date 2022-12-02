@@ -146,6 +146,8 @@ fadein.forEach((el) => fadeIn.observe(el))
 
 $(".connect-wallet-btn").click((e)=>{
     e.preventDefault();
+    $(".connect-wallet-btn").hide();
+    $(".purchase-token-btn").show();
     $(".swap-amount-con").removeClass("d-none");
 })
 let sapling1 = -40;
@@ -304,6 +306,24 @@ $(".shit-drop-dot").click(()=>{
     }
 })
 $(".shit-icon.shit-2").click(()=>{
+    if(window.innerWidth < 480 ){
+        if(click2 >= 6){
+            $(".shit-drop-dot").removeClass("dot-purp-d")
+            $(".shit-icon.shit-2").css({"animation-name": "dropShit"})
+            console.log("clicked")
+            setTimeout(() => {
+                $(".flower-2 .flower-petal.petal-2").css({"animation-name": "zoomIn"})
+            }, 4500);
+            setTimeout(() => {
+                $(".flower-2 .flower-petal.petal-1").css({"animation-name": "none","opacity": "0"})
+                $(".flower-2 .flower-petal.petal-2").css({"animation-name": "spin","animation-duration":"13s", "animation-iteration-count": "infinite"})
+            }, 5800);
+    
+        }
+        
+    }
+})
+$(".shit-drop-text").click(()=>{
     if(window.innerWidth < 480 ){
         if(click2 >= 6){
             $(".shit-drop-dot").removeClass("dot-purp-d")
@@ -532,9 +552,14 @@ $("#ameta-pay-amount").keydown(function(event){
             event.preventDefault(); 
         }
         else{
-            $(this).bind("keyup paste", function(){
-                if($(this).val() <3 || $(this).val() >3000){
-                    $(".warning-text").css({"opacity":"1"})
+            $(this).bind("keyup paste", function(){                             
+                if($(this).val() <30 && $(this).val() != ''){
+                    $(".warning-text").css({"opacity":"0"})
+                    $(".warning-text._1").css({"opacity":"1"})
+                }
+                else if($(this).val() > 3000){
+                    $(".warning-text").css({"opacity":"0"})
+                    $(".warning-text._2").css({"opacity":"1"})
                 }
                 else{
                     $(".warning-text").css({"opacity":"0"})
@@ -544,8 +569,10 @@ $("#ameta-pay-amount").keydown(function(event){
         }
     }
 })
-
 $(window).bind("load",function(){
+    $(".disabled").click(function(e){
+        e.preventDefault();
+    })
     setTimeout(()=>{
         if(document.getElementById("banner-bg-vid")){
             var vid = document.getElementById("banner-bg-vid");

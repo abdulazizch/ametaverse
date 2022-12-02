@@ -67,6 +67,14 @@ p.border-before::before {
   left: 0;
   top: 0;
 }
+@media (max-width: 482px) {
+  p.border-before {
+    padding-left: 0;
+  }
+  p.border-before::before {
+    display: none;
+  }
+}
 
 ul {
   list-style: none;
@@ -500,7 +508,7 @@ header {
 }
 @media (max-width: 482px) {
   header {
-    padding: 13.5% 6.5% 0;
+    padding: 8.5% 6.5% 0;
     min-height: 99vh;
   }
 }
@@ -627,7 +635,7 @@ header .bg-video-cont video {
 @media (max-width: 482px) {
   header .bg-video-cont {
     width: 94%;
-    top: -60px;
+    top: -35px;
     left: 50%;
   }
 }
@@ -656,6 +664,7 @@ header .header-text-cont {
     width: 100%;
     padding-left: 0;
     height: calc(100vh - 245px);
+    margin-top: 30px;
   }
 }
 @media (max-width: 390px) {
@@ -796,6 +805,11 @@ header .header-text-cont h2 {
   width: 44.7%;
   position: relative;
   z-index: 9;
+}
+@media (max-width: 482px) {
+  #what-is-ametaverse .what-is-ameta-sec .section-content .flower-anim-con .cloud-img-con {
+    width: 35%;
+  }
 }
 #what-is-ametaverse .what-is-ameta-sec .section-content .flower-anim-con .cloud-img-con:hover {
   -webkit-animation: shake 0.5s infinite;
@@ -997,6 +1011,11 @@ header .header-text-cont h2 {
   font-size: clamp(28px, 2.1vw, 40.38px);
   text-align: center;
 }
+@media (max-width: 482px) {
+  #what-is-ametaverse .what-is-ameta-sec .section-content .section-text h3 {
+    text-align: left;
+  }
+}
 #what-is-ametaverse .what-is-ameta-sec .section-content .section-text p {
   text-align: left;
   font-size: clamp(13px, 0.9375vw, 18px);
@@ -1025,7 +1044,7 @@ header .header-text-cont h2 {
 #what-is-ametaverse .what-is-ameta-sec .section-content .section-text .shit-icon {
   width: 0.9vw;
   top: 81%;
-  left: 0%;
+  left: 10%;
   position: absolute;
   z-index: 5;
   -webkit-animation-duration: 5s;
@@ -1187,7 +1206,7 @@ header .header-text-cont h2 {
 }
 @media (max-width: 482px) {
   #token-generation-event .token-gen-sec .section-content .section-phases-con .section-phases .phase-item-con .phase-item {
-    padding: 10px 5px;
+    padding: 6px 5px;
     -o-border-image: url(../images/phase-border-dots.png) 15;
        border-image: url(../images/phase-border-dots.png) 15;
   }
@@ -1266,9 +1285,19 @@ header .header-text-cont h2 {
   color: #fff;
   font-family: "GoGoHack";
 }
+@media (max-width: 482px) {
+  #token-generation-event .token-gen-sec .section-content .section-phases-con .section-phases .phase-item-con .phase-item h4 {
+    margin-bottom: 0;
+  }
+}
 #token-generation-event .token-gen-sec .section-content .section-phases-con .section-phases .phase-item-con .phase-item p {
   font-size: clamp(11px, 0.9375vw, 18px);
   margin: 0;
+}
+@media (max-width: 482px) {
+  #token-generation-event .token-gen-sec .section-content .section-phases-con .section-phases .phase-item-con .phase-item p {
+    line-height: 13px;
+  }
 }
 #token-generation-event .token-gen-sec .section-content .section-phases-con .section-phases .phase-item-con .item-swing {
   display: inline-flex;
@@ -1413,6 +1442,7 @@ header .header-text-cont h2 {
 #ameta-token-sale .ameta-token-sec .section-content .section-timer {
   width: 55%;
   position: relative;
+  max-height: 608px;
 }
 @media (max-width: 992px) {
   #ameta-token-sale .ameta-token-sec .section-content .section-timer {
@@ -1450,7 +1480,7 @@ header .header-text-cont h2 {
           animation-iteration-count: infinite;
 }
 #ameta-token-sale .ameta-token-sec .section-content .section-timer .timer-sec .timer-border-dots-con .border-dots._top {
-  top: -2.3%;
+  top: -2.1%;
   left: 0;
 }
 #ameta-token-sale .ameta-token-sec .section-content .section-timer .timer-sec .timer-border-dots-con .border-dots._top .iteration {
@@ -1458,7 +1488,7 @@ header .header-text-cont h2 {
           animation-name: moveLeft;
 }
 #ameta-token-sale .ameta-token-sec .section-content .section-timer .timer-sec .timer-border-dots-con .border-dots._bottom {
-  bottom: -2.3%;
+  bottom: -2.2%;
   left: -101%;
 }
 #ameta-token-sale .ameta-token-sec .section-content .section-timer .timer-sec .timer-border-dots-con .border-dots._bottom .iteration {
@@ -1505,8 +1535,26 @@ header .header-text-cont h2 {
   position: relative;
   z-index: 3;
 }
+@media (max-width: 482px) {
+  #ameta-token-sale .ameta-token-sec .section-content .section-timer .timer-sec .swap-amount-con {
+    flex-wrap: wrap;
+  }
+}
+#ameta-token-sale .ameta-token-sec .section-content .section-timer .timer-sec .swap-amount-con .arrow-icon {
+  width: 33px;
+}
+@media (max-width: 482px) {
+  #ameta-token-sale .ameta-token-sec .section-content .section-timer .timer-sec .swap-amount-con .arrow-icon {
+    display: none;
+  }
+}
+@media (max-width: 482px) {
+  #ameta-token-sale .ameta-token-sec .section-content .section-timer .timer-sec .swap-amount-con .amount-input-con {
+    width: 100%;
+  }
+}
 #ameta-token-sale .ameta-token-sec .section-content .section-timer .timer-sec .swap-amount-con .amount-input-con label {
-  font-size: clamp(15px, 0.9375vw, 18px);
+  font-size: clamp(12px, 0.9375vw, 18px);
   color: #fff;
   font-family: "CasCadia";
   margin-left: 10px;
@@ -1519,6 +1567,11 @@ header .header-text-cont h2 {
   align-items: center;
   padding: 1px;
 }
+@media (max-width: 482px) {
+  #ameta-token-sale .ameta-token-sec .section-content .section-timer .timer-sec .swap-amount-con .amount-input-con .amount-input {
+    height: 30px;
+  }
+}
 #ameta-token-sale .ameta-token-sec .section-content .section-timer .timer-sec .swap-amount-con .amount-input-con .amount-input .input-icon {
   width: 45%;
   height: 90%;
@@ -1527,7 +1580,7 @@ header .header-text-cont h2 {
   align-items: center;
 }
 #ameta-token-sale .ameta-token-sec .section-content .section-timer .timer-sec .swap-amount-con .amount-input-con .amount-input .input-icon p {
-  font-size: clamp(15px, 0.9375vw, 18px);
+  font-size: clamp(12px, 0.9375vw, 18px);
   color: #fff;
   font-family: "CasCadia";
   margin: 0;
@@ -1548,26 +1601,49 @@ header .header-text-cont h2 {
   color: #fff;
   text-align: right;
   padding-right: 10px;
-  font-size: 15px;
+  font-size: clamp(12px, 0.9vw, 15px);
 }
 #ameta-token-sale .ameta-token-sec .section-content .section-timer .timer-sec .swap-amount-con .amount-input-con .amount-input input::-moz-placeholder {
   color: #fff;
   font-family: "CasCadia";
-  font-size: 16px;
+  font-size: clamp(12px, 0.9vw, 16px);
 }
 #ameta-token-sale .ameta-token-sec .section-content .section-timer .timer-sec .swap-amount-con .amount-input-con .amount-input input:-ms-input-placeholder {
   color: #fff;
   font-family: "CasCadia";
-  font-size: 16px;
+  font-size: clamp(12px, 0.9vw, 16px);
 }
 #ameta-token-sale .ameta-token-sec .section-content .section-timer .timer-sec .swap-amount-con .amount-input-con .amount-input input::placeholder {
   color: #fff;
   font-family: "CasCadia";
-  font-size: 16px;
+  font-size: clamp(12px, 0.9vw, 16px);
 }
-#ameta-token-sale .ameta-token-sec .section-content .section-timer .warning-text {
+#ameta-token-sale .ameta-token-sec .section-content .section-timer .purchase-token-btn {
+  background: #e3e3e3;
+  color: #000000;
+  display: none;
+}
+#ameta-token-sale .ameta-token-sec .section-content .section-timer .purchase-token-btn.disabled {
+  cursor: not-allowed;
+}
+#ameta-token-sale .ameta-token-sec .section-content .section-timer .purchase-token-btn:hover {
+  background: #e3e3e3;
+}
+#ameta-token-sale .ameta-token-sec .section-content .section-timer .warning-text-con {
+  position: relative;
+  width: 100%;
+  margin-bottom: 30px;
+}
+#ameta-token-sale .ameta-token-sec .section-content .section-timer .warning-text-con .warning-text {
   font-weight: 500;
   opacity: 0;
+  position: absolute;
+  width: 100%;
+}
+@media (max-width: 482px) {
+  #ameta-token-sale .ameta-token-sec .section-content .section-timer .warning-text-con .warning-text {
+    font-size: 10px;
+  }
 }
 #ameta-token-sale .ameta-token-sec .ameta-address-con {
   display: flex;
@@ -1669,17 +1745,6 @@ header .header-text-cont h2 {
 }
 #tokenomics .tokenomics-sec .section-content .section-text p {
   position: relative;
-  padding-left: 20px;
-}
-#tokenomics .tokenomics-sec .section-content .section-text p::before {
-  content: "";
-  position: absolute;
-  width: 8px;
-  height: 100%;
-  background: #fff;
-  border-radius: 4px;
-  left: 0;
-  top: 0;
 }
 #tokenomics .tokenomics-sec .section-content .section-text h4 {
   font-size: clamp(22px, 1.78vw, 34px);
@@ -1697,7 +1762,7 @@ header .header-text-cont h2 {
 }
 #tokenomics .tokenomics-sec .section-content .section-text .tokenomic-items .tokenomic-item p {
   padding: 0;
-  font-size: clamp(12px, 0.9vw, 16px);
+  font-size: clamp(9px, 0.9vw, 16px);
 }
 #tokenomics .tokenomics-sec .section-content .section-text .tokenomic-items .tokenomic-item p::before {
   content: none;
@@ -1785,13 +1850,13 @@ header .header-text-cont h2 {
 }
 #tokenomics .tokenomics-sec .section-content .section-infobar .tokenomic-chart .chart-inner-text h6 {
   font-size: clamp(20px, 2.083vw, 40px);
-  color: #000;
+  color: #fff;
   text-align: center;
 }
 #tokenomics .tokenomics-sec .section-content .section-infobar .tokenomic-chart .chart-inner-text p {
-  font-size: clamp(16px, 1.302vw, 25px);
+  font-size: clamp(13px, 1.1vw, 22px);
   text-align: center;
-  color: #000;
+  color: #fff;
   font-family: "GoGoHack";
 }
 
@@ -1957,18 +2022,18 @@ header .header-text-cont h2 {
 }
 #play-games .play-games-sec .section-text {
   width: 33%;
-  margin-top: 18%;
+  margin-top: 20%;
   height: 100%;
 }
 @media (max-width: 1366px) {
   #play-games .play-games-sec .section-text {
-    margin-top: 14%;
+    margin-top: 15%;
   }
 }
 @media (max-width: 992px) {
   #play-games .play-games-sec .section-text {
     width: 95%;
-    margin-top: 14%;
+    margin-top: 15%;
   }
 }
 @media (max-width: 482px) {
@@ -2640,6 +2705,11 @@ header .header-text-cont h2 {
   height: 100%;
   width: 40px;
 }
+@media (max-width: 482px) {
+  #roadmap .roadmap-sec .roadmap-timeline .timeline-items-con {
+    margin-bottom: 25px;
+  }
+}
 #roadmap .roadmap-sec .roadmap-timeline .timeline-items-con .timeline-items-row {
   display: flex;
   justify-content: start;
@@ -2661,12 +2731,22 @@ header .header-text-cont h2 {
   padding-left: 0.7%;
   margin-top: 1vw;
 }
+@media (max-width: 482px) {
+  #roadmap .roadmap-sec .roadmap-timeline .timeline-items-con .timeline-items-row .timeline-item.item-2 {
+    margin-top: 25px;
+  }
+}
 #roadmap .roadmap-sec .roadmap-timeline .timeline-items-con .timeline-items-row .timeline-item.item-3 {
   padding-left: 1.5%;
 }
 #roadmap .roadmap-sec .roadmap-timeline .timeline-items-con .timeline-items-row .timeline-item.item-4 {
   padding-left: 2.3%;
   margin-top: 1vw;
+}
+@media (max-width: 482px) {
+  #roadmap .roadmap-sec .roadmap-timeline .timeline-items-con .timeline-items-row .timeline-item.item-4 {
+    margin-top: 25px;
+  }
 }
 @media (max-width: 992px) {
   #roadmap .roadmap-sec .roadmap-timeline .timeline-items-con .timeline-items-row .timeline-item {
@@ -2682,6 +2762,7 @@ header .header-text-cont h2 {
   #roadmap .roadmap-sec .roadmap-timeline .timeline-items-con .timeline-items-row .timeline-item {
     min-height: 14vh;
     width: 100%;
+    margin-top: 25px;
   }
 }
 #roadmap .roadmap-sec .roadmap-timeline .timeline-items-con .timeline-items-row .timeline-item .item-text {

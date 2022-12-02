@@ -1,6 +1,6 @@
 $(function(){
     $("#doughnutChart").drawDoughnutChart([
-        { title: "ICO / IDO",  text: "Distributed </br>the tokens that </br>are not sold </br>will be burnt", value : 20,  color: "#ffff00" },
+        { title: "ICO / IDO",  text: "The tokens that </br>are not sold </br>will be burnt", value : 20,  color: "#ffff00" },
         { title: "Development", text: "8% unlocked at listing <br/>And <br/>2% monthly thereafter", value:  20, color: "#ff0000" },
         { title: "Exchanges + Liquidity",  text: "100% unlocked at listing", value:  8,   color: "#0b3cf4" },
         { title: "Marketing",   text: "5% unlocked at listing<br/>And<br/>2% monthly thereafter", value : 10, color: "#5cf246" },
@@ -121,8 +121,14 @@ $(function(){
             })
             $(".chart-inner-text").css({"background":data[index].color+"99", "opacity": "1"})
             $(".chart-summary-title").html(data[index].title)
-            if(index == 0){
-              $(".chart-summary-title").html("")
+            if(index == 0 || index == 5 || index == 6){
+              $(".chart-summary-title").html("Distributed")
+            }
+            if(index == 1 || index == 2 || index == 3 || index == 4){
+              $(".chart-summary-title").html("VESTING")
+            }
+            if(index == 7){
+              $(".chart-summary-title").html("Locked")
             }
             $(".chart-summary-text").html(data[index].text)
         });
@@ -186,6 +192,12 @@ $(function(){
         $(".chart-summary-title").html(data[order].title)
         if(order == 1 || order == 2 || order == 3 || order == 4){
           $(".chart-summary-title").html("VESTING")
+        }
+        if(order == 0 || order == 5 || order == 6){
+          $(".chart-summary-title").html("Distributed")
+        }
+        if(order == 7){
+          $(".chart-summary-title").html("Locked")
         }
         $(".chart-summary-text").html(data[order].text)
       }

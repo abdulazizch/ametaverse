@@ -276,7 +276,7 @@
   }
   10% {
     top: 104%;
-    left: 0;
+    left: 10%;
     scale: 1;
     -webkit-animation-timing-function: ease-out;
             animation-timing-function: ease-out;
@@ -289,7 +289,7 @@
   }
   40% {
     top: 104%;
-    left: -12%;
+    left: -5%;
     scale: 2;
     -webkit-animation-timing-function: ease-out;
             animation-timing-function: ease-out;
@@ -302,6 +302,7 @@
   }
   78% {
     top: 104%;
+    left: -20%;
     scale: 2;
     -webkit-animation-timing-function: ease-out;
             animation-timing-function: ease-out;
@@ -337,7 +338,7 @@
   }
   10% {
     top: 104%;
-    left: 0;
+    left: 10%;
     scale: 1;
     -webkit-animation-timing-function: ease-out;
             animation-timing-function: ease-out;
@@ -350,7 +351,7 @@
   }
   40% {
     top: 104%;
-    left: -12%;
+    left: -5%;
     scale: 2;
     -webkit-animation-timing-function: ease-out;
             animation-timing-function: ease-out;
@@ -363,6 +364,7 @@
   }
   78% {
     top: 104%;
+    left: -20%;
     scale: 2;
     -webkit-animation-timing-function: ease-out;
             animation-timing-function: ease-out;

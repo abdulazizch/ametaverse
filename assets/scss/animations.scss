@@ -189,7 +189,7 @@ $dot-wid-xs: 0.104vw;
     }
     10%{
         top: 104%;
-        left: 0;
+        left: 10%;
         scale: (1);
         animation-timing-function: ease-out;
     }
@@ -200,7 +200,7 @@ $dot-wid-xs: 0.104vw;
     }
     40%{
         top: 104%;
-        left: -12%;
+        left: -5%;
         scale: (2);
         animation-timing-function: ease-out;
     }
@@ -211,7 +211,7 @@ $dot-wid-xs: 0.104vw;
     }
     78%{
         top: 104%;
-        // left: -15%;
+        left: -20%;
         scale: (2);
         animation-timing-function: ease-out;
     }
