@@ -1671,7 +1671,7 @@ header .header-text-cont h2 {
 }
 @media (max-width: 482px) {
   #ameta-token-sale .ameta-token-sec .ameta-address-con .ameta-address p {
-    font-size: 7px;
+    font-size: 6px;
   }
 }
 #ameta-token-sale .ameta-token-sec .ameta-address-con .ameta-address .address-icon {
@@ -1703,8 +1703,8 @@ header .header-text-cont h2 {
 }
 @media (max-width: 482px) {
   #ameta-token-sale .ameta-token-sec .ameta-address-con .ameta-address .address-icon {
-    width: 35px;
-    height: 35px;
+    width: 30px;
+    height: 30px;
   }
   #ameta-token-sale .ameta-token-sec .ameta-address-con .ameta-address .address-icon.icon-left {
     left: -18px;
@@ -2151,7 +2151,7 @@ header .header-text-cont h2 {
 @media (max-width: 482px) {
   #play-games .play-games-sec .game-cards-con ul.game-cards-crsl .item-card .card-data-con {
     margin-top: 15px;
-    margin-left: 2%;
+    margin-left: 0;
     height: 40%;
   }
 }
@@ -2171,8 +2171,8 @@ header .header-text-cont h2 {
 }
 @media (max-width: 482px) {
   #play-games .play-games-sec .game-cards-con ul.game-cards-crsl .item-card .card-data-con .card-data .data-icon {
-    width: 24px;
-    height: 24px;
+    width: 22px;
+    height: 22px;
   }
 }
 #play-games .play-games-sec .game-cards-con ul.game-cards-crsl .item-card .card-data-con .card-data .data-icon.polygon {

@@ -1576,7 +1576,7 @@ header{
                     font-size: 16px;
                     margin: 0;
                     @include responsive($sm){
-                        font-size: 7px;
+                        font-size: 6px;
                     }
                 }
                 .address-icon{
@@ -1606,8 +1606,8 @@ header{
                         background: #000;
                     }
                     @include responsive($sm){
-                        width: 35px;
-                        height: 35px; 
+                        width: 30px;
+                        height: 30px; 
                         &.icon-left{
                             left: -18px;
                         }
@@ -2043,7 +2043,7 @@ header{
 
                         @include responsive($sm){
                             margin-top: 15px;
-                            margin-left: 2%;
+                            margin-left: 0;
                             height: 40%;
                         }
                         
@@ -2060,8 +2060,8 @@ header{
                                 align-items: center;
                                 margin-right: 4px;
                                 @include responsive($sm){
-                                    width: 24px;
-                                    height: 24px;
+                                    width: 22px;
+                                    height: 22px;
                                 }
 
                                 &.polygon{
