@@ -1483,6 +1483,9 @@ header{
                                 display: flex;
                                 align-items: center;
                                 padding: 1px;
+                                @include responsive($xxl){
+                                    height: 38px;
+                                }
                                 @include responsive($sm){
                                     height: 30px;
                                 }
@@ -1498,11 +1501,36 @@ header{
                                         font-family: $secondary-font;
                                         margin: 0;
                                     }
-                                    img{
-                                        width: auto;
-                                        height: 100%;
-                                        object-fit: contain;
+                                    .icon{
+                                        width: 36px;
+                                        height: 36px;
+                                        border-radius: 50%;
+                                        border: 1px solid #fff;
+                                        background: #000000;
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
                                         margin-right: 5px;
+                                        @include responsive($xxl){
+                                            width: 28px;
+                                            height: 28px;
+                                        }
+                                        @include responsive($lg){
+                                            width: 28px;
+                                            height: 28px;
+                                        }
+                                        @include responsive($sm){
+                                            width: 28px;
+                                            height: 28px;
+                                        }
+                                        &.polygon{
+                                            background: #8247e5;
+                                        }
+                                        img{
+                                            width: 50%;
+                                            height: 50%;
+                                            object-fit: contain;
+                                        }
                                     }
                                 }
                                 input{
@@ -2726,6 +2754,12 @@ header{
             right: 18%;
             top: -40%;
             opacity: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            background: #000000;
+            border: 1px solid #fff;
 
             // animation-name: ball-bounce;
             // animation-timing-function: linear;
@@ -2745,8 +2779,8 @@ header{
         
 
             img{
-                width: 100%;
-                height: 100%;
+                width: 60%;
+                height: 60%;
                 object-fit: contain;
                 animation-name: spinAmeta;
                 animation-timing-function: linear;

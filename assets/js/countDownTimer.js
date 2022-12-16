@@ -1,6 +1,6 @@
-const launchDate = 10 
-const launchMonth = 12
-const launchYear = 2022
+const launchDate = 01 
+const launchMonth = 02
+const launchYear = 2023
 
 
 var date2 = new Date(launchYear,launchMonth,launchDate);
@@ -19,8 +19,8 @@ setInterval(() => {
 }, 250)
 
 function flipAllCards(days, hours, minutes, seconds) {
-  flip(document.querySelector("[data-days-tens]"), Math.floor(days / 10))
-  flip(document.querySelector("[data-days-ones]"), days % 10)
+  flip(document.querySelector("[data-days-tens]"), Math.floor( getDays() / 10))
+  flip(document.querySelector("[data-days-ones]"), getDays() % 10)
   flip(document.querySelector("[data-hours-tens]"), Math.floor(hours / 10))
   flip(document.querySelector("[data-hours-ones]"), hours % 10)
   flip(document.querySelector("[data-minutes-tens]"), Math.floor(minutes / 10))
@@ -56,4 +56,28 @@ function flip(flipCard, newNumber) {
     bottomFlip.remove()
   })
   flipCard.append(topFlip, bottomFlip)
+}
+
+
+function getDays(){
+  var currentdate = new Date();
+  var date1 = ''+currentdate.getFullYear()+'-'+(currentdate.getMonth()+1)+'-'+currentdate.getDate();
+  var date2 = ''+launchYear+'-'+launchMonth+'-'+launchDate;
+
+  date1 = date1.split('-');
+  date2 = date2.split('-');
+
+  date1 = new Date(date1[0], date1[1], date1[2]);
+  date2 = new Date(date2[0], date2[1], date2[2]);
+
+  date1_unixtime = parseInt(date1.getTime() / 1000);
+  date2_unixtime = parseInt(date2.getTime() / 1000);
+
+  var timeDifference = date2_unixtime - date1_unixtime;
+
+  var timeDifferenceInHours = timeDifference / 60 / 60;
+
+  var timeDifferenceInDays = timeDifferenceInHours  / 24;
+
+  return timeDifferenceInDays;
 }
